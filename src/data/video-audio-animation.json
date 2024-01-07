@@ -1,0 +1,59 @@
+{
+  "id": 1,
+  "title": { "big": "VIDEO, AUDIO & ANIMATION", "small": "by Lone Wolves Digital" },
+  "clientURLLink": "https://form.jotform.com/230592802711552",
+  "projectHeaderImage": "/img/catalog/pexels-pixabay-257904.jpg",
+  "videoLink": "https://vimeo.com/127203262",
+  "requestURL": "Click here",
+  "type": "Product/Service",
+  "category": [
+    {
+      "id": 1,
+      "name": "Editing & Post-Production Animation.",
+      "link": "#"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "11",
+      "link": "#"
+    }
+    
+  ],
+  "intro": {
+    "content": "Video refers to a sequence of images or frames that are presented in a rapid succession, creating the illusion of motion or movement. Videos can be created in various formats, resolutions, and lengths and can be used for a range of purposes, including entertainment, education, marketing, and communication. Videos can be produced using various devices, including smartphones, digital cameras, and professional video equipment, and can be edited using video editing software to enhance their quality and visual appeal. Audio refers to the sound that is recorded, processed, and reproduced electronically. Audio can be created using various devices, including microphones, musical instruments, and sound systems. Audio can be used in various contexts, including music production, film, television, radio, and podcasting. Audio can be edited and processed using digital audio software to enhance its quality and remove any unwanted sounds or noise.Animation refers to the process of creating moving images using a series of static images or frames. Animations can be created using various techniques, including traditional hand-drawn animation, stop motion animation, 2D computer animation, and 3D computer animation. Animations can be used for various purposes, including entertainment, advertising, education, and visualization. Animations can be created using animation software, which allows animators to create and manipulate digital models and characters to create realistic and visually appealing animations.",
+    "spmList": [
+      {
+        "id": 1,
+        "name": "Video Editing, Visual Effects, Subtitles & Captions, Intro & Outro, Videos, Screen casting Videos."
+      },
+      {
+        "id": 2,
+        "name": "Character Animation, Animated Explainers, Logo Animation, Animated GIFs, Lottie, Web Animation."
+      },
+      {
+        "id": 3,
+        "name": "3D Product Animation, E-Commerce Product Videos, Live Action Explainers, App & Website Previews, Corporate Videos, Unboxing Videos."
+      },
+      {
+        "id": 4,
+        "name": "Female Voice Over, Male Voice Over, German Voice Over, French Voice Over, Video Narration."
+      },
+      {
+        "id": 5,
+        "name": "Podcast Production, Audiobook Production, Sound Design, Audio Editing."
+      }
+    ]
+  },
+  "gallery": [
+    "/img/catalog/catagories/good-faces-BWMxkGvbd_Y-unsplash.jpg",
+    "/img/catalog/catagories/good-faces-gy5SlRW9OGA-unsplash.jpg",
+    "/img/catalog/catagories/hourglass-2910951_1920.jpg",
+    "/img/catalog/catagories/manny-pantoja-P2-4kxFhvCQ-unsplash.jpg",
+    "/img/catalog/catagories/woman-4702060_1920.jpg"
+  ],
+  "description": {
+    "content": "Video, audio, and animation are powerful tools that can be used to engage, inform, and entertain audiences. They are essential for businesses, organizations, and individuals who want to communicate effectively and create compelling content that stands out from the crowd. Video is a versatile medium that can be used to create a range of content, from promotional videos and advertisements to educational and instructional videos. It allows businesses to showcase their products or services and communicate their brand messaging effectively. Videos are engaging and can convey complex information quickly and efficiently, making them an ideal medium for reaching audiences across various platforms. Audio is a powerful tool for conveying emotion and telling stories. It can be used to create music, podcasts, audiobooks, and soundscapes that evoke emotion and captivate audiences. Audio content is easily accessible and can be consumed on-the-go, making it an ideal medium for reaching busy audiences who may not have the time to watch videos or read text-based content. Animation is a visually stunning medium that can bring stories and ideas to life. It is ideal for businesses and organizations that want to showcase complex ideas, products, or services in an engaging and visually appealing way. Animation can be used to create explainer videos, product demos, and infographics that educate and inform audiences in a memorable and engaging way. Overall, video, audio, and animation are essential tools for businesses, organizations, and individuals who want to create content that engages, informs, and entertains audiences. They are versatile, accessible, and can be used to communicate complex ideas effectively, making them ideal for a range of industries and applications."
+  }
+}

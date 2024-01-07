@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "title": "What is a Digital Nomad?.",
+    "content": "You hear buzz words like 'Gig-economy', 'Digital nomads' and freelancers all the time, what does it all mean? Come a little closer and I will tell you!  ",
+    "image": "/img/blog/pexels-andrea-piacquadio-3769021.jpg",
+    "tags": ["LONE ", "WOLVES", "BLOG"],
+    "date": {
+      "day": "Coming____",
+      "month": "soon…"
+    }
+  },
+
+  {
+    "id": 2,
+    "title": "What is a freelancer?",
+    "content": "To understand anything at its core. We must know its definition. If you have not already read my blog ''What is a Digital Nomad?'' then check it out first because there I have broken down some facts that separate digital nomads from freelancers.",
+    "image": "/img/blog/what.jpg",
+    "tags": ["LONE ", "WOLVES", "BLOG"],
+    "date": {
+      "day": "Coming____",
+      "month": "soon…"
+    }
+  },
+  
+  {
+    "id": 3,
+    "title": "Why you should become a freelancer.",
+    "content": "Have you ever thought of becoming a freelancer, but didn’t know where to start? Well, you my friend have come to the right place.",
+    "image": "/img/blog/pexels-andrea-piacquadio-3813341.jpg",
+    "tags": ["LONE ", "WOLVES ", "BLOG"],
+    "date": {
+      "day": "Coming____",
+      "month": "soon…"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Why you should not become a freelancer.",
+    "content": "There are so many great things about becoming a freelancer, but that there’s more to it than just freedom, that’s what I will unravel here.  If you haven’t already, please read my first blog “Why you should become a freelancer.” before reading the this one. You will thank me for it.",
+    "image": "/img/blog/pexels-andrea-piacquadio-3791134.jpg",
+    "tags": ["LONE ", "WOLVES", "BLOG"],
+    "date": {
+      "day": "Coming____",
+      "month": "soon…"
+    }
+  },
+  {
+    "id": 5,
+    "title": "How to become a freelancer.",
+    "content": "Assuming you have read both of my previous blogs, it’s time to dive into the how of free lancing. Here I will share more info about my personal journey as a freelancer.",
+    "image": "/img/blog/good-faces-DSj40n6beGk-unsplash.jpg",
+    "tags": ["LONE ", "WOLVES", "BLOG"],
+    "date": {
+      "day": "Coming____",
+      "month": " soon…",
+      "year":"2022"
+    }
+  }
+ 
+]

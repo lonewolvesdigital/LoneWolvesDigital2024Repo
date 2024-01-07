@@ -1,0 +1,60 @@
+{
+  "id": 1,
+  "title": { "big": "Catagory name", "small": "by Lone Wolves Digital" },
+  "clientURLLink": "https://form.jotform.com/230592802711552",
+  "projectHeaderImage": "/img/catalog/woman-4702060_1920.jpg",
+  "videoLink": "https://vimeo.com/127203262",
+  "requestURL": "Click here",
+  "type": "Product/Service",
+  "category": [
+    {
+      "id": 1,
+      "name": "Category 1",
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "name": "Category 2",
+      "link": "#"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "00",
+      "link": "#"
+    }
+    
+  ],
+  "intro": {
+    "content": "We are a Creative Agency & Startup Studio that provides Digital Products and Services turns to focus on client success. We specialize in user interface design, including front-end development which we consider to be an integral part.",
+    "spmList": [
+      {
+        "id": 1,
+        "name": "Tag1"
+      },
+      {
+        "id": 2,
+        "name": "Tag2"
+      },
+      {
+        "id": 31,
+        "name": "Tag3"
+      },
+      {
+        "id": 4,
+        "name": "Tag1"
+      }
+    ]
+  },
+  "gallery": [
+    "/img/catalog/catagories/good-faces-BWMxkGvbd_Y-unsplash.jpg",
+    "/img/catalog/catagories/good-faces-gy5SlRW9OGA-unsplash.jpg",
+    "/img/catalog/catagories/hourglass-2910951_1920.jpg",
+    "/img/catalog/catagories/manny-pantoja-P2-4kxFhvCQ-unsplash.jpg",
+    "/img/catalog/catagories/woman-4702060_1920.jpg"
+  ],
+  "description": {
+    "content": "We are a Creative Agency & Startup Studio that provides Digital Products and Services turns to focus on client success. We specialize in user interface design, including front-end development which we consider to be an integral part."
+  }
+}

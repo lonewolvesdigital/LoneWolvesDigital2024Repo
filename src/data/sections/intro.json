@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Welcome to Lone Wolves Digital",
+        "content": "A virtual solution provider, built on a centralized network of freelancers that offer digital products and services in the form of digital assets such as multimedia, software, documents, and data. Simply put the home of all things digital!",
+        "image": "/img/slid/thisisengineering.jpg"
+    },
+    {
+        "id": 2,
+        "title": "What do we offer?",
+        "content": "Whether you need Admin & Customer Support, Business & Finance, Data & AI Services, or Engineering & Architecture. We offer all of that and 8 other special fields! You my friend have come to the right place. WHAT YOU DEMAND, WE COMMAND!",
+        "image": "/img/slid/pexels-christina-morillo-1181352-min.jpg"
+    },
+    {
+        "id": 3,
+        "title": "But how?",
+        "content": "Here at Lone Wolves Digital, we don’t have a big expensive office or equipment.  Just a network of hard-working Freelancers. This allows us to tap into a wide variety of skills and talent, for a fraction of the price.",
+        "image": "/img/slid/slide-3-min.jpg"
+    }
+]

@@ -1,0 +1,47 @@
+{
+  "id": 1,
+  "title": { "big": "SOFTWARE DEVELOPMENT & IT", "small": "by Lone Wolves Digital" },
+  "clientURLLink": "https://form.jotform.com/230592802711552",
+  "projectHeaderImage": "/img/catalog/desola-lanre-ologun-kwzWjTnDPLk-unsplash.jpg",
+  "videoLink": "https://vimeo.com/127203262",
+  "requestURL": "Click here",
+  "type": "Product/Service",
+  "category": [
+    {
+      "id": 1,
+      "name": "Application Development Support & Cybersecurity.",
+      "link": "#"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "10",
+      "link": "#"
+    }
+    
+  ],
+  "intro": {
+    "content": "Software development refers to the process of creating software products that solve specific problems or meet particular needs. It involves various stages, including designing, programming, testing, and maintaining software systems. The goal of software development is to create reliable, efficient, and scalable software solutions that help individuals or organizations achieve their objectives.IT, or information technology, is a broad field that encompasses the use of computers, software, and telecommunications equipment to manage, store, retrieve, and transmit data and information. IT professionals work in various areas such as software development, network administration, database management, cybersecurity, and technical support. The primary objective of IT is to help organizations operate more efficiently by implementing technology solutions that support their business processes and goals.",
+    "spmList": [
+      {
+        "id": 1,
+        "name": "Mobile Apps, Web Programming, Desktop Applications, Game Development, Desktop Apps, Development for Streamers, Online Coding Lessons."
+      },
+      {
+        "id": 2,
+        "name": "DevOps & Cloud Support, Cybersecurity, Information technology, Data Protection, QA & Review."
+      }
+    ]
+  },
+  "gallery": [
+    "/img/catalog/catagories/good-faces-BWMxkGvbd_Y-unsplash.jpg",
+    "/img/catalog/catagories/good-faces-gy5SlRW9OGA-unsplash.jpg",
+    "/img/catalog/catagories/hourglass-2910951_1920.jpg",
+    "/img/catalog/catagories/manny-pantoja-P2-4kxFhvCQ-unsplash.jpg",
+    "/img/catalog/catagories/woman-4702060_1920.jpg"
+  ],
+  "description": {
+    "content": "Software development and IT are critical to the success of businesses and organizations in today's technology-driven world. With the increasing reliance on technology, software development and IT play a vital role in providing innovative solutions that enhance business operations, increase productivity, and improve customer satisfaction. From creating custom software solutions to managing complex IT infrastructure, software development and IT professionals are essential to driving business growth and success. In the field of software development, experts create high-quality software products that cater to the specific needs of businesses and individuals. They use the latest technologies, programming languages, and tools to design and develop software applications that solve complex problems and streamline business processes. On the other hand, IT professionals ensure that an organization's IT infrastructure is secure, reliable, and efficient. They manage networks, servers, databases, and software applications to ensure that systems are up and running 24/7, and any issues are resolved quickly. Overall, software development and IT are essential for businesses to stay competitive in today's digital age. They provide innovative solutions that help businesses operate more efficiently, enhance customer satisfaction, and drive growth and success."
+  }
+}

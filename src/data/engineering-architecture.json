@@ -1,0 +1,48 @@
+{
+  "id": 1,
+  "title": { "big": "ENGINEERING & ARCHITECTURE", "small": "by Lone Wolves Digital" },
+  "clientURLLink": "https://form.jotform.com/230592802711552",
+  "projectHeaderImage": "/img/catalog/pexels-rui-dias-12499181.jpg",
+  "videoLink": "https://vimeo.com/127203262",
+  "requestURL": "Click here",
+  "type": "Product/Service",
+  "category": [
+    {
+      "id": 1,
+      "name": "Architecture, Electronics, Engineering.",
+      "link": "#"
+    }
+    
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "04",
+      "link": "#"
+    }
+    
+  ],
+  "intro": {
+    "content": "Engineering is the application of scientific and mathematical principles to design and build structures, machines, systems, and processes. Engineers use their knowledge to solve real-world problems, create innovative solutions, and improve the way we live and work. Engineering can encompass a wide range of disciplines, including mechanical engineering, electrical engineering, civil engineering, chemical engineering, and many others. Engineers work in a variety of industries, such as manufacturing, construction, technology, and aerospace, among others, and they play a critical role in shaping the world we live in. Architecture is the art and science of designing and planning buildings and other structures. Architects use their knowledge of design, engineering, and materials to create functional, aesthetic, and safe spaces that meet the needs of the people who use them. They consider factors such as environmental impact, sustainability, accessibility, and cultural significance when designing buildings and structures. Architects work in a wide range of settings, including commercial and residential construction, urban planning, landscape design, and historic preservation. Architecture is a dynamic and constantly evolving field that requires creativity, technical skill, and a deep understanding of the needs and aspirations of the people who use the spaces we create.",
+    "spmList": [
+      {
+        "id": 1,
+        "name": "Building Design, Interior Design, Building Information Modeling Landscape Design"
+      },
+      {
+        "id": 2,
+        "name": "CAD"
+      }
+    ]
+  },
+  "gallery": [
+    "/img/catalog/catagories/good-faces-BWMxkGvbd_Y-unsplash.jpg",
+    "/img/catalog/catagories/good-faces-gy5SlRW9OGA-unsplash.jpg",
+    "/img/catalog/catagories/hourglass-2910951_1920.jpg",
+    "/img/catalog/catagories/manny-pantoja-P2-4kxFhvCQ-unsplash.jpg",
+    "/img/catalog/catagories/woman-4702060_1920.jpg"
+  ],
+  "description": {
+    "content": "Engineering and architecture are two of the most exciting and rewarding fields in the world today. They offer endless opportunities for creativity, innovation, and impact, and they play a critical role in shaping the world we live in. Whether you're interested in designing cutting-edge machines, building state-of-the-art structures, or planning sustainable communities, engineering and architecture offer limitless potential for growth and success. These fields require a unique combination of technical skill, creative vision, and problem-solving ability, and they offer opportunities to work on some of the most exciting and challenging projects in the world. By pursuing a career in engineering or architecture, you can make a real difference in the world, helping to create a better, more sustainable future for us all. With the rapid advancements in technology and the growing demand for innovative solutions, there has never been a better time to explore the possibilities of engineering and architecture. So why not join the millions of engineers and architects around the world who are shaping the future and making a real difference in the world today?"
+  }
+}

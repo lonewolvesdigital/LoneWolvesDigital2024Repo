@@ -1,0 +1,19 @@
+[{
+    "id": 1,
+    "icon": "pe-7s-smile",
+    "content": "Happy clients from all over the world, you could be next!",
+    "value": "300"
+},
+{
+    "id": 2,
+    "icon": "pe-7s-catalog",
+    "content": "Completed projects, signed sealed, and delivered.",
+    "value": "500"
+},
+{
+    "id": 3,
+    "icon": "pe-7s-medal",
+    "content": "To rank as the top 1000 start-up companies in the country. ",
+    "value": "1000"
+}
+]

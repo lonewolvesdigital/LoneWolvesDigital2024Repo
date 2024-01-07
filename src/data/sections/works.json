@@ -1,0 +1,88 @@
+[
+  {
+    "id": 1,
+    "title": "1.Admin & Customer Support.",
+    "secTex": "We got you!",
+    "image": "/img/charanjeet-dhiman-mHusyBu4bxM-unsplash.jpg",
+    "slug": "/project-details2-dark-dark/project-details2-dark-dark-dark"
+  },
+  {
+    "id": 2,
+    "title": "2.Business, & Finance.",
+    "secTex": "Money talks!",
+    "image": "/img/pexels-artem-podrez-5716035.jpg",
+    "slug": "/project-details2-dark-dark/project-details2-dark-dark-dark"
+  },
+  {
+    "id": 3,
+    "title": "3.Data & AI services.",
+    "secTex": "The future is now!",
+    "image": "/img/artificial-intelligence-2167835_640.jpg",
+    "slug": "/project-details2-dark-dark/project-details2-dark-dark-dark"
+  },
+  {
+    "id": 4,
+    "title": "4.Engineering & Architecture.",
+    "secTex": "Dream, Design, Develop! ",
+    "image": "/img/thisisengineering-raeng-hoivM01c-vg-unsplash.jpg",
+    "slug": "/project-details2-dark-dark/project-details2-dark-dark-dark"
+  },
+  {
+    "id": 5,
+    "title": "5.Graphics Design & Photography.",
+    "secTex": "Make them look!",
+    "image": "/img/tran-mau-tri-tam-g-pKprPg5yw-unsplash.jpg",
+    "slug": "/project-details2-dark-dark/project-details2-dark-dark-dark"
+  },
+  {
+    "id": 6,
+    "title": "6.HR & Training.",
+    "secTex": "The right people by, your side!",
+    "image": "/img/christina-wocintechchat-com-vzfgh3RAPzM-unsplash.jpg",
+    "slug": "/project-details2-dark-dark/project-details2-dark-dark-dark"
+  },
+  {
+    "id": 7,
+    "title": "7.Legal.",
+    "secTex": "When you'er in trouble!",
+    "image": "/img/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg",
+    "slug": "/project-details2-dark-dark/project-details2-dark-dark-dark"
+  },
+  {
+    "id": 8,
+    "title": "8.Lifestyle.",
+    "secTex": "A life worth living!",
+    "image": "/img/woman-2592247_1280.jpg",
+    "slug": "/project-details2-dark-dark/project-details2-dark-dark-dark"
+  },
+  {
+    "id": 9,
+    "title": "9.Sales & Digital Marketing.",
+    "secTex": "Sell to your target market!",
+    "image": "/img/entrepreneur-1340649_640.jpg",
+    "slug": "/project-details2-dark-dark/project-details2-dark-dark-dark"
+  },
+  {
+    "id": 10,
+    "title": "10.Software development & IT.",
+    "secTex": "Best for all the technophobes.",
+    "image": "/img/firosnv-photography-1wBmbnvv4TE-unsplash.jpg",
+    "slug": "/project-details2-dark-dark/project-details2-dark-dark-dark"
+  },
+   {
+    "id": 11,
+    "title": "11.Multimedia",
+    "secTex": "Be seen and heard!",
+    "image": "/img/onur-binay-O2-EZNGZIyk-unsplash.jpg",
+    "slug": "/project-details2-dark-dark/project-details2-dark-dark-dark"
+  },
+  {
+    "id": 12,
+    "title": "12.Writing & Translation.",
+    "secTex": "Don’t be misunderstood!",
+    "image": "/img/man-2562325_1280.jpg",
+    "slug": "/project-details2-dark-dark/project-details2-dark-dark-dark"
+  }
+
+ 
+]

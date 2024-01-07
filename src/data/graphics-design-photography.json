@@ -1,0 +1,77 @@
+{
+  "id": 1,
+  "title": { "big": "GRAPHICS DESIGN & PHOTOGRAPHY", "small": "by Lone Wolves Digital" },
+  "clientURLLink": "https://form.jotform.com/230592802711552",
+  "projectHeaderImage": "/img/catalog/pexels-tranmautritam-326503.jpg",
+  "videoLink": "https://vimeo.com/127203262",
+  "requestURL": "Click here",
+  "type": "Product/Service",
+  "category": [
+    {
+      "id": 1,
+      "name": "Packaging & Merchandise Design, Drawing & Illustration, Visual Design, Packaging & Covers, Fashion & Merchandise, Product & Characters Design, Infographics & Presentation Design, Photography.",
+      "link": "#"
+    }
+   
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "05",
+      "link": "#"
+    }
+    
+  ],
+  "intro": {
+    "content": "Graphic design is the art and practice of creating visual content to communicate messages and ideas to a specific audience. Graphic designers use typography, color, images, and other elements to design a wide range of visual materials, including logos, websites, advertisements, packaging, and more. They work in a variety of settings, such as advertising agencies, marketing firms, publishing companies, and design studios, among others. Graphic design is a constantly evolving field that requires creativity, technical skill, and a deep understanding of the needs and preferences of the target audience. Photography is the art and practice of capturing images using a camera. Photographers use their technical skill, creative vision, and artistic talent to create visual stories, convey emotions, and capture moments in time. They work in a wide range of settings, including commercial, artistic, and documentary photography, among others. Photography is a constantly evolving field that has been transformed by digital technologies, and it offers endless opportunities for creativity and innovation. Whether you're interested in capturing the beauty of the natural world, documenting social issues, or creating compelling commercial images, photography is a powerful tool for storytelling and communication.",
+    "spmList": [
+      {
+        "id": 1,
+        "name": "T-Shirts & Merchandise Design, Book Design, Packaging Design, Album Cover Design, Car Wraps, Podcast Cover Art."
+      },
+      {
+        "id": 2,
+        "name": "Illustration, Vector Tracing, Portraits, Caricatures, Cartoons Comics, Fashion Design, Pattern Design Storyboards."
+      },
+      {
+        "id": 3,
+        "name": "Presentation Design, Image Editing, Infographic Design, Vector Tracing."
+      },
+      {
+        "id": 4,
+        "name": "Packaging, Label Design, Book Design, Album Cover Design, Podcast Cover Art."
+      },
+      {
+        "id": 5,
+        "name": " Jewellery Design."
+      },
+      {
+        "id": 6,
+        "name": "Industrial Product Design, Character Modelling, Trade Booth Design."
+      },
+      {
+        "id": 7,
+        "name": "Flyer Design, Brochure Design, Poster Design, Catalog Design, Invitation Design, Menu Design, Postcard Design, Signage Design, Product Design, Graphics for Streamers, Character Modelling."
+      },
+      {
+        "id": 8,
+        "name": "Presentation Design, Infographic Design, Trade Show Booth Design, Resume Design."
+      },
+      {
+        "id": 9,
+        "name": "Portrait & Landscape Photographers, Lifestyle & Fashion, Real Estate Photographers, Event Photographers, Food Photographers, Aerial Photographers, Image Editing, Photography Advice, Local Photography, Product Photography."
+      }
+
+    ]
+  },
+  "gallery": [
+    "/img/catalog/catagories/good-faces-BWMxkGvbd_Y-unsplash.jpg",
+    "/img/catalog/catagories/good-faces-gy5SlRW9OGA-unsplash.jpg",
+    "/img/catalog/catagories/hourglass-2910951_1920.jpg",
+    "/img/catalog/catagories/manny-pantoja-P2-4kxFhvCQ-unsplash.jpg",
+    "/img/catalog/catagories/woman-4702060_1920.jpg"
+  ],
+  "description": {
+    "content": "Are you looking for a way to make your brand stand out in today's competitive marketplace? Look no further than the world of graphic design and photography! With the power of visual communication, you can create a compelling brand identity, tell your story, and connect with your audience in a whole new way. Whether you need a striking logo, a stunning website, or eye-catching advertising materials, graphic design can help you create a cohesive and memorable brand image that resonates with your customers. And when it comes to capturing your story, photography is the perfect tool to help you create stunning visuals that tell your story and evoke emotion. Whether you need high-quality product photography, engaging social media content, or powerful documentary images, photography can help you bring your vision to life. So why not explore the endless possibilities of graphic design and photography today? With the power of visual communication on your side, the sky's the limit for your brand's success!"
+  }
+}

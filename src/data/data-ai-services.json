@@ -1,0 +1,52 @@
+{
+  "id": 1,
+  "title": { "big": "DATA & AI SERVICES", "small": "by Lone Wolves Digital" },
+  "clientURLLink": "https://form.jotform.com/230592802711552",
+  "projectHeaderImage": "/img/catalog/pexels-alex-knight-2599244.jpg",
+  "videoLink": "https://vimeo.com/127203262",
+  "requestURL": "Click here",
+  "type": "Product/Service",
+  "category": [
+    {
+      "id": 1,
+      "name": "Data",
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "name": "AI",
+      "link": "#"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "03",
+      "link": "#"
+    }
+    
+  ],
+  "intro": {
+    "content": "Data & AI services refer to the use of artificial intelligence (AI) technologies to analyze and interpret large volumes of data. These services can include data mining, predictive analytics, natural language processing, machine learning, and other techniques that help organizations extract insights and make informed decisions based on their data. Data & AI services are used in a wide range of industries, such as healthcare, finance, marketing, and manufacturing, among others. They can help organizations improve efficiency, reduce costs, increase productivity, and gain a competitive edge. With the increasing availability of data and the rapid advancements in AI technologies, Data & AI services are becoming increasingly important for organizations looking to stay ahead in today's data-driven world.",
+    "spmList": [
+      {
+        "id": 1,
+        "name": "Data Entry, Data Processing Data Analytics Data Visualization Data Science Databases, Data Engineering"
+      },
+      {
+        "id": 2,
+        "name": "Mid-journey ArtistsDALL-E ArtistsStable Diffusion ArtistsAI ModelsAI Music VideosAI Content Editing"
+      }
+    ]
+  },
+  "gallery": [
+    "/img/catalog/catagories/good-faces-BWMxkGvbd_Y-unsplash.jpg",
+    "/img/catalog/catagories/good-faces-gy5SlRW9OGA-unsplash.jpg",
+    "/img/catalog/catagories/hourglass-2910951_1920.jpg",
+    "/img/catalog/catagories/manny-pantoja-P2-4kxFhvCQ-unsplash.jpg",
+    "/img/catalog/catagories/woman-4702060_1920.jpg"
+  ],
+  "description": {
+    "content": "Data & AI services are transforming the way businesses operate in the modern world. By leveraging the power of artificial intelligence and machine learning, these services allow organizations to unlock the full potential of their data, uncover insights, and make more informed decisions. Whether you're working in healthcare, finance, marketing, or manufacturing, Data & AI services offer endless opportunities for innovation, growth, and success. With the ability to analyze and interpret vast amounts of data in real-time, organizations can gain a competitive edge, improve efficiency, reduce costs, and drive innovation. The possibilities are endless, and the potential for impact is enormous. By embracing Data & AI services, you can stay ahead of the curve, harness the power of your data, and unlock new possibilities for growth and success."
+  }
+}

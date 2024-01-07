@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": {"first": "Midnight", "second": "Snack"},
+        "image": "/img/catalog/full/1.jpg",
+        "sub": "Design"
+    },
+    {
+      "id": 2,
+      "title": { "first": "Fisherman", "second": "Portrait" },
+      "image": "/img/catalog/full/2.jpg",
+      "sub": "Design"
+    },
+    {
+      "id": 3,
+      "title": { "first": "Tribos", "second": "Urbanas" },
+      "image": "/img/catalog/full/3.jpg",
+      "sub": "Design"
+    },
+    {
+      "id": 4,
+      "title": { "first": "Monsoon", "second": "in the city" },
+      "image": "/img/catalog/full/4.jpg",
+      "sub": "Design"
+    }
+]

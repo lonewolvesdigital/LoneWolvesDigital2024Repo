@@ -1,0 +1,15 @@
+{
+  "id": 1,
+  "image1": "/img/m-cooper-GSZ8mBkMHw0-unsplash-min.jpg",
+  "image2": "/img/till-daling-BJbEHRhZoLU-unsplash-min.jpg",
+  "exp": {
+    "nmb": 10,
+    "name": "Questions and answers."
+  },
+  "title": { "first": "All you need to know ", "second": "about Lone Wolves Digital." },
+  "content": {
+    "first": "Lone Wolves Digital was founded on the “LONE WOLF PHILOSOPHY” meaning that every Digital Nomad is an individual, or as I like to refer to us Lone Wolves.",
+    "second": " Whereas most wolves hunt in a pack, lone wolves hunt alone, the same way most people work in an organization, Digital Nomads work alone. It’s not uncommon that some lone wolves come across each and work together for a short while as freelancers do, but in the end, we are still individuals."
+  },
+  "smallTitle": "About Us"
+}

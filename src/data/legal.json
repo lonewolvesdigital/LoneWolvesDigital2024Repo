@@ -1,0 +1,43 @@
+{
+  "id": 1,
+  "title": { "big": "LEGAL", "small": "by Lone Wolves Digital" },
+  "clientURLLink": "https://form.jotform.com/230592802711552",
+  "projectHeaderImage": "/img/catalog/pexels-august-de-richelieu-4427430.jpg",
+  "videoLink": "https://vimeo.com/127203262",
+  "requestURL": "Click here",
+  "type": "Product/Service",
+  "category": [
+    {
+      "id": 1,
+      "name": "Legal Consulting",
+      "link": "#"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "07",
+      "link": "#"
+    }
+    
+  ],
+  "intro": {
+    "content": "Legal services refer to the provision of professional legal advice and representation to individuals, businesses, and other entities. This can include services such as drafting legal documents, negotiating on behalf of clients, representing clients in court or other legal proceedings, and providing legal advice and consultation. Legal services are offered by licensed professionals, such as lawyers and paralegals, who are trained to interpret and apply the law, navigate the legal system, and advocate on behalf of their clients. Legal services can cover a wide range of areas of law, such as criminal law, civil law, corporate law, family law, environmental law, intellectual property law, and many more. Legal services are essential for individuals and businesses to protect their rights and interests and to navigate complex legal issues. A lawyer is a professional who is licensed to practice law and provide legal advice and representation to individuals, businesses, and other entities. Lawyers are trained to interpret and apply the law, draft legal documents, negotiate on behalf of their clients, and represent clients in court or other legal proceedings. They work in a variety of areas of law, such as criminal law, civil law, corporate law, family law, environmental law, intellectual property law, and many more. Lawyers must have excellent analytical and critical thinking skills, as well as strong communication and advocacy skills, in order to effectively represent their clients and navigate the legal system.",
+    "spmList": [
+      {
+        "id": 1,
+        "name": "Legal Consulting"
+      }
+    ]
+  },
+  "gallery": [
+    "/img/catalog/catagories/good-faces-BWMxkGvbd_Y-unsplash.jpg",
+    "/img/catalog/catagories/good-faces-gy5SlRW9OGA-unsplash.jpg",
+    "/img/catalog/catagories/hourglass-2910951_1920.jpg",
+    "/img/catalog/catagories/manny-pantoja-P2-4kxFhvCQ-unsplash.jpg",
+    "/img/catalog/catagories/woman-4702060_1920.jpg"
+  ],
+  "description": {
+    "content": "Are you facing a legal issue that requires the expertise of a professional? Look no further than our legal services! Our team of experienced lawyers is dedicated to providing you with the highest quality legal representation and advice, no matter what your legal needs may be. Whether you’re dealing with a complex corporate matter, a personal injury claim, a family law dispute, or any other legal issue, we have the knowledge and experience to help you navigate the legal system and achieve the best possible outcome. We understand that legal issues can be stressful and overwhelming, which is why we work tirelessly to provide you with personalized attention and support throughout the entire process. With our legal services on your side, you can rest assured that you are in good hands. So why not take the first step today and contact us to schedule a consultation? Let us help you achieve the justice and resolution you deserve."
+  }
+}

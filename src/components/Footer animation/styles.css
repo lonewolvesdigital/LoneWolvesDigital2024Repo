@@ -1,0 +1,277 @@
+/*Base*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: "Monsterrat", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 1005;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav{
+    height: 10rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.navl-list{
+    display: flex;
+    list-style: none;
+}
+
+.nav-item{
+    margin-right: 5rem;
+}
+
+.nav-item:last-child{
+    margin-right: 0;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #fff;
+    transition: opacity .3s;
+}
+
+.nav-link:hover{
+    opacity: .6;
+}
+
+.logo{
+    display: block;
+    width: 8rem;
+}
+
+
+
+/*Utilities*/
+.container{
+    max-width: 125rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.hue-shift{
+    animation: hue-shift 5s infinite alternate;
+}
+
+/*Header & Nav*/
+header{
+    position: absolute;
+    top: 0;
+}
+
+
+/*Main content*/
+
+.landing-page{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient( to bottom right, #3B4679, #2B3153);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.landing-page::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: 100vh;
+    background-image: url("./images/bg-pat.png");
+    background-size: cover;
+    opacity: .4;
+    z-index: -1;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.content-details{
+    max-width:80%
+}
+
+.title{
+    padding-top: 50%;
+    font-size: 6rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.subtitle{
+    padding-top: 50%;
+    font-size: 6rem;
+    color: whitesmoke;
+    margin-bottom: 1rem;
+}
+
+.paragraph{
+    padding-bottom: 5%;
+    color: #929FC5;
+    margin-bottom: 2.5rem;
+}
+
+.search input {
+    border:none;
+    border-radius: 5rem;
+    padding: 2rem;
+    outline: none;
+}
+
+.search-bar{
+    width: calc(100% - .5rem);
+}
+
+.search-btn{
+    width: 10rem;
+    background-image: linear-gradient(to right, rgb(68, 249, 255), rgba(255, 9, 243, 0.712));
+    color: #fff;
+    cursor: pointer;
+    margin-left: -10rem;
+}
+
+.search-btn:hover{
+    background-image: linear-gradient( to left,rgb(255, 196, 68), rgba(255, 9, 243, 0.712));
+}
+
+.sm-list{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 10%;
+    display: flex;
+}
+
+.sm-link{
+    color: #929FC5;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #929FC5;
+    border-radius: 50%;
+    display: flex;
+    margin-right: 2.5rem;
+}
+
+.sm-link i{
+    margin: auto;
+}
+
+.sm-link:hover{
+    background-image: linear-gradient(to right, #A971FF,#30F8FF);
+    color: #fff;
+}
+
+.image-group{
+    margin-bottom: 50%;
+    margin-left: 90%;
+    text-align: center; 
+     position: relative;
+}
+
+.blob-bean{
+    position:absolute;
+    top: 100%;
+    right: 100%;
+    z-index: 10;
+    animation: move-down 1s infinite alternate;
+}
+
+.blob{
+    position: fixed;
+    z-index: -1;
+}
+
+.blob-1{
+    top: -11rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blob-2{
+    top: 15rem;
+    left: -17rem;
+}
+.blob-3{
+    right: 5rem;
+    bottom: -24rem;
+}
+
+.blob-4{
+    position: relative;
+    right: -21rem;
+    bottom: -17rem;
+}
+
+.blob-large{
+    position: relative;
+    animation: move-up 3s infinite alternate;
+    bottom: 50rem;
+    left: 100%;
+
+}
+
+/*Animations*/
+
+@keyframes move-up {
+    from{
+        transform: translateY(0);
+    }
+    
+    to{
+        transform: translateY(5rem);
+    }
+}
+
+@keyframes move-down {
+    from{
+        transform: translateY(50);
+    }
+    
+    to{
+        transform: translateY(-5rem);
+    }
+}
+
+@keyframes hue-shift {
+    from{
+        transform: hue-rotateX(50);
+    }
+    
+    to{
+        transform: hue-rotateX(-5rem);
+    }
+}
+
+
+/* /*Media Queries* */

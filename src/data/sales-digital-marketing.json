@@ -1,0 +1,63 @@
+{
+  "id": 1,
+  "title": { "big": "SALES & DIGITAL MARKETING", "small": "by Lone Wolves Digital" },
+  "clientURLLink": "https://form.jotform.com/230592802711552",
+  "projectHeaderImage": "/img/catalog/alexander-mils-lCPhGxs7pww-unsplash.jpg",
+  "videoLink": "https://vimeo.com/127203262",
+  "requestURL": "Click here",
+  "type": "Product/Service",
+  "category": [
+    {
+      "id": 1,
+      "name": "Branding , Logo & Brand Identity, Websites, Website Platforms, Social Media Marketing, Search engines, Analytics & Strategy.",
+      "link": "#"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "09",
+      "link": "#"
+    }
+    
+  ],
+  "intro": {
+    "content": "Sales and digital marketing refer to the strategies and techniques used to promote products or services through digital channels with the goal of driving sales and revenue. Sales typically involves the process of identifying potential customers, building relationships with them, and ultimately persuading them to make a purchase. Digital marketing, on the other hand, encompasses a wide range of tactics and techniques that businesses use to promote their products or services online, such as search engine optimization (SEO), social media marketing, email marketing, content marketing, and paid advertising. The goal of digital marketing is to increase brand awareness, drive website traffic, generate leads, and ultimately convert those leads into customers. Effective sales and digital marketing strategies are essential for businesses of all sizes and industries to compete in today's digital landscape and reach their target audience.",
+    "spmList": [
+      {
+        "id": 1,
+        "name": "Brand Identity Design, Brand Style Guides, Branding Services, Brand Voice & Tone."
+      },
+      {
+        "id": 2,
+        "name": "Logo Design, Business Cards and Stationery."
+      },
+      {
+        "id": 3,
+        "name": "Website Development, Website Maintenance, Business Websites, E-Commerce Development, E-commerce Management, Landing Pages, Website Content."
+      },
+      {
+        "id": 4,
+        "name": "WordPress, Shopify, Wix, Webflow, Figma."
+      },
+      {
+        "id": 5,
+        "name": "Social Media Marketing, Social Media Advertising, Marketing Strategy, Search Engine Optimization (SEO), Social Media Marketing Videos, Video Ads & Commercials, Spokesperson  Videos, Social Media Videos, Influencer Marketing."
+      },
+      {
+        "id": 6,
+        "name": "Market Research, Marketing Strategy, Web Analytics, Surveys."
+      }
+    ]
+  },
+  "gallery": [
+    "/img/catalog/catagories/good-faces-BWMxkGvbd_Y-unsplash.jpg",
+    "/img/catalog/catagories/good-faces-gy5SlRW9OGA-unsplash.jpg",
+    "/img/catalog/catagories/hourglass-2910951_1920.jpg",
+    "/img/catalog/catagories/manny-pantoja-P2-4kxFhvCQ-unsplash.jpg",
+    "/img/catalog/catagories/woman-4702060_1920.jpg"
+  ],
+  "description": {
+    "content": "Are you looking to grow your business and reach more customers? Our Sales and digital marketing services can help you achieve your goals! Our team of experts is dedicated to helping businesses of all sizes increase their online visibility, attract more qualified leads, and drive sales and revenue. We use the latest techniques and tools in digital marketing, such as SEO, social media marketing, email marketing, and paid advertising, to create a customized strategy that meets your unique needs and goals. With our sales expertise, we can help you build lasting relationships with your customers and increase your customer base. We believe in transparency and communication, which is why we provide regular reporting and analysis to keep you informed and up-to-date on your progress. So why wait? Contact us today to learn more about how our Sales and digital marketing services can help take your business to the next level."
+  }
+}

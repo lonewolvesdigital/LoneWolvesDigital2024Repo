@@ -1,0 +1,47 @@
+{
+  "id": 1,
+  "title": { "big": "ADMIN & CUSTOMER SUPPORT", "small": "by Lone Wolves Digital" },
+  "clientURLLink": "https://form.jotform.com/230592802711552",
+  "projectHeaderImage": "/img/catalog/pexels-kampus-production-8204325.jpg",
+  "videoLink": "https://vimeo.com/127203262",
+  "requestURL": "Click here",
+  "type": "Product/Service",
+  "category": [
+    {
+      "id": 1,
+      "name": "OFFICE ADMIN, Customer Support",
+      "link": "#"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "01",
+      "link": "#"
+    }
+    
+  ],
+  "intro": {
+    "content": " Admin, short for ''administrator'', typically refers to someone who is responsible for managing and overseeing the operation of a system, organization, or website. Administrators are often responsible for setting policies and procedures, managing resources, coordinating activities, and ensuring that everything runs smoothly. In the context of a website or online platform, an admin may be responsible for managing user accounts, moderating content, and ensuring that the website is functioning properly.Customer support refers to the process of providing assistance and guidance to customers who have questions or issues with a product or service. This typically involves communicating with customers through various channels, such as phone, email, chat, or social media, and helping them troubleshoot problems, find solutions, or address concerns. Customer support representatives may also be responsible for processing orders, handling returns, and providing information about products or services to potential customers. The goal of customer support is to ensure that customers are satisfied with their experience and receive the help they need to make the most of the product or service they have purchased.",
+    "spmList": [
+      {
+        "id": 1,
+        "name": "Editing, Data entry, Typing, Slide presentation, Virtual Assistance, Flyer "
+      },
+      {
+        "id": 2,
+        "name": "Distribution, Project Management, Customer Care"
+      }
+    ]
+  },
+  "gallery": [
+    "/img/catalog/catagories/good-faces-BWMxkGvbd_Y-unsplash.jpg",
+    "/img/catalog/catagories/good-faces-gy5SlRW9OGA-unsplash.jpg",
+    "/img/catalog/catagories/hourglass-2910951_1920.jpg",
+    "/img/catalog/catagories/manny-pantoja-P2-4kxFhvCQ-unsplash.jpg",
+    "/img/catalog/catagories/woman-4702060_1920.jpg"
+  ],
+  "description": {
+    "content": "Admin and customer support are essential components of any successful organization, whether it's a small business or a large corporation. As an administrator, you have the opportunity to shape and guide the direction of the organization, implement policies and procedures, and manage resources to ensure that everything runs smoothly. You are a crucial link between different departments and stakeholders, and you play a vital role in driving the organization forward. On the other hand, as a customer support representative, you have the chance to make a real difference in the lives of customers. You get to help them solve problems, find solutions and address concerns, which can be incredibly rewarding. Whether you're working in a call centre, responding to emails, or chatting with customers online, you have the power to make a positive impact and leave a lasting impression. Together, admin and customer support form the backbone of any successful organization, and they offer exciting opportunities for growth, development, and impact.."
+  }
+}

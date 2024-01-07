@@ -1,0 +1,51 @@
+{
+  "id": 1,
+  "title": { "big": "HR & TRAINING", "small": "by Lone Wolves Digital" },
+  "clientURLLink": "https://form.jotform.com/230592802711552",
+  "projectHeaderImage": "/img/catalog/pexels-cottonbro-studio-5989927.jpg",
+  "videoLink": "https://vimeo.com/127203262",
+  "requestURL": "Click here",
+  "type": "Product/Service",
+  "category": [
+    {
+      "id": 1,
+      "name": "Human Resources, Training, Recruiting.",
+      "link": "#"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "06",
+      "link": "#"
+    }
+    
+  ],
+  "intro": {
+    "content": "Human Resources is a department within an organization that is responsible for managing and coordinating the workforce. This includes tasks such as recruiting, hiring, training, compensating, and managing employees. The HR department is also responsible for developing policies and procedures related to employment, labour relations, and workplace safety. The ultimate goal of HR is to ensure that the organization's employees are happy, productive, and aligned with the company's goals and values. Training refers to the process of developing the knowledge, skills, and attitudes necessary for an individual to perform a particular job or role. This can include both formal and informal training, such as classroom instruction, on-the-job training, coaching, and mentoring. Training is important for both new and existing employees, as it helps them to acquire the skills they need to do their job effectively and to continue to develop their abilities throughout their career. Training can be delivered in a variety of formats, including e-learning, webinars, workshops, and hands-on practical sessions. A well-designed training program can help organizations to improve productivity, increase employee satisfaction, and reduce turnover rates.",
+    "spmList": [
+      {
+        "id": 1,
+        "name": "HR Consulting"
+      },
+      {
+        "id": 2,
+        "name": "Training"
+      },
+      {
+        "id": 3,
+        "name": "Recruiting "
+      }
+    ]
+  },
+  "gallery": [
+    "/img/catalog/catagories/good-faces-BWMxkGvbd_Y-unsplash.jpg",
+    "/img/catalog/catagories/good-faces-gy5SlRW9OGA-unsplash.jpg",
+    "/img/catalog/catagories/hourglass-2910951_1920.jpg",
+    "/img/catalog/catagories/manny-pantoja-P2-4kxFhvCQ-unsplash.jpg",
+    "/img/catalog/catagories/woman-4702060_1920.jpg"
+  ],
+  "description": {
+    "content": "Investing in HR and training is one of the best ways to set your organization up for success. By focusing on the development of your employees, you can create a culture of continuous learning and improvement that will drive productivity, boost morale, and improve the overall performance of your organization. With a well-designed HR department, you can ensure that your employees are engaged, motivated, and aligned with your company's goals and values. And by providing ongoing training and development opportunities, you can help your employees to acquire the skills and knowledge they need to succeed in their roles and to grow and advance within your organization. Investing in HR and training is not only beneficial for your employees, but also for your bottom line. So why not take the first step today and invest in the future success of your organization?"
+  }
+}

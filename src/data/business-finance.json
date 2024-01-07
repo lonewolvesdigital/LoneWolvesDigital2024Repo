@@ -1,0 +1,52 @@
+{
+  "id": 1,
+  "title": { "big": "BUSINESS & FINANCE", "small": "by Lone Wolves Digital" },
+  "clientURLLink": "https://form.jotform.com/230592802711552",
+  "projectHeaderImage": "/img/catalog/pexels-vlada-karpovich-7433822.jpg",
+  "videoLink": "https://vimeo.com/127203262",
+  "requestURL": "Click here",
+  "type": "Product/Service",
+  "category": [
+    {
+      "id": 1,
+      "name": "Business",
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "name": "Finance",
+      "link": "#"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "02",
+      "link": "#"
+    }
+    
+  ],
+  "intro": {
+    "content": "Business refers to an organization or enterprise engaged in commercial, industrial, or professional activities. This can include a wide range of activities, such as selling products or services, manufacturing goods, providing professional services, or conducting research and development. Businesses can be small or large, privately owned or publicly traded, and can operate in a variety of industries and sectors. The goal of most businesses is to generate revenue and profit while providing value to customers and stakeholders. Finance refers to the management of money, investments, and other financial resources. This includes activities such as budgeting, investing, accounting, financial analysis, and risk management. Finance is critical to the success of both individuals and organizations, as it helps them to manage their resources effectively and make informed decisions about investments and financial strategies. Finance professionals can work in a wide range of industries, such as banking, insurance, investment management, and corporate finance, among others. The field of finance is constantly evolving, and new technologies and strategies are continually being developed to help individuals and organizations achieve their financial goals.",
+    "spmList": [
+      {
+        "id": 1,
+        "name": "Business Plans, Market Research, Business Consulting, Project Management, CRM Management, ERP Management."
+      },
+      {
+        "id": 2,
+        "name": "Financial Consulting, Accounting."
+      }
+    ]
+  },
+  "gallery": [
+    "/img/catalog/catagories/good-faces-BWMxkGvbd_Y-unsplash.jpg",
+    "/img/catalog/catagories/good-faces-gy5SlRW9OGA-unsplash.jpg",
+    "/img/catalog/catagories/hourglass-2910951_1920.jpg",
+    "/img/catalog/catagories/manny-pantoja-P2-4kxFhvCQ-unsplash.jpg",
+    "/img/catalog/catagories/woman-4702060_1920.jpg"
+  ],
+  "description": {
+    "content": "Business and finance are two of the most dynamic and exciting fields in the modern world. Business is all about creating value, building relationships, and delivering products and services that meet the needs of customers and stakeholders. It's about innovation, creativity, and strategic thinking, and it offers endless opportunities for growth, development, and impact. Finance, on the other hand, is about managing resources, making informed decisions, and maximizing returns on investments. It's about understanding markets, predicting trends, and taking calculated risks. Whether you're interested in starting your own business, managing a team of professionals, or working as a financial analyst or advisor, business and finance offer limitless potential for success and fulfilment. These fields are constantly evolving, driven by new technologies, new ideas, and new challenges, and they provide a fertile ground for innovation and discovery. By pursuing a career in business or finance, you can make a real difference in the world, helping to shape the economy, create jobs, and improve the lives of individuals and communities."
+  }
+}

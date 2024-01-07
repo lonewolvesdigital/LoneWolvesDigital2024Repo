@@ -1,0 +1,47 @@
+{
+  "id": 1,
+  "title": { "big": "Lifestyle", "small": "by Lone Wolves Digital" },
+  "clientURLLink": "https://form.jotform.com/230592802711552",
+  "projectHeaderImage": "/img/catalog/pexels-nathan-cowley-1153369.jpg",
+  "videoLink": "https://vimeo.com/127203262",
+  "requestURL": "Click here",
+  "type": "Product/Service",
+  "category": [
+    {
+      "id": 1,
+      "name": "None",
+      "link": "#"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "08",
+      "link": "#"
+    }
+    
+  ],
+  "intro": {
+    "content": "Lifestyle refers to the way in which a person or group of people choose to live their lives. It encompasses a wide range of activities, behaviors, attitudes, and values that influence how individuals spend their time, interact with others, and make choices about their physical and mental well-being. Lifestyle can include factors such as diet, exercise, hobbies, social activities, work-life balance, stress management, and personal beliefs and values. It is a reflection of an individual's personal preferences and can vary widely depending on culture, age, income level, and other factors. Lifestyle plays an important role in overall health and well-being, as it can affect physical and mental health outcomes and contribute to overall life satisfaction.",
+    "spmList": [
+      {
+        "id": 1,
+        "name": "Arts & Crafts, Career Counselling, Cooking Lessons, Family Genealogy Online Tutoring."
+      },
+      {
+        "id": 2,
+        "name": "Personal Styling, Personal Training, Traveling, Wellness, Online Language Lessons"
+      }
+    ]
+  },
+  "gallery": [
+    "/img/catalog/catagories/good-faces-BWMxkGvbd_Y-unsplash.jpg",
+    "/img/catalog/catagories/good-faces-gy5SlRW9OGA-unsplash.jpg",
+    "/img/catalog/catagories/hourglass-2910951_1920.jpg",
+    "/img/catalog/catagories/manny-pantoja-P2-4kxFhvCQ-unsplash.jpg",
+    "/img/catalog/catagories/woman-4702060_1920.jpg"
+  ],
+  "description": {
+    "content": "At Lone Wolves Digital we, believe that everyone deserves to live their best life possible. That's why we offer a wide range of Lifestyle services to help you optimize your health, wellness, and overall quality of life. Whether you're looking to improve your fitness, manage stress, develop healthy eating habits, or simply find new ways to enjoy life, we have the tools and expertise to help you achieve your goals. Our team of experienced professionals will work with you to create a customized lifestyle plan that takes into account your unique needs and preferences. From personal training and nutrition counselling to stress management and mindfulness techniques, we offer a holistic approach to wellness that will leave you feeling energized, motivated, and ready to take on the world. So why wait? Take the first step towards a healthier, happier lifestyle today and contact us to learn more about our services. Let us help you unlock your full potential and start living your best life!"
+  }
+}

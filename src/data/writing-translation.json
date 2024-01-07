@@ -1,0 +1,55 @@
+{
+  "id": 1,
+  "title": { "big": "WRITING & TRANSLATION", "small": "by Lone Wolves Digital" },
+  "clientURLLink": "https://form.jotform.com/230592802711552",
+  "projectHeaderImage": "/img/catalog/pexels-rfstudio-3810788.jpg",
+  "videoLink": "https://vimeo.com/127203262",
+  "requestURL": "Click here",
+  "type": "Product/Service",
+  "category": [
+    {
+      "id": 1,
+      "name": "Articles & Blog Posts, Book & E-book Writing, Professional & Business Writing, Research & Summaries, Editing & Beta Reading, Copywriting.",
+      "link": "#"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "12",
+      "link": "#"
+    }
+    
+  ],
+  "intro": {
+    "content": "Writing refers to the process of creating written content for various purposes, including entertainment, education, marketing, and communication. It involves crafting compelling narratives, developing characters, and using language effectively to convey ideas and messages. Writing can take various forms, including fiction and non-fiction books, articles, blog posts, social media content, and marketing materials. Writers may specialize in different genres and writing styles, and they may work as freelancers or in-house writers for businesses, organizations, or publications. Translation refers to the process of converting written content from one language to another while maintaining the meaning, tone, and intent of the original text. Translation is essential for businesses and organizations that operate globally and need to communicate effectively with audiences in different languages. Translators must be fluent in at least two languages and have a deep understanding of the cultural nuances and context of the source and target languages. They may specialize in different areas, such as legal, medical, or technical translation, and may work as freelancers or in-house translators for businesses, organizations, or government agencies. Overall, writing and translation are essential tools for businesses, organizations, and individuals who want to communicate effectively and reach audiences across different languages and cultures. They require skilled professionals who can craft compelling narratives and accurately convey ideas and messages, making them critical for a range of industries and applications. Translation, Social Media Copy, Product Descriptions, Sales Copy, Book, Press Releases, eBook, Email Copy, Ad Copy,  Technical Writing, Scriptwriting, Proofreading, Editing, Content Writing.",
+    "spmList": [
+      {
+        "id": 1,
+        "name": "Creative Writing, Podcast Writing, Speechwriting."
+      },
+      {
+        "id": 2,
+        "name": "Resume Writing, Cover Letters, Business Names, Slogans, LinkedIn, Profiles."
+      },
+      {
+        "id": 3,
+        "name": "Email Writing, Sales Writing, Product Descriptions, Social Media Writing."
+      },
+      {
+        "id": 4,
+        "name": "Case Studies, Grant Writing, Legal Writing, Technical Writing, White Papers, Fact-Checking."
+      }
+    ]
+  },
+  "gallery": [
+    "/img/catalog/catagories/good-faces-BWMxkGvbd_Y-unsplash.jpg",
+    "/img/catalog/catagories/good-faces-gy5SlRW9OGA-unsplash.jpg",
+    "/img/catalog/catagories/hourglass-2910951_1920.jpg",
+    "/img/catalog/catagories/manny-pantoja-P2-4kxFhvCQ-unsplash.jpg",
+    "/img/catalog/catagories/woman-4702060_1920.jpg"
+  ],
+  "description": {
+    "content": "Introducing our top-notch Writing & Translation Services! Are you struggling to find the right words to convey your message? Do you need to communicate with clients or customers in a foreign language? Look no further than our Writing & Translation Services. Our team of experienced writers and translators can help you create compelling content for any purpose. From business proposals to academic papers, we've got you covered. We work closely with our clients to ensure that we understand their needs and deliver exactly what they're looking for. Our translation services are second to none. We can translate documents, websites, and marketing materials in over 100 languages. We understand that accurate translation is critical to effective communication, and we take great care to ensure that every translation is culturally sensitive and grammatically correct. At our Writing & Translation Services, we pride ourselves on delivering high-quality work on time and on budget. We offer competitive rates and flexible payment options to fit any budget. Whether you need a quick translation or ongoing writing support, we're here to help. Don't let language barriers hold you back. Contact us today to learn more about our Writing & Translation Services and how we can help you succeed."
+  }
+}

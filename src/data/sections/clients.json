@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "lightImage": "/img/clients/brands/light/toppng.com-html5-logo-300x300.png",
+        "darkImage": "/img/clients/brands/dark/toppng.com-vscode-visual-studio-code-953x953.png",
+        "url": "For all things code"
+    },
+    {
+        "id": 2,
+        "lightImage": "/img/clients/brands/light/toppng.com-bootstrap-social-media-icons-html-css-js-logo-800x1129.png",
+        "darkImage": "/img/clients/brands/dark/Office_365-Logo.wine.png",
+        "url": "For admin work"
+    },
+    {
+        "id": 3,
+        "lightImage": "/img/clients/brands/light/toppng.com-javascript-logo-computerprogrammieren-scripting-sprache-javascript-logo-vector-344x390.png",
+        "darkImage": "/img/clients/brands/dark/pngwing.com.png",
+        "url": "For secure backup"
+    },
+    {
+        "id": 4,
+        "lightImage": "/img/clients/brands/light/toppng.com-react-logo-icon-570x512.png",
+        "darkImage": "/img/clients/brands/dark/react.png",
+        "url": "For development"
+    },
+    {
+        "id": 5,
+        "lightImage": "/img/clients/brands/light/kisspng-figma-user-interface-design-designer-logo-apps-design-5ae2b107816577.63914842152480589553.png",
+        "darkImage": "/img/clients/brands/dark/kisspng-figma-user-interface-design-designer-logo-apps-design-5ae2b107816577.63914842152480589553.png",
+        "url": "For design"
+    },
+    {
+        "id": 6,
+        "lightImage": "/img/clients/brands/light/Unsplash-Logo-Square-Insight-Platforms.png",
+        "darkImage": "/img/clients/brands/dark/Unsplash-Logo-Square-Insight-Platforms.png",
+        "url": "For pictures"
+    },
+    {
+        "id": 7,
+        "lightImage": "/img/clients/brands/light/kisspng-fiverr-freelancer-digital-nomad-marketing-online-m-5ae5dfa39f0ae8.2377974515250144356515.png",
+        "darkImage": "/img/clients/brands/dark/Canva_(5).png",
+        "url": "For creativity"
+    },
+    {
+        "id": 8,
+        "lightImage": "/img/clients/brands/light/kisspng-logo-trademark-brand-deer-avatar-5b5561a1997027.7080134815323222096285.png",
+        "darkImage": "/img/clients/brands/dark/pngwing.com (2).png",
+        "url": "For multimedia"
+    }
+
+]
