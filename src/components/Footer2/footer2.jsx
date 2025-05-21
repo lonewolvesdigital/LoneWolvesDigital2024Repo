@@ -10,38 +10,43 @@ const Footer2 = () => {
     <footer className="app-footer" data-overlay-dark="0">
       <div className="container">
         <div className="row">
-          <div className="item md-mb50">
-            <div className="title">
-              <h5>Contact Us</h5>
-            </div>
-            <ul>
-              <li>
-                <span className="icon pe-7s-map-marker"></span>
-                <div className="cont">
-                  <h6>Official Address</h6>
-                  <p>SA Branch: 50 Harrington St,District Six, Cape Town, 7925</p>
-                  <p>Lesotho Branch: 234 Constitution Road, Foso, Maseru, Lesotho</p>
-                </div>
-              </li>
-              <li>
-                <span className="icon pe-7s-mail"></span>
-                <div className="cont">
-                  <h6>Email me</h6>
-                  <p>contact@lonewolvesdigital.com</p>
-                </div>
-              </li>
-              <li>
-                <span className="icon pe-7s-call"></span>
-                <div className="cont">
-                  <h6>Howl at us</h6>
-                  <p>+27 61 633 2445</p>
-                  <p>+27 21 709 0248</p>
-                  <p>+266 2232 0007</p>
-                </div>
-              </li>
-            </ul>
-          </div>
+        {/* <div className="circle-blur1"></div> */}
+      {/* <div className="circle-blur2"></div> */}
 
+        <div className="item md-mb50">
+              <div className="title">
+                <h5>Contact Us</h5>
+              </div>
+              <ul>
+                <li>
+                  <span className="icon pe-7s-map-marker"></span>
+                  <div className="cont">
+                    <h6>Official Address</h6>
+                    <p># 1127 201 - 1065 Canadian Place Mississauga, ON L4W 0C2 Canada</p>
+                    
+
+                  </div>
+                </li>
+                <li>
+                  <span className="icon pe-7s-mail"></span>
+                  <div className="cont">
+                    <h6>Email me</h6>
+                    <p>contact@lonewolvesdigital.com</p>
+                  </div>
+                </li>
+                <li>
+                  <span className="icon pe-7s-call"></span>
+                  <div className="cont">
+                    <h6>Howl at us</h6>
+                    <p>+1(709) 909-5955</p>
+                    
+
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+        
           <div className="col-lg-4">
             <div className="item">
               <div className="logo">
