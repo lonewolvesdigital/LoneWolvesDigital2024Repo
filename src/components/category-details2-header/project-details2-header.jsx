@@ -23,7 +23,7 @@ const ProjectDetails2Header = ({ projectHeaderData }) => {
               <h6>Buy now!</h6>
               <p>
                 <Link href={projectHeaderData.clientURLLink}>
-                  <a>{projectHeaderData.requestURL}</a>
+                  {projectHeaderData.requestURL}
                 </Link>
               </p>
             </div>
@@ -39,13 +39,9 @@ const ProjectDetails2Header = ({ projectHeaderData }) => {
               <h6>Category</h6>
               <p>
                 {projectHeaderData.category.map((cat, index) => (
-                  <Link href={cat.link} key={cat.id}>
-                    <a>
-                      {cat.name}
-                      {projectHeaderData.category.length != index + 1
-                        ? " ,"
-                        : ""}
-                    </a>
+                  <Link href={cat.link} key={cat.id} className="link">
+                    {cat.name}
+                    {projectHeaderData.category.length != index + 1 ? " ," : ""}
                   </Link>
                 ))}
               </p>
@@ -56,11 +52,9 @@ const ProjectDetails2Header = ({ projectHeaderData }) => {
               <h6>Tags</h6>
               <p>
                 {projectHeaderData.tags.map((tag, index) => (
-                  <Link href={tag.link} key={tag.id}>
-                    <a>
-                      {tag.name}
-                      {projectHeaderData.tags.length != index + 1 ? " ," : ""}
-                    </a>
+                  <Link href={tag.link} key={tag.id} className="link">
+                    {tag.name}
+                    {projectHeaderData.tags.length != index + 1 ? " ," : ""}
                   </Link>
                 ))}
               </p>

@@ -3,75 +3,72 @@
         "id": 1,
         "icon": "pe-7s-user-female",
         "title": "1.Admin & Customer Support." ,
-        "content": "Running a business demands great customer relations, and that’s why you want to trust Lone Wolves Digital to handle all your customer support needs. Whether it’s by chat messages, phone email or video call let us handle your inquiries, requests, orders, and complaints professionally!"
+        "content": "Trust us to handle all your customer support needs professionally via chat, phone, email, or video call. We manage inquiries, requests, and complaints to ensure great customer relations."
     },
     {
         "id": 2,
         "icon": "pe-7s-cash",
         "title": "2.Business, & Finance.",
-        "content": "Your company has many moving parts, which means things can and will break down from time to time. That’s when you need some expert assistance on business and finances that’s exactly what you will find here at Lone Wolves Digital. From Business Plans, Business Consulting, Market Research, Financial Consulting, Accounting, Presentations, and a whole lot more. Get it now!"
+        "content": "Expert assistance for your business and financial needs. We offer Business Plans, Consulting, Market Research, Financial Services, Accounting, and Presentations to keep your company running smoothly."
     },
     {
         "id": 3,
         "icon": " pe-7s-graph3",
         "title": "3.Data & AI services.",
-        "content": "Our world is ever-changing and that’s no secrete it is now more than ever more competitive, and what better way to get ahead of the competition than with Data and AI services from Lone Wolves Digital? Ranging from but, not limited to Database Administrators, Data Analysts, Data Entry, Data Visualization, and GPT Applications like AI Web Applications and AI Chatbots. We are way ahead of you! So, go into the future with Lone Wolves Digital."
+        "content": "Stay ahead with our Data and AI services. We provide Database Administration, Data Analysis, Visualization, and cutting-edge GPT Applications including AI Web Apps and Chatbots."
     },
-
     {
         "id": 4,
         "icon": "pe-7s-tools",
         "title": "4.Engineering & Architecture.",
-        "content": "So, maybe you have an idea, but you don’t quite know how to put it down on paper? Don’t worry with our engineers at Lone Wolves Digital you can expect nothing but the best Mechanical Engineers, Civil Engineers, Chemical Engineers, Architectural Designers, 3D Modelers, Industrial Designers, CAD Designers, and beyond. Look no further than Lone Wolves Digital!"
+        "content": "Turn your ideas into reality with our expert engineers. We offer Mechanical, Civil, and Chemical Engineering, plus Architectural Design, 3D Modeling, Industrial Design, and CAD services."
     },
-
     {
         "id": 5,
         "icon": "pe-7s-photo",
         "title": "5.Graphics Design & Photography.",
-        "content": "Your customers will only believe it when they see it because the eyes are the windows to your soul. We believe what you see is what you get, and at Lone Wolves Digital you get Image Editing, Presentation Design, Infographic Design, Vector Tracing, Resume Design, and NFT Art. Whether it’s 2D or 3D we offer it all and a whole lot more."
+        "content": "Visual excellence for your brand. Services include Image Editing, Presentation Design, Infographics, Vector Tracing, Resume Design, and NFT Art in both 2D and 3D formats."
     },
     {
         "id": 6,
         "icon": "pe-7s-user",
         "title": "6.HR & Training.",
-        "content": "If teamwork makes the dream work, then I am because you are! We all depend on each other as no one is an island, your business needs a team, the team of the right people working together day and night! That’s why you need Lone Wolves digital expert recruiters to handle your Talent Acquisition & Recruitment, Organizational Development, Compensation & Benefits, Performance Management, and HR Information Systems. We hire and fire whomever you desire so, you don’t have to!"
+        "content": "Build your dream team with our HR experts. We handle Recruitment, Organizational Development, Compensation, Performance Management, and HR Information Systems so you don't have to."
     },
     {
         "id": 7,
         "icon": "pe-7s-culture",
         "title": "7.Legal.",
-        "content": "Hopefully, you have never found yourself on the wrong side of the law. If not then thank goodness, if so then thank goodness, Lone Wolves Digital offers Legal Consulting from Legal Documents & Contracts, Legal Research, Legal Research, Legal Disputes,"
+        "content": "Professional legal support when you need it. Our services include Legal Consulting, Document & Contract Preparation, Legal Research, and Dispute Resolution assistance."
     },
     {
         "id": 8,
         "icon": "pe-7s-gym",
         "title": "8.Lifestyle.",
-        "content": "We are not here to tell you how to live your life, we are here to help you live your best life. Pick and choose from our wide range of lifestyle digital products and services. Online Tutoring, Career Counseling, Game Coaching, Life Coaching, Fitness, Nutrition, Wellness. But why stop there? See our full catalog on our Catalogue page."
+        "content": "Enhance your quality of life with our lifestyle services. We offer Online Tutoring, Career Counseling, Game Coaching, Life Coaching, Fitness, Nutrition, and Wellness programs."
     },
     {
         "id": 9,
         "icon": "pe-7s-graph1",
         "title": "9.Sales & Digital Marketing.",
-        "content": "If you market to everyone, you market to know one. Know your target market and reach them with Lone Wolves Digital sales and marketing solutions. We offer Lead Generation, Email Marketing, Affiliate Marketers, Mailchimp Specialists, Conversion Rate Optimization, Social Media Marketing, and not last or least Marketing Consultants. Don’t stop looking until you find what you need and when you do. Seal the deal with our sales solutions ranging but not limited to Sales Representatives, Cold Callers, Sales Managers, Sales Copywriters, and so on…"
+        "content": "Reach your target market effectively. Services include Lead Generation, Email Marketing, Affiliate Marketing, Conversion Optimization, Social Media Marketing, and Sales Consulting."
     },
     {
         "id": 10,
         "icon": "pe-7s-monitor",
         "title": "10.Software development & IT.",
-        "content": "Where is your business today without an app? Appositely nowhere, see what we did there? ha ha ha LOL! Okay now that the laughs are over let’s get back to serious business. Your company needs an APP, a way to secure and maintain it and we know this so, we’re offering you a whole list of digital products and services to help you. Starting with Web Development & Maintenance, Mobile Apps, Desktop Apps, and when you need support post-development! Come back for DevOps & Cloud, Support & IT, Cybersecurity & Data Protection, QA & Review, User Testing, and Online Coding Lessons. As you know, there’s so much more."
+        "content": "Complete tech solutions for your business. We develop Web, Mobile, and Desktop Apps with ongoing support, DevOps, Cloud Services, Cybersecurity, QA, and User Testing."
     },
     {
         "id": 11,
         "icon": "pe-7s-video",
         "title": "11.Multimedia",
-        "content": "People are more likely to interact with your company after seeing and listening to your videos as opposed to just reading long boring text, and that’s exactly why we at Lone Wolves Digital will make your message visual and audible. We’re talking about Voice Over, Producers & Composers, Audio Editing, Music Transcription, Vocal Tuning, DJ Drops & Tags, Beat Making, Audiobook Production, Audio Ads Production, Video Editing, Video Ads & Commercials, Animated Explainers, Character Animation, Music Videos and there are lots more of where that came from."
+        "content": "Engage your audience with professional multimedia. Services include Voice Over, Audio/Video Editing, Music Production, Animation, Explainer Videos, and Commercial Production."
     },
     {
         "id": 12,
         "icon": "pe-7s-note",
         "title": "12.Writing & Translation.",
-        "content": "Sometimes a message can be misconstrued or misunderstood, creating conflict and confusion, well those days are gone because Lone Wolves Digital has the experts who just know exactly what you want to say and how you want to say it, even before you do. We can help you with Articles & Blog Posts, Translation, Proofreading & Editing, Resume Writing, and Cover Letters. The list goes on…"
+        "content": "Clear, effective communication in any language. We provide Articles, Blog Posts, Translation, Proofreading, Editing, Resume Writing, and Cover Letter services."
     }
-
 ]

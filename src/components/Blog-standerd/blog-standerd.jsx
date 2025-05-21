@@ -19,23 +19,18 @@ const BlogStanderd = ({ blogs }) => {
                   key={blogItem.id}
                 >
                   <div className="img justify-content-center">
-                    <Link href={`#0`}>
-                      <a>
-                        <Image src={blogItem.image} alt="" 
+                    <Link href={`#0`} className="img-link">
+                      <Image src={blogItem.image} alt="" 
                         width={1000}
                         height={600} />
-                        
-                      </a>
                     </Link>
                   </div>
                   <div className="content">
                     <div className="row justify-content-center">
                       <div className="col-10">
-                        <Link href={`#0`}>
-                          <a className="date">
-                            <span className="num">{blogItem.date.day}</span>
-                            <span>{blogItem.date.month}</span>
-                          </a>
+                        <Link href={`#0`} className="date">
+                          <span className="num">{blogItem.date.day}</span>
+                          <span>{blogItem.date.month}</span>
                         </Link>
                         <div className="tags">
                           {blogItem.tags.map((tag, index) => (
@@ -45,13 +40,13 @@ const BlogStanderd = ({ blogs }) => {
                           ))}
                         </div>
                         <h4 className="title">
-                          <Link href={`#0`}>
+                          <Link href={`#0`} className="title-link">
                             {blogItem.title}
                           </Link>
                         </h4>
                         <p>{blogItem.content}</p>
-                        <Link href={`#0`}>
-                          <a className="butn bord curve mt-30">Read More</a>
+                        <Link href={`#0`} className="butn bord curve mt-30">
+                          Read More
                         </Link>
                       </div>
                     </div>

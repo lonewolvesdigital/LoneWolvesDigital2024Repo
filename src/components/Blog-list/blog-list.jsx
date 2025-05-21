@@ -52,7 +52,9 @@ const BlogList = ({ blogs }) => {
                           </div>
                           <h5>
                             <Link href="/contact/contact-dark">
-                              <a>{blogItem.title}</a>
+                              <a className="link">
+                                {blogItem.title}
+                              </a>
                             </Link>
                           </h5>
                           <p className="mt-10">
@@ -61,7 +63,9 @@ const BlogList = ({ blogs }) => {
                           
                           <div className="btn-more mt-30">
                             <Link href="/contact/contact-dark">
-                              <a className="simple-btn">ASK ABOUT IT</a>
+                              <a className="simple-btn">
+                                ASK ABOUT IT
+                              </a>
                             </Link>
                           </div>
                         </div>

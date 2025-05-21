@@ -31,11 +31,10 @@ const WorksStyle3 = () => {
               <div className="item-img">
                 <Link
                   href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
+                  className="imago wow"
                 >
-                  <a className="imago wow">
-                    <Image src="/img/catalog/cr/1.jpg" alt="image" layout='fill'/>
-                    <div className="item-img-overlay"></div>
-                  </a>
+                  <Image src="/img/catalog/cr/1.jpg" alt="image" layout='fill'/>
+                  <div className="item-img-overlay"></div>
                 </Link>
               </div>
               <div className="cont flex">
@@ -50,11 +49,10 @@ const WorksStyle3 = () => {
               <div className="item-img">
                 <Link
                   href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
+                  className="imago wow"
                 >
-                  <a className="imago wow">
-                    <Image src="/img/catalog/cr/2.jpg" alt="image" layout='fill'/>
-                    <div className="item-img-overlay"></div>
-                  </a>
+                  <Image src="/img/catalog/cr/2.jpg" alt="image" layout='fill'/>
+                  <div className="item-img-overlay"></div>
                 </Link>
               </div>
               <div className="cont flex">
@@ -72,11 +70,10 @@ const WorksStyle3 = () => {
               <div className="item-img">
                 <Link
                   href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
+                  className="imago wow"
                 >
-                  <a className="imago wow">
-                    <Image src="/img/catalog/cr/3.jpg" alt="image" layout='fill'/>
-                    <div className="item-img-overlay"></div>
-                  </a>
+                  <Image src="/img/catalog/cr/3.jpg" alt="image" layout='fill'/>
+                  <div className="item-img-overlay"></div>
                 </Link>
               </div>
               <div className="cont">
@@ -94,11 +91,10 @@ const WorksStyle3 = () => {
               <div className="item-img">
                 <Link
                   href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
+                  className="imago wow"
                 >
-                  <a className="imago wow">
-                    <Image src="/img/catalog/cr/4.jpg" alt="image" layout='fill'/>
-                    <div className="item-img-overlay"></div>
-                  </a>
+                  <Image src="/img/catalog/cr/4.jpg" alt="image" layout='fill'/>
+                  <div className="item-img-overlay"></div>
                 </Link>
               </div>
               <div className="cont">

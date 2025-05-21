@@ -1,0 +1,154 @@
+/* Navbar Search Styles */
+.navbarSearch {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.searchForm {
+  display: flex;
+  position: relative;
+  width: 250px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 40px 8px 15px;
+  border-radius: 25px;
+  border: double 2px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), 
+                    linear-gradient(to right, #12c2e9, #fd7e14, rgba(255, 9, 243, 0.712));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.searchInput:focus {
+  outline: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), 
+                    linear-gradient(to right, #12c2e9, #fd7e14, rgba(255, 9, 243, 0.712));
+  box-shadow: 0 0 15px rgba(18, 194, 233, 0.6), 
+              0 0 15px rgba(253, 126, 20, 0.4), 
+              0 0 15px rgba(255, 9, 243, 0.4);
+}
+
+.searchButton {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.searchButton:hover {
+  color: #fd7e14;
+}
+
+.searchSuggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(17, 18, 21, 0.95);
+  border-radius: 15px;
+  margin-top: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.searchSuggestions.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.suggestionItem {
+  padding: 12px 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.suggestionItem:hover {
+  background: linear-gradient(to right, rgba(18, 194, 233, 0.2), rgba(253, 126, 20, 0.2), rgba(255, 9, 243, 0.2));
+}
+
+.suggestionIcon {
+  font-size: 16px;
+  color: #12c2e9;
+}
+
+.suggestionText {
+  flex: 1;
+}
+
+.suggestionCategory {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Dark theme styles */
+:global(.navbar.light) .searchInput {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+:global(.navbar.light) .searchInput::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+:global(.navbar.light) .searchButton {
+  color: #333;
+}
+
+:global(.navbar.light) .searchButton:hover {
+  color: #fd7e14;
+}
+
+:global(.navbar.light) .searchSuggestions {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+:global(.navbar.light) .suggestionItem {
+  color: #333;
+}
+
+:global(.navbar.light) .suggestionCategory {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 991px) {
+  .navbarSearch {
+    width: 100%;
+    margin: 15px 0;
+    justify-content: center;
+  }
+  
+  .searchForm {
+    width: 90%;
+    max-width: 300px;
+  }
+}

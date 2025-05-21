@@ -22,34 +22,27 @@ const Blogs3 = () => {
               style={{ backgroundImage: "url(/img/blog/1.jpg)" }}
             >
               <div className="cont">
-                <Link href="/blog/blog-dark">
-                  <a className="date">
-                    <span>
-                      <i>06</i> Aug 2022
-                    </span>
-                  </a>
+                <Link href="/blog/blog-dark" className="date">
+                  <span>
+                    <i>06</i> Aug 2022
+                  </span>
                 </Link>
                 <div className="info">
                   <a href="#0" className="author">
                     <span>by / Admin</span>
                   </a>
-                  <Link href="/blog/blog-dark">
-                    <a className="tag">
-                      <span>WordPress</span>
-                    </a>
+                  <Link href="/blog/blog-dark" className="tag">
+                    <span>WordPress</span>
                   </Link>
                 </div>
                 <h6>
-                  <Link href="/blog-details/blog-details-dark">
-                    <a>
-                      The Start-Up Ultimate Guide to Make Your WordPress
-                      Journal.
-                    </a>
+                  <Link href="/blog-details/blog-details-dark" className="link">
+                    The Start-Up Ultimate Guide to Make Your WordPress Journal.
                   </Link>
                 </h6>
                 <div className="btn-more">
-                  <Link href="/blog-details/blog-details-dark">
-                    <a className="simple-btn">Read More</a>
+                  <Link href="/blog-details/blog-details-dark" className="simple-btn">
+                    Read More
                   </Link>
                 </div>
               </div>
@@ -61,34 +54,27 @@ const Blogs3 = () => {
               style={{ backgroundImage: "url(/img/blog/2.jpg)" }}
             >
               <div className="cont">
-                <Link href="/blog/blog-dark">
-                  <a className="date">
-                    <span>
-                      <i>06</i> Aug 2022
-                    </span>
-                  </a>
+                <Link href="/blog/blog-dark" className="date">
+                  <span>
+                    <i>06</i> Aug 2022
+                  </span>
                 </Link>
                 <div className="info">
                   <a href="#0" className="author">
                     <span>by / Admin</span>
                   </a>
-                  <Link href="/blog/blog-dark">
-                    <a className="tag">
-                      <span>WordPress</span>
-                    </a>
+                  <Link href="/blog/blog-dark" className="tag">
+                    <span>WordPress</span>
                   </Link>
                 </div>
                 <h6>
-                  <Link href="/blog-details/blog-details-dark">
-                    <a>
-                      The Start-Up Ultimate Guide to Make Your WordPress
-                      Journal.
-                    </a>
+                  <Link href="/blog-details/blog-details-dark" className="link">
+                    The Start-Up Ultimate Guide to Make Your WordPress Journal.
                   </Link>
                 </h6>
                 <div className="btn-more">
-                  <Link href="/blog-details/blog-details-dark">
-                    <a className="simple-btn">Read More</a>
+                  <Link href="/blog-details/blog-details-dark" className="simple-btn">
+                    Read More
                   </Link>
                 </div>
               </div>
@@ -100,34 +86,27 @@ const Blogs3 = () => {
               style={{ backgroundImage: "url(/img/blog/3.jpg)" }}
             >
               <div className="cont">
-                <Link href="/blog/blog-dark">
-                  <a className="date">
-                    <span>
-                      <i>06</i> Aug 2022
-                    </span>
-                  </a>
+                <Link href="/blog/blog-dark" className="date">
+                  <span>
+                    <i>06</i> Aug 2022
+                  </span>
                 </Link>
                 <div className="info">
                   <a href="#0" className="author">
                     <span>by / Admin</span>
                   </a>
-                  <Link href="/blog/blog-dark">
-                    <a className="tag">
-                      <span>WordPress</span>
-                    </a>
+                  <Link href="/blog/blog-dark" className="tag">
+                    <span>WordPress</span>
                   </Link>
                 </div>
                 <h6>
-                  <Link href="/blog-details/blog-details-dark">
-                    <a>
-                      The Start-Up Ultimate Guide to Make Your WordPress
-                      Journal.
-                    </a>
+                  <Link href="/blog-details/blog-details-dark" className="link">
+                    The Start-Up Ultimate Guide to Make Your WordPress Journal.
                   </Link>
                 </h6>
                 <div className="btn-more">
-                  <Link href="/blog-details/blog-details-dark">
-                    <a className="simple-btn">Read More</a>
+                  <Link href="/blog-details/blog-details-dark" className="simple-btn">
+                    Read More
                   </Link>
                 </div>
               </div>

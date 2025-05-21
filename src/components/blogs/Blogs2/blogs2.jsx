@@ -19,9 +19,7 @@ const Blogs2 = () => {
  
               </p>
               <Link href="/catalog/catalog-dark">
-                <a>
-                  <span>SEE OUR FULL CATALOG HERE! </span>
-                </a>
+                <span>SEE OUR FULL CATALOG HERE! </span>
               </Link>
             </div>
           </div>
@@ -35,25 +33,19 @@ const Blogs2 = () => {
               <div className="cont valign">
                 <div>
                   <div className="info">
-                    <Link href="/catalog/catalog-dark">
-                      <a className="date">
-                        <span>
-                          <i>Legal</i>
-                          </span>
-                      </a>
+                    <Link href="/catalog/catalog-dark" className="date">
+                      <span>
+                        <i>Legal</i>
+                      </span>
                     </Link>
                     <span>/</span>
-                    <Link href="/catalog/catalog-dark">
-                      <a className="tag">
-                        <span>Lone WOlVES Catalog</span>
-                      </a>
+                    <Link href="/catalog/catalog-dark" className="tag">
+                      <span>Lone WOlVES Catalog</span>
                     </Link>
                   </div>
                   <h5>
-                    <Link href="/catalog/catalog-dark">
-                      <a>
+                    <Link href="/catalog/catalog-dark" className="link">
                       Regardless of whether you need legal advice, help negotiating, or getting out of trouble, let us get you out of trouble and keep it that way.
-                      </a>
                     </Link>
                   </h5>
                 </div>
@@ -68,25 +60,19 @@ const Blogs2 = () => {
               <div className="cont valign">
                 <div>
                   <div className="info">
-                    <Link href="/catalog/catalog-dark">
-                      <a className="date">
-                        <span>
-                          <i>Lifestyle</i>
-                        </span>
-                      </a>
+                    <Link href="/catalog/catalog-dark" className="date">
+                      <span>
+                        <i>Lifestyle</i>
+                      </span>
                     </Link>
                     <span>/</span>
-                    <Link href="/catalog/catalog-dark">
-                      <a className="tag">
-                        <span>Lone WOlVES catalog</span>
-                      </a>
+                    <Link href="/catalog/catalog-dark" className="tag">
+                      <span>Lone WOlVES catalog</span>
                     </Link>
                   </div>
                   <h5>
-                    <Link href="/catalog/catalog-dark">
-                      <a>
+                    <Link href="/catalog/catalog-dark" className="link">
                       We have some expert advice on personal development, health, wellness, and even therapist! 
-                      </a>
                     </Link>
                   </h5>
                 </div>
@@ -101,25 +87,19 @@ const Blogs2 = () => {
               <div className="cont valign">
                 <div>
                   <div className="info">
-                    <Link href="/catalog/catalog-dark">
-                      <a className="date">
-                        <span>
-                          <i>Sales &</i> Digital Marketing.
-                        </span>
-                      </a>
+                    <Link href="/catalog/catalog-dark" className="date">
+                      <span>
+                        <i>Sales &</i> Digital Marketing.
+                      </span>
                     </Link>
                     <span>/</span>
-                    <Link href="/catalog/catalog-dark">
-                      <a className="tag">
-                        <span>Lone WOLVES catalog</span>
-                      </a>
+                    <Link href="/catalog/catalog-dark" className="tag">
+                      <span>Lone WOLVES catalog</span>
                     </Link>
                   </div>
                   <h5>
-                    <Link href="/catalog/catalog-dark">
-                      <a>
-                      Your brand needs to be heard and seen all over, that’s why you trust Lone Wolves Digital to convey your message.                       </a>
-                    </Link>
+                    <Link href="/catalog/catalog-dark" className="link">
+                      Your brand needs to be heard and seen all over, that’s why you trust Lone Wolves Digital to convey your message.                       </Link>
                   </h5>
                 </div>
               </div>

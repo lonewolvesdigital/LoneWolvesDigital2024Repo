@@ -184,17 +184,15 @@ const Blogs4 = () => {
                           <Link href="/blog/blog-dark">Trending</Link>
                         </div>
                         <div className="info">
-                          <Link href="/blog/blog-dark">
-                            <a>
-                              <i className="far fa-clock"></i>
-                              06 Aug 2022
-                            </a>
+                          <Link href="/blog/blog-dark" className="date">
+                            <i className="far fa-clock"></i>
+                            06 Aug 2022
                           </Link>
                           <a href="#0">by Alex Morgan</a>
                         </div>
                         <div className="title">
                           <h4>
-                            <Link href="/blog-details/blog-details-dark">
+                            <Link href="/blog-details/blog-details-dark" className="title-link">
                               Create The Lifestyle You Really Desire This World
                             </Link>
                           </h4>
@@ -207,7 +205,7 @@ const Blogs4 = () => {
                           </p>
                         </div>
                         <div className="more">
-                          <Link href={`/blog-details/blog-details-dark`}>
+                          <Link href="/blog-details/blog-details-dark" className="more-link">
                             Read More
                           </Link>
                         </div>
@@ -221,18 +219,16 @@ const Blogs4 = () => {
                           <Link href="/blog/blog-dark">Trending</Link>
                         </div>
                         <div className="info">
-                          <Link href="/blog/blog-dark">
-                            <a>
-                              <i className="far fa-clock"></i>
-                              06 Aug 2022
-                            </a>
+                          <Link href="/blog/blog-dark" className="date">
+                            <i className="far fa-clock"></i>
+                            06 Aug 2022
                           </Link>
                           <a href="#0">by Alex Morgan</a>
                         </div>
                         <div className="title">
                           <h4>
-                            <Link href="/blog-details/blog-details-dark">
-                              <a>List of The Best Investment Projects</a>
+                            <Link href="/blog-details/blog-details-dark" className="title-link">
+                              List of The Best Investment Projects
                             </Link>
                           </h4>
                         </div>
@@ -244,7 +240,7 @@ const Blogs4 = () => {
                           </p>
                         </div>
                         <div className="more">
-                          <Link href={`/blog-details/blog-details-dark`}>
+                          <Link href="/blog-details/blog-details-dark" className="more-link">
                             Read More
                           </Link>
                         </div>
@@ -258,18 +254,16 @@ const Blogs4 = () => {
                           <Link href="/blog/blog-dark">Trending</Link>
                         </div>
                         <div className="info">
-                          <Link href="/blog/blog-dark">
-                            <a>
-                              <i className="far fa-clock"></i>
-                              06 Aug 2022
-                            </a>
+                          <Link href="/blog/blog-dark" className="date">
+                            <i className="far fa-clock"></i>
+                            06 Aug 2022
                           </Link>
                           <a href="#0">by Alex Morgan</a>
                         </div>
                         <div className="title">
                           <h4>
-                            <Link href="/blog-details/blog-details-dark">
-                              <a>World Best Business Website Company</a>
+                            <Link href="/blog-details/blog-details-dark" className="title-link">
+                              World Best Business Website Company
                             </Link>
                           </h4>
                         </div>
@@ -281,7 +275,7 @@ const Blogs4 = () => {
                           </p>
                         </div>
                         <div className="more">
-                          <Link href={`/blog-details/blog-details-dark`}>
+                          <Link href="/blog-details/blog-details-dark" className="more-link">
                             Read More
                           </Link>
                         </div>

@@ -4,7 +4,6 @@ import IntroWithSlider from "../../components/Intro-with-slider/intro-with-slide
 import AboutUs from "../../components/About-us/about-us";
 import Services from "../../components/Services/services";
 import Works from "../../components/Works/works";
-import Services5 from "../../components/Services5/services5";
 import Numbers from "../../components/Numbers/numbers";
 import VideoWithTestimonials from "../../components/Video-with-testimonials/video-with-testimonials";
 import Clients from "../../components/Clients/clients";
@@ -12,6 +11,7 @@ import Blogs1 from "../../components/blogs/Blogs1/blogs1";
 import CallToAction from "../../components/Call-to-action/call-to-action";
 import Footer2 from "../../components/Footer2/footer2";
 import DarkTheme from "../../layouts/Dark";
+import NewProductCarousel from "../../components/NewProductCarousel/new-product-carousel";
 
 const Homepage1 = () => {
   const fixedSlider = React.useRef(null);
@@ -58,14 +58,14 @@ const Homepage1 = () => {
       <br/>
       <VideoWithTestimonials />
         <AboutUs />
-        <Services5  />
+        <NewProductCarousel />
         <Numbers />
         <Works />
         <Clients theme="dark" />
         <Blogs1 />
         <CallToAction />
         <Footer2 />
-      </div>        
+      </div>
       {/* <Services /> */}
     </DarkTheme>
   );

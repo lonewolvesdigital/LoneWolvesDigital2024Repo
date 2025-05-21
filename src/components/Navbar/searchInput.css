@@ -1,0 +1,9 @@
+.searchInput:focus {
+  background: rgba(255, 255, 255, 0.15);
+  outline: none;
+  border: 1px solid transparent;
+  box-shadow: 0 0 15px rgba(18, 194, 233, 0.4), 0 0 15px rgba(253, 126, 20, 0.3), 0 0 15px rgba(255, 9, 243, 0.3);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, #12c2e9, #fd7e14, rgba(255, 9, 243, 0.712));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}

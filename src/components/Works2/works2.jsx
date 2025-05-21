@@ -108,15 +108,17 @@ const Works2 = ({ sliderRef }) => {
                             <h6>
                               <Link
                                 href={`/works2/works2-dark`}
+                                className="tag"
                               >
-                                <a>art &amp; illustration</a>
+                                art &amp; illustration
                               </Link>
                             </h6>
                             <h4>
                               <Link
                                 href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
+                                className="title-link"
                               >
-                                <a>Innovation and Crafts.</a>
+                                Innovation and Crafts.
                               </Link>
                             </h4>
                           </div>
@@ -137,15 +139,17 @@ const Works2 = ({ sliderRef }) => {
                             <h6>
                               <Link
                                 href={`/works2/works2-dark`}
+                                className="tag"
                               >
-                                <a>art &amp; illustration</a>
+                                art &amp; illustration
                               </Link>
                             </h6>
                             <h4>
                               <Link
                                 href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
+                                className="title-link"
                               >
-                                <a>Inspiring new space.</a>
+                                Inspiring new space.
                               </Link>
                             </h4>
                           </div>
@@ -166,15 +170,17 @@ const Works2 = ({ sliderRef }) => {
                             <h6>
                               <Link
                                 href={`/works2/works2-dark`}
+                                className="tag"
                               >
-                                <a>art &amp; illustration</a>
+                                art &amp; illustration
                               </Link>
                             </h6>
                             <h4>
                               <Link
                                 href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
+                                className="title-link"
                               >
-                                <a>Natural plus modern.</a>
+                                Natural plus modern.
                               </Link>
                             </h4>
                           </div>
@@ -195,15 +201,17 @@ const Works2 = ({ sliderRef }) => {
                             <h6>
                               <Link
                                 href={`/works2/works2-dark`}
+                                className="tag"
                               >
-                                <a>art &amp; illustration</a>
+                                art &amp; illustration
                               </Link>
                             </h6>
                             <h4>
                               <Link
                                 href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
+                                className="title-link"
                               >
-                                <a>Innovation and Crafts.</a>
+                                Innovation and Crafts.
                               </Link>
                             </h4>
                           </div>
@@ -224,15 +232,17 @@ const Works2 = ({ sliderRef }) => {
                             <h6>
                               <Link
                                 href={`/works2/works2-dark`}
+                                className="tag"
                               >
-                                <a>art &amp; illustration</a>
+                                art &amp; illustration
                               </Link>
                             </h6>
                             <h4>
                               <Link
                                 href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
+                                className="title-link"
                               >
-                                <a>Inspiring new space.</a>
+                                Inspiring new space.
                               </Link>
                             </h4>
                           </div>

@@ -42,14 +42,16 @@ const LatestNews = () => {
                   </div>
                   <h5>
                     <Link href="/blog-details/blog-details-dark">
-                      <a>
+                      <a className="link">
                         How to use solid color combine with simple furnitures.
                       </a>
                     </Link>
                   </h5>
                   <div className="btn-more">
                     <Link href="/blog-details/blog-details-dark">
-                      <a className="simple-btn main-color">Read More</a>
+                      <a className="simple-btn main-color">
+                        Read More
+                      </a>
                     </Link>
                   </div>
                 </div>
@@ -80,14 +82,16 @@ const LatestNews = () => {
                   </div>
                   <h5>
                     <Link href="/blog-details/blog-details-dark">
-                      <a>
+                      <a className="link">
                         How to use solid color combine with simple furnitures.
                       </a>
                     </Link>
                   </h5>
                   <div className="btn-more">
                     <Link href="/blog-details/blog-details-dark">
-                      <a className="simple-btn main-color">Read More</a>
+                      <a className="simple-btn main-color">
+                        Read More
+                      </a>
                     </Link>
                   </div>
                 </div>
