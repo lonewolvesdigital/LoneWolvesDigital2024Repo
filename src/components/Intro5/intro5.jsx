@@ -94,10 +94,10 @@ const Intro5 = () => {
                       <div className="col-lg-4 valign">
                         <div className="explore">
                           <Link href="/project-details2-dark-dark/project-details2-dark-dark-dark"> 
-                          <a >
+                           >
                             Explore Project
                             <i className="ion-chevron-right"></i>
-                          </a>
+                          
                           </Link>
                         </div>
                       </div>

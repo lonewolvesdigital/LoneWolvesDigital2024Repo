@@ -34,7 +34,7 @@ const Clients3 = () => {
           <div className="col-lg col-sm-3">
             <div className="item">
               <div className="img">
-                <a href="#0">
+                 href="#0">
                   <Image
                     src="/img/mobile-app/brands/l1.png"
                     alt=""
@@ -47,14 +47,14 @@ const Clients3 = () => {
                     className="back"
                     layout='fill'
                   />
-                </a>
+                
               </div>
             </div>
           </div>
           <div className="col-lg col-sm-3">
             <div className="item">
               <div className="img">
-                <a href="#0">
+                 href="#0">
                   <Image
                     src="/img/mobile-app/brands/l2.png"
                     alt=""
@@ -67,14 +67,14 @@ const Clients3 = () => {
                     className="back"
                     layout='fill'
                   />
-                </a>
+                
               </div>
             </div>
           </div>
           <div className="col-lg col-sm-3">
             <div className="item">
               <div className="img">
-                <a href="#0">
+                 href="#0">
                   <Image 
                     src="/img/mobile-app/brands/l3.png"
                     alt=""
@@ -86,14 +86,14 @@ const Clients3 = () => {
                     alt=""
                     className="back"
                   />
-                </a>
+                
               </div>
             </div>
           </div>
           <div className="col-lg col-sm-3">
             <div className="item">
               <div className="img">
-                <a href="#0">
+                 href="#0">
                   <Image
                     src="/img/mobile-app/brands/l4.png"
                     alt=""
@@ -106,14 +106,14 @@ const Clients3 = () => {
                     className="back"
                     layout='fill'
                   />
-                </a>
+                
               </div>
             </div>
           </div>
           <div className="col-lg lg-hide">
             <div className="item">
               <div className="img">
-                <a href="#0">
+                 href="#0">
                   <Image
                     src="/img/mobile-app/brands/l5.png"
                     alt=""
@@ -126,7 +126,7 @@ const Clients3 = () => {
                     className="back"
                     layout='fill'
                   />
-                </a>
+                
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@ const Clients3 = () => {
           <div className="col-lg">
             <div className="item">
               <div className="img">
-                <a href="#0">
+                 href="#0">
                   <Image
                     src="/img/mobile-app/brands/l5.png"
                     alt=""
@@ -148,14 +148,14 @@ const Clients3 = () => {
                     className="back"
                     layout='fill'
                   />
-                </a>
+                
               </div>
             </div>
           </div>
           <div className="col-lg">
             <div className="item">
               <div className="img">
-                <a href="#0">
+                 href="#0">
                   <Image
                     src="/img/mobile-app/brands/l4.png"
                     alt=""
@@ -168,14 +168,14 @@ const Clients3 = () => {
                     className="back"
                     layout='fill'
                   />
-                </a>
+                
               </div>
             </div>
           </div>
           <div className="col-lg">
             <div className="item">
               <div className="img">
-                <a href="#0">
+                 href="#0">
                   <Image
                     src="/img/mobile-app/brands/l3.png"
                     alt=""
@@ -188,14 +188,14 @@ const Clients3 = () => {
                     className="back"
                     layout='fill'
                   />
-                </a>
+                
               </div>
             </div>
           </div>
           <div className="col-lg">
             <div className="item">
               <div className="img">
-                <a href="#0">
+                 href="#0">
                   <Image
                     src="/img/mobile-app/brands/l2.png"
                     alt=""
@@ -208,14 +208,14 @@ const Clients3 = () => {
                     className="back"
                     layout='fill'
                   />
-                </a>
+                
               </div>
             </div>
           </div>
           <div className="col-lg">
             <div className="item">
               <div className="img">
-                <a href="#0">
+                 href="#0">
                   <Image
                     src="/img/mobile-app/brands/l1.png"
                     alt=""
@@ -228,7 +228,7 @@ const Clients3 = () => {
                     className="back"
                     layout='fill'
                   />
-                </a>
+                
               </div>
             </div>
           </div>

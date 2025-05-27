@@ -100,7 +100,7 @@ const ProductCarousel = () => {
                           <h6 className={styles.title}>{item.title}</h6>
                           <p className={styles.description}>{item.content}</p>
                           <Link href={`/catalog/catalog-dark`}>
-                            <a className={styles.moreBtn}>Learn More</a>
+                             className={styles.moreBtn}>Learn More
                           </Link>
                         </div>
                       </div>

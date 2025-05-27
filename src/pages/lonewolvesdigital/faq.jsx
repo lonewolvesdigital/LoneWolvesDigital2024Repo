@@ -42,7 +42,7 @@ const Homepage5 = () => {
       </div>
       <Navbar nr={navbarRef} lr={logoRef} />
       <Intro4 />
-      <AboutUs3 />
+      boutUs3 />
       <Works3 />
       {/* <SkillsCircle theme="dark" /> */}
       <MinimalArea2 />

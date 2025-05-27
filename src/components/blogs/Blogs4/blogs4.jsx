@@ -188,7 +188,7 @@ const Blogs4 = () => {
                             <i className="far fa-clock"></i>
                             06 Aug 2022
                           </Link>
-                          <a href="#0">by Alex Morgan</a>
+                           href="#0">by Alex Morgan
                         </div>
                         <div className="title">
                           <h4>
@@ -223,7 +223,7 @@ const Blogs4 = () => {
                             <i className="far fa-clock"></i>
                             06 Aug 2022
                           </Link>
-                          <a href="#0">by Alex Morgan</a>
+                           href="#0">by Alex Morgan
                         </div>
                         <div className="title">
                           <h4>
@@ -258,7 +258,7 @@ const Blogs4 = () => {
                             <i className="far fa-clock"></i>
                             06 Aug 2022
                           </Link>
-                          <a href="#0">by Alex Morgan</a>
+                           href="#0">by Alex Morgan
                         </div>
                         <div className="title">
                           <h4>

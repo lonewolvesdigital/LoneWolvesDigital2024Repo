@@ -61,10 +61,10 @@ const catalog = ({ grid, filterPosition }) => {
             >
               <div className="item-img">
                 <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
-                  <a className="imago wow">
+                   className="imago wow">
                     <Image src="/img/catalog/catalog/1/1.jpg" alt="image" layout='fill' />
                     <div className="item-img-overlay"></div>
-                  </a>
+                  
                 </Link>
               </div>
               <div className="cont">
@@ -87,16 +87,16 @@ const catalog = ({ grid, filterPosition }) => {
             >
               <div className="item-img">
                 <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
-                  <a className="imago wow">
+                   className="imago wow">
                     <Image src="/img/catalog/catalog/1/2.jpg" alt="image" layout='fill' />
                     <div className="item-img-overlay"></div>
-                  </a>
+                  
                 </Link>
               </div>
               <div className="cont">
                 <h6>Through The Breaking</h6>
                 <span>
-                  <a href="#0">Design</a>, <a href="#0">WordPress</a>
+                   href="#0">Design,  href="#0">WordPress
                 </span>
               </div>
             </div>
@@ -113,16 +113,16 @@ const catalog = ({ grid, filterPosition }) => {
             >
               <div className="item-img">
                 <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
-                  <a className="imago wow">
+                   className="imago wow">
                     <Image src="/img/catalog/catalog/1/3.jpg" alt="image" layout='fill' />
                     <div className="item-img-overlay"></div>
-                  </a>
+                  
                 </Link>
               </div>
               <div className="cont">
                 <h6>Create With Creatives</h6>
                 <span>
-                  <a href="#0">Design</a>, <a href="#0">WordPress</a>
+                   href="#0">Design,  href="#0">WordPress
                 </span>
               </div>
             </div>
@@ -139,16 +139,16 @@ const catalog = ({ grid, filterPosition }) => {
             >
               <div className="item-img">
                 <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
-                  <a className="imago wow">
+                   className="imago wow">
                     <Image src="/img/catalog/catalog/1/4.jpg" alt="image" layout='fill'/>
                     <div className="item-img-overlay"></div>
-                  </a>
+                  
                 </Link>
               </div>
               <div className="cont">
                 <h6>Energies of Love</h6>
                 <span>
-                  <a href="#0">Design</a>, <a href="#0">WordPress</a>
+                   href="#0">Design,  href="#0">WordPress
                 </span>
               </div>
             </div>
@@ -165,16 +165,16 @@ const catalog = ({ grid, filterPosition }) => {
             >
               <div className="item-img">
                 <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
-                  <a className="imago wow">
+                   className="imago wow">
                     <Image src="/img/catalog/catalog/1/5.jpg" alt="image" layout='fill'/>
                     <div className="item-img-overlay"></div>
-                  </a>
+                  
                 </Link>
               </div>
               <div className="cont">
                 <h6>See It Yourself</h6>
                 <span>
-                  <a href="#0">Design</a>, <a href="#0">WordPress</a>
+                   href="#0">Design,  href="#0">WordPress
                 </span>
               </div>
             </div>
@@ -191,16 +191,16 @@ const catalog = ({ grid, filterPosition }) => {
             >
               <div className="item-img">
                 <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
-                  <a className="imago wow">
+                   className="imago wow">
                     <Image src="/img/catalog/catalog/1/6.jpg" alt="image" layout='fill' />
                     <div className="item-img-overlay"></div>
-                  </a>
+                  
                 </Link>
               </div>
               <div className="cont">
                 <h6>Blast From The Past</h6>
                 <span>
-                  <a href="#0">Design</a>, <a href="#0">WordPress</a>
+                   href="#0">Design,  href="#0">WordPress
                 </span>
               </div>
             </div>

@@ -51,7 +51,7 @@ const Services2 = () => {
         </div>
         <div className="smore">
           <Link href="/about/about-dark">
-            <a>Discover More</a>
+            Discover More
           </Link>
           <i className="fas fa-long-arrow-alt-right"></i>
         </div>

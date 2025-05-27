@@ -90,10 +90,10 @@ const ShowcasesFullScreenCircleSlide = () => {
                           <Link
                             href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
                           >
-                            <a>
+                           
                               <div className="stroke">{slide.title.first}</div>
                               <span>{slide.title.second}</span>
-                            </a>
+                            
                           </Link>
                         </h1>
                       </div>
@@ -104,10 +104,9 @@ const ShowcasesFullScreenCircleSlide = () => {
                           <Link
                             href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
                           >
-                            <a>
+                            
                               <div className="stroke">{slide.title.first}</div>
                               <span>{slide.title.second}</span>
-                            </a>
                           </Link>
                         </h1>
                       </div>

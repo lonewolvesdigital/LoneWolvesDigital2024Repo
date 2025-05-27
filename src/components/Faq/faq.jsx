@@ -28,9 +28,9 @@ const Faq = () => {
                 doloremque laudantium totarem aperiam eaqupsa quae abillo
                 inventore veritatis quasi architecto
               </p>
-              <a href="#0" className="butn-bord-red rounded buton mt-30">
+               href="#0" className="butn-bord-red rounded buton mt-30">
                 <span>Get Free 7 Days Trial</span>
-              </a>
+              
             </div>
           </div>
           <div className="col-lg-6 offset-lg-1">

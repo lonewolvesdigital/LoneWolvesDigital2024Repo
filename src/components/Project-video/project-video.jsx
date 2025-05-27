@@ -25,7 +25,7 @@ const ProjectVideo = ({ projectVideoDate }) => {
                 onClose={() => setOpen(false)}
               />
             )}
-            <a
+            
               className="vid"
               onClick={(e) => {
                 e.preventDefault();
@@ -37,7 +37,7 @@ const ProjectVideo = ({ projectVideoDate }) => {
                   <i className="fas fa-play"></i>
                 </span>
               </div>
-            </a>
+            
           </div>
         </div>
       </div>

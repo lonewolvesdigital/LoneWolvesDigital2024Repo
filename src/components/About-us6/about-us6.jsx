@@ -40,9 +40,9 @@ const AboutUs6 = () => {
                 <Link
                   href={`/about/about-dark`}
                 >
-                  <a className="butn bord mt-30">
+                   className="butn bord mt-30">
                     <span>About Us</span>
-                  </a>
+                  
                 </Link>
               </div>
             </div>

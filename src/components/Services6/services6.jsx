@@ -16,7 +16,7 @@ const Services6 = () => {
             Clarity is key so, show us where you want to take your project and we will show you how to get there.
             </p>
             <Link href="/lonewolvesdigital/process-dark">
-              <a className="custom-font more main-color">Read More</a>
+               className="custom-font more main-color">Read More
             </Link>
           </div>
 
@@ -30,7 +30,7 @@ const Services6 = () => {
             Like a chef preparing the ingredients for a five star meal, I prepare the components  for your new world class website.
             </p>
             <Link href="/lonewolvesdigital/process-dark">
-              <a className="custom-font more main-color">Read More</a>
+               className="custom-font more main-color">Read More
             </Link>
           </div>
 
@@ -44,7 +44,7 @@ const Services6 = () => {
             Once you know the purpose of your request and it&apos;s components, this can only mean it&apos;s time to plan the construction.
             </p>
             <Link href="/lonewolvesdigital/process-dark">
-              <a className="custom-font more main-color">Read More</a>
+               className="custom-font more main-color">Read More
             </Link>
           </div>
 
@@ -58,7 +58,7 @@ const Services6 = () => {
             It&apos;s magic time, we will make sure that no matter the task we will ensure that the images, video, text and animation are the correct combination, just for you. 
             </p>
             <Link href="/lonewolvesdigital/process-dark">
-              <a className="custom-font more main-color">Read More</a>
+               className="custom-font more main-color">Read More
             </Link>
           </div>
         </div>
@@ -74,7 +74,7 @@ const Services6 = () => {
             We give you what you asked for, and you will find it delivered right in your inbox, either by a link or the actual file!
             </p>
             <Link href="/lonewolvesdigital/process-dark">
-              <a className="custom-font more main-color">Read More</a>
+               className="custom-font more main-color">Read More
             </Link>
           </div>
           <div
@@ -87,7 +87,7 @@ const Services6 = () => {
             Some projects are bigger than other, that&apos;s why we stay with you for the long run. Feel free to come back for some TLC if needed.
             </p>
             <Link href="/lonewolvesdigital/process-dark">
-              <a className="custom-font more main-color">Read More</a>
+               className="custom-font more main-color">Read More
             </Link>
           </div>
           {/* <div
@@ -100,7 +100,7 @@ const Services6 = () => {
             5, 4, ,3 ,2 ,1 we got lift off. We are receiving live satellite images of a fully functional website. At this point its all systems go!
             </p>
             <Link href="/about/about-dark">
-              <a className="custom-font more main-color">Read More</a>
+               className="custom-font more main-color">Read More
             </Link>
           </div>
           <div
@@ -113,7 +113,7 @@ const Services6 = () => {
             No the job is not yet complete, believe it all not, sites like people need a little TLC and a place to call home.
             </p>
             <Link href="/about/about-dark">
-              <a className="custom-font more main-color">Read More</a>
+               className="custom-font more main-color">Read More
             </Link>
           </div> */}
           

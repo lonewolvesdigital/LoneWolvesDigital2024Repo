@@ -40,34 +40,34 @@ const ShopSidebar = () => {
             <h6 className="title mb-30">Category</h6>
             <ul>
               <li>
-                <a href="#0">
+                 href="#0">
                   App Design <span>05</span>
-                </a>
+                
               </li>
               <li>
-                <a href="#0">
+                 href="#0">
                   Development <span>03</span>
-                </a>
+                
               </li>
               <li>
-                <a href="#0">
+                 href="#0">
                   Web Design <span>07</span>
-                </a>
+                
               </li>
               <li>
-                <a href="#0">
+                 href="#0">
                   Dashboard <span>04</span>
-                </a>
+                
               </li>
               <li>
-                <a href="#0">
+                 href="#0">
                   Logo Design <span>09</span>
-                </a>
+                
               </li>
               <li>
-                <a href="#0">
+                 href="#0">
                   Branding <span>14</span>
-                </a>
+                
               </li>
             </ul>
           </div>
@@ -97,12 +97,12 @@ const ShopSidebar = () => {
             <h6 className="title mb-30">Popular Tags</h6>
 
             <div>
-              <a href="#0">Apps</a>
-              <a href="#0">Design</a>
-              <a href="#0">Branding</a>
-              <a href="#0">Software</a>
-              <a href="#0">Development</a>
-              <a href="#0">Web</a>
+               href="#0">Apps
+               href="#0">Design
+               href="#0">Branding
+               href="#0">Software
+               href="#0">Development
+               href="#0">Web
             </div>
           </div>
         </div>

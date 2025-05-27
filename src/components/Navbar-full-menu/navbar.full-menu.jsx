@@ -16,7 +16,7 @@ const NavbarFullMenu = ({ theme }) => {
       >
         <div className="container-fluid">
           <div className="logo">
-            <a href="#0">
+             href="#0">
               {theme ? (
                 theme === "light" ? (
                   <img src={appData.darkLogo} alt="logo" />
@@ -26,7 +26,7 @@ const NavbarFullMenu = ({ theme }) => {
               ) : (
                 <img src={appData.lightLogo} alt="logo" />
               )}
-            </a>
+            
           </div>
           <div className="menu-icon">
             <span className="icon">
@@ -263,7 +263,7 @@ const NavbarFullMenu = ({ theme }) => {
                 <div className="item">
                   <h6>Email :</h6>
                   <p>
-                    <a href="#0">Vie_website@gmail.com</a>
+                     href="#0">Vie_website@gmail.com
                   </p>
                 </div>
               </div>

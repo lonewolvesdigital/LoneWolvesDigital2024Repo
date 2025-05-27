@@ -28,9 +28,9 @@ const Blogs3 = () => {
                   </span>
                 </Link>
                 <div className="info">
-                  <a href="#0" className="author">
+                   href="#0" className="author">
                     <span>by / Admin</span>
-                  </a>
+                  
                   <Link href="/blog/blog-dark" className="tag">
                     <span>WordPress</span>
                   </Link>
@@ -60,9 +60,9 @@ const Blogs3 = () => {
                   </span>
                 </Link>
                 <div className="info">
-                  <a href="#0" className="author">
+                   href="#0" className="author">
                     <span>by / Admin</span>
-                  </a>
+                  
                   <Link href="/blog/blog-dark" className="tag">
                     <span>WordPress</span>
                   </Link>
@@ -92,9 +92,9 @@ const Blogs3 = () => {
                   </span>
                 </Link>
                 <div className="info">
-                  <a href="#0" className="author">
+                   href="#0" className="author">
                     <span>by / Admin</span>
-                  </a>
+                  
                   <Link href="/blog/blog-dark" className="tag">
                     <span>WordPress</span>
                   </Link>

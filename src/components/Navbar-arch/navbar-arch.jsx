@@ -10,7 +10,7 @@ const NavbarArch = ({ navbarRef, theme }) => {
   return (
     <nav className="navbar navbar-expand-lg" ref={navbarRef}>
       <div className="container">
-        <a className="logo" href="/">
+         className="logo" href="/">
           {theme ? (
             theme === "themeL" ? (
               <img src={appData.darkLogo} alt="logo" />
@@ -20,7 +20,7 @@ const NavbarArch = ({ navbarRef, theme }) => {
           ) : (
             <img src={appData.lightLogo} alt="logo" />
           )}
-        </a>
+        
 
         <button
           className="navbar-toggler"
@@ -48,54 +48,54 @@ const NavbarArch = ({ navbarRef, theme }) => {
                 Home
               </span>
               <div className="dropdown-menu">
-                <a
+                
                   className="dropdown-item"
                   href={`/homepage/home1-dark`}
                 >
                   Main Home
-                </a>
-                <a
+                
+                
                   className="dropdown-item"
                   href={`/homepage/home2-dark`}
                 >
                   Creative Agency
-                </a>
-                <a
+                
+                
                   className="dropdown-item"
                   href={`/homepage/home5-dark`}
                 >
                   Digital Agency
-                </a>
-                <a
+                
+                
                   className="dropdown-item"
                   href={`/homepage/home4-dark`}
                 >
                   Business One Page
-                </a>
-                <a
+                
+                
                   className="dropdown-item"
                   href={`/homepage/home3-dark`}
                 >
                   Corporate Business
-                </a>
-                <a
+                
+                
                   className="dropdown-item"
                   href={`/homepage/home6-dark`}
                 >
                   Modern Agency
-                </a>
-                <a
+                
+                
                   className="dropdown-item"
                   href={`/homepage/home7-dark`}
                 >
                   Freelancer
-                </a>
-                <a
+                
+                
                   className="dropdown-item"
                   href={`/homepage/home8-dark`}
                 >
                   Architecture
-                </a>
+                
               </div>
             </li>
 

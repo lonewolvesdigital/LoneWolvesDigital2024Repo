@@ -30,7 +30,7 @@ const Blogs2 = () => {
                   <div className="cont">
                     <div className="full-width">
                       <div className="tag">
-                        <a href="#0">Design & Arts</a>
+                         href="#0">Design & Arts
                       </div>
                       <div className="title">
                         <h5>
@@ -39,18 +39,18 @@ const Blogs2 = () => {
                         </h5>
                       </div>
                       <div className="info">
-                        <a href="#0">
+                         href="#0">
                           <span>Post By :</span>
                           Lisa A. Cowles
-                        </a>
-                        <a href="#0">
+                        
+                         href="#0">
                           <span>Comments :</span>
                           (05)
-                        </a>
+                        
                       </div>
-                      <a href="#0" className="butn-bord-red rounded buton">
+                       href="#0" className="butn-bord-red rounded buton">
                         <span>Read More</span>
-                      </a>
+                      
                     </div>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ const Blogs2 = () => {
                   <div className="cont">
                     <div className="full-width">
                       <div className="tag">
-                        <a href="#0">Design & Arts</a>
+                         href="#0">Design & Arts
                       </div>
                       <div className="title">
                         <h5>
@@ -78,18 +78,18 @@ const Blogs2 = () => {
                         </h5>
                       </div>
                       <div className="info">
-                        <a href="#0">
+                         href="#0">
                           <span>Post By :</span>
                           Lisa A. Cowles
-                        </a>
-                        <a href="#0">
+                        
+                         href="#0">
                           <span>Comments :</span>
                           (05)
-                        </a>
+                        
                       </div>
-                      <a href="#0" className="butn-bord-red rounded buton">
+                       href="#0" className="butn-bord-red rounded buton">
                         <span>Read More</span>
-                      </a>
+                      
                     </div>
                   </div>
                 </div>

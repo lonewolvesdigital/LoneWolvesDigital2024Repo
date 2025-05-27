@@ -34,9 +34,9 @@ const ShopStore = () => {
               <Image src="/img/mobile-app/shop/1.jpg" alt="" layout='fill'/>
               <span className="tag">Apps</span>
               <div className="add">
-                <a href="#0">
+                 href="#0">
                   Add To Cart <span className="pe-7s-angle-right"></span>
-                </a>
+                
               </div>
             </div>
             <div className="info">
@@ -51,9 +51,9 @@ const ShopStore = () => {
               <Image src="/img/mobile-app/shop/2.jpg" alt="" layout='fill'/>
               <span className="tag">Apps</span>
               <div className="add">
-                <a href="#0">
+                 href="#0">
                   Add To Cart <span className="pe-7s-angle-right"></span>
-                </a>
+                
               </div>
             </div>
             <div className="info">
@@ -68,9 +68,9 @@ const ShopStore = () => {
               <Image src="/img/mobile-app/shop/3.jpg" alt="" layout='fill'/>
               <span className="tag">Apps</span>
               <div className="add">
-                <a href="#0">
+                 href="#0">
                   Add To Cart <span className="pe-7s-angle-right"></span>
-                </a>
+                
               </div>
             </div>
             <div className="info">
@@ -85,9 +85,9 @@ const ShopStore = () => {
               <Image src="/img/mobile-app/shop/4.jpg" alt="" layout='fill'/>
               <span className="tag">Apps</span>
               <div className="add">
-                <a href="#0">
+                 href="#0">
                   Add To Cart <span className="pe-7s-angle-right"></span>
-                </a>
+                
               </div>
             </div>
             <div className="info">
@@ -102,9 +102,9 @@ const ShopStore = () => {
               <Image src="/img/mobile-app/shop/5.jpg" alt="" layout='fill'/>
               <span className="tag">Apps</span>
               <div className="add">
-                <a href="#0">
+                 href="#0">
                   Add To Cart <span className="pe-7s-angle-right"></span>
-                </a>
+                
               </div>
             </div>
             <div className="info">
@@ -119,9 +119,9 @@ const ShopStore = () => {
               <Image src="/img/mobile-app/shop/6.jpg" alt="" layout='fill'/>
               <span className="tag">Apps</span>
               <div className="add">
-                <a href="#0">
+                 href="#0">
                   Add To Cart <span className="pe-7s-angle-right"></span>
-                </a>
+                
               </div>
             </div>
             <div className="info">
@@ -136,9 +136,9 @@ const ShopStore = () => {
               <Image src="/img/mobile-app/shop/7.jpg" alt="" layout='fill'/>
               <span className="tag">Apps</span>
               <div className="add">
-                <a href="#0">
+                 href="#0">
                   Add To Cart <span className="pe-7s-angle-right"></span>
-                </a>
+                
               </div>
             </div>
             <div className="info">
@@ -153,9 +153,9 @@ const ShopStore = () => {
               <Image src="/img/mobile-app/shop/8.jpg" alt="" layout='fill'/>
               <span className="tag">Apps</span>
               <div className="add">
-                <a href="#0">
+                 href="#0">
                   Add To Cart <span className="pe-7s-angle-right"></span>
-                </a>
+                
               </div>
             </div>
             <div className="info">
@@ -170,9 +170,9 @@ const ShopStore = () => {
               <Image src="/img/mobile-app/shop/9.jpg" alt="" layout='fill'/>
               <span className="tag">Apps</span>
               <div className="add">
-                <a href="#0">
+                 href="#0">
                   Add To Cart <span className="pe-7s-angle-right"></span>
-                </a>
+                
               </div>
             </div>
             <div className="info">

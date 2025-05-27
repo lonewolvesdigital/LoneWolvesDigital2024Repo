@@ -56,12 +56,12 @@ const MinimalArea2 = () => {
                 </li>
               </ul>
               <Link href={`/t&c-list/t&c-list-dark`}>
-                <a
+                
                   className="butn bord curve mt-40 wow fadeInUp"
                   data-wow-delay=".8s"
                 >
                   <span>T&C</span>
-                </a>
+                
               </Link>
               <br />
             </div>

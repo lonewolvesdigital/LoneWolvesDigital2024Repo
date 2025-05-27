@@ -51,7 +51,7 @@ const ContactForm = () => {
               </h3>
               <div className="item mb-40">
                 <h5>
-                  <a href="#0">{ContactFromDate.email}</a>
+                   href="#0">{ContactFromDate.email}
                 </h5>
                 <h5>{ContactFromDate.phone}</h5>
               </div>
@@ -66,25 +66,25 @@ const ContactForm = () => {
                 </h6>
               </div>
               <div className="social mt-50">
-                <a href="https://www.facebook.com/lonewolvesdigital" className="icon">
+                 href="https://www.facebook.com/lonewolvesdigital" className="icon">
                   <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/lonewolvesdigital/" className="icon">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="https://twitter.com/LoneWolvesDigit">
-                <i className="fab fa-twitter"></i>
-               </a>
                 
-                <a href="https://www.linkedin.com/company/lone-wolves-digital/" className="icon">
+                 href="https://www.instagram.com/lonewolvesdigital/" className="icon">
+                  <i className="fab fa-instagram"></i>
+                
+                 href="https://twitter.com/LoneWolvesDigit">
+                <i className="fab fa-twitter"></i>
+               
+                
+                 href="https://www.linkedin.com/company/lone-wolves-digital/" className="icon">
                   <i className="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.youtube.com/@LoneWolvesDigital">
+                
+                 href="https://www.youtube.com/@LoneWolvesDigital">
                   <i className="fab fa-youtube"></i>
-                </a>
-                <a href="https://github.com/lonewolvesdigital" className="icon">
+                
+                 href="https://github.com/lonewolvesdigital" className="icon">
                   <i className="fab fa-github"></i>
-                </a>
+                
               </div>
             </div>
           </div>

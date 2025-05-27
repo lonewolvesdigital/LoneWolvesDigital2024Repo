@@ -62,9 +62,9 @@ const BlogStanderd = ({ blogs }) => {
                 </span>
                 <span>
                   <Link href={`/blog/blog-dark`}>
-                    <a>
+                    
                       <i className="fas fa-angle-right"></i>
-                    </a>
+                    
                   </Link>
                 </span>
               </div> */}

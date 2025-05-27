@@ -40,7 +40,7 @@ const WorksStyle3 = () => {
               <div className="cont flex">
                 <h6 className="color-font">Creative Design</h6>
                 <span>
-                  <a href="#0">Graphic</a>
+                   href="#0">Graphic
                 </span>
               </div>
             </div>
@@ -58,7 +58,7 @@ const WorksStyle3 = () => {
               <div className="cont flex">
                 <h6 className="color-font">Modern Design</h6>
                 <span>
-                  <a href="#0">Brand</a>, <a href="#0">Web</a>
+                   href="#0">Brand,  href="#0">Web
                 </span>
               </div>
             </div>
@@ -79,7 +79,7 @@ const WorksStyle3 = () => {
               <div className="cont">
                 <h6 className="color-font">Creative Design</h6>
                 <span>
-                  <a href="#0">Website</a>
+                   href="#0">Website
                 </span>
               </div>
             </div>
@@ -100,7 +100,7 @@ const WorksStyle3 = () => {
               <div className="cont">
                 <h6 className="color-font">Modern Design</h6>
                 <span>
-                  <a href="#0">Graphic</a>
+                   href="#0">Graphic
                 </span>
               </div>
             </div>

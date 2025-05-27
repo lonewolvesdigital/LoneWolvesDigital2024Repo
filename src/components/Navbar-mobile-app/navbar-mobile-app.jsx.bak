@@ -13,7 +13,7 @@ const NavbarMobileApp = ({ lr, nr, theme }) => {
       }`}
     >
       <div className="container">
-        <Link href="/" legacyBehavior>
+        <Link href="/">
            className="logo">
             {theme ? (
               theme === "themeL" ? (

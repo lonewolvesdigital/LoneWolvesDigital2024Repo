@@ -33,9 +33,9 @@ const pricepackages2 = () => {
                   </h6>
                 </div>
                 <div className="order mb-40">
-                  <a href="https://forms.gle/JNpvsvCG1yaVxuLAA" className="butn-gray rounded buton">
+                   href="https://forms.gle/JNpvsvCG1yaVxuLAA" className="butn-gray rounded buton">
                     <span>SELECT</span>
-                  </a>
+                  
                 </div>
                 <div className="feat">
                   <ul>
@@ -239,9 +239,9 @@ const pricepackages2 = () => {
                     <br/>
                     <br/>
                     <div className="order mb-40">
-                  <a href="https://form.jotform.com/230592802711552" className="butn-gr rounded buton">
+                   href="https://form.jotform.com/230592802711552" className="butn-gr rounded buton">
                     <span>START NOW!</span>
-                  </a>
+                  
                 </div>
                     </ul>
                 </div>
@@ -262,9 +262,9 @@ const pricepackages2 = () => {
                   </h6>
                 </div>
                 <div className="order mb-40">
-                  <a href="https://forms.gle/JNpvsvCG1yaVxuLAA" className="butn-gray rounded buton">
+                   href="https://forms.gle/JNpvsvCG1yaVxuLAA" className="butn-gray rounded buton">
                     <span>SELECT</span>
-                  </a>
+                  
                 </div>
                 <div className="feat">
                   <ul>

@@ -21,7 +21,7 @@ const Video2 = () => {
           onClose={() => setOpen(false)}
         />
       )}
-      <a
+      
         className="vid valign"
         onClick={(e) => {
           e.preventDefault();
@@ -33,7 +33,7 @@ const Video2 = () => {
             <i className="pe-7s-play"></i>
           </span>
         </div>
-      </a>
+      
       <div className="container">
         <div className="stauts">
           <div className="item">

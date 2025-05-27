@@ -46,7 +46,7 @@ const About = () => {
       </div>
       <Navbar nr={navbarRef} lr={logoRef} from="about-dark" />
       <PagesHeader />
-      <AboutIntro />
+      boutIntro />
       {/* <Services3/> */}
       <Services6 />
       <Services style="4item" />

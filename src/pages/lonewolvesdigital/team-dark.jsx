@@ -41,10 +41,10 @@ const Homepage = () => {
       </div>
       <Navbar nr={navbarRef} lr={logoRef} />
       <FreelancreIntro />
-      <AboutCaleb/>
+      boutCaleb/>
       {/* <WorksStyle4 /> */}
-      <AboutUs5 />
-      <AboutCaleb2/>
+      boutUs5 />
+      boutCaleb2/>
       <FullTestimonials showHead />
       <Blogs2 />
       <SContactForm noLine />

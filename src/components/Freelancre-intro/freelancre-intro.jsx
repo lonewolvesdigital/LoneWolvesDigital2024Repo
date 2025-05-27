@@ -73,7 +73,7 @@ const FreelancreIntro = () => {
               </li>
 
               <li className="mail-us">
-                <a href="mailto:calebmutombo@lonewolvesdigital.com?subject= New demmand!">
+                 href="mailto:calebmutombo@lonewolvesdigital.com?subject= New demmand!">
                   <div className="flex">
                     <div className="text valign">
                       <div className="full-width">
@@ -87,7 +87,7 @@ const FreelancreIntro = () => {
                       </div>
                     </div>
                   </div>
-                </a>
+                
               </li>
             </ul>
           </div>

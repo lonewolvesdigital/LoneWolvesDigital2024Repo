@@ -90,10 +90,10 @@ const IntroWithSlider = ({ sliderRef }) => {
                         <div className="caption center mt-30">
                           <h1 className="color-font">{slide.title}</h1>
                           {slide?.content && <p>{slide.content}</p>}
-                          <Link href="/about/about-dark">
-                            <a className="butn bord curve mt-30">
+                          <Link href="/about/about-dark" legacyBehavior>
+                             className="butn bord curve mt-30">
                               <span>Learn More?</span>
-                            </a>
+                            
                           </Link>
                         </div>
                       </div>
@@ -121,24 +121,24 @@ const IntroWithSlider = ({ sliderRef }) => {
         <div ref={paginationRef} className="swiper-pagination top botm"></div>
 
         <div className="social-icon">
-          <a href="https://www.facebook.com/lonewolvesdigital">
+           href="https://www.facebook.com/lonewolvesdigital">
             <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://twitter.com/LoneWolvesDigit">
+          
+           href="https://twitter.com/LoneWolvesDigit">
             <i className="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.instagram.com/lonewolvesdigital/">
+          
+           href="https://www.instagram.com/lonewolvesdigital/">
             <i className="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/lone-wolves-digital/">
+          
+           href="https://www.linkedin.com/company/lone-wolves-digital/">
             <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="https://www.youtube.com/@LoneWolvesDigital">
+          
+           href="https://www.youtube.com/@LoneWolvesDigital">
                   <i className="fab fa-youtube"></i>
-                </a>
-                <a href="https://github.com/lonewolvesdigital" className="icon">
+                
+                 href="https://github.com/lonewolvesdigital" className="icon">
                   <i className="fab fa-github"></i>
-                </a>
+                
         </div>
       </div>
     </header>

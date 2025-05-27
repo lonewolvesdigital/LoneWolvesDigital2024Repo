@@ -42,7 +42,7 @@ const VideoWithTestimonials = () => {
                       onClose={() => setOpen(false)}
                     />
                   )}
-                  <a
+                  
                     className="vid"
                     onClick={(e) => {
                       e.preventDefault();
@@ -54,7 +54,7 @@ const VideoWithTestimonials = () => {
                         <i className="fas fa-play testim-box background play"></i>
                       </span>
                     </div>
-                  </a>
+                  
                 </div>
               </div>
             </div>
