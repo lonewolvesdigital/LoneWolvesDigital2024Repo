@@ -18,7 +18,9 @@ const Clients3 = () => {
                       src="/img/mobile-app/shapes/border.png"
                       alt=""
                       className="bord-gr"
-                      layout='fill'
+                      width={100}
+                      height={10}
+                      style={{ objectFit: 'contain' }}
                     />
                   </span>
                   Global Partners
@@ -34,19 +36,22 @@ const Clients3 = () => {
           <div className="col-lg col-sm-3">
             <div className="item">
               <div className="img">
-                 href="#0">
-                  <Image
-                    src="/img/mobile-app/brands/l1.png"
-                    alt=""
-                    className="front"
-                    layout='fill'
-                  />
-                  <Image
-                    src="/img/mobile-app/brands/l1.png"
-                    alt=""
-                    className="back"
-                    layout='fill'
-                  />
+                <Image
+                  src="/img/mobile-app/brands/l1.png"
+                  alt=""
+                  className="front"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
+                <Image
+                  src="/img/mobile-app/brands/l1.png"
+                  alt=""
+                  className="back"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
                 
               </div>
             </div>
@@ -54,19 +59,22 @@ const Clients3 = () => {
           <div className="col-lg col-sm-3">
             <div className="item">
               <div className="img">
-                 href="#0">
-                  <Image
-                    src="/img/mobile-app/brands/l2.png"
-                    alt=""
-                    className="front"
-                    layout='fill'
-                  />
-                  <Image
-                    src="/img/mobile-app/brands/l2.png"
-                    alt=""
-                    className="back"
-                    layout='fill'
-                  />
+                <Image
+                  src="/img/mobile-app/brands/l2.png"
+                  alt=""
+                  className="front"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
+                <Image
+                  src="/img/mobile-app/brands/l2.png"
+                  alt=""
+                  className="back"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
                 
               </div>
             </div>
@@ -74,18 +82,22 @@ const Clients3 = () => {
           <div className="col-lg col-sm-3">
             <div className="item">
               <div className="img">
-                 href="#0">
-                  <Image 
-                    src="/img/mobile-app/brands/l3.png"
-                    alt=""
-                    className="front"
-                    layout='fill'
-                  />
-                  <Image
-                    src="/img/mobile-app/brands/l3.png"
-                    alt=""
-                    className="back"
-                  />
+                <Image 
+                  src="/img/mobile-app/brands/l3.png"
+                  alt=""
+                  className="front"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
+                <Image
+                  src="/img/mobile-app/brands/l3.png"
+                  alt=""
+                  className="back"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
                 
               </div>
             </div>
@@ -93,19 +105,22 @@ const Clients3 = () => {
           <div className="col-lg col-sm-3">
             <div className="item">
               <div className="img">
-                 href="#0">
-                  <Image
-                    src="/img/mobile-app/brands/l4.png"
-                    alt=""
-                    className="front"
-                    layout='fill'
-                  />
-                  <Image
-                    src="/img/mobile-app/brands/l4.png"
-                    alt=""
-                    className="back"
-                    layout='fill'
-                  />
+                <Image
+                  src="/img/mobile-app/brands/l4.png"
+                  alt=""
+                  className="front"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
+                <Image
+                  src="/img/mobile-app/brands/l4.png"
+                  alt=""
+                  className="back"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
                 
               </div>
             </div>
@@ -113,19 +128,22 @@ const Clients3 = () => {
           <div className="col-lg lg-hide">
             <div className="item">
               <div className="img">
-                 href="#0">
-                  <Image
-                    src="/img/mobile-app/brands/l5.png"
-                    alt=""
-                    className="front"
-                    layout='fill'
-                  />
-                  <Image
-                    src="/img/mobile-app/brands/l5.png"
-                    alt=""
-                    className="back"
-                    layout='fill'
-                  />
+                <Image
+                  src="/img/mobile-app/brands/l5.png"
+                  alt=""
+                  className="front"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
+                <Image
+                  src="/img/mobile-app/brands/l5.png"
+                  alt=""
+                  className="back"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
                 
               </div>
             </div>
@@ -135,19 +153,22 @@ const Clients3 = () => {
           <div className="col-lg">
             <div className="item">
               <div className="img">
-                 href="#0">
-                  <Image
-                    src="/img/mobile-app/brands/l5.png"
-                    alt=""
-                    className="front"
-                    layout='fill'
-                  />
-                  <Image
-                    src="/img/mobile-app/brands/l5.png"
-                    alt=""
-                    className="back"
-                    layout='fill'
-                  />
+                <Image
+                  src="/img/mobile-app/brands/l5.png"
+                  alt=""
+                  className="front"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
+                <Image
+                  src="/img/mobile-app/brands/l5.png"
+                  alt=""
+                  className="back"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
                 
               </div>
             </div>
@@ -155,19 +176,22 @@ const Clients3 = () => {
           <div className="col-lg">
             <div className="item">
               <div className="img">
-                 href="#0">
-                  <Image
-                    src="/img/mobile-app/brands/l4.png"
-                    alt=""
-                    className="front"
-                    layout='fill'
-                  />
-                  <Image
-                    src="/img/mobile-app/brands/l4.png"
-                    alt=""
-                    className="back"
-                    layout='fill'
-                  />
+                <Image
+                  src="/img/mobile-app/brands/l4.png"
+                  alt=""
+                  className="front"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
+                <Image
+                  src="/img/mobile-app/brands/l4.png"
+                  alt=""
+                  className="back"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
                 
               </div>
             </div>
@@ -175,19 +199,22 @@ const Clients3 = () => {
           <div className="col-lg">
             <div className="item">
               <div className="img">
-                 href="#0">
-                  <Image
-                    src="/img/mobile-app/brands/l3.png"
-                    alt=""
-                    className="front"
-                    layout='fill'
-                  />
-                  <Image
-                    src="/img/mobile-app/brands/l3.png"
-                    alt=""
-                    className="back"
-                    layout='fill'
-                  />
+                <Image
+                  src="/img/mobile-app/brands/l3.png"
+                  alt=""
+                  className="front"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
+                <Image
+                  src="/img/mobile-app/brands/l3.png"
+                  alt=""
+                  className="back"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
                 
               </div>
             </div>
@@ -195,19 +222,22 @@ const Clients3 = () => {
           <div className="col-lg">
             <div className="item">
               <div className="img">
-                 href="#0">
-                  <Image
-                    src="/img/mobile-app/brands/l2.png"
-                    alt=""
-                    className="front"
-                    layout='fill'
-                  />
-                  <Image
-                    src="/img/mobile-app/brands/l2.png"
-                    alt=""
-                    className="back"
-                    layout='fill'
-                  />
+                <Image
+                  src="/img/mobile-app/brands/l2.png"
+                  alt=""
+                  className="front"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
+                <Image
+                  src="/img/mobile-app/brands/l2.png"
+                  alt=""
+                  className="back"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
                 
               </div>
             </div>
@@ -215,19 +245,22 @@ const Clients3 = () => {
           <div className="col-lg">
             <div className="item">
               <div className="img">
-                 href="#0">
-                  <Image
-                    src="/img/mobile-app/brands/l1.png"
-                    alt=""
-                    className="front"
-                    layout='fill'
-                  />
-                  <Image
-                    src="/img/mobile-app/brands/l1.png"
-                    alt=""
-                    className="back"
-                    layout='fill'
-                  />
+                <Image
+                  src="/img/mobile-app/brands/l1.png"
+                  alt=""
+                  className="front"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
+                <Image
+                  src="/img/mobile-app/brands/l1.png"
+                  alt=""
+                  className="back"
+                  width={150}
+                  height={50}
+                  style={{ objectFit: 'contain' }}
+                />
                 
               </div>
             </div>

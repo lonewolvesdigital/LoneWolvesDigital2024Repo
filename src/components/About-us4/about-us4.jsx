@@ -32,7 +32,7 @@ const AboutUs4 = () => {
                 )}
                 <div className="vid-area">
                   <div className="vid-icon">
-                    
+                    <a
                       className="vid"
                       href="https://vimeo.com/127203262"
                       onClick={(e) => {
@@ -45,7 +45,7 @@ const AboutUs4 = () => {
                           <i className="fas fa-play"></i>
                         </span>
                       </div>
-                    
+                    </a>
                   </div>
                   <div className="valign">
                     <span className="text">Watch Video</span>

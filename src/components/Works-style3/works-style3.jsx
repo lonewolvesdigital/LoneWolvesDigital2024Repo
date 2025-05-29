@@ -33,14 +33,24 @@ const WorksStyle3 = () => {
                   href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
                   className="imago wow"
                 >
-                  <Image src="/img/catalog/cr/1.jpg" alt="image" layout='fill'/>
-                  <div className="item-img-overlay"></div>
+                  <div>
+                    <Image 
+                      src="/img/catalog/cr/1.jpg" 
+                      alt="image" 
+                      width={800}
+                      height={600}
+                      style={{ objectFit: 'cover' }}
+                    />
+                    <div className="item-img-overlay"></div>
+                  </div>
                 </Link>
               </div>
               <div className="cont flex">
                 <h6 className="color-font">Creative Design</h6>
                 <span>
-                   href="#0">Graphic
+                  <Link href="#0">
+                    <span>Graphic</span>
+                  </Link>
                 </span>
               </div>
             </div>
@@ -51,14 +61,22 @@ const WorksStyle3 = () => {
                   href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
                   className="imago wow"
                 >
-                  <Image src="/img/catalog/cr/2.jpg" alt="image" layout='fill'/>
-                  <div className="item-img-overlay"></div>
+                  <div>
+                    <Image src="/img/catalog/cr/2.jpg" alt="image" width={800} height={600} style={{ objectFit: 'cover' }}/>
+                    <div className="item-img-overlay"></div>
+                  </div>
                 </Link>
               </div>
               <div className="cont flex">
                 <h6 className="color-font">Modern Design</h6>
                 <span>
-                   href="#0">Brand,  href="#0">Web
+                  <Link href="#0">
+                    <span>Brand</span>
+                  </Link>
+                  ,&nbsp;
+                  <Link href="#0">
+                    <span>Web</span>
+                  </Link>
                 </span>
               </div>
             </div>
@@ -72,14 +90,24 @@ const WorksStyle3 = () => {
                   href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
                   className="imago wow"
                 >
-                  <Image src="/img/catalog/cr/3.jpg" alt="image" layout='fill'/>
-                  <div className="item-img-overlay"></div>
+                  <div>
+                    <Image 
+                      src="/img/catalog/cr/3.jpg" 
+                      alt="image"
+                      width={800}
+                      height={600}
+                      style={{ objectFit: 'cover' }}
+                    />
+                    <div className="item-img-overlay"></div>
+                  </div>
                 </Link>
               </div>
               <div className="cont">
                 <h6 className="color-font">Creative Design</h6>
                 <span>
-                   href="#0">Website
+                  <Link href="#0">
+                    <span>Website</span>
+                  </Link>
                 </span>
               </div>
             </div>
@@ -93,14 +121,24 @@ const WorksStyle3 = () => {
                   href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}
                   className="imago wow"
                 >
-                  <Image src="/img/catalog/cr/4.jpg" alt="image" layout='fill'/>
-                  <div className="item-img-overlay"></div>
+                  <div>
+                    <Image 
+                      src="/img/catalog/cr/4.jpg" 
+                      alt="image"
+                      width={800}
+                      height={600}
+                      style={{ objectFit: 'cover' }}
+                    />
+                    <div className="item-img-overlay"></div>
+                  </div>
                 </Link>
               </div>
               <div className="cont">
                 <h6 className="color-font">Modern Design</h6>
                 <span>
-                   href="#0">Graphic
+                  <Link href="#0">
+                    <span>Graphic</span>
+                  </Link>
                 </span>
               </div>
             </div>

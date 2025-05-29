@@ -44,10 +44,10 @@ const WorksStyle5 = () => {
             >
               <div className="item-img">
                 <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
-                   className="imago wow">
-                    <Image src="/img/arch/work/1.jpg" alt="image" layout='fill'/>
+                  <div className="imago wow">
+                    <Image src="/img/arch/work/1.jpg" alt="image" width={800} height={600} style={{ objectFit: 'cover' }} />
                     <div className="item-img-overlay"></div>
-                  
+                  </div>
                 </Link>
               </div>
               <div className="cont">
@@ -65,10 +65,10 @@ const WorksStyle5 = () => {
             >
               <div className="item-img">
                 <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
-                   className="imago wow">
-                    <Image src="/img/arch/work/2.jpg" alt="image" layout='fill'/>
+                  <div className="imago wow">
+                    <Image src="/img/arch/work/2.jpg" alt="image" width={800} height={600} style={{ objectFit: 'cover' }} />
                     <div className="item-img-overlay"></div>
-                  
+                  </div>
                 </Link>
               </div>
               <div className="cont">
@@ -86,10 +86,10 @@ const WorksStyle5 = () => {
             >
               <div className="item-img">
                 <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
-                   className="imago wow">
-                    <Image src="/img/arch/work/5.jpg" alt="image" layout='fill'/>
+                  <div className="imago wow">
+                    <Image src="/img/arch/work/5.jpg" alt="image" width={800} height={600} style={{ objectFit: 'cover' }} />
                     <div className="item-img-overlay"></div>
-                  
+                  </div>
                 </Link>
               </div>
               <div className="cont">
@@ -107,10 +107,10 @@ const WorksStyle5 = () => {
             >
               <div className="item-img">
                 <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
-                   className="imago wow">
-                    <Image src="/img/arch/work/3.jpg" alt="image" layout='fill'/>
+                  <div className="imago wow">
+                    <Image src="/img/arch/work/3.jpg" alt="image" width={800} height={600} style={{ objectFit: 'cover' }} />
                     <div className="item-img-overlay"></div>
-                  
+                  </div>
                 </Link>
               </div>
               <div className="cont">
@@ -128,10 +128,10 @@ const WorksStyle5 = () => {
             >
               <div className="item-img">
                 <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
-                   className="imago wow">
-                    <Image src="/img/arch/work/4.jpg" alt="image" layout='fill'/>
+                  <div className="imago wow">
+                    <Image src="/img/arch/work/4.jpg" alt="image" width={800} height={600} style={{ objectFit: 'cover' }} />
                     <div className="item-img-overlay"></div>
-                  
+                  </div>
                 </Link>
               </div>
               <div className="cont">
@@ -149,10 +149,10 @@ const WorksStyle5 = () => {
             >
               <div className="item-img">
                 <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
-                   className="imago wow">
-                    <Image src="/img/arch/work/6.jpg" alt="image" layout='fill'/>
+                  <div className="imago wow">
+                    <Image src="/img/arch/work/6.jpg" alt="image" width={800} height={600} style={{ objectFit: 'cover' }} />
                     <div className="item-img-overlay"></div>
-                  
+                  </div>
                 </Link>
               </div>
               <div className="cont">

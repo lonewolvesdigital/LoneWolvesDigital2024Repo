@@ -16,7 +16,7 @@ const NavbarFullMenu = ({ theme }) => {
       >
         <div className="container-fluid">
           <div className="logo">
-             href="#0">
+             href="#0"
               {theme ? (
                 theme === "light" ? (
                   <img src={appData.darkLogo} alt="logo" />
@@ -241,7 +241,9 @@ const NavbarFullMenu = ({ theme }) => {
                   <li>
                     <div className="o-hidden">
                       <Link href={`/contact/contact-dark`} className="link">
-                        <span className="nm">05.</span>Contact
+                        <span>
+                          <span className="nm">05.</span>Contact
+                        </span>
                       </Link>
                     </div>
                   </li>
@@ -263,8 +265,22 @@ const NavbarFullMenu = ({ theme }) => {
                 <div className="item">
                   <h6>Email :</h6>
                   <p>
-                     href="#0">Vie_website@gmail.com
+                    <a href="mailto:Vie_website@gmail.com">Vie_website@gmail.com</a>
                   </p>
+                </div>
+                <div className="social">
+                  <a href="#0">
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#0">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                  <a href="#0">
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                  <a href="#0">
+                    <i className="fab fa-youtube"></i>
+                  </a>
                 </div>
               </div>
             </div>

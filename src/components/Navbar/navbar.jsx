@@ -1,13 +1,12 @@
-// eslint-disable @next/next/no-img-element
-import React from "react";
-import Image from 'next/image';
+import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import appData from "../../data/app.json";
-import { handleDropdown, handleMobileDropdown } from "../../common/navbar";
+import { handleMobileDropdown } from "../../common/navbar";
 import styles from "./navbar.module.css";
 
 const Navbar = ({ lr, nr, theme }) => {
-  const [searchQuery, setSearchQuery] = React.useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
@@ -16,10 +15,7 @@ const Navbar = ({ lr, nr, theme }) => {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // Implement search functionality here
       console.log("Searching for:", searchQuery);
-      // You can redirect to a search results page or filter content
-      // window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
     }
   };
 
@@ -31,16 +27,24 @@ const Navbar = ({ lr, nr, theme }) => {
       }`}
     >
       <div className="container">
-        <Link href="/" className="logo">
-          {theme ? (
-            theme === "themeL" ? (
-              <Image ref={lr} src={appData.darkLogo} alt="logo" layout="responsive" width={100} height={100} />
+        <Link href="/">
+          <a ref={lr} className="logo">
+            {theme === "themeL" ? (
+              <Image
+                src={appData.darkLogo}
+                alt="logo"
+                width={100}
+                height={100}
+              />
             ) : (
-              <Image ref={lr} src={appData.lightLogo} alt="logo" layout="responsive" width={100} height={100} />
-            )
-          ) : (
-            <Image ref={lr} src={appData.lightLogo} alt="logo" layout="responsive" width={100} height={100} />
-          )}
+              <Image
+                src={appData.lightLogo}
+                alt="logo"
+                width={100}
+                height={100}
+              />
+            )}
+          </a>
         </Link>
 
         <button
@@ -75,32 +79,28 @@ const Navbar = ({ lr, nr, theme }) => {
           </div>
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link href="/lonewolvesdigital/home-dark" className="nav-link">
-                Home
+              <Link href="/lonewolvesdigital/home-dark">
+                <a className="nav-link">Home</a>
               </Link>
             </li>
-
             <li className="nav-item">
-              <Link href="/catalog/catalog-dark" className="nav-link">
-                Catalog
+              <Link href="/catalog/catalog-dark">
+                <a className="nav-link">Catalog</a>
               </Link>
             </li>
-
             <li className="nav-item">
-              <Link href="/about/about-dark" className="nav-link">
-                About
+              <Link href="/about/about-dark">
+                <a className="nav-link">About</a>
               </Link>
             </li>
-
             <li className="nav-item">
-              <Link href="/contact/contact-dark" className="nav-link">
-                Contact
+              <Link href="/contact/contact-dark">
+                <a className="nav-link">Contact</a>
               </Link>
             </li>
-
             <li className="nav-item">
-              <Link href="/price/price-details-dark" className="nav-link">
-                Quotes
+              <Link href="/price/price-details-dark">
+                <a className="nav-link">Quotes</a>
               </Link>
             </li>
           </ul>

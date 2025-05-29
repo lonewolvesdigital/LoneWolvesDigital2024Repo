@@ -57,7 +57,7 @@ const Homepage1 = () => {
       <br/>
       <br/>
       <VideoWithTestimonials />
-        boutUs />
+        <AboutUs />
         <NewProductCarousel />
         <Numbers />
         <Works />

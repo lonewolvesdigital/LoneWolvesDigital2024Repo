@@ -53,7 +53,7 @@ const Clients = ({theme}) => {
                             // href="#0"
                             className="link words chars splitting"
                             data-splitting
-                          >
+                          
                             {item.url}
                           
                         </Split>
@@ -104,7 +104,7 @@ const Clients = ({theme}) => {
                             // href="#0"
                             className="link words chars splitting"
                             data-splitting
-                          >
+                        
                             {item.url}
                           
                         </Split>

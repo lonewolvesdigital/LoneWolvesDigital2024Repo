@@ -15,15 +15,15 @@ const AboutUs2 = () => {
               <div className="row">
                 <div className="col-md-5 cmd-padding valign">
                   <div className="img1 wow imago" data-wow-delay=".5s">
-                    <Image src={AboutUs2Date.image1} alt="" layout='fill' />
+                    <Image src={AboutUs2Date.image1} alt="" width={300} height={400} style={{ objectFit: 'cover' }} />
                   </div>
                 </div>
                 <div className="col-md-7 cmd-padding">
                   <div className="img2 wow imago" data-wow-delay=".3s">
-                    <Image src={AboutUs2Date.image2} alt="" layout='fill' />
+                    <Image src={AboutUs2Date.image2} alt="" width={300} height={400} style={{ objectFit: 'cover' }} />
                   </div>
                   <div className="img3 wow imago" data-wow-delay=".8s">
-                    <Image src={AboutUs2Date.image3} alt=""  layout='fill'/>
+                    <Image src={AboutUs2Date.image3} alt="" width={300} height={400} style={{ objectFit: 'cover' }} />
                   </div>
                   <div className="container">
                     <div className="row">

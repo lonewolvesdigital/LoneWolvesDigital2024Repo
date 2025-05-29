@@ -42,24 +42,25 @@ const VideoWithTestimonials = () => {
                       onClose={() => setOpen(false)}
                     />
                   )}
-                  
+                  <a
+                    href="https://vimeo.com/808635458"
                     className="vid"
                     onClick={(e) => {
                       e.preventDefault();
                       setOpen(true);
                     }}
                   >
-                    <div className="vid-butn  ">
-                      <span className="icon ">
-                        <i className="fas fa-play testim-box background play"></i>
+                    <div className="vid-butn">
+                      <span className="icon">
+                        <i className="fas fa-play"></i>
                       </span>
                     </div>
-                  
+                  </a>
                 </div>
               </div>
             </div>
-            {/* <div className=" block-sec col-lg-5 offset-lg-1">
-              <div className="testim-box" >
+            <div className="col-lg-5 offset-lg-1">
+              <div className="testim-box">
                 <div className="head-box">
                   <h6 className="wow fadeIn" data-wow-delay=".5s">
                     Our Clients
@@ -68,70 +69,20 @@ const VideoWithTestimonials = () => {
                     What Client&apos;s Say?
                   </h4>
                 </div>
-                <Slider
-                  {...settings}
-                  className="slic-item wow fadeInUp"
-                  data-wow-delay=".5s"
-                >
+                <Slider {...settings} className="slic-item wow fadeInUp" data-wow-delay=".5s">
                   <div className="item">
                     <p>
-                      Nulla metus metus ullamcorper vel tincidunt sed euismod
-                      nibh volutpat velit class aptent taciti sociosqu ad
-                      litora.
+                      Exceptional service! The team at Lone Wolves Digital transformed our online presence completely. Their attention to detail and innovative solutions exceeded our expectations.
                     </p>
                     <div className="info">
                       <div className="img">
                         <div className="img-box">
-                          <Image src="/img/clients/1.jpg" alt="" layout='fill'/>
+                          <img src="/img/clients/1.jpg" alt="" />
                         </div>
                       </div>
                       <div className="cont">
                         <div className="author">
-                          <h6 className="author-name ">Alex Regelman</h6>
-                          <span className="author-details">
-                            Co-founder, Colabrio
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <p>
-                      Nulla metus metus ullamcorper vel tincidunt sed euismod
-                      nibh volutpat velit class aptent taciti sociosqu ad
-                      litora.
-                    </p>
-                    <div className="info">
-                      <div className="img">
-                        <div className="img-box">
-                          <Image src="/img/clients/2.jpg" alt="" layout='fill'/>
-                        </div>
-                      </div>
-                      <div className="cont">
-                        <div className="author">
-                          <h6 className="author-name ">Alex Regelman</h6>
-                          <span className="author-details">
-                            Co-founder, Colabrio
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <p>
-                      Nulla metus metus ullamcorper vel tincidunt sed euismod
-                      nibh volutpat velit class aptent taciti sociosqu ad
-                      litora.
-                    </p>
-                    <div className="info">
-                      <div className="img">
-                        <div className="img-box">
-                          <Image src="/img/clients/3.jpg" alt="" layout='fill'/>
-                        </div>
-                      </div>
-                      <div className="cont">
-                        <div className="author">
-                          <h6 className="author-name ">Alex Regelman</h6>
+                          <h6 className="author-name">Alex Regelman</h6>
                           <span className="author-details">
                             Co-founder, Colabrio
                           </span>
@@ -141,7 +92,7 @@ const VideoWithTestimonials = () => {
                   </div>
                 </Slider>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

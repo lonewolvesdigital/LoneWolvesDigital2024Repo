@@ -91,7 +91,7 @@ const IntroWithSlider = ({ sliderRef }) => {
                           <h1 className="color-font">{slide.title}</h1>
                           {slide?.content && <p>{slide.content}</p>}
                           <Link href="/about/about-dark" legacyBehavior>
-                             className="butn bord curve mt-30">
+                             className="butn bord curve mt-30"
                               <span>Learn More?</span>
                             
                           </Link>
@@ -121,22 +121,22 @@ const IntroWithSlider = ({ sliderRef }) => {
         <div ref={paginationRef} className="swiper-pagination top botm"></div>
 
         <div className="social-icon">
-           href="https://www.facebook.com/lonewolvesdigital">
+           href="https://www.facebook.com/lonewolvesdigital"
             <i className="fab fa-facebook-f"></i>
           
-           href="https://twitter.com/LoneWolvesDigit">
+           href="https://twitter.com/LoneWolvesDigit"
             <i className="fab fa-twitter"></i>
           
-           href="https://www.instagram.com/lonewolvesdigital/">
+           href="https://www.instagram.com/lonewolvesdigital/"
             <i className="fab fa-instagram"></i>
           
-           href="https://www.linkedin.com/company/lone-wolves-digital/">
+           href="https://www.linkedin.com/company/lone-wolves-digital/"
             <i className="fab fa-linkedin"></i>
           
-           href="https://www.youtube.com/@LoneWolvesDigital">
+           href="https://www.youtube.com/@LoneWolvesDigital"
                   <i className="fab fa-youtube"></i>
                 
-                 href="https://github.com/lonewolvesdigital" className="icon">
+                 href="https://github.com/lonewolvesdigital" className="icon"
                   <i className="fab fa-github"></i>
                 
         </div>

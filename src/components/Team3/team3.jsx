@@ -22,7 +22,13 @@ const Team3 = () => {
           <div className="col-lg-4">
             <div className="item cir md-mb50">
               <div className="img">
-                <Image src="/img/team/a1.jpg" alt="" layout='fill' />
+                <Image 
+                  src="/img/team/a1.jpg" 
+                  alt="" 
+                  width={300}
+                  height={300}
+                  style={{ objectFit: 'cover' }}
+                />
                 <div id="circle1">
                   <svg
                     version="1.1"
@@ -61,7 +67,13 @@ const Team3 = () => {
           <div className="col-lg-4">
             <div className="item cir md-mb50">
               <div className="img">
-                <Image src="/img/team/a2.jpg" alt="" layout='fill' />
+                <Image 
+                  src="/img/team/a2.jpg" 
+                  alt="" 
+                  width={300}
+                  height={300}
+                  style={{ objectFit: 'cover' }}
+                />
                 <div id="circle2">
                   <svg
                     version="1.1"
@@ -98,9 +110,15 @@ const Team3 = () => {
             </div>
           </div>
           <div className="col-lg-4">
-            <div className="item cir sm-mb50">
+            <div className="item cir">
               <div className="img">
-                <Image src="/img/team/a3.jpg" alt="" layout='fill'/>
+                <Image 
+                  src="/img/team/a3.jpg" 
+                  alt="" 
+                  width={300}
+                  height={300}
+                  style={{ objectFit: 'cover' }}
+                />
                 <div id="circle3">
                   <svg
                     version="1.1"

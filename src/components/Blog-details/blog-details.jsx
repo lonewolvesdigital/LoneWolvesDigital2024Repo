@@ -26,7 +26,7 @@ const BlogDetails = ({ theme }) => {
           <div className="col-lg-11">
             <div className="post">
               <div className="img">
-                <Image src="/img/blog/single.jpg" alt="" layout='fill' />
+                <Image src="/img/blog/single.jpg" alt="" width={800} height={400} style={{ objectFit: 'cover' }} />
               </div>
               <div className="content pt-60">
                 <div className="row justify-content-center">

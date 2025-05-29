@@ -25,7 +25,13 @@ const WorksStyle1 = () => {
                     data-tooltip-tit="Work image"
                     data-tooltip-sub="Design"
                   >
-                    <Image src="/img/catalog/catalog/1/1.jpg" alt="" layout='fill'/>
+                    <Image 
+                      src="/img/catalog/catalog/1/1.jpg" 
+                      alt="" 
+                      width={400}
+                      height={300}
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
                 
               </Link>
@@ -39,7 +45,13 @@ const WorksStyle1 = () => {
                     data-tooltip-tit="Work image"
                     data-tooltip-sub="Design"
                   >
-                    <Image src="/img/catalog/catalog/2/1.jpg" alt="" layout='fill'/>
+                    <Image 
+                      src="/img/catalog/catalog/2/1.jpg" 
+                      alt="" 
+                      width={400}
+                      height={300}
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
               </Link>
             </div>
@@ -52,7 +64,13 @@ const WorksStyle1 = () => {
                     data-tooltip-tit="Work image"
                     data-tooltip-sub="Design"
                   >
-                    <Image src="/img/catalog/catalog/1/2.jpg" alt="" layout='fill'/>
+                    <Image 
+                      src="/img/catalog/catalog/1/2.jpg" 
+                      alt="" 
+                      width={400}
+                      height={300}
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
               </Link>
             </div>
@@ -65,7 +83,13 @@ const WorksStyle1 = () => {
                     data-tooltip-tit="Work image"
                     data-tooltip-sub="Design"
                   >
-                    <Image src="/img/catalog/catalog/2/3.jpg" alt="" layout='fill'/>
+                    <Image 
+                      src="/img/catalog/catalog/2/3.jpg" 
+                      alt="" 
+                      width={400}
+                      height={300}
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
               </Link>
             </div>
@@ -78,7 +102,13 @@ const WorksStyle1 = () => {
                     data-tooltip-tit="Work image"
                     data-tooltip-sub="Design"
                   >
-                    <Image src="/img/catalog/catalog/1/3.jpg" alt="" layout='fill'/>
+                    <Image 
+                      src="/img/catalog/catalog/1/3.jpg" 
+                      alt="" 
+                      width={400}
+                      height={300}
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
               </Link>
             </div>
@@ -91,7 +121,13 @@ const WorksStyle1 = () => {
                     data-tooltip-tit="Work image"
                     data-tooltip-sub="Design"
                   >
-                    <Image src="/img/catalog/catalog/2/4.jpg" alt="" layout='fill'/>
+                    <Image 
+                      src="/img/catalog/catalog/2/4.jpg" 
+                      alt="" 
+                      width={400}
+                      height={300}
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
               </Link>
             </div>
@@ -104,7 +140,13 @@ const WorksStyle1 = () => {
                     data-tooltip-tit="Work image"
                     data-tooltip-sub="Design"
                   >
-                    <Image src="/img/catalog/catalog/1/4.jpg" alt="" layout='fill'/>
+                    <Image 
+                      src="/img/catalog/catalog/1/4.jpg" 
+                      alt="" 
+                      width={400}
+                      height={300}
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
               </Link>
             </div>
@@ -117,7 +159,13 @@ const WorksStyle1 = () => {
                     data-tooltip-tit="Work image"
                     data-tooltip-sub="Design"
                   >
-                    <Image src="/img/catalog/catalog/2/5.jpg" alt="" layout='fill'/>
+                    <Image 
+                      src="/img/catalog/catalog/2/5.jpg" 
+                      alt="" 
+                      width={400}
+                      height={300}
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
               </Link>
             </div>
@@ -130,7 +178,13 @@ const WorksStyle1 = () => {
                     data-tooltip-tit="Work image"
                     data-tooltip-sub="Design"
                   >
-                    <Image src="/img/catalog/catalog/1/5.jpg" alt="" layout='fill'/>
+                    <Image 
+                      src="/img/catalog/catalog/1/5.jpg" 
+                      alt="" 
+                      width={400}
+                      height={300}
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
               </Link>
             </div>

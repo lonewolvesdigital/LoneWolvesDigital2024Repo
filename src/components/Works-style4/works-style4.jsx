@@ -63,7 +63,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/admin-customer-support`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-luana-freitas-15490322.jpg" alt=""
                   width={1000}
-                  height={1500}/>
+                  height={1500} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -103,7 +103,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/admin-customer-support`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-yan-krukau-8866790.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -127,7 +127,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/business-finance`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-christina-morillo-1181395.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -165,7 +165,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/business-finance`} className="rota">
                   <Image src="/img/catalog/freelancer/savings-2789112_1920.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -192,7 +192,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/data-ai-services`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-karolina-grabowska-7681097.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -233,7 +233,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/data-ai-services`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-kindel-media-8566469.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 {/* <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
@@ -277,7 +277,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/engineering-architecture`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-mihai-vlasceanu-1400249.jpg" alt=""
                   width={1000}
-                  height={1500} />
+                  height={1500} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -309,7 +309,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/engineering-architecture`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-rfstudio-3825580.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -333,7 +333,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/graphics-design-photography`} className="rota">
                   <Image src="/img/catalog/freelancer/magic-mind-GnD_TOrbWh4-unsplash.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -374,7 +374,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/graphics-design-photography`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-ekrulila-3246665.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -420,7 +420,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/graphics-design-photography`} className="rota">
                   <Image src="/img/catalog/freelancer/krisztian-tabori-IyaNci0CyRk-unsplash.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -452,7 +452,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/graphics-design-photography`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-drew-williams-2608495.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -486,7 +486,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/graphics-design-photography`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-gustavo-fring-4127636.jpg" alt=""
                   width={1000}
-                  height={1500}/>
+                  height={1500} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -518,7 +518,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/graphics-design-photography`} className="rota">
                   <Image src="/img/catalog/freelancer/man-3130952_1920.png" alt=""
                   width={1000}
-                  height={1500}/>
+                  height={1500} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -547,7 +547,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/graphics-design-photography`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-leeloo-thefirst-7598012.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -601,7 +601,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/graphics-design-photography`} className="rota">
                   <Image src="/img/catalog/freelancer/infographics-1005174_1280.png" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -634,7 +634,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/graphics-design-photography`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-kaique-rocha-598917.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -684,7 +684,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/hr-training`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-cottonbro-studio-5989930.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -707,7 +707,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/legal`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-august-de-richelieu-4427622.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -730,7 +730,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/lifestyle`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-marlene-leppänen-1019771.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -783,7 +783,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/sales-digital-marketing`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-daniel-adesina-1445454.jpg" alt=""
                     width={1000}
-                    height={1500}/>
+                    height={1500} style={{ objectFit: 'cover' }}/>
                   <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -817,7 +817,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/sales-digital-marketing`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-tetyana-kovyrina-11138259.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -850,7 +850,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/sales-digital-marketing`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-ketut-subiyanto-4132331.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -891,7 +891,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/sales-digital-marketing`} className="rota">
                   <Image src="/img/catalog/freelancer/wordpress-2171594_1920.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -925,7 +925,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/sales-digital-marketing`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-dalila-dalprat-2055500.jpg" alt=""
                   width={1000}
-                  height={1500}/>
+                  height={1500} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -972,7 +972,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/sales-digital-marketing`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-cottonbro-studio-7350905.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1020,7 +1020,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/sales-digital-marketing`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-cottonbro-studio-5083397.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1052,7 +1052,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/software-development-it`} className="rota">
                   <Image src="/img/catalog/freelancer/procreator-ux-design-studio-VzJjPuk53sk-unsplash.jpg" alt=""
                   width={1000}
-                  height={1500}/>
+                  height={1500} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1094,7 +1094,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/software-development-it`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-saksham-choudhary-2036656.jpg" alt=""
                   width={1000}
-                  height={1500}/>
+                  height={1500} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1132,7 +1132,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/video-audio-animation`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-cytonn-photography-955405.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1166,7 +1166,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/video-audio-animation`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-merlin-lightpainting-11137997.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1203,7 +1203,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/video-audio-animation`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-mart-production-7335420.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1242,7 +1242,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/video-audio-animation`} className="rota">
                   <Image src="/img/catalog/freelancer/emmanuel-ikwuegbu-Wc-vrrwxts0-unsplash.jpg" alt=""
                   width={1000}
-                  height={1500}/>
+                  height={1500} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1276,7 +1276,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/video-audio-animation`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-george-milton-6953865.jpg" alt=""
                   width={1000}
-                  height={1500}/>
+                  height={1500} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1308,7 +1308,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/video-audio-animation`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-los-muertos-crew-7586652.jpg" alt=""
                   width={1000}
-                  height={1500}/>
+                  height={1500} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1342,7 +1342,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/writing-translation`} className="rota">
                   <Image src="/img/catalog/freelancer/karthik-sridasyam-BmjLE77gz0E-unsplash.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1399,7 +1399,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/writing-translation`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-thought-catalog-904620.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1430,7 +1430,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/writing-translation`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-ketut-subiyanto-4350108.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1465,7 +1465,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/writing-translation`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-christina-morillo-1181569.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1503,7 +1503,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/writing-translation`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-vlada-karpovich-4050287.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">
@@ -1532,7 +1532,7 @@ const WorksStyle4 = () => {
                 <Link href={`/catalog/writing-translation`} className="rota">
                   <Image src="/img/catalog/freelancer/pexels-august-de-richelieu-4427547.jpg" alt=""
                   width={1000}
-                  height={1000}/>
+                  height={1000} style={{ objectFit: 'cover' }}/>
                     <div className="item-img-overlay"></div>
                 </Link>
                 <div className="tags">

@@ -5,7 +5,6 @@ import Link from "next/link";
 import DarkTheme from "../../layouts/Dark";
 import Image from 'next/image';
 
-
 const BlogList = ({ blogs }) => {
   return (
     <section className="blog-pg blog-list section-padding pt-0">
@@ -13,7 +12,7 @@ const BlogList = ({ blogs }) => {
         <div className="row justify-content-center">
           <div className="col-lg-11">
             <div className="posts mt-80">
-              {blogs.map((blogItem, index) => (
+              {blogs.map((blogItem) => (
                 <div
                   className="item mb-80 wow fadeInUp"
                   key={blogItem.id}
@@ -22,10 +21,11 @@ const BlogList = ({ blogs }) => {
                   <div className="row">
                     <div className="col-lg-6 valign">
                       <div className="img md-mb50">
-                      <Image 
-                        width={600}
-                        height={400}
-                         src={blogItem.image} alt="" 
+                        <Image 
+                          width={600}
+                          height={400}
+                          src={blogItem.image}
+                          alt=""
                         />
                       </div>
                     </div>
@@ -33,31 +33,32 @@ const BlogList = ({ blogs }) => {
                       <div className="cont">
                         <div>
                           <div className="info">
-                            <Link href="/contact/contact-dark" className="date">
-                              <span>
-                                <i>{blogItem.date.day}</i>
-                                {blogItem.date.month}
+                            <Link href="/contact/contact-dark">
+                              <span className="date">
+                                <span className="date-content">
+                                  <i>{blogItem.date.day}</i>
+                                  {blogItem.date.month}
+                                </span>
                               </span>
                             </Link>
                             <span>/</span>
-                            {blogItem.tags.map((tag, index) => (
-                              <Link key={index} href="/contact/contact-dark" className="tag">
-                                <span>{tag}</span>
+                            {blogItem.tags.map((tag, idx) => (
+                              <Link key={idx} href="/contact/contact-dark">
+                                <span className="tag">{tag}</span>
                               </Link>
                             ))}
                           </div>
                           <h5>
-                            <Link href="/contact/contact-dark" className="link">
-                              {blogItem.title}
+                            <Link href="/contact/contact-dark">
+                              <span className="link">{blogItem.title}</span>
                             </Link>
                           </h5>
                           <p className="mt-10">
-                            {blogItem.content.substr(0, 5000)}
+                            {blogItem.content.substring(0, 5000)}
                           </p>
-                          
                           <div className="btn-more mt-30">
-                            <Link href="/contact/contact-dark" className="simple-btn">
-                              ASK ABOUT IT
+                            <Link href="/contact/contact-dark">
+                              <span className="simple-btn">ASK ABOUT IT</span>
                             </Link>
                           </div>
                         </div>
@@ -66,29 +67,28 @@ const BlogList = ({ blogs }) => {
                   </div>
                 </div>
               ))}
-
-
-              {/* <div className="pagination">
+              {/*
+              <div className="pagination">
                 <span className="active">
-                  <Link href={`/blog/blog-dark`}>1</Link>
+                  <Link href="/blog/blog-dark">1</Link>
                 </span>
                 <span>
-                  <Link href={`/blog/blog-dark`}>2</Link>
+                  <Link href="/blog/blog-dark">2</Link>
                 </span>
                 <span>
-                  <Link href={`/blog/blog-dark`} className="icon">
+                  <Link href="/blog/blog-dark">
                     <i className="fas fa-angle-right"></i>
                   </Link>
                 </span>
-              </div> */}
-              
+              </div>
+              */}
             </div>
           </div>
         </div>
       </div>
-    <DarkTheme mobileappstyle>
-    </DarkTheme>
+      <DarkTheme mobileappstyle />
     </section>
   );
 };
+
 export default BlogList;

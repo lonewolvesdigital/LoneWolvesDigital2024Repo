@@ -1,4 +1,3 @@
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,7 +7,6 @@ const Footer2 = () => {
     <footer className="app-footer" data-overlay-dark="0">
       <div className="container">
         <div className="row">
-          {/* Contact Section */}
           <div className="item md-mb50">
             <div className="title">
               <h5>Contact Us</h5>
@@ -38,7 +36,6 @@ const Footer2 = () => {
             </ul>
           </div>
 
-          {/* Subscribe Section */}
           <div className="col-lg-4">
             <div className="item">
               <div className="logo">
@@ -53,84 +50,70 @@ const Footer2 = () => {
               <div className="title Copy-right">
                 <p>
                   Made by Caleb Mutombo. <br />
-                  At Lone Wolves Digital.{" "}
-                  <Link href="/lonewolvesdigital/team-dark">
-                    <a>Meet the pack</a>
+                  At Lone Wolves Digital.{' '}
+                  <Link href="/lonewolvesdigital/team-dark" className="link">
+                    Meet the pack
                   </Link>
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Blog Previews */}
           <div className="col-lg-4">
             <div className="item md-mb50">
               <div className="title">
                 <h5>Lone Wolf Blogs</h5>
               </div>
               <ul>
-                <li>
-                  <div className="img">
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <Image
-                          width={900}
-                          height={700}
-                          src="/img/blog/pexels-andrea-piacquadio-3813341.jpg"
-                          alt="Blog 1"
-                        />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="sm-post">
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <p>Why you should become a freelancer.</p>
-                      </a>
-                    </Link>
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <span className="date">LONE WOLF BLOGS</span>
-                        <h6>Coming soon...</h6>
-                      </a>
-                    </Link>
-                  </div>
-                </li>
-                <li>
-                  <div className="img">
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <Image
-                          width={900}
-                          height={700}
-                          src="/img/blog/pexels-andrea-piacquadio-3791134.jpg"
-                          alt="Blog 2"
-                        />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="sm-post">
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <p>Why you should not become a freelancer.</p>
-                      </a>
-                    </Link>
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <span className="date">LONE WOLVES BLOG</span>
-                        <h6>Coming soon...</h6>
-                      </a>
-                    </Link>
-                  </div>
-                </li>
+                {[
+                  {
+                    id: 1,
+                    href: "/blog/blog-dark",
+                    imgSrc: "/img/blog/pexels-andrea-piacquadio-3813341.jpg",
+                    alt: "Blog 1",
+                    text: "Why you should become a freelancer.",
+                  },
+                  {
+                    id: 2,
+                    href: "/blog/blog-dark",
+                    imgSrc: "/img/blog/pexels-andrea-piacquadio-3791134.jpg",
+                    alt: "Blog 2",
+                    text: "Why you should not become a freelancer.",
+                  },
+                ].map((post) => (
+                  <li key={post.id}>
+                    <div>
+                      <div className="img">
+                        <Link href={post.href}>
+                          <Image
+                            width={900}
+                            height={700}
+                            src={post.imgSrc}
+                            alt={post.alt}
+                            style={{ objectFit: "cover" }}
+                          />
+                        </Link>
+                      </div>
+                      <div className="sm-post">
+                        <Link href={post.href}>
+                          <p>{post.text}</p>
+                        </Link>
+                        <Link href={post.href}>
+                          <div>
+                            <span className="date">LONE WOLF BLOGS</span>
+                            <h6>Coming soon...</h6>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
 
-          {/* Resources & Links */}
           <div className="container">
             <div className="row">
-              {/* Resources */}
               <div className="col-lg-3 col-md-6">
                 <div className="item-clumn links md-mb50">
                   <h5 className="title">Resources</h5>
@@ -144,8 +127,8 @@ const Footer2 = () => {
                     ].map(({ label, href }) => (
                       <li key={label}>
                         <span className="icon pe-7s-angle-right"></span>
-                        <Link href={href}>
-                          <a className="link">{label}</a>
+                        <Link href={href} className="link">
+                          {label}
                         </Link>
                       </li>
                     ))}
@@ -153,7 +136,6 @@ const Footer2 = () => {
                 </div>
               </div>
 
-              {/* Links */}
               <div className="col-lg-2 col-md-6">
                 <div className="item-clumn links sm-mb50">
                   <h5 className="title">Links</h5>
@@ -162,13 +144,13 @@ const Footer2 = () => {
                       { label: "Contact", href: "/contact/contact-dark" },
                       { label: "Blog", href: "/blog/blog-dark" },
                       { label: "FAQ", href: "/lonewolvesdigital/faq" },
-                      { label: "T&C", href: "/t&c-list/t&c-list-dark" },
-                      { label: "Quotes", href: "/price/price-details-dark" },
+                      {	label: "T&C", href: "/t&c-list/t&c-list-dark" },
+                      {	label: "Quotes", href: "/price/price-details-dark" },
                     ].map(({ label, href }) => (
                       <li key={label}>
                         <span className="icon pe-7s-angle-right"></span>
-                        <Link href={href}>
-                          <a className="link">{label}</a>
+                        <Link href={href} className="link">
+                          {label}
                         </Link>
                       </li>
                     ))}
@@ -176,7 +158,6 @@ const Footer2 = () => {
                 </div>
               </div>
 
-              {/* Socials */}
               <div className="item-clumn links">
                 <h5 className="title mb-30">Social Links</h5>
                 <div className="social">
@@ -211,7 +192,6 @@ const Footer2 = () => {
                 </div>
               </div>
 
-              {/* Logo & Slogan */}
               <div className="col-lg-4 col-md-6">
                 <div className="item-clumn our md-mb50">
                   <a href="#0" className="logo-brand mb-50">
@@ -225,11 +205,9 @@ const Footer2 = () => {
         </div>
       </div>
 
-      {/* Background Effects */}
       <div className="circle-blur"></div>
       <div className="circle-blur two"></div>
 
-      {/* Footer Copyright */}
       <br />
       <div className="text-center">
         <p>© 2024 Lone Wolves Digital. All Rights Reserved.</p>

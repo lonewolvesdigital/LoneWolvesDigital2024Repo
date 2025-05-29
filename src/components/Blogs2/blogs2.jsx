@@ -23,14 +23,14 @@ const Blogs2 = () => {
               <div className="row">
                 <div className="col-md-5">
                   <div className="img">
-                    <Image src="/img/mobile-app/blog/1.jpg" alt="" layout='fill' />
+                    <Image src="/img/mobile-app/blog/1.jpg" alt="" width={400} height={300} style={{ objectFit: 'cover' }} />
                   </div>
                 </div>
                 <div className="col-md-7 valign">
                   <div className="cont">
                     <div className="full-width">
                       <div className="tag">
-                         href="#0">Design & Arts
+                        <a href="#0">Design & Arts</a>
                       </div>
                       <div className="title">
                         <h5>
@@ -39,18 +39,18 @@ const Blogs2 = () => {
                         </h5>
                       </div>
                       <div className="info">
-                         href="#0">
+                        <a href="#0">
                           <span>Post By :</span>
                           Lisa A. Cowles
-                        
-                         href="#0">
+                        </a>
+                        <a href="#0">
                           <span>Comments :</span>
                           (05)
-                        
+                        </a>
                       </div>
-                       href="#0" className="butn-bord-red rounded buton">
+                      <a href="#0" className="butn-bord-red rounded buton">
                         <span>Read More</span>
-                      
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -62,14 +62,14 @@ const Blogs2 = () => {
               <div className="row">
                 <div className="col-md-5">
                   <div className="img">
-                    <Image src="/img/mobile-app/blog/2.jpg" alt="" layout='fill'/>
+                    <Image src="/img/mobile-app/blog/2.jpg" alt="" width={400} height={300} style={{ objectFit: 'cover' }}/>
                   </div>
                 </div>
                 <div className="col-md-7 valign">
                   <div className="cont">
                     <div className="full-width">
                       <div className="tag">
-                         href="#0">Design & Arts
+                        <a href="#0">Design & Arts</a>
                       </div>
                       <div className="title">
                         <h5>
@@ -78,18 +78,18 @@ const Blogs2 = () => {
                         </h5>
                       </div>
                       <div className="info">
-                         href="#0">
+                        <a href="#0">
                           <span>Post By :</span>
                           Lisa A. Cowles
-                        
-                         href="#0">
+                        </a>
+                        <a href="#0">
                           <span>Comments :</span>
                           (05)
-                        
+                        </a>
                       </div>
-                       href="#0" className="butn-bord-red rounded buton">
+                      <a href="#0" className="butn-bord-red rounded buton">
                         <span>Read More</span>
-                      
+                      </a>
                     </div>
                   </div>
                 </div>

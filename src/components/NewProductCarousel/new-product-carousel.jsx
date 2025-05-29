@@ -260,7 +260,7 @@ const NewProductCarousel = () => {
                             <h6 className={styles.title}>{item.title}</h6>
                             <p className={styles.description}>{item.content}</p>
                             <Link href={getCatalogLink(item.id)} legacyBehavior>
-                               className={styles.learnMoreBtn}>Learn More
+                               className={styles.learnMoreBtn}Learn More
                             </Link>
                           </div>
                         </div>
