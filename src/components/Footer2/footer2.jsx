@@ -261,7 +261,7 @@ const Footer2 = () => {
                 </a>
                 
               </div>
-              <div>
+              {/* <div>
             <br/>
             <br/>
             <br/>
@@ -273,24 +273,10 @@ const Footer2 = () => {
             <br/>
 
 
-            </div>
-
-            </div>
-            <div>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
+            </div> */}
 
             </div>
-            </div>
-            <div>
+            {/* <div>
             <br/>
             <br/>
             <br/>
@@ -302,13 +288,27 @@ const Footer2 = () => {
             <br/>
 
 
+            </div> */}
             </div>
+            {/* <div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+
+
+            </div> */}
            
 
               
           <div className="col-lg-4 col-md-6">
             <div className="item-clumn our md-mb50">
-              <a href="#0" className="logo-brand mb-50">
+              <a href="#0" className="logo-brand">
                 <Image width={1000} height={1000} src="/img/logo.png" alt="" />
               </a>
             </div>

@@ -60,7 +60,7 @@ const Homepage1 = () => {
         <AboutUs />
         <Services5  />
         <Numbers />
-        <Works />
+        {/* <Works /> */}
         <Clients theme="dark" />
         <Blogs1 />
         <CallToAction />
