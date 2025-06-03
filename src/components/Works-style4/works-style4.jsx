@@ -1,27 +1,530 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import initIsotope from "../../common/initIsotope";
 import Image from 'next/image';
 
-
 const WorksStyle4 = () => {
-  React.useEffect(() => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedFilter, setSelectedFilter] = useState("*");
+
+  useEffect(() => {
     setTimeout(() => {
       initIsotope();
     }, 1000);
   }, []);
+
+  useEffect(() => {
+    if (searchTerm === "") {
+      setSelectedFilter("*");
+      setTimeout(() => {
+        initIsotope();
+      }, 100);
+    }
+  }, [searchTerm]);
+
+  const items = [
+    {
+      category: "ACS",
+      title: "Office Admin",
+      description: "Unlock the Power of OFFICE ADMIN with our Expert Team!",
+      image: "/img/catalog/freelancer/pexels-luana-freitas-15490322.jpg",
+      link: "/catalog/admin-customer-support",
+      tags: ["Editing", "Data entry", "Typing", "Slide presentation", "Virtual Assistance", "Flyer Distribution", "Project Management"],
+      width: 1000,
+      height: 1500,
+    },
+    {
+      category: "ACS",
+      title: "Customer Support",
+      description: "The Best Customer Care Around: Let us take care of them!",
+      image: "/img/catalog/freelancer/pexels-yan-krukau-8866790.jpg",
+      link: "/catalog/admin-customer-support",
+      tags: ["Customer Care"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "BF",
+      title: "Business",
+      description: "Discover the revolutionary benefits of business today!",
+      image: "/img/catalog/freelancer/pexels-christina-morillo-1181395.jpg",
+      link: "/catalog/business-finance",
+      tags: ["Business Plans", "Market Research", "Business Consulting", "Project Management", "CRM Management", "ERP Management"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "BF",
+      title: "Finance",
+      description: "Money talks all else walks and that's why money matters!",
+      image: "/img/catalog/freelancer/savings-2789112_1920.jpg",
+      link: "/catalog/business-finance",
+      tags: ["Financial Consulting", "Accounting"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "DA",
+      title: "Data",
+      description: "Unlock the power of data and harness the potential to achieve your personal and business goals, with Lone Wolves Digital!",
+      image: "/img/catalog/freelancer/pexels-karolina-grabowska-7681097.jpg",
+      link: "/catalog/data-ai-services",
+      tags: ["Data Entry", "Data Processing", "Data Analytics", "Data Visualization", "Data Science", "Databases", "Data Engineering"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "DA",
+      title: "AI",
+      description: "With the power of AI Lone Wolves Digital will take your business to the next level!",
+      image: "/img/catalog/freelancer/pexels-kindel-media-8566469.jpg",
+      link: "/catalog/data-ai-services",
+      tags: ["Mid-journey Artists", "DALL-E Artists", "Stable Diffusion Artists", "AI Models", "AI Music Videos", "AI Content Editing"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "EA",
+      title: "Architecture",
+      description: "Design the future with Lone Wolves Digital, explore the world's most innovative architecture!",
+      image: "/img/catalog/freelancer/pexels-mihai-vlasceanu-1400249.jpg",
+      link: "/catalog/engineering-architecture",
+      tags: ["Building Design", "Interior Design", "Building Information Modeling", "Landscape Design"],
+      width: 1000,
+      height: 1500,
+    },
+    {
+      category: "EA",
+      title: "Electronics Engineering",
+      description: "Innovations and breakthroughs that will shape our world!",
+      image: "/img/catalog/freelancer/pexels-rfstudio-3825580.jpg",
+      link: "/catalog/engineering-architecture",
+      tags: ["CAD"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "GDP",
+      title: "Packaging & Merchandise Design",
+      description: "Unwrap your brand's potential and elevate your packaging and merchandise design with the help of Lone Wolves Digital today!",
+      image: "/img/catalog/freelancer/magic-mind-GnD_TOrbWh4-unsplash.jpg",
+      link: "/catalog/graphics-design-photography",
+      tags: ["T-Shirts & Merchandise Design", "Book Design", "Packaging Design", "Album Cover Design", "Car Wraps", "Podcast Cover Art"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "GDP",
+      title: "Drawing & Illustration",
+      description: "Draw your imagination and bring your ideas to life with Lone Wolves Digital Illustration Services!",
+      image: "/img/catalog/freelancer/pexels-ekrulila-3246665.jpg",
+      link: "/catalog/graphics-design-photography",
+      tags: ["Illustration", "Vector Tracing", "Portraits", "Caricatures", "Cartoons", "Comics", "Fashion Design", "Pattern Design", "Storyboards"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "GDP",
+      title: "Visual Design",
+      description: "Unleash creativity and bring your vision to life with Lone Wolves Digital Art & Illustration services!",
+      image: "/img/catalog/freelancer/krisztian-tabori-IyaNci0CyRk-unsplash.jpg",
+      link: "/catalog/graphics-design-photography",
+      tags: ["Presentation Design", "Image Editing", "Infographic Design", "Vector Tracing"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "GDP",
+      title: "Packaging & Covers",
+      description: "Stand out in the crowd and get noticed with expert packaging & covers services from Lone Wolves Digital!",
+      image: "/img/catalog/freelancer/pexels-drew-williams-2608495.jpg",
+      link: "/catalog/graphics-design-photography",
+      tags: ["Packaging", "Label Design", "Book Design", "Album Cover Design", "Podcast Cover Art"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "GDP",
+      title: "Fashion & Merchandise",
+      description: "With Lone Wolves Digital Fashion & Merchandise services, you can make a statement that elevates your style!",
+      image: "/img/catalog/freelancer/pexels-gustavo-fring-4127636.jpg",
+      link: "/catalog/graphics-design-photography",
+      tags: ["Fashion Design", "T-Shirts", "Merchandise", "Jewelry Design"],
+      width: 1000,
+      height: 1500,
+    },
+    {
+      category: "GDP",
+      title: "Product & Characters Design",
+      description: "From concept to creation we will bring your products and characters to life with Our Lone Wolves Digital Designers!",
+      image: "/img/catalog/freelancer/man-3130952_1920.png",
+      link: "/catalog/graphics-design-photography",
+      tags: ["Industrial Product Design", "Character Modeling", "Trade Booth Design"],
+      width: 1000,
+      height: 1500,
+    },
+    {
+      category: "GDP",
+      title: "Print Design",
+      description: "For the print that packs a punch choose Lone Wolves Digital and make your message stand out with our professional design services",
+      image: "/img/catalog/freelancer/pexels-leeloo-thefirst-7598012.jpg",
+      link: "/catalog/graphics-design-photography",
+      tags: ["Flyer Design", "Brochure Design", "Poster Design", "Catalog Design", "Invitation Design", "Menu Design", "Postcard Design", "Signage Design", "Graphics for Streamers", "Character Modeling"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "GDP",
+      title: "Infographics & Presentation Design",
+      description: "Visualize your ideas and communicate with clarity that Impacts your customers/clients with Lone Wolves Digital Infographics and Presentation Designers!",
+      image: "/img/catalog/freelancer/infographics-1005174_1280.png",
+      link: "/catalog/graphics-design-photography",
+      tags: ["Presentation Design", "Infographic Design", "Trade Show Booth Design", "Resume Design"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "GDP",
+      title: "Photography",
+      description: "Capture Life's Moments and experience the magic of photography with Lone Wolves Digital expert Photographers!",
+      image: "/img/catalog/freelancer/pexels-kaique-rocha-598917.jpg",
+      link: "/catalog/graphics-design-photography",
+      tags: ["Portrait Photographers", "Lifestyle & Fashion Photographers", "Real Estate Photographers", "Event Photographers", "Food Photographers", "Aerial Photographers", "Image Editing", "Photography Advice", "Local Photography", "Product Photography"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "HRT",
+      title: "HR & Training",
+      description: "Boost Performance your team's potential with Lone Wolves Digital's HR and Training Solutions!",
+      image: "/img/catalog/freelancer/pexels-cottonbro-studio-5989930.jpg",
+      link: "/catalog/hr-training",
+      tags: ["HR Consulting"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "L",
+      title: "Legal",
+      description: "Trust our expertise to protect your rights and navigate the legal landscape!",
+      image: "/img/catalog/freelancer/pexels-august-de-richelieu-4427622.jpg",
+      link: "/catalog/legal",
+      tags: ["Legal Consulting"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "LS",
+      title: "Lifestyle",
+      description: "Embrace a vibrant lifestyle and live your best life with Lone Wolves Digital Lifestyle digital products and services!",
+      image: "/img/catalog/freelancer/pexels-marlene-leppänen-1019771.jpg",
+      link: "/catalog/lifestyle",
+      tags: ["Arts & Crafts", "Career Counseling", "Cooking Lessons", "Family", "Genealogy", "Online Tutoring", "Other Lifestyle", "Personal Styling", "Personal Training", "Traveling", "Wellness", "Online Language Lessons"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "SDM",
+      title: "Branding",
+      description: "Build a Strong Brand Identity with Lone Wolves Digital and let us help you stand out in a crowded market!",
+      image: "/img/catalog/freelancer/pexels-daniel-adesina-1445454.jpg",
+      link: "/catalog/sales-digital-marketing",
+      tags: ["Brand Identity Design", "Brand Style Guides", "Branding Services", "Brand Voice & Tone"],
+      width: 1000,
+      height: 1500,
+    },
+    {
+      category: "SDM",
+      title: "Logo & Brand Identity",
+      description: "Make your mark with an identity that speaks volumes. Lone Wolves Digital brings your brand to life with professional logo and identity design services!",
+      image: "/img/catalog/freelancer/pexels-tetyana-kovyrina-11138259.jpg",
+      link: "/catalog/sales-digital-marketing",
+      tags: ["Logo Design", "Brand Style Guides", "Business Cards", "Stationery"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "SDM",
+      title: "Websites",
+      description: "We build more than just websites. We create online experiences. So, Why not let us at Lone Wolves Digital Craft your digital presence with our expert web developers!",
+      image: "/img/catalog/freelancer/pexels-ketut-subiyanto-4132331.jpg",
+      link: "/catalog/sales-digital-marketing",
+      tags: ["Website Development", "Website Maintenance", "Business Websites", "E-Commerce Development", "E-commerce Management", "Landing Pages", "Website Content"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "SDM",
+      title: "Website Platforms",
+      description: "Join the digital revolution and choose Lone Wolves Digital website platform services to elevate your brand!",
+      image: "/img/catalog/freelancer/wordpress-2171594_1920.jpg",
+      link: "/catalog/sales-digital-marketing",
+      tags: ["WordPress", "Shopify", "Wix", "Webflow", "Figma"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "SDM",
+      title: "Social Media Marketing",
+      description: "Let us help you reach your target audience and increase your social media engagement. Lone Wolves Digital will elevate your social media game with our proven marketing tactics!",
+      image: "/img/catalog/freelancer/pexels-dalila-dalprat-2055500.jpg",
+      link: "/catalog/sales-digital-marketing",
+      tags: ["Social Media Marketing", "Social Media Advertising", "Marketing Strategy", "Search Engine Optimization (SEO)", "Social Media Marketing Videos", "Video Ads & Commercials", "Spokesperson Videos", "Social Media Videos", "Influencer Marketing"],
+      width: 1000,
+      height: 1500,
+    },
+    {
+      category: "SDM",
+      title: "Search Engines",
+      description: "Rank higher and be seen. Lone Wolves Digital search engine optimization services get results!",
+      image: "/img/catalog/freelancer/pexels-cottonbro-studio-7350905.jpg",
+      link: "/catalog/sales-digital-marketing",
+      tags: ["Search Engine Marketing (SEM)", "Local SEO", "Marketing Advice", "E-Commerce Marketing", "Video Marketing", "Guest Posting", "Email Marketing", "Web Analytics", "Mobile App Marketing"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "SDM",
+      title: "Analytics & Strategy",
+      description: "With our customized analytics strategy solutions you get data-driven insights to maximize your ROI with Lone Wolves Digital!",
+      image: "/img/catalog/freelancer/pexels-cottonbro-studio-5083397.jpg",
+      link: "/catalog/sales-digital-marketing",
+      tags: ["Market Research", "Marketing Strategy", "Web Analytics", "Surveys"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "SDIT",
+      title: "Application Development",
+      description: "From concept to launch. We bring your ideas to life with innovative, user-friendly apps that enhance your business!",
+      image: "/img/catalog/freelancer/procreator-ux-design-studio-VzJjPuk53sk-unsplash.jpg",
+      link: "/catalog/software-development-it",
+      tags: ["Mobile Apps", "Web Programming", "Desktop Applications", "Game Development", "Desktop Apps", "Development for Streamers", "Online Coding Lessons"],
+      width: 1000,
+      height: 1500,
+    },
+    {
+      category: "SDIT",
+      title: "Support & Cybersecurity",
+      description: "Don't leave your security to chance! Let our experts protect your business today. Our support and cybersecurity services offer complete peace of mind for your business!",
+      image: "/img/catalog/freelancer/pexels-saksham-choudhary-2036656.jpg",
+      link: "/catalog/software-development-it",
+      tags: ["DevOps & Cloud", "Support", "Cybersecurity", "Information Technology", "Data Protection", "QA & Review"],
+      width: 1000,
+      height: 1500,
+    },
+    {
+      category: "VAA",
+      title: "Editing & Post-Production",
+      description: "From raw footage to polished final product, we're your one stop shop for all your post-production needs! Let Lone Wolves Digital transform your basic edits into a masterpiece with our expert editing and post-production services!",
+      image: "/img/catalog/freelancer/pexels-cytonn-photography-955405.jpg",
+      link: "/catalog/video-audio-animation",
+      tags: ["Video Editing", "Visual Effects", "Subtitles & Captions", "Intro & Outro Videos", "Screen casting Videos"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "VAA",
+      title: "Animation",
+      description: "Our animation services help you communicate your message in a creative and engaging way. Our skilled animators bring a touch of magic to your content, making it truly unforgettable.",
+      image: "/img/catalog/freelancer/pexels-merlin-lightpainting-11137997.jpg",
+      link: "/catalog/video-audio-animation",
+      tags: ["Character Animation", "Animated Explainers", "Logo Animation", "Animated GIFs", "Lottie", "Web Animation"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "VAA",
+      title: "Product Explainer Videos",
+      description: "Show, don't tell. Let our product and explainer videos do the talking for you!",
+      image: "/img/catalog/freelancer/pexels-mart-production-7335420.jpg",
+      link: "/catalog/video-audio-animation",
+      tags: ["3D Product Animation", "E-Commerce Product Videos", "Live Action Explainers", "App & Website Previews", "Corporate Videos", "Unboxing Videos"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "VAA",
+      title: "Voice Over",
+      description: "Make your message heard with professional voice over services for any project",
+      image: "/img/catalog/freelancer/emmanuel-ikwuegbu-Wc-vrrwxts0-unsplash.jpg",
+      link: "/catalog/video-audio-animation",
+      tags: ["Female Voice Over", "Male Voice Over", "German Voice Over", "French Voice Over", "Video Narration"],
+      width: 1000,
+      height: 1500,
+    },
+    {
+      category: "VAA",
+      title: "Audio Streaming",
+      description: "Listen to your heart's content with our top-rated audio streaming services!",
+      image: "/img/catalog/freelancer/pexels-george-milton-6953865.jpg",
+      link: "/catalog/video-audio-animation",
+      tags: ["Podcast Production", "Audiobook Production", "Sound Design", "Audio Editing"],
+      width: 1000,
+      height: 1500,
+    },
+    {
+      category: "VAA",
+      title: "Music",
+      description: "Feel the beat, hear the magic and let the sound of your dreams from, classical to hip hop, we have it all!",
+      image: "/img/catalog/freelancer/pexels-los-muertos-crew-7586652.jpg",
+      link: "/catalog/video-audio-animation",
+      tags: ["Producers & Composers", "Singers & Vocalists", "Mixing", "Mastering", "Songwriters"],
+      width: 1000,
+      height: 1500,
+    },
+    {
+      category: "WT",
+      title: "Articles & Blog Posts",
+      description: "Make your website stand out with expertly crafted articles and blog posts. Lone Wolves Digital creatives, compelling content that engages and inspires your audience through engaging and shareable content!",
+      image: "/img/catalog/freelancer/karthik-sridasyam-BmjLE77gz0E-unsplash.jpg",
+      link: "/catalog/writing-translation",
+      tags: ["Translation", "Social Media Writing", "Product Descriptions", "Sales Writing", "Book", "Press Releases", "eBook", "Email Writing", "Ad Writing", "Technical Writing", "Scriptwriting", "Proofreading", "Editing", "Content Writing"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "WT",
+      title: "Book & Ebook Writing",
+      description: "If Knowledge is power then it's time to unleash your potential with books and e-books that allow you to explore new worlds!",
+      image: "/img/catalog/freelancer/pexels-thought-catalog-904620.jpg",
+      link: "/catalog/writing-translation",
+      tags: ["Creative Writing", "Podcast Writing", "Book"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "WT",
+      title: "Professional & Business Writing",
+      description: "Whether you need to convey complex technical information to a lay audience, craft a compelling sales pitch, or create a business proposal that sets you apart from your competitors, professional and business writing can help you achieve your goals!",
+      image: "/img/catalog/freelancer/pexels-ketut-subiyanto-4350108.jpg",
+      link: "/catalog/writing-translation",
+      tags: ["Resume Writing", "Cover Letters", "Business Names", "Slogans", "LinkedIn Profiles"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "WT",
+      title: "Research & Summaries",
+      description: "Research and summaries can help businesses, students, and professionals to make informed decisions, present findings in a clear and compelling manner, and ultimately achieve their goals. Whether you need assistance with market research, data analysis, or report writing, professional research and summary services can provide you with the support and expertise you need to succeed!",
+      image: "/img/catalog/freelancer/pexels-christina-morillo-1181569.jpg",
+      link: "/catalog/writing-translation",
+      tags: ["Case Studies", "Grant Writing", "Legal Writing", "Technical Writing", "White Papers", "Fact-Checking"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "WT",
+      title: "Editing & Beta Reading",
+      description: "By using Lone Wolves Digital's professional Editing & Beta Reading services, you can ensure that your written content is polished, error-free, and ready to impress your readers. Whether you are a writer looking to improve your work, a business looking to produce high-quality content, or a student looking to ace your assignments, Editing & Beta Reading can help you achieve your goals. With a keen eye for detail and a commitment to excellence, professional editors and beta readers can help you take your writing to the next level!",
+      image: "/img/catalog/freelancer/pexels-vlada-karpovich-4050287.jpg",
+      link: "/catalog/writing-translation",
+      tags: ["Proofreading", "Editing", "Beta Reading"],
+      width: 1000,
+      height: 1000,
+    },
+    {
+      category: "WT",
+      title: "Copywriting",
+      description: "Are you worried about protecting your intellectual property and ensuring that your creative works are not misused or plagiarized? Look no further than our comprehensive copyright services. Our team of experts can guide you through the process of registering your works and provide ongoing support to safeguard your rights. With our help, you can rest assured that your hard work is protected and that you can reap the rewards of your creativity for years to come. Contact us today to learn more about our copyright services and how we can help you secure your valuable intellectual property.",
+      image: "/img/catalog/freelancer/pexels-august-de-richelieu-4427547.jpg",
+      link: "/catalog/writing-translation",
+      tags: ["Email Copy", "Sales Copy", "Product Descriptions", "Social Media Copy"],
+      width: 1000,
+      height: 1000,
+    },
+  ];
+
+  const filteredItems = items.filter(item => {
+    const searchLower = searchTerm.toLowerCase();
+    const titleMatch = item.title.toLowerCase().includes(searchLower);
+    const tagsMatch = item.tags.some(tag => tag.toLowerCase().includes(searchLower));
+    const categoryMatch = selectedFilter === "*" || item.category === selectedFilter;
+    return (titleMatch || tagsMatch) && categoryMatch;
+  });
+
+  const handleFilterChange = (e) => {
+    setSelectedFilter(e.target.value);
+    setTimeout(() => {
+      initIsotope();
+    }, 100);
+  };
+
   return (
     <section className="catalog-frl section-padding pb-70">
+      <style jsx>{`
+        .search-filter-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 16px;
+          justify-content: center;
+          margin-bottom: 32px;
+          padding: 0 15px;
+        }
+        .search-bar {
+          padding: 10px 16px;
+          width: 100%;
+          max-width: 400px;
+          border: 1px solid #d1d5db;
+          border-radius: 8px;
+          font-size: 16px;
+          color: #374151;
+          outline: none;
+          background: none;
+          transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .search-bar::placeholder {
+          color: #9ca3af;
+        }
+        .search-bar:focus {
+          border-color: #3b82f6;
+          box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+        .filter-dropdown {
+          padding: 10px 16px;
+          width: 100%;
+          max-width: 300px;
+          border: 1px solid #d1d5db;
+          border-radius: 8px;
+          font-size: 16px;
+          color: #fff;
+          // background-color: #fff;
+          background: none;
+          cursor: pointer;
+          transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .filter-dropdown:focus {
+          border-color: #3b82f6;
+          box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+          outline: none;
+        }
+        .filter-dropdown option {
+          padding: 10px;
+          background-color: #fff;
+          color: #374151;
+        }
+        .no-results {
+          text-align: center;
+          padding: 40px 0;
+          font-size: 18px;
+          color: #6b7280;
+        }
+        @media (max-width: 768px) {
+          .search-bar, .filter-dropdown {
+            max-width: 100%;
+          }
+        }
+      `}</style>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-8 col-md-10">
-            <div className="sec-head  text-center">
+            <div className="sec-head text-center">
               <h6 className="wow fadeIn" data-wow-delay=".5s">
                 Lone Wolves Digital catalog
               </h6>
               <h3 className="wow color-font">
-              The home of  <br /> all things digital.
+                The home of <br /> all things digital.
               </h3>
             </div>
           </div>
@@ -29,1611 +532,79 @@ const WorksStyle4 = () => {
       </div>
       <div className="container">
         <div className="row">
-          <div className="filtering col-12">
-            <div className="filter wow fadeIn" data-wow-delay=".5s">
-              <span data-filter="*" className="active">
-                All
-              </span>
-              <span data-filter=".ACS">1.Admin & Customer Support</span>
-              <span data-filter=".BF"> 2.Business & Finance </span>
-              <span data-filter=".DA">3.Data & AI services</span>
-              <span data-filter=".EA">4.Engineering & Architecture</span>
-              <span data-filter=".GDP">5.Graphics Design & Photography</span>
-              <span data-filter=".HRT">6.HR & Training</span>
-              <span data-filter=".L">7.Legal</span>
-              <span data-filter=".LS">8.Lifestyle</span>
-              <span data-filter=".SDM">9.Sales & Digital Marketing</span>
-              <span data-filter=".SDIT">10.Software development & IT </span>
-              <span data-filter=".VAA">11.Video, Audio & Animation</span>
-              <span data-filter=".WT">12.Writing & Translation</span>
-
+          <div className="col-12">
+            <div className="search-filter-container">
+              <input
+                type="text"
+                className="search-bar"
+                placeholder="Search by title or tags..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <select
+                className="filter-dropdown"
+                value={selectedFilter}
+                onChange={handleFilterChange}
+              >
+                <option value="*">All</option>
+                <option value="ACS">Admin & Customer Support</option>
+                <option value="BF">Business & Finance</option>
+                <option value="DA">Data & AI Services</option>
+                <option value="EA">Engineering & Architecture</option>
+                <option value="GDP">Graphics Design & Photography</option>
+                <option value="HRT">HR & Training</option>
+                <option value="L">Legal</option>
+                <option value="LS">Lifestyle</option>
+                <option value="SDM">Sales & Digital Marketing</option>
+                <option value="SDIT">Software Development & IT</option>
+                <option value="VAA">Video, Audio & Animation</option>
+                <option value="WT">Writing & Translation</option>
+              </select>
             </div>
           </div>
 
           <div className="filter wow fadeIn gallery full-width">
-            <div
-              className="col-md-6 items ACS lg-mr wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>OFFICE ADMIN</h6>
-                  <p>Unlock the Power of OFFICE ADMIN with our Expert Team!</p>
-                </div>
-                <Link href={`/catalog/admin-customer-support`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-luana-freitas-15490322.jpg" alt=""
-                  width={1000}
-                  height={1500}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Editing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Data entry</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Typing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Slide presentation</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Virtual Assistance</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Flyer Distribution</Link>
-                  </span><span>
-                    <Link href="#0">Project Management</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items ACS wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Customer Support</h6>
-                  <p>The Best Customer Care Around: Let us take care of them!</p>
-                </div>
-                <Link href={`/catalog/admin-customer-support`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-yan-krukau-8866790.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Customer Care</Link>
-                  </span>
-               
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items BF wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Business</h6>
-                  <p>Discover the revolutionary benefits of business today!</p>
-                </div>
-                <Link href={`/catalog/business-finance`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-christina-morillo-1181395.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="/works4/works4-dark">Business Plans</Link>
-                  </span>
-                  <span>
-                    <Link href="/works4/works4-dark">Market Research</Link>
-                  </span>
-                  <span>
-                    <Link href="/works4/works4-dark">Business Consulting</Link>
-                  </span>
-                  <span>
-                    <Link href="/works4/works4-dark">Project Management</Link>
-                  </span>
-                  <span>
-                    <Link href="/works4/works4-dark">CRM Management</Link>
-                  </span>
-                  <span>
-                    <Link href="/works4/works4-dark">ERP Management</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items BF graphic wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Finance.</h6>
-                  <p>Money talks all else walks and that&apos;s why money matters!</p>
-                </div>
-                <Link href={`/catalog/business-finance`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/savings-2789112_1920.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Financial Consulting</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Accounting</Link>
-                  </span>
-                  
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items DA wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Data</h6>
-                  <p>Unlock the power of data and harness the potential to achieve your personal and business goals, with Lone Wolves Digital!</p>
-                </div>
-                <Link href={`/catalog/data-ai-services`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-karolina-grabowska-7681097.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Data Entry</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Data Processing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Data Analytics</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Data Visualization</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Data Science</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Databases</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Data Engineering</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items DA wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>AI</h6>
-                  <p>With the power of AI Lone Wolves Digital will take your business to the next level!</p>
-                </div>
-                <Link href={`/catalog/data-ai-services`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-kindel-media-8566469.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                {/* <Link href={`/project-details2-dark-dark/project-details2-dark-dark-dark`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/d847951e-d8e6-4f7c-8dac-3cdad6321a99.webp" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link> */}
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Mid-journey Artists</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">DALL-E Artists</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Stable Diffusion Artists</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">AI Models</Link>
-                  </span><span>
-                    <Link href="#0">AI Music Videos</Link>
-                  </span><span>
-                    <Link href="#0">AI Content Editing</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items EA wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Architecture</h6>
-                  <p>Design the future with Lone Wolves Digital, explore the world&apos;s most innovative architecture!</p>
-                </div>
-                <Link href={`/catalog/engineering-architecture`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-mihai-vlasceanu-1400249.jpg" alt=""
-                  width={1000}
-                  height={1500} />
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Building Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Interior Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Building Information Modeling</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Landscape Design</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items EA wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Electronics Engineering</h6>
-                  <p>Innovations and breakthroughs that will shape our world!</p>
-                </div>
-                <Link href={`/catalog/engineering-architecture`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-rfstudio-3825580.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">CAD</Link>
-                  </span>
-        
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items GDP wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Packaging & Merchandise Design </h6>
-                  <p>Unwrap your brand&apos;s potential and elevate your packaging and merchandise design with the help of Lone Wolves Digital today!</p>
-                </div>
-                <Link href={`/catalog/graphics-design-photography`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/magic-mind-GnD_TOrbWh4-unsplash.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">T-Shirts & Merchandise Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Book Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Packaging Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Album Cover Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Car Wraps</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Podcast Cover Art</Link>
-                  </span>
-                 
-                </div>
-
-                
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items GDP wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Drawing & Illustration</h6>
-                  <p>Draw your imagination and bring your ideas to life with Lone Wolves Digital Illustration Services!</p>
-                </div>
-                <Link href={`/catalog/graphics-design-photography`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-ekrulila-3246665.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Illustration</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Vector Tracing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Portraits </Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Caricatures</Link>
-                  </span><span>
-                    <Link href="#0">Cartoons</Link>
-                  </span><span>
-                    <Link href="#0">Comics</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Fashion Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Pattern Design</Link>
-                  </span><span>
-                    <Link href="#0">Storyboards</Link>
-                  </span>
-                </div>
-
-                
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items GDP wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Visual Design</h6>
-                  <p>Unleash creativity and bring your vision to life with Lone Wolves Digital Art & Illustration services!</p>
-                </div>
-                <Link href={`/catalog/graphics-design-photography`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/krisztian-tabori-IyaNci0CyRk-unsplash.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Presentation Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Image Editing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Infographic Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Vector Tracing</Link>
-                  </span>
-                </div> 
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items GDP wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Packaging & Covers</h6>
-                  <p>Stand out in the crowd and get noticed with expert packaging & covers services from Lone Wolves Digital!</p>
-                </div>
-                <Link href={`/catalog/graphics-design-photography`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-drew-williams-2608495.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Packaging</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Label Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Book Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Album Cover Design</Link>
-                  </span><span>
-                    <Link href="#0">Podcast Cover Art</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items GDP wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Fashion & Merchandise</h6>
-                  <p> With Lone Wolves Digital Fashion & Merchandise services, you can make a statement that elevates your style!</p>
-                </div>
-                <Link href={`/catalog/graphics-design-photography`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-gustavo-fring-4127636.jpg" alt=""
-                  width={1000}
-                  height={1500}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Fashion Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">T-Shirts</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Merchandise</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Jewelry Design</Link>
-                  </span>
-                  </div> 
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items GDP wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Product & Characters Design</h6>
-                  <p>From concept to creation we will bring your products and characters to life with Our Lone Wolves Digital Designers!!</p>
-                </div>
-                <Link href={`/catalog/graphics-design-photography`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/man-3130952_1920.png" alt=""
-                  width={1000}
-                  height={1500}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Industrial Product Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Character Modeling</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Trade Booth Design</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items GDP wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Print Design</h6>
-                  <p>For the print that packs a punch choose Lone Wolves Digital and make your message stand out with our professional design services</p>
-                </div>
-                <Link href={`/catalog/graphics-design-photography`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-leeloo-thefirst-7598012.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Flyer Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Brochure Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Portraits </Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Poster Design</Link>
-                  </span><span>
-                    <Link href="#0">Catalog Design</Link>
-                  </span><span>
-                    <Link href="#0">Invitation Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Menu Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Postcard Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Signage Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Product Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Graphics for Streamers</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Character Modeling</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items GDP wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Infographics & Presentation Design</h6>
-                  <p>Visualize your ideas and communicate with clarity that Impacts your customers/cliens with Lone Wolves Digital Infographics and Presentation Designers!!</p>
-                </div>
-                <Link href={`/catalog/graphics-design-photography`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/infographics-1005174_1280.png" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Presentation Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Infographic Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Trade Show Booth Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Resume Design</Link>
-                  </span>
-                </div> 
-              </div>
-            </div>
-
-
-            <div
-              className="col-md-6 items GDP wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Photography</h6>
-                  <p>Capture Life&apos;s Moments and experience the magic of photography with Lone Wolves Digital expert Photographers!</p>
-                </div>
-                <Link href={`/catalog/graphics-design-photography`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-kaique-rocha-598917.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                <span>
-                    <Link href="#0">Portrait Photographers</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Lifestyle & Fashion Photographers</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Real Estate Photographers</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Event Photographers</Link>
-                  </span><span>
-                    <Link href="#0">Food Photographers</Link>
-                  </span><span>
-                    <Link href="#0">Aerial Photographers</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Image Editing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Photography Advice</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Local Photography</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Product Photography</Link>
-                  </span>
-                </div> 
-              </div>
-            </div>
-
-
-
-            <div
-              className="col-md-6 items HRT wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>HR & Training</h6>
-                  <p>Boost Performance your team&apos;s potential with Lone Wolves Digital&apos;s HR and Training Solutions!!</p>
-                </div>
-                <Link href={`/catalog/hr-training`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-cottonbro-studio-5989930.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">HR Consulting</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items L wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Legal</h6>
-                  <p>Trust our expertise to protect your rights and navigate the legal landscape!</p>
-                </div>
-                <Link href={`/catalog/legal`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-august-de-richelieu-4427622.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Legal Consulting</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items LS wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Lifestyle</h6>
-                  <p>Embrace a vibrant lifestyle and live your best life with Lone Wolves Digital Lifestyle digital products and services!</p>
-                </div>
-                <Link href={`/catalog/lifestyle`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-marlene-leppänen-1019771.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Arts & Crafts</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Career Counseling</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Cooking Lessons</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Family</Link>
-                  </span><span>
-                    <Link href="#0">Genealogy</Link>
-                  </span><span>
-                    <Link href="#0">Online Tutoring</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Other Lifestyle</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Personal Styling</Link>
-                  </span><span>
-                    <Link href="#0">Personal Training</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Traveling</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Wellness</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Online Language Lessons</Link>
-                  </span>
-                </div>  
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items SDM wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Branding</h6>
-                  <p> Build a Strong Brand Identity with Lone Wolves Digital and let us help you stand out in a crowded market!</p>
-                </div>
-                <Link href={`/catalog/sales-digital-marketing`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-daniel-adesina-1445454.jpg" alt=""
-                  width={1000}
-                  height={1500}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Brand Identity Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Brand Style Guides</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Branding Services </Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Branding Services</Link>
-                  </span><span>
-                    <Link href="#0">Brand Voice & Tone</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items SDM wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Logo & Brand Identity</h6>
-                  <p> Make your mark with an identity that speaks volumes. Lone Wolves Digital brings your brand to life with professional logo and identity design services.!</p>
-                </div>
-                <Link href={`/catalog/sales-digital-marketing`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-tetyana-kovyrina-11138259.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Logo Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Brand Style Guides</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Business Cards</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Stationery</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-
-             <div
-              className="col-md-6 items SDM wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Websites</h6>
-                  <p> We build more than just websites. We create online experiences. So, Why not let us at Lone Wolves Digital Craft your digital presence with our expert web developers!</p>
-                </div>
-                <Link href={`/catalog/sales-digital-marketing`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-ketut-subiyanto-4132331.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Website Development</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Website Maintenance</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Business Websites</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">E-Commerce Development</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">E-commerce Management</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Landing Pages</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Website Content</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-             <div
-              className="col-md-6 items SDM wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Website Platforms</h6>
-                  <p>Join the digital revolution and choose Lone Wolves Digital website platform services to elevate your brand!</p>
-                </div>
-                <Link href={`/catalog/sales-digital-marketing`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/wordpress-2171594_1920.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">WordPress</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Shopify</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Wix</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Webflow</Link>
-                  </span><span>
-                    <Link href="#0">Figma</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-             <div
-              className="col-md-6 items SDM wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Social Media Marketing</h6>
-                  <p>Let us help you reach your target audience and increase your social media engagement. Lone Wolves Digital will elevate your social media game with our proven marketing tactics!</p>
-                </div>
-                <Link href={`/catalog/sales-digital-marketing`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-dalila-dalprat-2055500.jpg" alt=""
-                  width={1000}
-                  height={1500}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Social Media Marketing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Social Media Advertising</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Marketing Strategy</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Search Engine Optimization (SEO)</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Social Media Marketing Videos</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Video Ads & Commercials</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Spokesperson Videos</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Social Media Videos</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Influencer Marketing</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-             <div
-              className="col-md-6 items SDM wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Search engines</h6>
-                  <p> Rank higher and bee seen. Lone Wolves Digital search engine optimization services gets results!</p>
-                </div>
-                <Link href={`/catalog/sales-digital-marketing`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-cottonbro-studio-7350905.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Search Engine Marketing (SEM)</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Local SEO</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Marketing Advice</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">E-Commerce Marketing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Video Marketing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Guest Posting</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Email Marketing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Web Analytics</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Mobile App Marketing</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items SDM wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Analytics & Strategy</h6>
-                  <p>With our customized  analytics strategy solutions you get data-driven insights to maximize your ROI with Lone Wolves Digital! 
-                  !</p>
-                </div>
-                <Link href={`/catalog/sales-digital-marketing`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-cottonbro-studio-5083397.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Market Research</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Marketing Strategy</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Web Analytics</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Surveys</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items SDIT wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Application Development</h6>
-                  <p>From concept to launch. We bring your ideas to life with innovative, user-friendly apps that enhance your business!</p>
-                </div>
-                <Link href={`/catalog/software-development-it`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/procreator-ux-design-studio-VzJjPuk53sk-unsplash.jpg" alt=""
-                  width={1000}
-                  height={1500}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Mobile Apps</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Web Programming</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Desktop Applications</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Game Development</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Desktop Apps</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Development for Streamers</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Online Coding Lessons</Link>
-                  </span>
-                                  
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items SDIT wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Support & Cybersecurity</h6>
-                  <p>Don&apos;t leave your security to chance! Let our experts protect your business today. Our support and cybersecurity services offer complete peace of mind for your business!</p>
-                </div>
-                <Link href={`/catalog/software-development-it`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-saksham-choudhary-2036656.jpg" alt=""
-                  width={1000}
-                  height={1500}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">DevOps & Cloud</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Support</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Cybersecurity</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Intormation technology</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Data Protection</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">QA & Review</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items VAA wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Editing & Post-Production</h6>
-                  <p>From raw footage to polished final product, we&apos;re your one stop shop for all your post-production needs! Let Lone Wolves Digital transform your basic edits into a masterpiece with our expert editing and post-production services!</p>
-                </div>
-                <Link href={`/catalog/video-audio-animation`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-cytonn-photography-955405.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Video Editing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Visual Effects</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Subtitles & Captions</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Intro & Outro Videos</Link>
-                  </span><span>
-                    <Link href="#0">Screen casting Videos</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items VAA wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Animation</h6>
-                  <p>Our animation services help you communicate your message in a creative and engaging way. Our skilled animators bring a touch of magic to your content, making it truly unforgettable.</p>
-                </div>
-                <Link href={`/catalog/video-audio-animation`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-merlin-lightpainting-11137997.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Character Animation</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Animated Explainers</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Logo Animation</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Animated GIFs</Link>
-                  </span><span>
-                    <Link href="#0">Lottie</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Web Animation</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items VAA wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Product Explainer Videos</h6>
-                  <p>Show, don&apos;t tell. Let our product and explainer videos do the talking for you!</p>
-                </div>
-                <Link href={`/catalog/video-audio-animation`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-mart-production-7335420.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">3D Product Animation</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">E-Commerce Product Videos</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Live Action Explainers</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">App & Website Previews</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Corporate Videos</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Unboxing Videos</Link>
-                  </span>
-
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items VAA wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Voice Over</h6>
-                  <p>Make your message heard professional voice over services for any project</p>
-                </div>
-                <Link href={`/catalog/video-audio-animation`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/emmanuel-ikwuegbu-Wc-vrrwxts0-unsplash.jpg" alt=""
-                  width={1000}
-                  height={1500}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Female Voice Over</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Male Voice Over</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">German Voice Over</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">French Voice Over</Link>
-                  </span><span>
-                    <Link href="#0">Video Narration</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items VAA wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Audio Streaming</h6>
-                  <p>Listen to your heart&apos;s content with our top-rated audio streaming services!</p>
-                </div>
-                <Link href={`/catalog/video-audio-animation`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-george-milton-6953865.jpg" alt=""
-                  width={1000}
-                  height={1500}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Podcast Production</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Audiobook Production</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Sound Design</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Audio Editing</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items VAA wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Music</h6>
-                  <p>Feel the beat, hear the magic and let the sound of your dreams from, classical to hip hop, we have it all!</p>
-                </div>
-                <Link href={`/catalog/video-audio-animation`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-los-muertos-crew-7586652.jpg" alt=""
-                  width={1000}
-                  height={1500}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Producers & Composers</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Singers & Vocalists</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Mixing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Mastering</Link>
-                  </span><span>
-                    <Link href="#0">Songwriters</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items WT wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Articles & Blog Posts</h6>
-                  <p>Make your website stand out with expertly crafted articles and blog posts. Lone Wolves Digital creatives, compelling content that engages and inspires your audience through engaging and shareable content!</p>
-                </div>
-                <Link href={`/catalog/writing-translation`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/karthik-sridasyam-BmjLE77gz0E-unsplash.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Translation</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Social Media Writing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Product Descriptions</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Sales Writing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Book </Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Press Releases</Link>
-                  </span> <span>
-                    <Link href="#0">eBook</Link>
-                  </span> <span>
-                    <Link href="#0">Email Writing</Link>
-                  </span> <span>
-                    <Link href="#0">Ad Writing</Link>
-                  </span> <span>
-                    <Link href="#0">Technical Writing</Link>
-                  </span> <span>
-                    <Link href="#0">Scriptwriting</Link>
-                  </span> 
-                  <span>
-                    <Link href="#0">Proofreading </Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Editing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Content Writing</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items WT wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Book & Ebook Writing</h6>
-                  <p>If Knowledge is power then it&apos;s time to unleash your potential with books and e-books that allow you to explore new worlds!</p>
-                </div>
-                <Link href={`/catalog/writing-translation`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-thought-catalog-904620.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Creative Writing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Podcast Writing</Link>
-                  </span>
-                               
-                  <span>
-                    <Link href="#0">Book </Link>
-                  </span>
-                 
+            {filteredItems.length > 0 ? (
+              filteredItems.map((item, index) => (
+                <div
+                  key={index}
+                  className={`col-md-6 items ${item.category} ${item.category === 'ACS' && index === 0 ? 'lg-mr' : ''} wow fadeInUp`}
+                  data-wow-delay=".4s"
+                >
+                  <div className="item-img">
+                    <div className="cont">
+                      <h6>{item.title}</h6>
+                      <p>{item.description}</p>
+                    </div>
+                    <Link href={item.link}>
+                      <a className="rota">
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          width={item.width}
+                          height={item.height}
+                          quality={75}
+                          loading="lazy"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                        <div className="item-img-overlay"></div>
+                      </a>
+                    </Link>
+                    <div className="tags">
+                      {item.tags.map((tag, tagIndex) => (
+                        <span key={tagIndex}>
+                          <Link href="#0">{tag}</Link>
+                        </span>
+                      ))}
+                    </div>
                   </div>
+                </div>
+              ))
+            ) : (
+              <div className="no-results">
+                No results found for your search. Try a different term.
               </div>
-            </div>
-
-            <div
-              className="col-md-6 items WT wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Professional & Business Writing</h6>
-                  <p>Whether you need to convey complex technical information to a lay audience, craft a compelling sales pitch, or create a business proposal that sets you apart from your competitors, professional and business writing can help you achieve your goals!</p>
-                </div>
-                <Link href={`/catalog/writing-translation`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-ketut-subiyanto-4350108.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Resume Writing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Cover Letters</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Business Names </Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Slogans</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">LinkedIn Profiles</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items WT wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Research & Summaries</h6>
-                  <p>Research and summaries can help businesses, students, and professionals to make informed decisions, present findings in a clear and compelling manner, and ultimately achieve their goals. Whether you need assistance with market research, data analysis, or report writing, professional research and summary services can provide you with the support and expertise you need to succeed!</p>
-                </div>
-                <Link href={`/catalog/writing-translation`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-christina-morillo-1181569.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Case Studies</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Grant Writing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Legal Writing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Technical Writing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">White Papers</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Fact-Checking</Link>
-                  </span> 
-                  </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items WT wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Editing & Beta Reading</h6>
-                  <p>By using Lone Wolves Digtial&apos;s professional Editing & Beta Reading services, you can ensure that your written content is polished, error-free, and ready to impress your readers. Whether you are a writer looking to improve your work, a business looking to produce high-quality content, or a student looking to ace your assignments, Editing & Beta Reading can help you achieve your goals. With a keen eye for detail and a commitment to excellence, professional editors and beta readers can help you take your writing to the next level!</p>
-                </div>
-                <Link href={`/catalog/writing-translation`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-vlada-karpovich-4050287.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Proofreading</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Editing</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Beta Reading</Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-md-6 items WT wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="item-img">
-                <div className="cont">
-                  <h6>Copywriting</h6>
-                  <p>Are you worried about protecting your intellectual property and ensuring that your creative works are not misused or plagiarized? Look no further than our comprehensive copyright services. Our team of experts can guide you through the process of registering your works and provide ongoing support to safeguard your rights. With our help, you can rest assured that your hard work is protected and that you can reap the rewards of your creativity for years to come. Contact us today to learn more about our copyright services and how we can help you secure your valuable intellectual property.</p>
-                </div>
-                <Link href={`/catalog/writing-translation`}>
-                  <a className="rota">
-                    <Image src="/img/catalog/freelancer/pexels-august-de-richelieu-4427547.jpg" alt=""
-                  width={1000}
-                  height={1000}/>
-                    <div className="item-img-overlay"></div>
-                  </a>
-                </Link>
-                <div className="tags">
-                  <span>
-                    <Link href="#0">Email Copy</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Sales Copy</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Product Descriptions</Link>
-                  </span>
-                  <span>
-                    <Link href="#0">Social Media Copy</Link>
-                  </span>
-                  
-                </div>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
