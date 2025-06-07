@@ -4,8 +4,23 @@ import Image from "next/image";
 import Link from "next/link";
 import appData from "../../data/app.json";
 import { handleDropdown, handleMobileDropdown } from "../../common/navbar";
+import { Sun, SunMoon } from "lucide-react";
+import { useGlobalContext } from "../../context/GlobalContext";
 
 const Navbar = ({ lr, nr, theme }) => {
+  const [isDark, setIsDark] = React.useState(true);
+  const {themeCSS, setThemeCSS} = useGlobalContext();
+
+  const onToggleTheme = () => {
+    setIsDark(!isDark);
+  if(themeCSS==="/css/light.css"){
+    setThemeCSS("/css/dark.css")
+    localStorage.setItem("theme", "dark")
+  }else {
+    setThemeCSS("/css/light.css")
+    localStorage.setItem("theme", "light")
+  }
+  }
   return (
     <nav
       ref={nr}
@@ -16,12 +31,33 @@ const Navbar = ({ lr, nr, theme }) => {
           <a className="logo">
             {theme ? (
               theme === "themeL" ? (
-                <Image ref={lr} src={appData.darkLogo} alt="logo" layout="responsive" width={100} height={100} />
+                <Image
+                  ref={lr}
+                  src={appData.darkLogo}
+                  alt="logo"
+                  layout="responsive"
+                  width={100}
+                  height={100}
+                />
               ) : (
-                <Image ref={lr} src={appData.lightLogo} alt="logo" layout="responsive" width={100} height={100} />
+                <Image
+                  ref={lr}
+                  src={appData.lightLogo}
+                  alt="logo"
+                  layout="responsive"
+                  width={100}
+                  height={100}
+                />
               )
             ) : (
-              <Image ref={lr} src={appData.lightLogo} alt="logo" layout="responsive" width={100} height={100} />
+              <Image
+                ref={lr}
+                src={appData.lightLogo}
+                alt="logo"
+                layout="responsive"
+                width={100}
+                height={100}
+              />
             )}
           </a>
         </Link>
@@ -72,6 +108,16 @@ const Navbar = ({ lr, nr, theme }) => {
                 <a className="nav-link">Quotes</a>
               </Link>
             </li>
+
+            <li className="nav-item">
+              <button
+                className="btn-toggle-theme nav-link"
+                onClick={onToggleTheme}
+                aria-label="Toggle Dark/Light Mode"
+              >
+                {!isDark ? <Sun/> : <SunMoon/>}
+              </button>
+            </li>
           </ul>
         </div>
       </div>
@@ -81,7 +127,6 @@ const Navbar = ({ lr, nr, theme }) => {
         .navbar {
           padding: 1rem;
         }
-        
 
         .navbar-toggler {
           margin-left: auto;
@@ -94,6 +139,20 @@ const Navbar = ({ lr, nr, theme }) => {
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        .btn-toggle-theme {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          font-size: 1rem;
+          padding: 0.5rem 1rem;
+          color: inherit;
+          font-family: inherit;
+        }
+
+        .btn-toggle-theme:hover {
+          text-decoration: underline;
         }
 
         @media (max-width: 991px) {

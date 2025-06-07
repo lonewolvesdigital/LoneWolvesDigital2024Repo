@@ -3,6 +3,7 @@ import { Formik, Form, Field } from "formik";
 
 const SContactForm = ({ noLine }) => {
   const messageRef = React.useRef(null);
+  
   function validateEmail(value) {
     let error;
     if (!value) {
@@ -12,18 +13,18 @@ const SContactForm = ({ noLine }) => {
     }
     return error;
   }
-  const sendMessage = (ms) => new Promise((r) => setTimeout(r, ms));
+
   return (
     <section className="contact-sec section-padding position-re">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-8 col-md-10">
-            <div className="sec-head  text-center">
+            <div className="sec-head text-center">
               <h6 className="wow fadeIn" data-wow-delay=".5s">
                 Contact Lone Wolves Digital
               </h6>
               <h3 className="wow color-font">
-              Help us, help you, turn your ideas into magic. 
+                Help us, help you, turn your ideas into magic.
               </h3>
             </div>
           </div>
@@ -37,24 +38,46 @@ const SContactForm = ({ noLine }) => {
                   email: "",
                   message: "",
                 }}
-                onSubmit={async (values) => {
-                  await sendMessage(500);
-                  alert(JSON.stringify(values, null, 2));
-                  // show message
+                onSubmit={async (values, { setSubmitting, resetForm }) => {
+                  try {
+                    const response = await fetch("https://api.web3forms.com/submit", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json",
+                      },
+                      body: JSON.stringify({
+                        access_key: "2edd3a90-0587-4f9c-9ef8-3eb6e882925b", // Replace with your Web3Forms access key
+                        name: values.name,
+                        email: values.email,
+                        message: values.message,
+                      }),
+                    });
 
-                  messageRef.current.innerText =
-                    "Your Message has been successfully sent. I will contact you soon.";
-                  // Reset the values
-                  values.name = "";
-                  values.email = "";
-                  values.message = "";
-                  // clear message
+                    const result = await response.json();
+
+                    if (result.success) {
+                      messageRef.current.innerText =
+                        "Your Message has been successfully sent. We will contact you soon.";
+                      resetForm();
+                    } else {
+                      messageRef.current.innerText =
+                        "There was an error sending your message. Please try again.";
+                    }
+                  } catch (error) {
+                    messageRef.current.innerText =
+                      "An error occurred. Please try again later.";
+                    console.error("Error:", error);
+                  }
+
                   setTimeout(() => {
                     messageRef.current.innerText = "";
-                  }, 2000);
+                  }, 3000);
+
+                  setSubmitting(false);
                 }}
               >
-                {({ errors, touched }) => (
+                {({ errors, touched, isSubmitting }) => (
                   <Form id="contact-form">
                     <div className="messages" ref={messageRef}></div>
                     <div className="controls">
@@ -85,7 +108,6 @@ const SContactForm = ({ noLine }) => {
                             )}
                           </div>
                         </div>
-
                         <div className="col-12">
                           <div className="form-group">
                             <Field
@@ -103,8 +125,9 @@ const SContactForm = ({ noLine }) => {
                             <button
                               type="submit"
                               className="nb butn bord curve mt-30"
+                              disabled={isSubmitting}
                             >
-                              <span>Send Massege</span>
+                              <span>Send Message</span>
                             </button>
                           </div>
                         </div>

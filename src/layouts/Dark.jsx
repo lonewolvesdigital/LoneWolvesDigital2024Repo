@@ -1,19 +1,24 @@
 /* eslint-disable @next/next/no-css-tags */
 import React from "react";
 import Head from "next/head";
+import { useGlobalContext } from "../context/GlobalContext";
 
 const DarkTheme = ({ children, useSkin, mobileappstyle }) => {
-  const [themeCss, setThemeCss] = React.useState("");
-
+const {setThemeCSS, themeCSS} = useGlobalContext()
   React.useEffect(() => {
     const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setThemeCss(isDarkMode ? "/css/dark.css" : "/css/light.css");
+    setThemeCSS(isDarkMode ? "/css/dark.css" : "/css/light.css");
+    if(isDarkMode){
+      localStorage.setItem("themeMode", "dark")
+    } else {
+      localStorage.setItem("themeMode", "light")
+    }
   }, []);
 
   return (
     <>
       <Head>
-        {themeCss && <link rel="stylesheet" href={themeCss} />}
+        {themeCSS && <link rel="stylesheet" href={themeCSS} />}
         {useSkin && <link rel="stylesheet" href="/css/arch-skin-dark.css" />}
         {mobileappstyle && <link href="/css/mobile-app-dark.css" rel="stylesheet" />}
       </Head>

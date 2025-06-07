@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar/navbar";
 import Footer2 from "../../components/Footer2/footer2";
 import WorksHeader from "../../components/Works-header/works-header";
 import WorksStyle4 from "../../components/Works-style4/works-style4";
+import CatalogPricing from "../../components/pricing/catalog-pricing";
 
 
 const WorksDark = () => {
@@ -36,6 +37,8 @@ const WorksDark = () => {
     });
   }, [fixedHeader, MainContent, navbarRef]);
 
+ 
+
   return (
     <DarkTheme mobileappstyle>
       <div className="circle-bg">
@@ -48,6 +51,8 @@ const WorksDark = () => {
       <WorksHeader sliderRef={fixedHeader} />
       <div ref={MainContent} className="main-content">
       <WorksStyle4 grid={3} filterPosition="center" />
+
+      
 
         {/* <WorksStyle4 grid={3} filterPosition="center" /> */}
         <Footer2 />

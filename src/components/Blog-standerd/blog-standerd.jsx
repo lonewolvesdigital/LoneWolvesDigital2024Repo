@@ -58,21 +58,6 @@ const BlogStanderd = ({ blogs }) => {
                   </div>
                 </div>
               ))}
-              {/* <div className="pagination">
-                <span className="active">
-                  <Link href={`/blog/blog-dark`}>1</Link>
-                </span>
-                <span>
-                  <Link href={`/blog/blog-dark`}>2</Link>
-                </span>
-                <span>
-                  <Link href={`/blog/blog-dark`}>
-                    <a>
-                      <i className="fas fa-angle-right"></i>
-                    </a>
-                  </Link>
-                </span>
-              </div> */}
             </div>
           </div>
         </div>

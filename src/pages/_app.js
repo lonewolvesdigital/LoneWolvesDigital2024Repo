@@ -5,6 +5,7 @@ import Cursor from "../components/cursor";
 import ScrollToTop from "../components/scrollToTop";
 import LoadingScreen from "../components/Loading-Screen";
 import "../styles/main.scss";
+import { GlobalProvider } from "../context/GlobalContext";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -15,7 +16,9 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Cursor />
       <LoadingScreen />
-      <Component {...pageProps} />
+     <GlobalProvider>
+       <Component {...pageProps} />
+     </GlobalProvider>
       <ScrollToTop />
       <Script id="wow" src="/js/wow.min.js"></Script>
       <Script

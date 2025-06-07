@@ -19,6 +19,7 @@ const Homepage1 = () => {
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
 
+
   React.useEffect(() => {
     setInterval(() => {
       if (fixedSlider.current) {
@@ -43,6 +44,8 @@ const Homepage1 = () => {
     });
   }, [fixedSlider, MainContent, navbarRef]);
 
+
+
   return (
     <DarkTheme mobileappstyle>
        <div className="circle-bg">
@@ -51,7 +54,7 @@ const Homepage1 = () => {
           <div className="gradient-circle two"></div>
         </div>
       </div>
-      <Navbar nr={navbarRef} lr={logoRef} />
+      <Navbar nr={navbarRef} lr={logoRef}/>
       <IntroWithSlider sliderRef={fixedSlider} />
       <div ref={MainContent} className="main-content">
       <br/>

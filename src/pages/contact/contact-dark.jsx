@@ -46,10 +46,21 @@ const Contact = () => {
         <ContactForm />
         <div className="map" id="ieatmaps">
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.8344934958986!2d18.415954734887695!3d-33.919658999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc67c227c54691%3A0x1054ddc64444ee9d!2sWeWork%20-%20Coworking%20%26%20Office%20Space!5e0!3m2!1sen!2sza!4v1677677039594!5m2!1sen!2sza" 
+        {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.8344934958986!2d18.415954734887695!3d-33.919658999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc67c227c54691%3A0x1054ddc64444ee9d!2sWeWork%20-%20Coworking%20%26%20Office%20Space!5e0!3m2!1sen!2sza!4v1677677039594!5m2!1sen!2sza" 
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        </iframe> */}
+
+         <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.5234567890123!2d-79.6789012345678!3d43.5678901234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s1065%20Canadian%20Pl%2C%20Mississauga%2C%20ON%20L4W%200C2%2C%20Canada!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+        width="100%"
+        height="450"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="1065 Canadian Place, Mississauga Location"
+      ></iframe>
         </div>
 
         <Footer2 hideBGCOLOR />
