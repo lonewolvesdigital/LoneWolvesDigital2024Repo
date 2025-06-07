@@ -31,7 +31,7 @@ const Navbar = ({ lr, nr, theme }) => {
     >
       <div className="container d-flex align-items-center justify-content-between">
         {/* Logo and Email Input */}
-        <div style={{display: "flex", justifyContent: "center", alignItems: "center", width: "100%"}} className="d-flex align-items-center logo-email-wrapper">
+        <div className="d-flex align-items-center logo-email-wrapper">
           <Link href="/">
             <a className="logo me-2">
               {theme ? (

@@ -47,7 +47,7 @@ const SContactForm = ({ noLine }) => {
                         Accept: "application/json",
                       },
                       body: JSON.stringify({
-                        access_key: "2edd3a90-0587-4f9c-9ef8-3eb6e882925b", // Replace with your Web3Forms access key
+                        access_key: "aa414ac5-5454-4bdb-ae40-622f3ff4b5f2", // Replace with your Web3Forms access key
                         name: values.name,
                         email: values.email,
                         message: values.message,
