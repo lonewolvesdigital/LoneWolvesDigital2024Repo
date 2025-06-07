@@ -13,7 +13,7 @@ const {setThemeCSS, themeCSS} = useGlobalContext()
     } else {
       localStorage.setItem("themeMode", "light")
     }
-  }, []);
+  }, [themeCSS]);
 
   return (
     <>

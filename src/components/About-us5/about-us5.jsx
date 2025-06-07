@@ -2,6 +2,7 @@
 import React from "react";
 import aboutSkillsProgress from "../../common/aboutSkillsProgress";
 import Image from 'next/image';
+import Link from "next/link";
 
 
 const AboutUs5 = () => {
@@ -122,7 +123,7 @@ const AboutUs5 = () => {
               
               {/* Book Now Button */}
               <div style={{display: "flex", gap: "30px"}} className="mb-50">
-                <a 
+                <Link 
                   href="#" 
                   onClick={handleBookingClick}
                   style={{
@@ -140,8 +141,8 @@ const AboutUs5 = () => {
                   }}
                 >
                   Book Now
-                </a>
-                 <a 
+                </Link>
+                 <Link
                   href="/contact/contact-dark" 
                   // onClick={handleBookingClick}
                   style={{
@@ -159,7 +160,7 @@ const AboutUs5 = () => {
                   }}
                 >
                   Contact Now
-                </a>
+                </Link>
               </div>
         </div>
          </div>
