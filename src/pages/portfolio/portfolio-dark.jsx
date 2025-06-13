@@ -166,15 +166,7 @@ const Portfolio = () => {
           padding: '0 2rem',
           textAlign: 'center'
         }}>
-          <h1 style={{
-            fontSize: '3.5rem',
-            fontWeight: '700',
-            margin: '0 0 1rem 0',
-            background: 'linear-gradient(45deg, #00d4ff, #b19cd9, #ff6b6b)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>
+          <h1 className='color-font'>
             Our Portfolio
           </h1>
           <p style={{

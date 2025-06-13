@@ -34,73 +34,127 @@ const ProjectDetails2Dark = () => {
     });
   }, [navbarRef]);
 
-  const data = {
- title: `${ProjectDate.title.big}`,
-   subtitle:
-     `${ProjectDate.title.small}`,
+ const data = {
+  title: "ENGINEERING & ARCHITECTURE",
+  subtitle: "Professional Design & Construction Services",
   packages: [
     {
       packageName: "Beta Pack",
-      price: "$2,500/mo",
+      price: "Starting at $2,250/mo",
+      licenseType: "Standard Engineering & Architectural Guidance – No IP Transfer",
       features: [
-        "📄 Admin support included",
-        "📞 Priority email/chat support",
-        "📊 Monthly reporting dashboard"
+        "10 hrs/mo of engineering or architectural consulting (2D drafting, code review)",
+        "Basic 2D CAD drawings (up to 5 sheets)",
+        "Monthly progress & compliance report",
+        "Email support (48 hr SLA)",
+        "No IP transfer of CAD files or calculation models"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $2,500/mo for 12 months", "📈 Total: $30,000"]
+          details: [
+            "Monthly Cost: $2,500",
+            "Annual Cost: $30,000",
+            "Live Call Deposit: $3,000",
+            "Discount Amount: $3,000 (10%)",
+            "Monthly After Discount: $2,250",
+            "Total After Discount: $27,000"
+          ],
+          savings: "$3,000"
         },
         {
           label: "Option B – 6-Month Plan",
-          details: ["💳 $2,750/mo for 6 months", "📈 Total: $16,500"]
+          details: [
+            "Monthly Cost: $4,500",
+            "Semiannual Cost: $27,000",
+            "Discount Amount: $4,050 (15%)",
+            "Monthly After Discount: $3,750",
+            "Total After Discount: $22,500"
+          ],
+          savings: "$4,050"
         }
       ],
-      buyLink: "#buy-beta",
-      quoteLink: "#quote-beta"
+      buyLink: "#buy-beta-engineering",
+      quoteLink: "#quote-beta-engineering"
     },
     {
       packageName: "Sigma Pack",
-      price: "$4,000/mo",
+      price: "Starting at $5,220/mo",
+      licenseType: "Advanced Engineering & Architecture – No IP Transfer",
       features: [
-        "🧾 Advanced admin support",
-        "🛠️ Workflow automation",
-        "💼 Dedicated manager"
+        "20 hrs/mo of consulting (3D BIM modeling, structural analysis sketches)",
+        "3D BIM model & coordination (up to Level 2 detail)",
+        "Bi-weekly design review workshops",
+        "Priority email & chat support (24 hr SLA)",
+        "No IP transfer of model assets"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $4,000/mo", "📈 Total: $48,000"]
+          details: [
+            "Monthly Cost: $5,800",
+            "Annual Cost: $69,600",
+            "Live Call Deposit: $6,960",
+            "Discount Amount: $6,960 (10%)",
+            "Monthly After Discount: $5,220",
+            "Total After Discount: $62,640"
+          ],
+          savings: "$6,960"
         },
         {
           label: "Option B – 6-Month Plan",
-          details: ["💳 $4,400/mo", "📈 Total: $26,400"]
+          details: [
+            "Monthly Cost: $9,000",
+            "Semiannual Cost: $54,000",
+            "Discount Amount: $6,750 (12.5%)",
+            "Monthly After Discount: $8,125",
+            "Total After Discount: $47,250"
+          ],
+          savings: "$6,750"
         }
       ],
-      buyLink: "#buy-sigma",
-      quoteLink: "#quote-sigma"
+      buyLink: "#buy-sigma-engineering",
+      quoteLink: "#quote-sigma-engineering"
     },
     {
       packageName: "Alpha Pack",
-      price: "$7,000/mo",
+      price: "Starting at $8,550/mo",
+      licenseType: "Enterprise Engineering & Architecture – Full IP Transfer",
       features: [
-        "🧠 Strategic consulting",
-        "🔧 Custom integrations",
-        "👥 Team training sessions"
+        "40 hrs/mo dedicated consulting (full CD set, MEP coordination)",
+        "Complete Construction Documents (up to 50 sheets)",
+        "Weekly on-site or virtual site reviews",
+        "Custom parametric families & scripts (Revit, AutoCAD)",
+        "24/7 phone, chat & email support",
+        "Full IP transfer of all CAD/BIM assets and calculation models"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $7,000/mo", "📈 Total: $84,000"]
+          details: [
+            "Monthly Cost: $9,500",
+            "Annual Cost: $114,000",
+            "Live Call Deposit: $11,400",
+            "Discount Amount: $10,000 (8.77%)",
+            "Monthly After Discount: $8,550",
+            "Total After Discount: $102,600"
+          ],
+          savings: "$10,000"
         },
         {
           label: "Option B – 6-Month Plan",
-          details: ["💳 $7,500/mo", "📈 Total: $45,000"]
+          details: [
+            "Monthly Cost: $16,000",
+            "Semiannual Cost: $96,000",
+            "Discount Amount: $12,000 (12.5%)",
+            "Monthly After Discount: $14,000",
+            "Total After Discount: $84,000"
+          ],
+          savings: "$12,000"
         }
       ],
-      buyLink: "#buy-alpha",
-      quoteLink: "#quote-alpha"
+      buyLink: "#buy-alpha-engineering",
+      quoteLink: "#quote-alpha-engineering"
     }
   ]
 };

@@ -33,76 +33,131 @@ const ProjectDetails2Dark = () => {
       }
     });
   }, [navbarRef]);
-  const data = {
-  title: `${ProjectDate.title.big}`,
-    subtitle:
-      `${ProjectDate.title.small}`,
+ const data = {
+  title: "WRITING & TRANSLATION",
+  subtitle: "Content Creation, Translation, and Localization Services",
   packages: [
     {
       packageName: "Beta Pack",
-      price: "$2,500/mo",
+      price: "Starting at $2,500/mo",
+      licenseType: "Standard Content & Translation Retainer – No IP Transfer",
       features: [
-        "📄 Admin support included",
-        "📞 Priority email/chat support",
-        "📊 Monthly reporting dashboard"
+        "20 pages/mo of written content (blogs, articles, web copy)",
+        "5,000 words/mo of translation (any language pair)",
+        "Proofreading & light editing of client-supplied drafts",
+        "Monthly performance & quality report",
+        "Email support (48-hr SLA)"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $2,500/mo for 12 months", "📈 Total: $30,000"]
+          details: [
+            "Monthly Cost: $2,500",
+            "Annual Cost: $30,000",
+            "Live Call Deposit: $3,000",
+            "Discount Amount: $3,000 (10%)",
+            "Monthly After Discount: $2,250",
+            "Total After Discount: $27,000"
+          ],
+          savings: "$3,000"
         },
         {
           label: "Option B – 6-Month Plan",
-          details: ["💳 $2,750/mo for 6 months", "📈 Total: $16,500"]
+          details: [
+            "Monthly Cost: $4,200",
+            "Semiannual Cost: $25,200",
+            "Discount Amount: $3,780 (15%)",
+            "Monthly After Discount: $3,360",
+            "Total After Discount: $20,160"
+          ],
+          savings: "$3,780"
         }
       ],
-      buyLink: "#buy-beta",
-      quoteLink: "#quote-beta"
+      buyLink: "#buy-beta-writing",
+      quoteLink: "#quote-beta-writing"
     },
     {
       packageName: "Sigma Pack",
-      price: "$4,000/mo",
+      price: "Starting at $6,000/mo",
+      licenseType: "Enhanced Content & Multilingual Suite – No IP Transfer",
       features: [
-        "🧾 Advanced admin support",
-        "🛠️ Workflow automation",
-        "💼 Dedicated manager"
+        "40 pages/mo of SEO-optimized content with keyword research",
+        "15,000 words/mo of translation + localization",
+        "Bi-weekly style and accuracy audits",
+        "CMS & CAT tools integration (e.g., WordPress, SDL Trados)",
+        "Priority email & chat support (24-hr SLA)"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $4,000/mo", "📈 Total: $48,000"]
+          details: [
+            "Monthly Cost: $6,000",
+            "Annual Cost: $72,000",
+            "Live Call Deposit: $7,200",
+            "Discount Amount: $7,200 (10%)",
+            "Monthly After Discount: $5,400",
+            "Total After Discount: $64,800"
+          ],
+          savings: "$7,200"
         },
         {
           label: "Option B – 6-Month Plan",
-          details: ["💳 $4,400/mo", "📈 Total: $26,400"]
+          details: [
+            "Monthly Cost: $9,000",
+            "Semiannual Cost: $54,000",
+            "Discount Amount: $6,750 (12.5%)",
+            "Monthly After Discount: $8,125",
+            "Total After Discount: $47,250"
+          ],
+          savings: "$6,750"
         }
       ],
-      buyLink: "#buy-sigma",
-      quoteLink: "#quote-sigma"
+      buyLink: "#buy-sigma-writing",
+      quoteLink: "#quote-sigma-writing"
     },
     {
       packageName: "Alpha Pack",
-      price: "$7,000/mo",
+      price: "Starting at $10,000/mo",
+      licenseType: "Enterprise Content & IP Transfer",
       features: [
-        "🧠 Strategic consulting",
-        "🔧 Custom integrations",
-        "👥 Team training sessions"
+        "80 pages/mo of bespoke content (white papers, eBooks, scripts)",
+        "Unlimited translation & localization",
+        "Custom style guides, glossaries, and translation memory setup",
+        "Weekly editorial and localization performance reports",
+        "Dedicated Account Manager & 24/7 support",
+        "Full IP transfer of all created materials"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $7,000/mo", "📈 Total: $84,000"]
+          details: [
+            "Monthly Cost: $10,000",
+            "Annual Cost: $120,000",
+            "Live Call Deposit: $12,000",
+            "Discount Amount: $10,000 (8.33%)",
+            "Monthly After Discount: $9,167",
+            "Total After Discount: $110,000"
+          ],
+          savings: "$10,000"
         },
         {
           label: "Option B – 6-Month Plan",
-          details: ["💳 $7,500/mo", "📈 Total: $45,000"]
+          details: [
+            "Monthly Cost: $16,000",
+            "Semiannual Cost: $96,000",
+            "Discount Amount: $12,000 (12.5%)",
+            "Monthly After Discount: $14,000",
+            "Total After Discount: $84,000"
+          ],
+          savings: "$12,000"
         }
       ],
-      buyLink: "#buy-alpha",
-      quoteLink: "#quote-alpha"
+      buyLink: "#buy-alpha-writing",
+      quoteLink: "#quote-alpha-writing"
     }
   ]
 };
+
 
  const localizationSummaryPricingData = {
   title: "Localization & Content Services Comparison",

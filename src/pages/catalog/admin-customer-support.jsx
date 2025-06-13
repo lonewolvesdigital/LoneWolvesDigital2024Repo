@@ -33,27 +33,42 @@ const ProjectDetails2Dark = () => {
       }
     });
   }, [navbarRef]);
-   const data = {
-  title: `${ProjectDate.title.big}`,
-  subtitle:
-    `${ProjectDate.title.small}`,
+  const data = {
+  title: "PRICING PACKAGES",
+  subtitle: "Admin & Customer Support Services",
   packages: [
     {
       packageName: "Beta Pack",
-      price: "$2,500/mo",
+      price: "Starting at $2,250/mo",
+      licenseType: "Basic Admin & Support Retainer",
       features: [
-        "📄 Admin support included",
-        "📞 Priority email/chat support",
-        "📊 Monthly reporting dashboard"
+        "80 hrs/mo of virtual admin support (email & chat)",
+        "Phone coverage during business hours (9 am–5 pm)",
+        "Monthly activity & KPI summary report",
+        "Email support (48 hr SLA)",
+        "No IP transfer of workflows or scripts"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $2,500/mo for 12 months", "📈 Total: $30,000"]
+          details: [
+            "Monthly Cost: $2,500",
+            "Annual Cost: $30,000",
+            "Live Call Deposit: $3,000",
+            "Monthly After Discount: $2,250",
+            "Total After Discount: $27,000"
+          ],
+          savings: "$3,000"
         },
         {
-          label: "Option B – 6-Month Plan",
-          details: ["💳 $2,750/mo for 6 months", "📈 Total: $16,500"]
+          label: "Option B – 6-Month Plan", 
+          details: [
+            "Monthly Cost: $4,500",
+            "Semiannual Cost: $27,000",
+            "Monthly After Discount: $3,750",
+            "Total After Discount: $22,500"
+          ],
+          savings: "$4,050"
         }
       ],
       buyLink: "#buy-beta",
@@ -61,20 +76,36 @@ const ProjectDetails2Dark = () => {
     },
     {
       packageName: "Sigma Pack",
-      price: "$4,000/mo",
+      price: "Starting at $4,950/mo",
+      licenseType: "Standard Admin & Support",
       features: [
-        "🧾 Advanced admin support",
-        "🛠️ Workflow automation",
-        "💼 Dedicated manager"
+        "160 hrs/mo of virtual admin support (email, chat, phone)",
+        "Weekly performance & volume reports",
+        "Basic workflow automation (templates & macros)",
+        "Priority email & chat support (24 hr SLA)",
+        "No IP transfer of custom automation scripts"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $4,000/mo", "📈 Total: $48,000"]
+          details: [
+            "Monthly Cost: $5,500",
+            "Annual Cost: $66,000", 
+            "Live Call Deposit: $6,600",
+            "Monthly After Discount: $4,950",
+            "Total After Discount: $59,400"
+          ],
+          savings: "$6,600"
         },
         {
           label: "Option B – 6-Month Plan",
-          details: ["💳 $4,400/mo", "📈 Total: $26,400"]
+          details: [
+            "Monthly Cost: $9,000",
+            "Semiannual Cost: $54,000",
+            "Monthly After Discount: $8,125", 
+            "Total After Discount: $47,250"
+          ],
+          savings: "$6,750"
         }
       ],
       buyLink: "#buy-sigma",
@@ -82,23 +113,39 @@ const ProjectDetails2Dark = () => {
     },
     {
       packageName: "Alpha Pack",
-      price: "$7,000/mo",
+      price: "Starting at $8,250/mo",
+      licenseType: "Enterprise Admin & Support – Full IP Transfer",
       features: [
-        "🧠 Strategic consulting",
-        "🔧 Custom integrations",
-        "👥 Team training sessions"
+        "300 hrs/mo of dedicated admin support (all channels, 24/7)",
+        "Daily insights & executive summary dashboards",
+        "Custom automation workflows & integrations", 
+        "24/7 phone, chat & email support",
+        "Full IP transfer of all templates, scripts, and documentation"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $7,000/mo", "📈 Total: $84,000"]
+          details: [
+            "Monthly Cost: $9,000",
+            "Annual Cost: $108,000",
+            "Live Call Deposit: $10,800",
+            "Monthly After Discount: $8,250",
+            "Total After Discount: $99,000"
+          ],
+          savings: "$9,000"
         },
         {
           label: "Option B – 6-Month Plan",
-          details: ["💳 $7,500/mo", "📈 Total: $45,000"]
+          details: [
+            "Monthly Cost: $16,000",
+            "Semiannual Cost: $96,000",
+            "Monthly After Discount: $14,000",
+            "Total After Discount: $84,000"
+          ],
+          savings: "$12,000"
         }
       ],
-      buyLink: "#buy-alpha",
+      buyLink: "#buy-alpha", 
       quoteLink: "#quote-alpha"
     }
   ]

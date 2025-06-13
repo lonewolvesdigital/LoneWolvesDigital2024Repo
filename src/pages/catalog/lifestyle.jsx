@@ -35,72 +35,126 @@ const ProjectDetails2Dark = () => {
   }, [navbarRef]);
 
   const data = {
- title: `${ProjectDate.title.big}`,
-   subtitle:
-     `${ProjectDate.title.small}`,
+  title: "LIFESTYLE",
+  subtitle: "Personal Development & Wellness Services",
   packages: [
     {
       packageName: "Beta Pack",
-      price: "$2,500/mo",
+      price: "Starting at $2,250/mo",
+      licenseType: "Basic Lifestyle Support – No IP Transfer",
       features: [
-        "📄 Admin support included",
-        "📞 Priority email/chat support",
-        "📊 Monthly reporting dashboard"
+        "4 sessions/mo of online tutoring or career coaching (60 min each)",
+        "4 sessions/mo of group life coaching (via video)",
+        "4 customized workout plans/mo (digital delivery)",
+        "Monthly meal-plan template (basic)",
+        "Email support (48 hr SLA)"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $2,500/mo for 12 months", "📈 Total: $30,000"]
+          details: [
+            "Monthly Cost: $2,500",
+            "Annual Cost: $30,000",
+            "Live Call Deposit: $3,000",
+            "Discount Amount: $3,000 (10%)",
+            "Monthly After Discount: $2,250",
+            "Total After Discount: $27,000"
+          ],
+          savings: "$3,000"
         },
         {
           label: "Option B – 6-Month Plan",
-          details: ["💳 $2,750/mo for 6 months", "📈 Total: $16,500"]
+          details: [
+            "Monthly Cost: $4,200",
+            "Semiannual Cost: $25,200",
+            "Discount Amount: $3,780 (15%)",
+            "Monthly After Discount: $3,360",
+            "Total After Discount: $20,160"
+          ],
+          savings: "$3,780"
         }
       ],
-      buyLink: "#buy-beta",
-      quoteLink: "#quote-beta"
+      buyLink: "#buy-beta-lifestyle",
+      quoteLink: "#quote-beta-lifestyle"
     },
     {
       packageName: "Sigma Pack",
-      price: "$4,000/mo",
+      price: "Starting at $5,220/mo",
+      licenseType: "Enhanced Lifestyle Program – No IP Transfer",
       features: [
-        "🧾 Advanced admin support",
-        "🛠️ Workflow automation",
-        "💼 Dedicated manager"
+        "8 sessions/mo of mixed tutoring, career & life coaching",
+        "8 customized workout plans/mo + monthly progress check-ins",
+        "Bi-weekly bespoke meal plans & nutrition tips",
+        "Monthly engagement & progress report",
+        "Priority email & chat support (24 hr SLA)"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $4,000/mo", "📈 Total: $48,000"]
+          details: [
+            "Monthly Cost: $5,800",
+            "Annual Cost: $69,600",
+            "Live Call Deposit: $6,960",
+            "Discount Amount: $6,960 (10%)",
+            "Monthly After Discount: $5,220",
+            "Total After Discount: $62,640"
+          ],
+          savings: "$6,960"
         },
         {
           label: "Option B – 6-Month Plan",
-          details: ["💳 $4,400/mo", "📈 Total: $26,400"]
+          details: [
+            "Monthly Cost: $9,000",
+            "Semiannual Cost: $54,000",
+            "Discount Amount: $6,750 (12.5%)",
+            "Monthly After Discount: $8,125",
+            "Total After Discount: $47,250"
+          ],
+          savings: "$6,750"
         }
       ],
-      buyLink: "#buy-sigma",
-      quoteLink: "#quote-sigma"
+      buyLink: "#buy-sigma-lifestyle",
+      quoteLink: "#quote-sigma-lifestyle"
     },
     {
       packageName: "Alpha Pack",
-      price: "$7,000/mo",
+      price: "Starting at $8,667/mo",
+      licenseType: "Premium Lifestyle Concierge – Full IP Transfer",
       features: [
-        "🧠 Strategic consulting",
-        "🔧 Custom integrations",
-        "👥 Team training sessions"
+        "Unlimited coaching sessions (tutoring, life, career)",
+        "Custom workout & habit-tracking app with direct coach access",
+        "Weekly bespoke meal plans + one-on-one nutrition consult (4 hrs/mo)",
+        "Weekly progress analytics dashboard",
+        "24/7 phone, chat & email support",
+        "Full IP transfer of all created materials"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $7,000/mo", "📈 Total: $84,000"]
+          details: [
+            "Monthly Cost: $9,500",
+            "Annual Cost: $114,000",
+            "Live Call Deposit: $11,400",
+            "Discount Amount: $9,500 (8.33%)",
+            "Monthly After Discount: $8,667",
+            "Total After Discount: $104,000"
+          ],
+          savings: "$9,500"
         },
         {
           label: "Option B – 6-Month Plan",
-          details: ["💳 $7,500/mo", "📈 Total: $45,000"]
+          details: [
+            "Monthly Cost: $16,000",
+            "Semiannual Cost: $96,000",
+            "Discount Amount: $12,000 (12.5%)",
+            "Monthly After Discount: $14,000",
+            "Total After Discount: $84,000"
+          ],
+          savings: "$12,000"
         }
       ],
-      buyLink: "#buy-alpha",
-      quoteLink: "#quote-alpha"
+      buyLink: "#buy-alpha-lifestyle",
+      quoteLink: "#quote-alpha-lifestyle"
     }
   ]
 };

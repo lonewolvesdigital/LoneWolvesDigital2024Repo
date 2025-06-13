@@ -34,76 +34,134 @@ const ProjectDetails2Dark = () => {
     });
   }, [navbarRef]);
 
-  const data = {
-  title: `${ProjectDate.title.big}`,
-    subtitle:
-      `${ProjectDate.title.small}`,
+ const data = {
+  title: "SOFTWARE DEVELOPMENT",
+  subtitle: "E-commerce Packages for Startups to Enterprises",
   packages: [
     {
       packageName: "Beta Pack",
-      price: "$2,500/mo",
+      price: "Starting at $350/mo",
+      licenseType: "Commercial Use – No Source Code",
       features: [
-        "📄 Admin support included",
-        "📞 Priority email/chat support",
-        "📊 Monthly reporting dashboard"
+        "Platforms: Square, WooCommerce, WordPress",
+        "No-code solutions for lean startups and small businesses",
+        "Flexible, budget-friendly implementations",
+        "Basic storefront setup and deployment",
+        "Email support (48-hr SLA)"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $2,500/mo for 12 months", "📈 Total: $30,000"]
+          details: [
+            "Monthly Cost: $350",
+            "Annual Cost: $4,200",
+            "Live Call Deposit: $700",
+            "Discount Amount: $700",
+            "Monthly After Discount: ~$292",
+            "Total After Discount: $3,500"
+          ],
+          savings: "$700"
         },
         {
-          label: "Option B – 6-Month Plan",
-          details: ["💳 $2,750/mo for 6 months", "📈 Total: $16,500"]
+          label: "Option B – 6-Month Plan (Accelerated)",
+          details: [
+            "Monthly Cost: $700",
+            "Semiannual Cost: $4,200",
+            "Live Call Deposit: $700",
+            "Discount Amount: $700",
+            "Monthly After Discount: ~$584",
+            "Total After Discount: $3,500"
+          ],
+          savings: "$700"
         }
       ],
-      buyLink: "#buy-beta",
-      quoteLink: "#quote-beta"
+      buyLink: "#buy-beta-ecommerce",
+      quoteLink: "#quote-beta-ecommerce"
     },
     {
       packageName: "Sigma Pack",
-      price: "$4,000/mo",
+      price: "Starting at $500/mo",
+      licenseType: "Commercial Use – No Source Code",
       features: [
-        "🧾 Advanced admin support",
-        "🛠️ Workflow automation",
-        "💼 Dedicated manager"
+        "Platforms: Wix Studio, Webflow",
+        "Advanced marketing tools and integrations",
+        "Enhanced UI/UX for customer engagement",
+        "Built-in analytics and lead tracking",
+        "Priority email & chat support (24-hr SLA)"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $4,000/mo", "📈 Total: $48,000"]
+          details: [
+            "Monthly Cost: $500",
+            "Annual Cost: $6,000",
+            "Live Call Deposit: $1,000",
+            "Discount Amount: $1,000",
+            "Monthly After Discount: ~$417",
+            "Total After Discount: $5,000"
+          ],
+          savings: "$1,000"
         },
         {
-          label: "Option B – 6-Month Plan",
-          details: ["💳 $4,400/mo", "📈 Total: $26,400"]
+          label: "Option B – 6-Month Plan (Accelerated)",
+          details: [
+            "Monthly Cost: $1,000",
+            "Semiannual Cost: $6,000",
+            "Live Call Deposit: $1,000",
+            "Discount Amount: $1,000",
+            "Monthly After Discount: ~$834",
+            "Total After Discount: $5,000"
+          ],
+          savings: "$1,000"
         }
       ],
-      buyLink: "#buy-sigma",
-      quoteLink: "#quote-sigma"
+      buyLink: "#buy-sigma-ecommerce",
+      quoteLink: "#quote-sigma-ecommerce"
     },
     {
       packageName: "Alpha Pack",
-      price: "$7,000/mo",
+      price: "Starting at $3,000/mo",
+      licenseType: "Full Ownership – Source Code & IP Transfer",
       features: [
-        "🧠 Strategic consulting",
-        "🔧 Custom integrations",
-        "👥 Team training sessions"
+        "Platform: Shopify Plus",
+        "Enterprise-grade e-commerce with global selling",
+        "Advanced automation and custom workflows",
+        "Full customization with source code access",
+        "Dedicated team with 24/7 support",
+        "Full IP transfer of codebase and business logic"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $7,000/mo", "📈 Total: $84,000"]
+          details: [
+            "Monthly Cost: $3,000",
+            "Annual Cost: $36,000",
+            "Live Call Deposit: $6,000",
+            "Discount Amount: $6,000",
+            "Monthly After Discount: $2,500",
+            "Total After Discount: $30,000"
+          ],
+          savings: "$6,000"
         },
         {
-          label: "Option B – 6-Month Plan",
-          details: ["💳 $7,500/mo", "📈 Total: $45,000"]
+          label: "Option B – 6-Month Plan (Accelerated)",
+          details: [
+            "Monthly Cost: $6,000",
+            "Semiannual Cost: $36,000",
+            "Live Call Deposit: $6,000",
+            "Discount Amount: $6,000",
+            "Monthly After Discount: $5,000",
+            "Total After Discount: $30,000"
+          ],
+          savings: "$6,000"
         }
       ],
-      buyLink: "#buy-alpha",
-      quoteLink: "#quote-alpha"
+      buyLink: "#buy-alpha-ecommerce",
+      quoteLink: "#quote-alpha-ecommerce"
     }
   ]
 };
+
 
  const saasSummaryPricingData = {
   title: "SaaS Application Licensing Comparison",

@@ -34,72 +34,125 @@ const ProjectDetails2Dark = () => {
     });
   }, [navbarRef]);
   const data = {
- title: `${ProjectDate.title.big}`,
-   subtitle:
-     `${ProjectDate.title.small}`,
+  title: "BUSINESS & FINANCE",
+  subtitle: "Strategic Financial Planning & CFO Services",
   packages: [
     {
       packageName: "Beta Pack",
-      price: "$2,500/mo",
+      price: "Starting at $2,700/mo",
+      licenseType: "Advisory Retainer – No IP Transfer",
       features: [
-        "📄 Admin support included",
-        "📞 Priority email/chat support",
-        "📊 Monthly reporting dashboard"
+        "10 hrs/mo of financial planning & analysis (budgeting, forecasting)",
+        "Monthly KPI dashboard & summary report",
+        "Standard budgeting templates & cash-flow models",
+        "Email support (48 hr SLA)",
+        "No transfer of custom financial models or IP"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $2,500/mo for 12 months", "📈 Total: $30,000"]
+          details: [
+            "Monthly Cost: $3,000",
+            "Annual Cost: $36,000",
+            "Live Call Deposit: $3,600",
+            "Discount Amount: $3,600 (10%)",
+            "Monthly After Discount: $2,700",
+            "Total After Discount: $32,400"
+          ],
+          savings: "$3,600"
         },
         {
-          label: "Option B – 6-Month Plan",
-          details: ["💳 $2,750/mo for 6 months", "📈 Total: $16,500"]
+          label: "Option B – Accelerated 6-Month Plan",
+          details: [
+            "Monthly Cost: $5,400",
+            "Semiannual Cost: $32,400",
+            "Discount Amount: $4,860 (15%)",
+            "Monthly After Discount: $4,540",
+            "Total After Discount: $27,240"
+          ],
+          savings: "$4,860"
         }
       ],
-      buyLink: "#buy-beta",
-      quoteLink: "#quote-beta"
+      buyLink: "#buy-beta-finance",
+      quoteLink: "#quote-beta-finance"
     },
     {
       packageName: "Sigma Pack",
-      price: "$4,000/mo",
+      price: "Starting at $5,400/mo",
+      licenseType: "Enhanced Advisory Retainer – No IP Transfer",
       features: [
-        "🧾 Advanced admin support",
-        "🛠️ Workflow automation",
-        "💼 Dedicated manager"
+        "20 hrs/mo of CFO-level consultations & scenario planning",
+        "Bi-weekly financial performance & variance reports",
+        "Basic automation of reporting workflows (Excel/Power BI templates)",
+        "Priority email & chat support (24 hr SLA)",
+        "No IP transfer of automation scripts"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $4,000/mo", "📈 Total: $48,000"]
+          details: [
+            "Monthly Cost: $6,000",
+            "Annual Cost: $72,000",
+            "Live Call Deposit: $7,200",
+            "Discount Amount: $7,200 (10%)",
+            "Monthly After Discount: $5,400",
+            "Total After Discount: $64,800"
+          ],
+          savings: "$7,200"
         },
         {
-          label: "Option B – 6-Month Plan",
-          details: ["💳 $4,400/mo", "📈 Total: $26,400"]
+          label: "Option B – Accelerated 6-Month Plan",
+          details: [
+            "Monthly Cost: $9,000",
+            "Semiannual Cost: $54,000",
+            "Discount Amount: $6,750 (12.5%)",
+            "Monthly After Discount: $8,125",
+            "Total After Discount: $47,250"
+          ],
+          savings: "$6,750"
         }
       ],
-      buyLink: "#buy-sigma",
-      quoteLink: "#quote-sigma"
+      buyLink: "#buy-sigma-finance",
+      quoteLink: "#quote-sigma-finance"
     },
     {
       packageName: "Alpha Pack",
-      price: "$7,000/mo",
+      price: "Starting at $9,167/mo",
+      licenseType: "Enterprise Finance Leadership – Full IP Transfer",
       features: [
-        "🧠 Strategic consulting",
-        "🔧 Custom integrations",
-        "👥 Team training sessions"
+        "40 hrs/mo of dedicated CFO strategy, including M&A, fundraising support, and investor reporting",
+        "Weekly deep-dive financial health & risk assessments",
+        "Custom financial models, dashboards, and automation scripts",
+        "24/7 phone, chat & email support",
+        "Full IP transfer of all financial models, templates, and documentation"
       ],
       paymentPlans: [
         {
           label: "Option A – 12-Month Plan",
-          details: ["💳 $7,000/mo", "📈 Total: $84,000"]
+          details: [
+            "Monthly Cost: $10,000",
+            "Annual Cost: $120,000",
+            "Live Call Deposit: $12,000",
+            "Discount Amount: $10,000 (8.33%)",
+            "Monthly After Discount: $9,167",
+            "Total After Discount: $110,000"
+          ],
+          savings: "$10,000"
         },
         {
-          label: "Option B – 6-Month Plan",
-          details: ["💳 $7,500/mo", "📈 Total: $45,000"]
+          label: "Option B – Accelerated 6-Month Plan",
+          details: [
+            "Monthly Cost: $16,000",
+            "Semiannual Cost: $96,000",
+            "Discount Amount: $12,000 (12.5%)",
+            "Monthly After Discount: $14,000",
+            "Total After Discount: $84,000"
+          ],
+          savings: "$12,000"
         }
       ],
-      buyLink: "#buy-alpha",
-      quoteLink: "#quote-alpha"
+      buyLink: "#buy-alpha-finance",
+      quoteLink: "#quote-alpha-finance"
     }
   ]
 };
