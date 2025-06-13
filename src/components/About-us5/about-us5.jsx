@@ -167,7 +167,7 @@ const AboutUs5 = () => {
           </div>
           <div className="col-lg-8 valign">
             <div className="cont full-width">
-              <h3 className="color-font my-skills-pad-left">My Skills</h3>
+              <h3 className="color-font ">My Skills</h3>
               <h5 className="co-tit mb-15 ">
               Here&apos;s what to expect.
                </h5>

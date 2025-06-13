@@ -1,0 +1,412 @@
+[
+  {
+    "category": "ACS",
+    "title": "Office Admin",
+    "description": "Unlock the Power of OFFICE ADMIN with our Expert Team!",
+    "image": "/img/catalog/freelancer/pexels-luana-freitas-15490322.jpg",
+    "link": "/catalog/admin-customer-support",
+    "tags": ["Editing", "Data entry", "Typing", "Slide presentation", "Virtual Assistance", "Flyer Distribution", "Project Management"],
+    "width": 1000,
+    "height": 1500
+  },
+  {
+    "category": "ACS",
+    "title": "Customer Support",
+    "description": "The Best Customer Care Around: Let us take care of them!",
+    "image": "/img/catalog/freelancer/pexels-yan-krukau-8866790.jpg",
+    "link": "/catalog/admin-customer-support",
+    "tags": ["Customer Care"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "BF",
+    "title": "Business",
+    "description": "Discover the revolutionary benefits of business today!",
+    "image": "/img/catalog/freelancer/pexels-christina-morillo-1181395.jpg",
+    "link": "/catalog/business-finance",
+    "tags": ["Business Plans", "Market Research", "Business Consulting", "Project Management", "CRM Management", "ERP Management"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "BF",
+    "title": "Finance",
+    "description": "Money talks all else walks and that's why money matters!",
+    "image": "/img/catalog/freelancer/savings-2789112_1920.jpg",
+    "link": "/catalog/business-finance",
+    "tags": ["Financial Consulting", "Accounting"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "DA",
+    "title": "Data",
+    "description": "Unlock the power of data and harness the potential to achieve your personal and business goals, with Lone Wolves Digital!",
+    "image": "/img/catalog/freelancer/pexels-karolina-grabowska-7681097.jpg",
+    "link": "/catalog/data-ai-services",
+    "tags": ["Data Entry", "Data Processing", "Data Analytics", "Data Visualization", "Data Science", "Databases", "Data Engineering"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "DA",
+    "title": "AI",
+    "description": "With the power of AI Lone Wolves Digital will take your business to the next level!",
+    "image": "/img/catalog/freelancer/pexels-kindel-media-8566469.jpg",
+    "link": "/catalog/data-ai-services",
+    "tags": ["Mid-journey Artists", "DALL-E Artists", "Stable Diffusion Artists", "AI Models", "AI Music Videos", "AI Content Editing"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "EA",
+    "title": "Architecture",
+    "description": "Design the future with Lone Wolves Digital, explore the world's most innovative architecture!",
+    "image": "/img/catalog/freelancer/pexels-mihai-vlasceanu-1400249.jpg",
+    "link": "/catalog/engineering-architecture",
+    "tags": ["Building Design", "Interior Design", "Building Information Modeling", "Landscape Design"],
+    "width": 1000,
+    "height": 1500
+  },
+  {
+    "category": "EA",
+    "title": "Electronics Engineering",
+    "description": "Innovations and breakthroughs that will shape our world!",
+    "image": "/img/catalog/freelancer/pexels-rfstudio-3825580.jpg",
+    "link": "/catalog/engineering-architecture",
+    "tags": ["CAD"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "GDP",
+    "title": "Packaging & Merchandise Design",
+    "description": "Unwrap your brand's potential and elevate your packaging and merchandise design with the help of Lone Wolves Digital today!",
+    "image": "/img/catalog/freelancer/magic-mind-GnD_TOrbWh4-unsplash.jpg",
+    "link": "/catalog/graphics-design-photography",
+    "tags": ["T-Shirts & Merchandise Design", "Book Design", "Packaging Design", "Album Cover Design", "Car Wraps", "Podcast Cover Art"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "GDP",
+    "title": "Drawing & Illustration",
+    "description": "Draw your imagination and bring your ideas to life with Lone Wolves Digital Illustration Services!",
+    "image": "/img/catalog/freelancer/pexels-ekrulila-3246665.jpg",
+    "link": "/catalog/graphics-design-photography",
+    "tags": ["Illustration", "Vector Tracing", "Portraits", "Caricatures", "Cartoons", "Comics", "Fashion Design", "Pattern Design", "Storyboards"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "GDP",
+    "title": "Visual Design",
+    "description": "Unleash creativity and bring your vision to life with Lone Wolves Digital Art & Illustration services!",
+    "image": "/img/catalog/freelancer/krisztian-tabori-IyaNci0CyRk-unsplash.jpg",
+    "link": "/catalog/graphics-design-photography",
+    "tags": ["Presentation Design", "Image Editing", "Infographic Design", "Vector Tracing"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "GDP",
+    "title": "Packaging & Covers",
+    "description": "Stand out in the crowd and get noticed with expert packaging & covers services from Lone Wolves Digital!",
+    "image": "/img/catalog/freelancer/pexels-drew-williams-2608495.jpg",
+    "link": "/catalog/graphics-design-photography",
+    "tags": ["Packaging", "Label Design", "Book Design", "Album Cover Design", "Podcast Cover Art"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "GDP",
+    "title": "Fashion & Merchandise",
+    "description": "With Lone Wolves Digital Fashion & Merchandise services, you can make a statement that elevates your style!",
+    "image": "/img/catalog/freelancer/pexels-gustavo-fring-4127636.jpg",
+    "link": "/catalog/graphics-design-photography",
+    "tags": ["Fashion Design", "T-Shirts", "Merchandise", "Jewelry Design"],
+    "width": 1000,
+    "height": 1500
+  },
+  {
+    "category": "GDP",
+    "title": "Product & Characters Design",
+    "description": "From concept to creation we will bring your products and characters to life with Our Lone Wolves Digital Designers!",
+    "image": "/img/catalog/freelancer/man-3130952_1920.png",
+    "link": "/catalog/graphics-design-photography",
+    "tags": ["Industrial Product Design", "Character Modeling", "Trade Booth Design"],
+    "width": 1000,
+    "height": 1500
+  },
+  {
+    "category": "GDP",
+    "title": "Print Design",
+    "description": "For the print that packs a punch choose Lone Wolves Digital and make your message stand out with our professional design services",
+    "image": "/img/catalog/freelancer/pexels-leeloo-thefirst-7598012.jpg",
+    "link": "/catalog/graphics-design-photography",
+    "tags": ["Flyer Design", "Brochure Design", "Poster Design", "Catalog Design", "Invitation Design", "Menu Design", "Postcard Design", "Signage Design", "Graphics for Streamers", "Character Modeling"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "GDP",
+    "title": "Infographics & Presentation Design",
+    "description": "Visualize your ideas and communicate with clarity that Impacts your customers/clients with Lone Wolves Digital Infographics and Presentation Designers!",
+    "image": "/img/catalog/freelancer/infographics-1005174_1280.png",
+    "link": "/catalog/graphics-design-photography",
+    "tags": ["Presentation Design", "Infographic Design", "Trade Show Booth Design", "Resume Design"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "GDP",
+    "title": "Photography",
+    "description": "Capture Life's Moments and experience the magic of photography with Lone Wolves Digital expert Photographers!",
+    "image": "/img/catalog/freelancer/pexels-kaique-rocha-598917.jpg",
+    "link": "/catalog/graphics-design-photography",
+    "tags": ["Portrait Photographers", "Lifestyle & Fashion Photographers", "Real Estate Photographers", "Event Photographers", "Food Photographers", "Aerial Photographers", "Image Editing", "Photography Advice", "Local Photography", "Product Photography"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "HRT",
+    "title": "HR & Training",
+    "description": "Boost Performance your team's potential with Lone Wolves Digital's HR and Training Solutions!",
+    "image": "/img/catalog/freelancer/pexels-cottonbro-studio-5989930.jpg",
+    "link": "/catalog/hr-training",
+    "tags": ["HR Consulting"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "L",
+    "title": "Legal",
+    "description": "Trust our expertise to protect your rights and navigate the legal landscape!",
+    "image": "/img/catalog/freelancer/pexels-august-de-richelieu-4427622.jpg",
+    "link": "/catalog/legal",
+    "tags": ["Legal Consulting"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "LS",
+    "title": "Lifestyle",
+    "description": "Embrace a vibrant lifestyle and live your best life with Lone Wolves Digital Lifestyle digital products and services!",
+    "image": "/img/catalog/freelancer/pexels-marlene-leppänen-1019771.jpg",
+    "link": "/catalog/lifestyle",
+    "tags": ["Arts & Crafts", "Career Counseling", "Cooking Lessons", "Family", "Genealogy", "Online Tutoring", "Other Lifestyle", "Personal Styling", "Personal Training", "Traveling", "Wellness", "Online Language Lessons"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "SDM",
+    "title": "Branding",
+    "description": "Build a Strong Brand Identity with Lone Wolves Digital and let us help you stand out in a crowded market!",
+    "image": "/img/catalog/freelancer/pexels-daniel-adesina-1445454.jpg",
+    "link": "/catalog/sales-digital-marketing",
+    "tags": ["Brand Identity Design", "Brand Style Guides", "Branding Services", "Brand Voice & Tone"],
+    "width": 1000,
+    "height": 1500
+  },
+  {
+    "category": "SDM",
+    "title": "Logo & Brand Identity",
+    "description": "Make your mark with an identity that speaks volumes. Lone Wolves Digital brings your brand to life with professional logo and identity design services!",
+    "image": "/img/catalog/freelancer/pexels-tetyana-kovyrina-11138259.jpg",
+    "link": "/catalog/sales-digital-marketing",
+    "tags": ["Logo Design", "Brand Style Guides", "Business Cards", "Stationery"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "SDM",
+    "title": "Websites",
+    "description": "We build more than just websites. We create online experiences. So, Why not let us at Lone Wolves Digital Craft your digital presence with our expert web developers!",
+    "image": "/img/catalog/freelancer/pexels-ketut-subiyanto-4132331.jpg",
+    "link": "/catalog/sales-digital-marketing",
+    "tags": ["Website Development", "Website Maintenance", "Business Websites", "E-Commerce Development", "E-commerce Management", "Landing Pages", "Website Content"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "SDM",
+    "title": "Website Platforms",
+    "description": "Join the digital revolution and choose Lone Wolves Digital website platform services to elevate your brand!",
+    "image": "/img/catalog/freelancer/wordpress-2171594_1920.jpg",
+    "link": "/catalog/sales-digital-marketing",
+    "tags": ["WordPress", "Shopify", "Wix", "Webflow", "Figma"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "SDM",
+    "title": "Social Media Marketing",
+    "description": "Let us help you reach your target audience and increase your social media engagement. Lone Wolves Digital will elevate your social media game with our proven marketing tactics!",
+    "image": "/img/catalog/freelancer/pexels-dalila-dalprat-2055500.jpg",
+    "link": "/catalog/sales-digital-marketing",
+    "tags": ["Social Media Marketing", "Social Media Advertising", "Marketing Strategy", "Search Engine Optimization (SEO)", "Social Media Marketing Videos", "Video Ads & Commercials", "Spokesperson Videos", "Social Media Videos", "Influencer Marketing"],
+    "width": 1000,
+    "height": 1500
+  },
+  {
+    "category": "SDM",
+    "title": "Search Engines",
+    "description": "Rank higher and be seen. Lone Wolves Digital search engine optimization services get results!",
+    "image": "/img/catalog/freelancer/pexels-cottonbro-studio-7350905.jpg",
+    "link": "/catalog/sales-digital-marketing",
+    "tags": ["Search Engine Marketing (SEM)", "Local SEO", "Marketing Advice", "E-Commerce Marketing", "Video Marketing", "Guest Posting", "Email Marketing", "Web Analytics", "Mobile App Marketing"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "SDM",
+    "title": "Analytics & Strategy",
+    "description": "With our customized analytics strategy solutions you get data-driven insights to maximize your ROI with Lone Wolves Digital!",
+    "image": "/img/catalog/freelancer/pexels-cottonbro-studio-5083397.jpg",
+    "link": "/catalog/sales-digital-marketing",
+    "tags": ["Market Research", "Marketing Strategy", "Web Analytics", "Surveys"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "SDIT",
+    "title": "Application Development",
+    "description": "From concept to launch. We bring your ideas to life with innovative, user-friendly apps that enhance your business!",
+    "image": "/img/catalog/freelancer/procreator-ux-design-studio-VzJjPuk53sk-unsplash.jpg",
+    "link": "/catalog/software-development-it",
+    "tags": ["Mobile Apps", "Web Programming", "Desktop Applications", "Game Development", "Desktop Apps", "Development for Streamers", "Online Coding Lessons"],
+    "width": 1000,
+    "height": 1500
+  },
+  {
+    "category": "SDIT",
+    "title": "Support & Cybersecurity",
+    "description": "Don't leave your security to chance! Let our experts protect your business today. Our support and cybersecurity services offer complete peace of mind for your business!",
+    "image": "/img/catalog/freelancer/pexels-saksham-choudhary-2036656.jpg",
+    "link": "/catalog/software-development-it",
+    "tags": ["DevOps & Cloud", "Support", "Cybersecurity", "Information Technology", "Data Protection", "QA & Review"],
+    "width": 1000,
+    "height": 1500
+  },
+  {
+    "category": "VAA",
+    "title": "Editing & Post-Production",
+    "description": "From raw footage to polished final product, we're your one stop shop for all your post-production needs! Let Lone Wolves Digital transform your basic edits into a masterpiece with our expert editing and post-production services!",
+    "image": "/img/catalog/freelancer/pexels-cytonn-photography-955405.jpg",
+    "link": "/catalog/video-audio-animation",
+    "tags": ["Video Editing", "Visual Effects", "Subtitles & Captions", "Intro & Outro Videos", "Screen casting Videos"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "VAA",
+    "title": "Animation",
+    "description": "Our animation services help you communicate your message in a creative and engaging way. Our skilled animators bring a touch of magic to your content, making it truly unforgettable.",
+    "image": "/img/catalog/freelancer/pexels-merlin-lightpainting-11137997.jpg",
+    "link": "/catalog/video-audio-animation",
+    "tags": ["Character Animation", "Animated Explainers", "Logo Animation", "Animated GIFs", "Lottie", "Web Animation"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "VAA",
+    "title": "Product Explainer Videos",
+    "description": "Show, don't tell. Let our product and explainer videos do the talking for you!",
+    "image": "/img/catalog/freelancer/pexels-mart-production-7335420.jpg",
+    "link": "/catalog/video-audio-animation",
+    "tags": ["3D Product Animation", "E-Commerce Product Videos", "Live Action Explainers", "App & Website Previews", "Corporate Videos", "Unboxing Videos"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "VAA",
+    "title": "Voice Over",
+    "description": "Make your message heard with professional voice over services for any project",
+    "image": "/img/catalog/freelancer/emmanuel-ikwuegbu-Wc-vrrwxts0-unsplash.jpg",
+    "link": "/catalog/video-audio-animation",
+    "tags": ["Female Voice Over", "Male Voice Over", "German Voice Over", "French Voice Over", "Video Narration"],
+    "width": 1000,
+    "height": 1500
+  },
+  {
+    "category": "VAA",
+    "title": "Audio Streaming",
+    "description": "Listen to your heart's content with our top-rated audio streaming services!",
+    "image": "/img/catalog/freelancer/pexels-george-milton-6953865.jpg",
+    "link": "/catalog/video-audio-animation",
+    "tags": ["Podcast Production", "Audiobook Production", "Sound Design", "Audio Editing"],
+    "width": 1000,
+    "height": 1500
+  },
+  {
+    "category": "VAA",
+    "title": "Music",
+    "description": "Feel the beat, hear the magic and let the sound of your dreams from, classical to hip hop, we have it all!",
+    "image": "/img/catalog/freelancer/pexels-los-muertos-crew-7586652.jpg",
+    "link": "/catalog/video-audio-animation",
+    "tags": ["Producers & Composers", "Singers & Vocalists", "Mixing", "Mastering", "Songwriters"],
+    "width": 1000,
+    "height": 1500
+  },
+  {
+    "category": "WT",
+    "title": "Articles & Blog Posts",
+    "description": "Make your website stand out with expertly crafted articles and blog posts. Lone Wolves Digital creatives, compelling content that engages and inspires your audience through engaging and shareable content!",
+    "image": "/img/catalog/freelancer/karthik-sridasyam-BmjLE77gz0E-unsplash.jpg",
+    "link": "/catalog/writing-translation",
+    "tags": ["Translation", "Social Media Writing", "Product Descriptions", "Sales Writing", "Book", "Press Releases", "eBook", "Email Writing", "Ad Writing", "Technical Writing", "Scriptwriting", "Proofreading", "Editing", "Content Writing"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "WT",
+    "title": "Book & Ebook Writing",
+    "description": "If Knowledge is power then it's time to unleash your potential with books and e-books that allow you to explore new worlds!",
+    "image": "/img/catalog/freelancer/pexels-thought-catalog-904620.jpg",
+    "link": "/catalog/writing-translation",
+    "tags": ["Creative Writing", "Podcast Writing", "Book"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "WT",
+    "title": "Professional & Business Writing",
+    "description": "Whether you need to convey complex technical information to a lay audience, craft a compelling sales pitch, or create a business proposal that sets you apart from your competitors, professional and business writing can help you achieve your goals!",
+    "image": "/img/catalog/freelancer/pexels-ketut-subiyanto-4350108.jpg",
+    "link": "/catalog/writing-translation",
+    "tags": ["Resume Writing", "Cover Letters", "Business Names", "Slogans", "LinkedIn Profiles"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "WT",
+    "title": "Research & Summaries",
+    "description": "Research and summaries can help businesses, students, and professionals to make informed decisions, present findings in a clear and compelling manner, and ultimately achieve their goals. Whether you need assistance with market research, data analysis, or report writing, professional research and summary services can provide you with the support and expertise you need to succeed!",
+    "image": "/img/catalog/freelancer/pexels-christina-morillo-1181569.jpg",
+    "link": "/catalog/writing-translation",
+    "tags": ["Case Studies", "Grant Writing", "Legal Writing", "Technical Writing", "White Papers", "Fact-Checking"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "WT",
+    "title": "Editing & Beta Reading",
+    "description": "By using Lone Wolves Digital's professional Editing & Beta Reading services, you can ensure that your written content is polished, error-free, and ready to impress your readers. Whether you are a writer looking to improve your work, a business looking to produce high-quality content, or a student looking to ace your assignments, Editing & Beta Reading can help you achieve your goals. With a keen eye for detail and a commitment to excellence, professional editors and beta readers can help you take your writing to the next level!",
+    "image": "/img/catalog/freelancer/pexels-vlada-karpovich-4050287.jpg",
+    "link": "/catalog/writing-translation",
+    "tags": ["Proofreading", "Editing", "Beta Reading"],
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "category": "WT",
+    "title": "Copywriting",
+    "description": "Are you worried about protecting your intellectual property and ensuring that your creative works are not misused or plagiarized? Look no further than our comprehensive copyright services. Our team of experts can guide you through the process of registering your works and provide ongoing support to safeguard your rights. With our help, you can rest assured that your hard work is protected and that you can reap the rewards of your creativity for years to come. Contact us today to learn more about our copyright services and how we can help you secure your valuable intellectual property.",
+    "image": "/img/catalog/freelancer/pexels-august-de-richelieu-4427547.jpg",
+    "link": "/catalog/writing-translation",
+    "tags": ["Email Copy", "Sales Copy", "Product Descriptions", "Social Media Copy"],
+    "width": 1000,
+    "height": 1000
+  }
+]
