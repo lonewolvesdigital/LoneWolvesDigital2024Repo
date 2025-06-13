@@ -3,173 +3,154 @@ import Link from "next/link";
 import appData from "../../data/app.json";
 import DarkTheme from "../../layouts/Dark";
 import Image from "next/image";
-
 import Head from "next/head";
+
 const Footer2 = () => {
   return (
     <footer className="app-footer" data-overlay-dark="0">
-
-      {/* 1st container  */}
+      {/* Main Footer Content */}
       <div className="container">
         <div className="row">
-          {/* <div className="circle-blur1"></div> */}
-          {/* <div className="circle-blur2"></div> */}
-
-          <div className="item md-mb50">
-            <div className="title">
-              <h5>Contact Us</h5>
+          {/* Contact Section */}
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="item footer-contact">
+              <div className="title">
+                <h5>Contact Us</h5>
+              </div>
+              <ul>
+                <li>
+                  <span className="icon pe-7s-map-marker"></span>
+                  <div className="cont">
+                    <h6>Official Address</h6>
+                    <p>
+                      # 1127 201 - 1065 Canadian Place Mississauga, ON L4W 0C2
+                      Canada
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <span className="icon pe-7s-mail"></span>
+                  <div className="cont">
+                    <h6>Email me</h6>
+                    <p>contact@lonewolvesdigital.com</p>
+                  </div>
+                </li>
+                <li>
+                  <span className="icon pe-7s-call"></span>
+                  <div className="cont">
+                    <h6>Howl at us</h6>
+                    <p>+1(709) 909-5955</p>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <ul>
-              <li>
-                <span className="icon pe-7s-map-marker"></span>
-                <div className="cont">
-                  <h6>Official Address</h6>
-                  <p>
-                    # 1127 201 - 1065 Canadian Place Mississauga, ON L4W 0C2
-                    Canada
-                  </p>
-                </div>
-              </li>
-              <li>
-                <span className="icon pe-7s-mail"></span>
-                <div className="cont">
-                  <h6>Email me</h6>
-                  <p>contact@lonewolvesdigital.com</p>
-                </div>
-              </li>
-              <li>
-                <span className="icon pe-7s-call"></span>
-                <div className="cont">
-                  <h6>Howl at us</h6>
-                  <p>+1(709) 909-5955</p>
-                </div>
-              </li>
-            </ul>
           </div>
 
-          <div className="col-lg-4">
-            <div className="item">
-              <div className="logo">
-                <h5>Subscribe to Lone Wolf Blogs </h5>
+          {/* Newsletter Section */}
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="item footer-newsletter">
+              <div className="title">
+                <h5>Subscribe to Lone Wolf Blogs</h5>
               </div>
-
-              <li>
-                {/* <div className="subscribe">
-                    <input type="text" placeholder="Type Your Email" />
-                    <span className="subs pe-7s-paper-plane"></span>
-                  </div> */}
+              <div className="newsletter-wrapper">
                 <iframe
-                  width="540"
-                  height="305"
+                  className="newsletter-iframe"
                   src="https://sibforms.com/serve/MUIFAHoypKk3szmU57oO5Ro2lIrfPluMGzhuR9yd4CExKJ2ui-TVrnjT09SM-n1X5sV-I-1y72XZarFlolppu9d0Wc2DcQF5YA8iihJle1cuaNkOFyuSPHXpro3KeKXeLGFmzx1ijyxGkQ2eL0PU_romI7jfj6SSgtIEeAcFHC3tDW6qKx8xNfv1QXUpoQ9aGs_kzLXB6vUk0p"
                   frameBorder="0"
                   scrolling="auto"
                   allowFullScreen
-                  style={{
-                    display: "block",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    maxWidth: "100%",
-                  }}
                 ></iframe>
-              </li>
-              <br />
-              <br />
-
-              <div className="title  Copy-right">
+              </div>
+              <div className="copyright-section">
                 <p>
-                  Made by Caleb Mutombo. <span />
+                  Made by Caleb Mutombo.
                   <br />
-                  <span /> At Lone Wolves Digital. <span /> <span />
+                  At Lone Wolves Digital.{" "}
                   <Link href="/lonewolvesdigital/team-dark">
-                    <a>
-                      {" "}
-                      <span />
-                    </a>
+                    <a></a>
                   </Link>
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="col-lg-4">
-            <div className="item md-mb50">
+          {/* Blog Section */}
+          <div className="col-lg-4 col-md-12 col-sm-12">
+            <div className="item footer-blogs">
               <div className="title">
-                <h5>Lone Wolf Bolgs</h5>
+                <h5>Lone Wolf Blogs</h5>
               </div>
-
-              <ul>
+              <ul className="blog-list">
                 <li>
-                  <div className="img">
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <Image
-                          width={900}
-                          height={700}
-                          src="/img/blog/pexels-andrea-piacquadio-3813341.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="sm-post">
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <p>Why you should become a freelancer.</p>
-                      </a>
-                    </Link>
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <span className="date">LONE WOLF BLOGS</span>{" "}
-                        <h6>coming soon...</h6>
-                      </a>
-                    </Link>
+                  <div className="blog-item">
+                    <div className="img">
+                      <Link href="/blog/blog-dark">
+                        <a>
+                          <Image
+                            width={80}
+                            height={60}
+                            src="/img/blog/pexels-andrea-piacquadio-3813341.jpg"
+                            alt="Blog post thumbnail"
+                          />
+                        </a>
+                      </Link>
+                    </div>
+                    <div className="sm-post">
+                      <Link href="/blog/blog-dark">
+                        <a>
+                          <p>Why you should become a freelancer.</p>
+                        </a>
+                      </Link>
+                      <Link href="/blog/blog-dark">
+                        <a>
+                          <span className="color-font">LONE WOLF BLOGS</span>
+                          <h6>coming soon...</h6>
+                        </a>
+                      </Link>
+                    </div>
                   </div>
                 </li>
-
                 <li>
-                  <div className="img">
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <Image
-                          width={900}
-                          height={700}
-                          src="/img/blog/pexels-andrea-piacquadio-3791134.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="sm-post">
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <p>Why you should not become a freelancer.</p>
-                      </a>
-                    </Link>
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <span className="date">LONE WOLVES BLOG</span>{" "}
-                        <h6>coming soon...</h6>
-                      </a>
-                    </Link>
+                  <div className="blog-item">
+                    <div className="img">
+                      <Link href="/blog/blog-dark">
+                        <a>
+                          <Image
+                            width={80}
+                            height={60}
+                            src="/img/blog/pexels-andrea-piacquadio-3791134.jpg"
+                            alt="Blog post thumbnail"
+                          />
+                        </a>
+                      </Link>
+                    </div>
+                    <div className="sm-post">
+                      <Link href="/blog/blog-dark">
+                        <a>
+                          <p>Why you should not become a freelancer.</p>
+                        </a>
+                      </Link>
+                      <Link href="/blog/blog-dark">
+                        <a>
+                          <span className="color-font">LONE WOLVES BLOG</span>
+                          <h6>coming soon...</h6>
+                        </a>
+                      </Link>
+                    </div>
                   </div>
                 </li>
-
-                <br />
-                <br />
-                <br />
               </ul>
             </div>
           </div>
+        </div>
 
-          {/* 2nd container */}
-           <div className="footer-responsive-section">
-        <div className="container">
+        {/* Secondary Footer Section */}
+        <div className="footer-secondary">
           <div className="row">
             {/* Resources Column */}
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="item-clumn links md-mb50">
-                <h5 className="title">Resources</h5>
+            <div className="col-lg-3 col-md-6 col-sm-6 col-6">
+              <div className="footer-column">
+                <h6 className="column-title">Resources</h6>
                 <ul>
                   <li>
                     <span className="icon pe-7s-angle-right"></span>
@@ -206,9 +187,9 @@ const Footer2 = () => {
             </div>
 
             {/* Links Column */}
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="item-clumn links sm-mb50">
-                <h5 className="title">Links</h5>
+            <div className="col-lg-3 col-md-6 col-sm-6 col-6">
+              <div className="footer-column">
+                <h6 className="column-title">Links</h6>
                 <ul>
                   <li>
                     <span className="icon pe-7s-angle-right"></span>
@@ -244,39 +225,36 @@ const Footer2 = () => {
               </div>
             </div>
 
-            {/* Social Links Column - Fixed with proper Bootstrap classes */}
+            {/* Social Links Column */}
             <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="item-clumn links">
-                <h5 className="title mb-30">Social Links</h5>
-                <div className="item">
-                  <div className="social">
-                    <a href="https://www.facebook.com/lonewolvesdigital">
-                      <i className="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://twitter.com/LoneWolvesDigit">
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://www.instagram.com/lonewolvesdigital/">
-                      <i className="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@LoneWolvesDigital">
-                      <i className="fab fa-youtube"></i>
-                    </a>
-                  </div>
+              <div className="footer-column">
+                <h6 className="column-title">Social Links</h6>
+                <div className="social-links">
+                  <a href="https://www.facebook.com/lonewolvesdigital" aria-label="Facebook">
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="https://twitter.com/LoneWolvesDigit" aria-label="Twitter">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                  <a href="https://www.instagram.com/lonewolvesdigital/" aria-label="Instagram">
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.youtube.com/@LoneWolvesDigital" aria-label="YouTube">
+                    <i className="fab fa-youtube"></i>
+                  </a>
                 </div>
               </div>
             </div>
 
-            {/* Logo Column - Fixed with responsive image sizing */}
+            {/* Logo Column */}
             <div className="col-lg-3 col-md-6 col-sm-12">
-              <div className="item-clumn our md-mb50">
+              <div className="footer-column logo-column">
                 <a href="#0" className="logo-brand">
                   <Image
-                    width={150}
-                    height={150}
+                    width={120}
+                    height={120}
                     src="/img/logo.png"
                     alt="Lone Wolves Digital"
-                    style={{ maxWidth: '100%', height: 'auto' }}
                   />
                 </a>
                 <p className="tagline">WHAT YOU DEMAND, WE COMMAND!</p>
@@ -285,75 +263,207 @@ const Footer2 = () => {
           </div>
         </div>
       </div>
-        </div>
-      </div>
+
+      {/* Background Elements */}
       <div className="circle-blur"></div>
       <div className="circle-blur two"></div>
 
-      <br />
-      <div className="text-center">
-        <p>© 2024 Lone Wolves Digital. All Rights Reserved</p>
+      {/* Copyright */}
+      <div className="footer-copyright">
+        <div className="container">
+          <div className="text-center">
+            <p>© 2024 Lone Wolves Digital. All Rights Reserved</p>
+          </div>
+        </div>
       </div>
-       <style jsx>{`
-        .footer-responsive-section {
-          padding: 40px 0;
+
+      <style jsx>{`
+        .app-footer {
+          padding: 60px 0 0;
+          position: relative;
         }
 
-        .item-clumn {
-          margin-bottom: 30px;
+        .item {
+          margin-bottom: 40px;
         }
 
-        .item-clumn .title {
-          font-size: 18px;
+        .title h5 {
+          font-size: 20px;
           font-weight: 600;
-          margin-bottom: 20px;
+          margin-bottom: 25px;
+          color: #fff;
         }
 
-        .item-clumn ul {
+        /* Contact Section */
+        .footer-contact ul {
           list-style: none;
           padding: 0;
           margin: 0;
         }
 
-        .item-clumn ul li {
-          margin-bottom: 12px;
+        .footer-contact ul li {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 20px;
+        }
+
+        .footer-contact .icon {
+          font-size: 18px;
+          margin-right: 15px;
+          margin-top: 5px;
+          color: #007bff;
+        }
+
+        .footer-contact .cont h6 {
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 5px;
+          color: #fff;
+        }
+
+        .footer-contact .cont p {
+          font-size: 14px;
+          line-height: 1.6;
+          color: #ccc;
+          margin: 0;
+        }
+
+        /* Newsletter Section */
+        .footer-newsletter .newsletter-wrapper {
+          margin-bottom: 30px;
+        }
+
+        .newsletter-iframe {
+          width: 100%;
+          height: 280px;
+          border: none;
+          border-radius: 8px;
+        }
+
+        .copyright-section p {
+          font-size: 14px;
+          color: #ccc;
+          line-height: 1.6;
+        }
+
+        /* Blog Section */
+        .blog-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .blog-item {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 20px;
+        }
+
+        .blog-item .img {
+          margin-right: 15px;
+          flex-shrink: 0;
+        }
+
+        .blog-item .img img {
+          border-radius: 6px;
+          object-fit: cover;
+        }
+
+        .blog-item .sm-post p {
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 8px;
+          color: #fff;
+          line-height: 1.4;
+        }
+
+        .blog-item .date {
+          font-size: 12px;
+          color: #007bff;
+          text-transform: uppercase;
+        }
+
+        .blog-item h6 {
+          font-size: 12px;
+          color: #ccc;
+          margin: 0;
+        }
+
+        /* Secondary Footer */
+        .footer-secondary {
+          padding: 40px 0;
+          border-top: 1px solid #333;
+          margin-top: 40px;
+        }
+
+        .footer-column {
+          margin-bottom: 30px;
+        }
+
+        .column-title {
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 20px;
+          color: #fff;
+        }
+
+        .footer-column ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .footer-column ul li {
           display: flex;
           align-items: center;
+          margin-bottom: 10px;
         }
 
-        .item-clumn ul li .icon {
-          margin-right: 8px;
+        .footer-column ul li .icon {
           font-size: 12px;
+          margin-right: 8px;
+          color: #007bff;
         }
 
-        .item-clumn ul li a {
+        .footer-column ul li a {
+          color: #ccc;
           text-decoration: none;
-          transition: opacity 0.3s ease;
+          font-size: 14px;
+          transition: color 0.3s ease;
         }
 
-        .item-clumn ul li a:hover {
-          opacity: 0.8;
+        .footer-column ul li a:hover {
+          color: #007bff;
         }
 
-        .social {
+        /* Social Links */
+        .social-links {
           display: flex;
           gap: 15px;
           flex-wrap: wrap;
         }
 
-        .social a {
-          display: inline-flex;
+        .social-links a {
+          display: flex;
           align-items: center;
           justify-content: center;
           width: 40px;
           height: 40px;
+          background: #333;
           border-radius: 50%;
+          color: #fff;
           text-decoration: none;
           transition: all 0.3s ease;
         }
 
-        .social a:hover {
+        .social-links a:hover {
+          background: #007bff;
           transform: translateY(-2px);
+        }
+
+        /* Logo Column */
+        .logo-column {
+          text-align: center;
         }
 
         .logo-brand {
@@ -363,84 +473,165 @@ const Footer2 = () => {
 
         .tagline {
           font-size: 14px;
-          font-weight: 500;
+          font-weight: 600;
+          color: #fff;
+          margin: 0;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        /* Copyright */
+        .footer-copyright {
+          background: #1a1a1a;
+          padding: 20px 0;
+          border-top: 1px solid #333;
+        }
+
+        .footer-copyright p {
+          color: #ccc;
+          font-size: 14px;
           margin: 0;
         }
 
-        /* Mobile Responsive Styles - Parallel Layout */
-        @media (max-width: 768px) {
-          .footer-responsive-section {
+        /* Tablet Styles */
+        @media (max-width: 991px) {
+          .app-footer {
+            padding: 40px 0 0;
+          }
+
+          .newsletter-iframe {
+            height: 250px;
+          }
+
+          .footer-secondary {
             padding: 30px 0;
           }
+        }
 
-          .item-clumn {
-            margin-bottom: 25px;
-            text-align: left;
+        /* Mobile Styles */
+        @media (max-width: 767px) {
+          .app-footer {
+            padding: 30px 0 0;
           }
 
-          .item-clumn .title {
+          .item {
+            margin-bottom: 35px;
+          }
+
+          .title h5 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+
+          /* Contact Section Mobile */
+          .footer-contact ul li {
+            margin-bottom: 18px;
+          }
+
+          .footer-contact .icon {
             font-size: 16px;
+            margin-right: 12px;
+          }
+
+          .footer-contact .cont h6 {
+            font-size: 15px;
+          }
+
+          .footer-contact .cont p {
+            font-size: 13px;
+          }
+
+          /* Newsletter Mobile */
+          .newsletter-iframe {
+            height: 220px;
+          }
+
+          /* Blog Section Mobile */
+          .blog-item {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          .blog-item .img {
+            margin-right: 0;
+            margin-bottom: 10px;
+            align-self: center;
+          }
+
+          /* Secondary Footer Mobile */
+          .footer-secondary {
+            padding: 25px 0;
+          }
+
+          .column-title {
+            font-size: 15px;
             margin-bottom: 15px;
           }
 
-          .item-clumn ul li {
-            justify-content: flex-start;
-            margin-bottom: 8px;
+          .footer-column ul li a {
+            font-size: 13px;
           }
 
-          .social {
-            justify-content: flex-start;
+          /* Social Links Mobile */
+          .social-links {
+            justify-content: center;
             gap: 12px;
           }
 
-          .social a {
+          .social-links a {
             width: 35px;
             height: 35px;
           }
 
-          .logo-brand {
-            text-align: left;
-            display: block;
+          /* Logo Mobile */
+          .logo-column {
+            text-align: center;
+            margin-top: 20px;
           }
 
           .tagline {
-            text-align: left;
             font-size: 13px;
-          }
-
-          .md-mb50 {
-            margin-bottom: 20px !important;
-          }
-          
-          .sm-mb50 {
-            margin-bottom: 20px !important;
           }
         }
 
+        /* Small Mobile Styles */
         @media (max-width: 480px) {
-          .footer-responsive-section {
+          .app-footer {
+            padding: 20px 0 0;
+          }
+
+          .item {
+            margin-bottom: 25px;
+          }
+
+          .title h5 {
+            font-size: 16px;
+            margin-bottom: 15px;
+          }
+
+          .newsletter-iframe {
+            height: 200px;
+          }
+
+          .footer-secondary {
             padding: 20px 0;
           }
 
-          .item-clumn {
-            margin-bottom: 18px;
-          }
-
-          .item-clumn .title {
-            font-size: 15px;
+          .column-title {
+            font-size: 14px;
             margin-bottom: 12px;
           }
 
-          .item-clumn ul li {
-            font-size: 14px;
-            margin-bottom: 6px;
+          .footer-column ul li {
+            margin-bottom: 8px;
           }
 
-          .social {
-            gap: 10px;
+          .footer-column ul li a {
+            font-size: 12px;
           }
 
-          .social a {
+          .social-links a {
             width: 32px;
             height: 32px;
             font-size: 14px;
@@ -449,16 +640,36 @@ const Footer2 = () => {
           .tagline {
             font-size: 12px;
           }
+
+          .footer-copyright p {
+            font-size: 12px;
+          }
         }
 
-        .mb-30 {
-          margin-bottom: 30px !important;
+        /* Very Small Mobile */
+        @media (max-width: 360px) {
+          .newsletter-iframe {
+            height: 180px;
+          }
+
+          .blog-item .img img {
+            width: 60px;
+            height: 45px;
+          }
+
+          .social-links {
+            gap: 8px;
+          }
+
+          .social-links a {
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
+          }
         }
       `}</style>
     </footer>
   );
 };
-
-<DarkTheme mobileappstyle />;
 
 export default Footer2;

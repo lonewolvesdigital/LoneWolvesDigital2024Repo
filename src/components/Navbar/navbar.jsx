@@ -204,7 +204,7 @@ const Navbar = ({ lr, nr, theme }) => {
             {isSearchOpen && searchQuery.trim() !== "" && filteredServices.length === 0 && (
               <div className="search-dropdown">
                 <div className="search-no-results">
-                  <p>No services found for "{searchQuery}"</p>
+                  <p>No services found for &quot{searchQuery}&quot</p>
                 </div>
               </div>
             )}
