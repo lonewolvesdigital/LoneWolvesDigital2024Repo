@@ -81,7 +81,7 @@ const Footer2 = () => {
                 <h5>Lone Wolf Blogs</h5>
               </div>
               <ul className="blog-list">
-                <li>
+                <li className="responsive-blog-item">
                   <div className="blog-item">
                     <div className="img">
                       <Link href="/blog/blog-dark">
@@ -111,7 +111,39 @@ const Footer2 = () => {
                     </div>
                   </div>
                 </li>
-                <li>
+
+{/* mobile view  */}
+                  <li className="responsive-blog-item-sm">
+                  <div className="blog-item">
+                    <div className="img">
+                      <Link href="/blog/blog-dark">
+                        <a>
+                          <Image
+                            width={500}
+                            height={300}
+                            src="/img/blog/pexels-andrea-piacquadio-3813341.jpg"
+                            alt="Blog post thumbnail"
+                          />
+                        </a>
+                      </Link>
+                    </div>
+                    <div className="sm-post">
+                      <span className="color-font footer-title-sm">LONE WOLVES BLOG</span>
+                      <Link href="/blog/blog-dark">
+                        <a >
+                          <p>Why you should become a freelancer.</p>
+                        </a>
+                      </Link>
+                      <Link href="/blog/blog-dark">
+                        <a>
+                          <span className="color-font footer-title">LONE WOLF BLOGS</span>
+                          <h6 style={{fontSize: "15px"}}>coming soon...</h6>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                </li>
+                <li className="responsive-blog-item">
                   <div className="blog-item">
                     <div className="img">
                       <Link href="/blog/blog-dark">
@@ -122,6 +154,40 @@ const Footer2 = () => {
                             src="/img/blog/pexels-andrea-piacquadio-3791134.jpg"
                             alt="Blog post thumbnail"
                           />
+
+                        </a>
+                      </Link>
+                    </div>
+                    <div className="sm-post">
+                      <span className="color-font footer-title-sm">LONE WOLVES BLOG</span>
+                      <Link href="/blog/blog-dark">
+                        <a>
+                          <p>Why you should not become a freelancer.</p>
+                        </a>
+                      </Link>
+                      <Link href="/blog/blog-dark">
+                        <a>
+                          <span className="color-font footer-title">LONE WOLVES BLOG</span>
+                          <h6 style={{fontSize: "15px"}}>coming soon...</h6>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                </li>
+
+{/* mobile view  */}
+                 <li className="responsive-blog-item-sm">
+                  <div className="blog-item">
+                    <div className="img">
+                      <Link href="/blog/blog-dark">
+                        <a>
+                          <Image
+                            width={500}
+                            height={300}
+                            src="/img/blog/pexels-andrea-piacquadio-3791134.jpg"
+                            alt="Blog post thumbnail"
+                          />
+
                         </a>
                       </Link>
                     </div>
@@ -613,6 +679,13 @@ const Footer2 = () => {
           }
         }
 
+        .responsive-blog-item-sm{
+        display: none;
+        } 
+         .responsive-blog-item{
+        display: block;
+        } 
+
         /* Small Mobile Styles */
         @media (max-width: 480px) {
           .app-footer {
@@ -622,6 +695,13 @@ const Footer2 = () => {
           .item {
             margin-bottom: 25px;
           }
+
+           .responsive-blog-item-sm{
+        display: block;
+        } 
+         .responsive-blog-item{
+        display: none;
+        } 
 
           .title h5 {
             font-size: 16px;
