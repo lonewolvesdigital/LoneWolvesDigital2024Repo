@@ -96,15 +96,16 @@ const Footer2 = () => {
                       </Link>
                     </div>
                     <div className="sm-post">
+                      <span className="color-font footer-title-sm">LONE WOLVES BLOG</span>
                       <Link href="/blog/blog-dark">
-                        <a>
+                        <a >
                           <p>Why you should become a freelancer.</p>
                         </a>
                       </Link>
                       <Link href="/blog/blog-dark">
                         <a>
-                          <span className="color-font">LONE WOLF BLOGS</span>
-                          <h6>coming soon...</h6>
+                          <span className="color-font footer-title">LONE WOLF BLOGS</span>
+                          <h6 style={{fontSize: "15px"}}>coming soon...</h6>
                         </a>
                       </Link>
                     </div>
@@ -125,6 +126,7 @@ const Footer2 = () => {
                       </Link>
                     </div>
                     <div className="sm-post">
+                      <span className="color-font footer-title-sm">LONE WOLVES BLOG</span>
                       <Link href="/blog/blog-dark">
                         <a>
                           <p>Why you should not become a freelancer.</p>
@@ -132,8 +134,8 @@ const Footer2 = () => {
                       </Link>
                       <Link href="/blog/blog-dark">
                         <a>
-                          <span className="color-font">LONE WOLVES BLOG</span>
-                          <h6>coming soon...</h6>
+                          <span className="color-font footer-title">LONE WOLVES BLOG</span>
+                          <h6 style={{fontSize: "15px"}}>coming soon...</h6>
                         </a>
                       </Link>
                     </div>
@@ -480,6 +482,14 @@ const Footer2 = () => {
           letter-spacing: 1px;
         }
 
+        .footer-title{
+        display: block;
+        }
+
+        .footer-title-sm {
+        display: none;
+        }
+
         /* Copyright */
         .footer-copyright {
           background: #1a1a1a;
@@ -517,6 +527,14 @@ const Footer2 = () => {
           .item {
             margin-bottom: 35px;
           }
+
+            .footer-title{
+        display: none;
+        }
+
+        .footer-title-sm {
+        display: block;
+        }
 
           .title h5 {
             font-size: 18px;
