@@ -226,8 +226,8 @@ const Portfolio = () => {
                 transition: 'all 0.3s ease'
               }}
               onFocus={(e) => {
-                e.target.style.borderColor = '#00d4ff';
-                e.target.style.boxShadow = '0 0 0 2px rgba(0, 212, 255, 0.2)';
+                e.target.style.borderColor = 'rgb(68, 249, 255)';
+                e.target.style.boxShadow = '0 0 0 2px rgba(68, 249, 255, 0.2)';
               }}
               onBlur={(e) => {
                 e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)';
@@ -249,7 +249,7 @@ const Portfolio = () => {
                 alignItems: 'center',
                 gap: '0.5rem',
                 padding: '0.75rem 1rem',
-                background: showFilters ? 'rgba(0, 212, 255, 0.2)' : 'rgba(255, 255, 255, 0.1)',
+                background: showFilters ? 'rgba(68, 249, 255, 0.2)' : 'rgba(255, 255, 255, 0.1)',
                 border: '1px solid rgba(255, 255, 255, 0.2)',
                 borderRadius: '0.5rem',
                 color: '#ffffff',
@@ -292,7 +292,7 @@ const Portfolio = () => {
           }}>
             <h3 style={{
               margin: '0 0 1rem 0',
-              color: '#00d4ff',
+              color: 'rgb(68, 249, 255)',
               fontSize: '1.1rem'
             }}>
               Filter by Category
@@ -306,7 +306,7 @@ const Portfolio = () => {
                 onClick={() => setSelectedCategory('')}
                 style={{
                   padding: '0.5rem 1rem',
-                  background: !selectedCategory ? 'rgba(0, 212, 255, 0.3)' : 'rgba(255, 255, 255, 0.1)',
+                  background: !selectedCategory ? 'rgba(68, 249, 255, 0.3)' : 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '1.5rem',
                   color: '#ffffff',
@@ -323,7 +323,7 @@ const Portfolio = () => {
                   onClick={() => setSelectedCategory(category)}
                   style={{
                     padding: '0.5rem 1rem',
-                    background: selectedCategory === category ? 'rgba(0, 212, 255, 0.3)' : 'rgba(255, 255, 255, 0.1)',
+                    background: selectedCategory === category ? 'rgba(68, 249, 255, 0.3)' : 'rgba(255, 255, 255, 0.1)',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                     borderRadius: '1.5rem',
                     color: '#ffffff',
@@ -373,8 +373,8 @@ const Portfolio = () => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 212, 255, 0.1)';
-                e.currentTarget.style.borderColor = 'rgba(0, 212, 255, 0.3)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(68, 249, 255, 0.1)';
+                e.currentTarget.style.borderColor = 'rgba(68, 249, 255, 0.3)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
@@ -431,7 +431,7 @@ const Portfolio = () => {
                   margin: '0 0 1rem 0',
                   fontSize: '1.4rem',
                   fontWeight: '600',
-                  color: '#00d4ff'
+                  color: 'rgb(68, 249, 255)'
                 }}>
                   {project.name}
                 </h3>
@@ -482,7 +482,7 @@ const Portfolio = () => {
                     alignItems: 'center',
                     gap: '0.5rem',
                     padding: '0.75rem 1.5rem',
-                    background: 'linear-gradient(45deg, #00d4ff, #b19cd9)',
+                    background: 'linear-gradient(to right, rgb(68, 249, 255), #fd7e14, rgba(255, 9, 243, 0.712))',
                     border: 'none',
                     borderRadius: '0.5rem',
                     color: '#ffffff',
@@ -493,7 +493,7 @@ const Portfolio = () => {
                   }}
                   onMouseEnter={(e) => {
                     e.target.style.transform = 'translateY(-2px)';
-                    e.target.style.boxShadow = '0 10px 20px rgba(0, 212, 255, 0.3)';
+                    e.target.style.boxShadow = '0 10px 20px rgba(68, 249, 255, 0.3)';
                   }}
                   onMouseLeave={(e) => {
                     e.target.style.transform = 'translateY(0)';
@@ -519,7 +519,7 @@ const Portfolio = () => {
             <h3 style={{
               fontSize: '1.5rem',
               marginBottom: '1rem',
-              color: '#00d4ff'
+              color: 'rgb(68, 249, 255)'
             }}>
               No projects found
             </h3>

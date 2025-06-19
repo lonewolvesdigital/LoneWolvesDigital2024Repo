@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
        <Component {...pageProps} />
      </GlobalProvider>
       <ScrollToTop />
-      <Script id="wow" src="/js/wow.min.js"></Script>
+      <Script id="wow" src="/js/wow.min.js" onLoad={() => { if (window.WOW) { new window.WOW().init(); } }} />
       <Script
         strategy="beforeInteractive"
         id="splitting"
@@ -32,7 +32,11 @@ function MyApp({ Component, pageProps }) {
         strategy="beforeInteractive"
         src="/js/isotope.pkgd.min.js"
       ></Script>
-      <Script id="wowInit" strategy="lazyOnload">{`new WOW().init();`}</Script>
+      <Script
+        id="bootstrap-bundle"
+        strategy="beforeInteractive"
+        src="/js/bootstrap.bundle.min.js"
+      />
     </>
   );
 }

@@ -13,6 +13,7 @@ const Navbar = ({ lr, nr, theme }) => {
   const [isDark, setIsDark] = React.useState(true);
   const [searchQuery, setSearchQuery] = React.useState("");
   const [isSearchOpen, setIsSearchOpen] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [filteredServices, setFilteredServices] = React.useState([]);
   const { themeCSS, setThemeCSS } = useGlobalContext();
   const router = useRouter();
@@ -28,6 +29,25 @@ const Navbar = ({ lr, nr, theme }) => {
       localStorage.setItem("theme", "light");
     }
   };
+
+  // Toggle mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    document.body.style.overflow = !isMobileMenuOpen ? 'hidden' : '';
+  };
+
+  // Close mobile menu on route change
+  React.useEffect(() => {
+    const handleRouteChange = () => {
+      setIsMobileMenuOpen(false);
+      document.body.style.overflow = '';
+    };
+
+    router.events.on('routeChangeStart', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router.events]);
 
   // Handle search input changes
   const handleSearchChange = (e) => {
@@ -61,7 +81,20 @@ const Navbar = ({ lr, nr, theme }) => {
 
   // Handle search input focus
   const handleSearchFocus = () => {
-    if (searchQuery.trim() !== "" && filteredServices.length > 0) {
+    if ((searchQuery.trim() !== "" && filteredServices.length > 0) || (searchQuery.trim() === "" && isSearchOpen)) {
+      setIsSearchOpen(true);
+    }
+  };
+
+  // Handle dropdown icon click
+  const handleDropdownClick = () => {
+    if (isSearchOpen) {
+      setIsSearchOpen(false);
+      setFilteredServices([]);
+    } else {
+      if (searchQuery.trim() === "") {
+        setFilteredServices(servicesData); // Show all services if search is empty
+      }
       setIsSearchOpen(true);
     }
   };
@@ -92,23 +125,34 @@ const Navbar = ({ lr, nr, theme }) => {
       ref={nr}
       className={`navbar navbar-expand-lg change ${
         theme === "themeL" ? "light" : ""
-      }`}
+      } ${isMobileMenuOpen ? 'menu-open' : ''}`}
     >
-      <div className="container d-flex align-items-center justify-content-between">
-        {/* Logo and Search Input */}
-        <div className="d-flex align-items-center logo-email-wrapper">
-          <Link href="/">
-            <a className="logo me-2">
-              {theme ? (
-                theme === "themeL" ? (
-                  <Image
-                    ref={lr}
-                    src={appData.darkLogo}
-                    alt="logo"
-                    layout="responsive"
-                    width={100}
-                    height={100}
-                  />
+      <div className="container">
+        <div className="navbar-content" style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 0 }}>
+          {/* Logo */}
+          <div className="logo-wrapper" style={{ marginRight: 0, paddingRight: 0 }}>
+            <Link href="/">
+              <a className="logo">
+                {theme ? (
+                  theme === "themeL" ? (
+                    <Image
+                      ref={lr}
+                      src={appData.darkLogo}
+                      alt="logo"
+                      layout="responsive"
+                      width={100}
+                      height={100}
+                    />
+                  ) : (
+                    <Image
+                      ref={lr}
+                      src={appData.lightLogo}
+                      alt="logo"
+                      layout="responsive"
+                      width={100}
+                      height={100}
+                    />
+                  )
                 ) : (
                   <Image
                     ref={lr}
@@ -118,37 +162,22 @@ const Navbar = ({ lr, nr, theme }) => {
                     width={100}
                     height={100}
                   />
-                )
-              ) : (
-                <Image
-                  ref={lr}
-                  src={appData.lightLogo}
-                  alt="logo"
-                  layout="responsive"
-                  width={100}
-                  height={100}
-                />
-              )}
-            </a>
-          </Link>
+                )}
+              </a>
+            </Link>
+          </div>
 
           {/* Search input with dropdown */}
-          <div className="subscribe-mobile search-container" ref={searchRef}>
-            <div className="search-input-wrapper">
+          <div className="search-container" ref={searchRef} style={{ width: '230px', maxWidth: '230px', minWidth: '230px', marginLeft: 0 }}>
+            <div className="search-input-wrapper" style={{ width: '100%', maxWidth: '230px', minWidth: '230px' }}>
               <input
                 type="text"
                 value={searchQuery}
                 onChange={handleSearchChange}
                 onFocus={handleSearchFocus}
-                style={{
-                  background: "none",
-                  borderRadius: "20px",
-                  border: "1px solid #ccc",
-                  width: "200px",
-                  padding: "8px 40px 8px 12px",
-                  paddingRight: searchQuery ? "40px" : "12px"
-                }}
-                placeholder="Find services...."
+                className="search-input"
+                placeholder="Search here...."
+                style={{ width: '100%', maxWidth: '230px', minWidth: '230px', boxSizing: 'border-box', flex: '1 1 0%' }}
               />
               <div className="search-icons">
                 {searchQuery ? (
@@ -158,77 +187,49 @@ const Navbar = ({ lr, nr, theme }) => {
                     onClick={clearSearch}
                   />
                 ) : (
-                  <Search size={16} className="search-icon" />
+                  <>
+                    <Search size={16} className="search-icon" />
+                    <span className="dropdown-icon" style={{cursor: 'pointer', marginLeft: 6}} onClick={handleDropdownClick}>
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 8L10 13L15 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </span>
+                  </>
                 )}
               </div>
-            </div>
-
-            {/* Search Results Dropdown */}
-            {isSearchOpen && filteredServices.length > 0 && (
-              <div className="search-dropdown">
-                <div className="search-results">
-                  {filteredServices.slice(0, 8).map((service, index) => (
-                    <div
-                      key={index}
-                      className="search-result-item"
-                      onClick={() => handleServiceSelect(service)}
-                    >
-                      <div className="search-result-content">
-                        <h6 className="search-result-title">{service.title}</h6>
-                        <p className="search-result-description">
-                          {service.description.length > 60 
-                            ? `${service.description.substring(0, 60)}...` 
-                            : service.description
-                          }
-                        </p>
-                        <div className="search-result-tags">
-                          {service.tags.slice(0, 3).map((tag, tagIndex) => (
-                            <span key={tagIndex} className="search-tag">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
+              {/* Move the dropdown here so it is always directly under the search bar */}
+              {isSearchOpen && filteredServices.length > 0 && (
+                <div className="dropdown-menu-services styled-dropdown" style={{ width: '100%', maxWidth: '230px', minWidth: '230px', left: 0 }}>
+                  {filteredServices.map((service, idx) => (
+                    <div key={idx} className="dropdown-service-item styled-dropdown-item" onClick={() => handleServiceSelect(service)}>
+                      <div className="dropdown-service-title">{service.title}</div>
+                      <div className="dropdown-service-description">{service.description.length > 40 ? service.description.substring(0, 40) + '...' : service.description}</div>
+                      <div className="dropdown-service-tags">
+                        {service.tags && service.tags.slice(0, 3).map((tag, tagIdx) => (
+                          <span key={tagIdx} className="dropdown-service-tag">{tag}</span>
+                        ))}
                       </div>
                     </div>
                   ))}
                 </div>
-                {filteredServices.length > 8 && (
-                  <div className="search-footer">
-                    <small>Showing 8 of {filteredServices.length} results</small>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* No Results */}
-            {isSearchOpen && searchQuery.trim() !== "" && filteredServices.length === 0 && (
-              <div className="search-dropdown">
-                <div className="search-no-results">
-                  <p>No services found for &quot{searchQuery}&quot</p>
-                </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
+
+          {/* Mobile Toggle */}
+          <button
+            className="navbar-toggler"
+            type="button"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle navigation"
+            style={{ marginLeft: 0 }}
+          >
+            <span className="icon-bar">
+              <i className="fas fa-bars"></i>
+            </span>
+          </button>
         </div>
 
-        {/* Mobile Toggle */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          onClick={handleMobileDropdown}
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="icon-bar">
-            <i className="fas fa-bars"></i>
-          </span>
-        </button>
-
         {/* Navbar Links */}
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className={`navbar-collapse ${isMobileMenuOpen ? 'show' : ''}`}>
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link href="/lonewolvesdigital/home-dark">
@@ -279,16 +280,37 @@ const Navbar = ({ lr, nr, theme }) => {
           padding: 1rem;
         }
 
-        .logo {
-          max-width: 100px;
+        .navbar-content {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 0;
         }
 
-        .subscribe-mobile {
-          display: none;
+        .logo-wrapper {
+          margin-right: 0;
+          padding-right: 0;
+        }
+
+        .logo {
+          max-width: 100px;
+          display: block;
+        }
+
+        .search-container,
+        .search-input-wrapper,
+        .search-input,
+        .dropdown-menu-services.styled-dropdown {
+          max-width: 230px !important;
+          min-width: 230px !important;
+          width: 230px !important;
         }
 
         .search-container {
-          position: relative;
+          width: 230px;
+          margin: 0 8px;
+          flex-shrink: 0;
         }
 
         .search-input-wrapper {
@@ -297,19 +319,29 @@ const Navbar = ({ lr, nr, theme }) => {
           align-items: center;
         }
 
-        .search-input-wrapper input {
-          padding: 0.4rem 0.6rem;
-          border: 1px solid #ccc;
+        .search-input {
+          padding: 8px 40px 8px 12px;
+          background: transparent;
           border-radius: 20px;
           font-size: 0.875rem;
-          width: 200px;
+          width: 100%;
           transition: all 0.3s ease;
+          position: relative;
+          border: double 2px transparent;
+          background-image: linear-gradient(white, white), 
+            linear-gradient(to right, rgb(68, 249, 255), #fd7e14, rgba(255, 9, 243, 0.712));
+          background-origin: border-box;
+          background-clip: padding-box, border-box;
         }
 
-        .search-input-wrapper input:focus {
+        .search-input:focus {
           outline: none;
-          border-color: #0070f3;
-          box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.1);
+          border: double 2.5px transparent;
+          background-image: linear-gradient(white, white), 
+            linear-gradient(to right, rgb(68, 249, 255), #fd7e14, rgba(255, 9, 243, 0.712));
+          background-origin: border-box;
+          background-clip: padding-box, border-box;
+          box-shadow: 0 0 15px rgba(68, 249, 255, 0.2);
         }
 
         .search-icons {
@@ -329,51 +361,79 @@ const Navbar = ({ lr, nr, theme }) => {
           color: #333;
         }
 
+        .navbar-collapse {
+          flex: 0 0 auto;  /* Prevents nav from growing */
+        }
+
         .search-dropdown {
           position: absolute;
-          top: 100%;
+          top: calc(100% + 8px);
           left: 0;
-          right: 0;
-          background: white;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          background: rgba(0, 0, 0, 0.5);  /* 50% transparent black */
+          border-radius: 12px;
           z-index: 1000;
           max-height: 400px;
           overflow-y: auto;
-          margin-top: 4px;
+          border: double 2px transparent;
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+            linear-gradient(to right, rgb(68, 249, 255), #fd7e14, rgba(255, 9, 243, 0.712));
+          background-origin: border-box;
+          background-clip: padding-box, border-box;
+          padding: 1px;  /* Ensure border is visible */
+        }
+
+        .styled-dropdown {
+          position: absolute;
+          left: 0;
+          top: 100%;
+          width: 100%; /* Match the width of the search bar */
+          min-width: 340px;
+          max-width: 500px;
+          z-index: 1000;
+          max-height: 400px;
+          overflow-y: auto;
+          border-radius: 18px;
+          margin-top: 8px;
+          background: linear-gradient(120deg, rgba(68,249,255,0.85) 0%, rgba(253,126,20,0.85) 50%, rgba(255,9,243,0.7) 100%);
+          box-shadow: 0 4px 32px 0 rgba(0,0,0,0.25);
+          padding: 1px 0;
+          border: double 2px transparent;
+          background-clip: padding-box, border-box;
         }
 
         .search-results {
-          padding: 8px 0;
+          padding: 8px;
+          background: transparent;
         }
 
         .search-result-item {
-          padding: 12px 16px;
+          padding: 12px;
           cursor: pointer;
-          border-bottom: 1px solid #f0f0f0;
+          border-radius: 8px;
           transition: background-color 0.2s ease;
+          margin-bottom: 4px;
         }
 
         .search-result-item:hover {
-          background-color: #f8f9fa;
+          background-color: rgba(0, 0, 0, 0.3);  /* Darker on hover */
         }
 
         .search-result-item:last-child {
-          border-bottom: none;
+          margin-bottom: 0;
         }
 
         .search-result-title {
           margin: 0 0 4px 0;
           font-size: 0.9rem;
           font-weight: 600;
-          color: #333;
+          color: #fff;
         }
 
         .search-result-description {
           margin: 0 0 8px 0;
           font-size: 0.75rem;
-          color: #666;
+          color: rgba(255, 255, 255, 0.7);
           line-height: 1.3;
         }
 
@@ -385,29 +445,28 @@ const Navbar = ({ lr, nr, theme }) => {
 
         .search-tag {
           font-size: 0.7rem;
-          background-color: #e9ecef;
-          color: #495057;
-          padding: 2px 6px;
+          background-color: rgba(255, 255, 255, 0.1);
+          color: rgba(255, 255, 255, 0.9);
+          padding: 2px 8px;
           border-radius: 12px;
           white-space: nowrap;
         }
 
         .search-footer {
-          padding: 8px 16px;
-          background-color: #f8f9fa;
-          border-top: 1px solid #e9ecef;
+          padding: 8px 12px;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
           text-align: center;
         }
 
         .search-footer small {
-          color: #6c757d;
+          color: rgba(255, 255, 255, 0.6);
           font-size: 0.75rem;
         }
 
         .search-no-results {
           padding: 16px;
           text-align: center;
-          color: #6c757d;
+          color: rgba(255, 255, 255, 0.7);
         }
 
         .search-no-results p {
@@ -415,127 +474,231 @@ const Navbar = ({ lr, nr, theme }) => {
           font-size: 0.875rem;
         }
 
-        /* Dark theme styles */
-        .navbar.light .search-dropdown {
-          background: #333;
-          border-color: #555;
+        /* Scrollbar styling for the dropdown */
+        .search-dropdown::-webkit-scrollbar {
+          width: 8px;
         }
 
-        .navbar.light .search-result-item {
-          border-bottom-color: #444;
+        .search-dropdown::-webkit-scrollbar-track {
+          background: rgba(0, 0, 0, 0.2);
+          border-radius: 0 12px 12px 0;
         }
 
-        .navbar.light .search-result-item:hover {
-          background-color: #404040;
+        .search-dropdown::-webkit-scrollbar-thumb {
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 4px;
         }
 
-        .navbar.light .search-result-title {
+        .search-dropdown::-webkit-scrollbar-thumb:hover {
+          background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Dark theme input styles */
+        .navbar.light .search-input {
+          background-image: linear-gradient(#333, #333), 
+            linear-gradient(to right, rgb(68, 249, 255), #fd7e14, rgba(255, 9, 243, 0.712));
           color: #fff;
         }
 
-        .navbar.light .search-result-description {
-          color: #ccc;
-        }
-
-        .navbar.light .search-tag {
-          background-color: #555;
-          color: #fff;
-        }
-
-        .navbar.light .search-footer {
-          background-color: #404040;
-          border-top-color: #555;
-        }
-
-        .navbar.light .search-footer small {
-          color: #aaa;
-        }
-
-        .navbar.light .search-no-results {
-          color: #aaa;
-        }
-
-        .navbar.light .search-input-wrapper input {
-          background: #333;
-          border-color: #555;
-          color: #fff;
-        }
-
-        .navbar.light .search-input-wrapper input::placeholder {
-          color: #aaa;
-        }
-
-        .navbar.light .search-input-wrapper input:focus {
-          border-color: #0070f3;
-        }
-
-        .navbar.light .search-icons {
-          color: #aaa;
-        }
-
-        .navbar.light .search-clear-icon:hover {
-          color: #fff;
-        }
-
-        .subs {
-          margin-left: 0.5rem;
-          font-size: 1.2rem;
-          color: #0070f3;
-          cursor: pointer;
-        }
-
-        .navbar-toggler {
-          border: none;
-          background: none;
-          font-size: 1.5rem;
-          margin-left: auto;
+        .navbar.light .search-input:focus {
+          background-image: linear-gradient(#333, #333), 
+            linear-gradient(to right, rgb(68, 249, 255), #fd7e14, rgba(255, 9, 243, 0.712));
         }
 
         .btn-toggle-theme {
-          background: transparent;
+          background: transparent !important;
           border: none;
           cursor: pointer;
-          font-size: 1rem;
-          padding: 0.5rem 1rem;
+          padding: 0.5rem;
           color: inherit;
-          font-family: inherit;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: opacity 0.2s ease;
+        }
+
+        .btn-toggle-theme:hover {
+          opacity: 0.8;
+        }
+
+        .btn-toggle-theme:focus {
+          outline: none;
+          box-shadow: none;
         }
 
         @media (max-width: 991px) {
-          .subscribe-mobile {
-            display: flex;
-            align-items: center;
-            margin-left: 1rem;
-          }
-
-          .logo-email-wrapper {
-            flex: 1;
-            display: flex;
-            align-items: center;
+          .navbar-content {
+            flex-wrap: wrap;
           }
 
           .navbar-collapse {
-            margin-top: 1rem;
+            position: fixed;
+            top: 0;
+            right: -280px;
+            width: 280px;
+            /* Remove fixed height and use min-height for flexibility */
+            min-height: 100vh;
+            height: auto;
+            background: rgba(0, 0, 0, 0.95);
+            padding: 2rem 1rem;
+            transition: all 0.3s ease-in-out;
+            z-index: 1000;
+            border-left: double 2px transparent;
+            background-clip: padding-box, border-box;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)),
+              linear-gradient(to bottom, rgb(68, 249, 255), #fd7e14, rgba(255, 9, 243, 0.712));
+            transform: translateX(0);
+            opacity: 0;
+            visibility: hidden;
+            overflow-y: visible;
+          }
+
+          .navbar-collapse.show {
+            right: 0;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
           }
 
           .navbar-nav {
+            display: flex;
             flex-direction: column;
-            align-items: flex-end;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 0;
           }
 
           .nav-item {
-            margin-bottom: 0.5rem;
+            opacity: 0;
+            transform: translateX(20px);
           }
 
-          .search-input-wrapper input {
-            width: 160px;
+          .navbar-collapse.show .nav-item {
+            animation: slideIn 0.3s ease forwards;
+          }
+
+          .nav-item:nth-child(1) { animation-delay: 0.1s; }
+          .nav-item:nth-child(2) { animation-delay: 0.2s; }
+          .nav-item:nth-child(3) { animation-delay: 0.3s; }
+          .nav-item:nth-child(4) { animation-delay: 0.4s; }
+          .nav-item:nth-child(5) { animation-delay: 0.5s; }
+          .nav-item:nth-child(6) { animation-delay: 0.6s; }
+          .nav-item:nth-child(7) { animation-delay: 0.7s; }
+
+          @keyframes slideIn {
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+
+          .nav-link {
+            color: #fff !important;
+            font-size: 1.1rem;
+            padding: 0.8rem 1.2rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            margin: 0;
+          }
+
+          .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+          }
+
+          /* Overlay when menu is open */
+          .navbar::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            pointer-events: none;
+          }
+
+          .navbar.menu-open::after {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+          }
+
+          .navbar-toggler {
+            display: block;
+            padding: 0.5rem;
+            color: inherit;
+            z-index: 1001;
+            position: relative;
+          }
+
+          .navbar-toggler .icon-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: inherit;
           }
         }
 
-        @media (max-width: 768px) {
-          .search-input-wrapper input {
-            width: 140px;
+        @media (max-width: 230px) {
+          .search-container {
+            flex: 0 1 230px;
+            margin: 0.5rem auto; /* Center horizontally */
+            display: flex;
+            justify-content: center;
           }
+          .search-input-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+
+        .styled-dropdown-item {
+          padding: 18px 20px 12px 20px;
+          border-bottom: 1px solid rgba(255,255,255,0.08);
+          cursor: pointer;
+          transition: background 0.2s;
+          color: #fff;
+        }
+        .styled-dropdown-item:last-child {
+          border-bottom: none;
+        }
+        .styled-dropdown-item:hover {
+          background: rgba(0,0,0,0.10);
+        }
+        .dropdown-service-title {
+          font-weight: 700;
+          font-size: 1.05rem;
+          margin-bottom: 2px;
+          color: #fff;
+        }
+        .dropdown-service-description {
+          font-size: 0.85rem;
+          color: #e0e0e0;
+          margin-bottom: 8px;
+        }
+        .dropdown-service-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+        }
+        .dropdown-service-tag {
+          background: rgba(255,255,255,0.18);
+          color: #fff;
+          font-size: 0.75rem;
+          padding: 2px 10px;
+          border-radius: 12px;
+          margin-top: 2px;
+          white-space: nowrap;
         }
       `}</style>
     </nav>

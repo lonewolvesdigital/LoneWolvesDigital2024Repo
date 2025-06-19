@@ -8,9 +8,24 @@ import Image from 'next/image';
 const MinimalArea = () => {
   React.useEffect(() => {
     cardMouseEffect(document.querySelectorAll(".feat .items"));
-    setTimeout(() => {
-      thumparallaxDown();
-    }, 1000);
+    
+    // Initialize parallax only after images are loaded
+    const initParallax = () => {
+      try {
+        thumparallaxDown();
+      } catch (error) {
+        console.warn("Parallax initialization delayed, retrying...");
+        setTimeout(initParallax, 500);
+      }
+    };
+
+    // Wait for DOM to be ready
+    if (document.readyState === 'complete') {
+      initParallax();
+    } else {
+      window.addEventListener('load', initParallax);
+      return () => window.removeEventListener('load', initParallax);
+    }
   }, []);
   return (
     <section className="min-area sub-bg">
