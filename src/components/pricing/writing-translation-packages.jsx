@@ -1,21 +1,12 @@
 import React, { useState } from "react";
 
-
-const pricepackages2 = () => {
-  // State for dropdowns for each card and each option
+const WritingTranslationPackages = () => {
   const [dropdowns, setDropdowns] = useState({
-    betaA: false,
-    betaB: false,
-    sigmaA: false,
-    sigmaB: false,
-    alphaA: false,
-    alphaB: false,
     betaSelect: false,
     sigmaSelect: false,
     alphaSelect: false,
   });
 
-  // Helper for select plan dropdown, now accepts a key for each card
   const renderSelectPlan = (dropdownKey) => (
     <div className="custom-dropdown" style={{ position: 'relative', marginTop: '10px' }}>
       <button 
@@ -47,57 +38,14 @@ const pricepackages2 = () => {
             padding: '1px'
           }}
         >
-          <a 
-            href="https://form.jotform.com/230592802711552"
-            className="dropdown-link"
-            style={{
-              display: 'block',
-              padding: '10px 15px',
-              color: '#fff',
-              textDecoration: 'none',
-              transition: 'background-color 0.3s'
-            }}
-            onMouseEnter={(e) => e.target.style.backgroundColor = '#000'}
-            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-          >
-            Option A
-          </a>
-          <a 
-            href="https://form.jotform.com/241234567890123"
-            className="dropdown-link"
-            style={{
-              display: 'block',
-              padding: '10px 15px',
-              color: '#fff',
-              textDecoration: 'none',
-              transition: 'background-color 0.3s'
-            }}
-            onMouseEnter={(e) => e.target.style.backgroundColor = '#000'}
-            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-          >
-            Option B
-          </a>
-          <a 
-            href="https://form.jotform.com/241234567890124"
-            className="dropdown-link"
-            style={{
-              display: 'block',
-              padding: '10px 15px',
-              color: '#fff',
-              textDecoration: 'none',
-              transition: 'background-color 0.3s'
-            }}
-            onMouseEnter={(e) => e.target.style.backgroundColor = '#000'}
-            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-          >
-            Custom Plan
-          </a>
+          <a href="#" className="dropdown-link" style={{display:'block',padding:'10px 15px',color:'#fff',textDecoration:'none',transition:'background-color 0.3s'}} onMouseEnter={e=>e.target.style.backgroundColor='#000'} onMouseLeave={e=>e.target.style.backgroundColor='transparent'}>Option A</a>
+          <a href="#" className="dropdown-link" style={{display:'block',padding:'10px 15px',color:'#fff',textDecoration:'none',transition:'background-color 0.3s'}} onMouseEnter={e=>e.target.style.backgroundColor='#000'} onMouseLeave={e=>e.target.style.backgroundColor='transparent'}>Option B</a>
+          <a href="#" className="dropdown-link" style={{display:'block',padding:'10px 15px',color:'#fff',textDecoration:'none',transition:'background-color 0.3s'}} onMouseEnter={e=>e.target.style.backgroundColor='#000'} onMouseLeave={e=>e.target.style.backgroundColor='transparent'}>Custom Plan</a>
         </div>
       )}
     </div>
   );
 
-  // Ensure only one dropdown is open at a time
   const toggleDropdown = (key) => {
     setDropdowns((prev) => {
       const newState = Object.keys(prev).reduce((acc, k) => ({ ...acc, [k]: false }), {});
@@ -105,33 +53,32 @@ const pricepackages2 = () => {
     });
   };
 
-  // --- Comparison Table Data ---
   const [tableOpen, setTableOpen] = useState(false);
   const features = [
-    { label: "💵 Monthly Cost", values: ["$2,500", "$3,000", "$4,500", "$5,200", "$7,500", "$8,500"] },
-    { label: "📅 Annual/Semiannual Cost", values: ["$30,000", "$18,000", "$54,000", "$31,200", "$90,000", "$51,000"] },
-    { label: "💰 Live Call Deposit", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
-    { label: "🎁 Discount Amount", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
-    { label: "🧾 Monthly After Discount", values: ["$2,375", "$2,850", "$4,050", "$4,680", "$6,375", "$7,225"] },
-    { label: "💸 Pre Discount Total", values: ["$30,000", "$18,000", "$54,000", "$31,200", "$90,000", "$51,000"] },
-    { label: "🏦 Post Discount Total", values: ["$28,500", "$17,100", "$48,600", "$28,080", "$76,500", "$43,350"] },
-    { label: "🎉 Total Savings", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
-    { label: "📉 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
-    { label: "📧 Email and Chat Support", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "📅 Calendar Management", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "🗂️ Data Entry and Management", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "📞 Basic Customer Service", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "📋 Administrative Tasks", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "🤝 Omnichannel Support", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🚨 Escalation Management", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "📱 Social Media Engagement", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "📈 Reporting and Analytics", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "👨‍💼 Dedicated Account Manager", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🌐 24/7 Support", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "✅ Quality Assurance", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🗣️ Multilingual Support", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🔥 Crisis Management", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🔗 CRM Integration", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCB5 Monthly Cost", values: ["$2,500", "$3,000", "$4,500", "$5,200", "$7,500", "$8,500"] },
+    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: ["$30,000", "$18,000", "$54,000", "$31,200", "$90,000", "$51,000"] },
+    { label: "\uD83D\uDCB0 Live Call Deposit", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
+    { label: "\uD83C\uDF81 Discount Amount", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
+    { label: "\uD83D\uDCDD Monthly After Discount", values: ["$2,375", "$2,850", "$4,050", "$4,680", "$6,375", "$7,225"] },
+    { label: "\uD83D\uDCB8 Pre Discount Total", values: ["$30,000", "$18,000", "$54,000", "$31,200", "$90,000", "$51,000"] },
+    { label: "\uD83C\uDFE6 Post Discount Total", values: ["$28,500", "$17,100", "$48,600", "$28,080", "$76,500", "$43,350"] },
+    { label: "\uD83C\uDF89 Total Savings", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
+    { label: "\uD83D\uDCB9 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
+    { label: "\u270D️ Blog Post Writing", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCDD Website Content Creation", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCEC Email Copywriting", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDC64 General Document Translation", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "Proofreading & Editing", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDD0E SEO-Optimized Content", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCDA Technical Writing", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCE2 Marketing & Ad Copywriting", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDF10 Website Localization", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\u270D️ Press Release Writing", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "⚖️ Legal & Certified Trans.", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDF93 Academic & Research Writing", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDF0E Transcreation & Cultural", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDFA4 Scriptwriting", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCDA Book & Ebook Writing", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
   ];
   const headers = [
     "Feature / Metric",
@@ -143,7 +90,6 @@ const pricepackages2 = () => {
     "Alpha Pack (6-Mo)",
   ];
 
-  // Responsive stack for plan cards
   const planStackStyle = {
     display: 'flex',
     gap: '24px',
@@ -159,10 +105,10 @@ const pricepackages2 = () => {
           <div className="col-lg-8 col-md-10">
             <div className="s-head text-center mb-80">
               <h1 className="stit mb-30">
-                <span className="left"></span>Admin & Customer Support
+                <span className="left"></span>Writing & Translation
                 <span className="right"></span>
               </h1>
-              <p> - Virtual assistance and customer service solutions </p>
+              <p> - Content development and localization services </p>
             </div>
           </div>
         </div>
@@ -176,7 +122,7 @@ const pricepackages2 = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>2500
+                    <span>$</span>2,500
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -184,16 +130,16 @@ const pricepackages2 = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Ideal for startups and small businesses needing foundational administrative and customer support to keep operations running smoothly.
+                  🏷️ Deal Summary: Essential writing and translation services for foundational content needs, including basic blog posts and general document translation.
                 </div>
                 <div className="beta-features mb-20">
                   <strong>Features</strong>
                   <ul>
-                    <li>📧 Email and Chat Support</li>
-                    <li>📅 Calendar Management</li>
-                    <li>🗂️ Data Entry and Management</li>
-                    <li>📞 Basic Customer Service</li>
-                    <li>📋 Administrative Tasks</li>
+                    <li>✍️ Blog Post Writing (Basic)</li>
+                    <li>📝 Website Content Creation (Standard)</li>
+                    <li>📧 Email Copywriting (Simple)</li>
+                    <li>🗣️ General Document Translation</li>
+                    <li>Proofreading & Editing (Basic)</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
                     {/* 12-Month Plan */}
@@ -248,16 +194,16 @@ const pricepackages2 = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Perfect for growing businesses that require more comprehensive support, including handling complex customer issues and managing social media, to enhance customer satisfaction and brand presence.
+                  🏷️ Deal Summary: Comprehensive writing and translation services for growing businesses, including SEO content, technical writing, and localized marketing materials.
                 </div>
                 <div className="beta-features mb-20">
                   <strong>Features</strong>
                   <ul>
-                    <li>🤝 Omnichannel Support (Phone, Email, Chat)</li>
-                    <li>🚨 Escalation Management</li>
-                    <li>📱 Social Media Engagement</li>
-                    <li>📈 Reporting and Analytics</li>
-                    <li>👨‍💼 Dedicated Account Manager</li>
+                    <li>🔍 SEO-Optimized Content Writing</li>
+                    <li>📚 Technical Writing & Documentation</li>
+                    <li>📢 Marketing & Ad Copywriting</li>
+                    <li>🌐 Website Localization</li>
+                    <li>✍️ Press Release Writing</li>
                     <li>Includes all Beta Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -313,16 +259,16 @@ const pricepackages2 = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: The ultimate solution for large enterprises needing a full-fledged, 24/7 support team, complete with quality assurance and multilingual capabilities, to deliver exceptional customer experiences across the globe.
+                  🏷️ Deal Summary: Elite writing and localization solutions for large enterprises, including legal translation, academic writing, and strategic content planning for global audiences.
                 </div>
                 <div className="beta-features mb-20">
                   <strong>Features</strong>
                   <ul>
-                    <li>🌐 24/7 Support</li>
-                    <li>✅ Quality Assurance and Monitoring</li>
-                    <li>🗣️ Multilingual Support</li>
-                    <li>🔥 Crisis Management</li>
-                    <li>🔗 CRM Integration and Management</li>
+                    <li>⚖️ Legal & Certified Translation</li>
+                    <li>🎓 Academic & Research Writing</li>
+                    <li>🌎 Transcreation & Cultural Adaptation</li>
+                    <li>🎙️ Scriptwriting (Video/Audio)</li>
+                    <li>📚 Book & Ebook Writing</li>
                     <li>Includes all Beta and Sigma Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -382,7 +328,7 @@ const pricepackages2 = () => {
               letterSpacing: "1px",
             }}
           >
-            Admin & Customer Support Comparison Table {tableOpen ? "▲" : "▼"}
+            Writing & Translation Comparison Table {tableOpen ? "▲" : "▼"}
           </button>
           {tableOpen && (
             <div style={{
@@ -445,4 +391,4 @@ const pricepackages2 = () => {
   );
 };
 
-export default pricepackages2;
+export default WritingTranslationPackages;

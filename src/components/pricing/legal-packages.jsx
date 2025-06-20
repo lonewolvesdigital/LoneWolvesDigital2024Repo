@@ -1,15 +1,8 @@
 import React, { useState } from "react";
 
-
-const pricepackages2 = () => {
+const LegalPackages = () => {
   // State for dropdowns for each card and each option
   const [dropdowns, setDropdowns] = useState({
-    betaA: false,
-    betaB: false,
-    sigmaA: false,
-    sigmaB: false,
-    alphaA: false,
-    alphaB: false,
     betaSelect: false,
     sigmaSelect: false,
     alphaSelect: false,
@@ -48,7 +41,7 @@ const pricepackages2 = () => {
           }}
         >
           <a 
-            href="https://form.jotform.com/230592802711552"
+            href="#"
             className="dropdown-link"
             style={{
               display: 'block',
@@ -63,7 +56,7 @@ const pricepackages2 = () => {
             Option A
           </a>
           <a 
-            href="https://form.jotform.com/241234567890123"
+            href="#"
             className="dropdown-link"
             style={{
               display: 'block',
@@ -78,7 +71,7 @@ const pricepackages2 = () => {
             Option B
           </a>
           <a 
-            href="https://form.jotform.com/241234567890124"
+            href="#"
             className="dropdown-link"
             style={{
               display: 'block',
@@ -108,30 +101,30 @@ const pricepackages2 = () => {
   // --- Comparison Table Data ---
   const [tableOpen, setTableOpen] = useState(false);
   const features = [
-    { label: "💵 Monthly Cost", values: ["$2,500", "$3,000", "$4,500", "$5,200", "$7,500", "$8,500"] },
-    { label: "📅 Annual/Semiannual Cost", values: ["$30,000", "$18,000", "$54,000", "$31,200", "$90,000", "$51,000"] },
-    { label: "💰 Live Call Deposit", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
-    { label: "🎁 Discount Amount", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
-    { label: "🧾 Monthly After Discount", values: ["$2,375", "$2,850", "$4,050", "$4,680", "$6,375", "$7,225"] },
-    { label: "💸 Pre Discount Total", values: ["$30,000", "$18,000", "$54,000", "$31,200", "$90,000", "$51,000"] },
-    { label: "🏦 Post Discount Total", values: ["$28,500", "$17,100", "$48,600", "$28,080", "$76,500", "$43,350"] },
-    { label: "🎉 Total Savings", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
-    { label: "📉 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
-    { label: "📧 Email and Chat Support", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "📅 Calendar Management", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "🗂️ Data Entry and Management", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "📞 Basic Customer Service", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "📋 Administrative Tasks", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "🤝 Omnichannel Support", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🚨 Escalation Management", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "📱 Social Media Engagement", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "📈 Reporting and Analytics", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "👨‍💼 Dedicated Account Manager", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🌐 24/7 Support", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "✅ Quality Assurance", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🗣️ Multilingual Support", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🔥 Crisis Management", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🔗 CRM Integration", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCB5 Monthly Cost", values: ["$3,500", "$4,000", "$6,500", "$7,400", "$9,500", "$10,000"] },
+    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: ["$42,000", "$24,000", "$78,000", "$44,400", "$114,000", "$60,000"] },
+    { label: "\uD83D\uDCB0 Live Call Deposit", values: ["$2,100", "$1,200", "$7,800", "$4,440", "$17,100", "$9,000"] },
+    { label: "\uD83C\uDF81 Discount Amount", values: ["$2,100", "$1,200", "$7,800", "$4,440", "$17,100", "$9,000"] },
+    { label: "\uD83D\uDCDD Monthly After Discount", values: ["$3,325", "$3,800", "$5,850", "$6,660", "$8,075", "$8,500"] },
+    { label: "\uD83D\uDCB8 Pre Discount Total", values: ["$42,000", "$24,000", "$78,000", "$44,400", "$114,000", "$60,000"] },
+    { label: "\uD83C\uDFE6 Post Discount Total", values: ["$39,900", "$22,800", "$70,200", "$40,000", "$96,900", "$51,000"] },
+    { label: "\uD83C\uDF89 Total Savings", values: ["$2,100", "$1,200", "$7,800", "$4,440", "$17,100", "$9,000"] },
+    { label: "\uD83D\uDCB9 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
+    { label: "\uD83D\uDCDC Contract Review", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "⚖️ Business Registration", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDEB4️ IP Overview", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCCB Compliance Checklist", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCE7 Basic Legal Consultations", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "✍️ Custom Contract Drafting", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "🔒 Data Privacy & GDPR", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "💼 Employment Law Advisory", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCC8 M&A Support", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDC68\u200D⚖️ Regulatory Filings", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDFDB️ Litigation Support", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "🌍 International Law", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCCA Corporate Governance", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "🚨 Crisis Management Legal", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "🧩 Specialized Industry", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
   ];
   const headers = [
     "Feature / Metric",
@@ -159,10 +152,10 @@ const pricepackages2 = () => {
           <div className="col-lg-8 col-md-10">
             <div className="s-head text-center mb-80">
               <h1 className="stit mb-30">
-                <span className="left"></span>Admin & Customer Support
+                <span className="left"></span>Legal
                 <span className="right"></span>
               </h1>
-              <p> - Virtual assistance and customer service solutions </p>
+              <p> - Compliance and legal advisory services </p>
             </div>
           </div>
         </div>
@@ -176,7 +169,7 @@ const pricepackages2 = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>2500
+                    <span>$</span>3,500
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -184,30 +177,30 @@ const pricepackages2 = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Ideal for startups and small businesses needing foundational administrative and customer support to keep operations running smoothly.
+                  🏷️ Deal Summary: Foundational legal support for startups and small businesses, including basic contract review and compliance checks.
                 </div>
                 <div className="beta-features mb-20">
                   <strong>Features</strong>
                   <ul>
-                    <li>📧 Email and Chat Support</li>
-                    <li>📅 Calendar Management</li>
-                    <li>🗂️ Data Entry and Management</li>
-                    <li>📞 Basic Customer Service</li>
-                    <li>📋 Administrative Tasks</li>
+                    <li>📜 Contract Review (Basic)</li>
+                    <li>⚖️ Business Registration & Licensing</li>
+                    <li>🛡️ Intellectual Property (IP) Overview</li>
+                    <li>📋 Compliance Checklist Development</li>
+                    <li>📧 Basic Legal Consultations (Email/Chat)</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
                     {/* 12-Month Plan */}
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $2,500</li>
-                        <li>📅 Annual Cost: $30,000</li>
-                        <li>💰 Live Call Deposit: $1,500</li>
-                        <li>🎁 Discount Amount: $1,500</li>
-                        <li>🧾 Monthly After Discount: $2,375</li>
-                        <li>💸 Pre Discount Total : $30,000</li>
-                        <li>🏦 Post Discount Total : $28,500</li>
-                        <li>🎉 Total Savings: $1,500</li>
+                        <li>💵 Monthly Cost: $3,500</li>
+                        <li>📅 Annual Cost: $42,000</li>
+                        <li>💰 Live Call Deposit: $2,100</li>
+                        <li>🎁 Discount Amount: $2,100</li>
+                        <li>🧾 Monthly After Discount: $3,325</li>
+                        <li>💸 Pre Discount Total : $42,000</li>
+                        <li>🏦 Post Discount Total : $39,900</li>
+                        <li>🎉 Total Savings: $2,100</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -215,14 +208,14 @@ const pricepackages2 = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $3,000</li>
-                        <li>📅 Semiannual Cost: $18,000</li>
-                        <li>💰 Live Call Deposit: $900</li>
-                        <li>🎁 Discount Amount: $900</li>
-                        <li>🧾 Monthly After Discount: $2,850</li>
-                        <li>💸 Pre Discount Total : $18,000</li>
-                        <li>🏦 Post Discount Total : $17,100</li>
-                        <li>🎉 Total Savings: $900</li>
+                        <li>💵 Monthly Cost: $4,000</li>
+                        <li>📅 Semiannual Cost: $24,000</li>
+                        <li>💰 Live Call Deposit: $1,200</li>
+                        <li>🎁 Discount Amount: $1,200</li>
+                        <li>🧾 Monthly After Discount: $3,800</li>
+                        <li>💸 Pre Discount Total : $24,000</li>
+                        <li>🏦 Post Discount Total : $22,800</li>
+                        <li>🎉 Total Savings: $1,200</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -240,7 +233,7 @@ const pricepackages2 = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>4,500
+                    <span>$</span>6,500
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -248,16 +241,16 @@ const pricepackages2 = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Perfect for growing businesses that require more comprehensive support, including handling complex customer issues and managing social media, to enhance customer satisfaction and brand presence.
+                  🏷️ Deal Summary: Comprehensive legal advisory for growing businesses, including detailed contract drafting, data privacy, and employment law support.
                 </div>
                 <div className="beta-features mb-20">
                   <strong>Features</strong>
                   <ul>
-                    <li>🤝 Omnichannel Support (Phone, Email, Chat)</li>
-                    <li>🚨 Escalation Management</li>
-                    <li>📱 Social Media Engagement</li>
-                    <li>📈 Reporting and Analytics</li>
-                    <li>👨‍💼 Dedicated Account Manager</li>
+                    <li>✍️ Custom Contract Drafting</li>
+                    <li>🔒 Data Privacy & GDPR Compliance</li>
+                    <li>💼 Employment Law Advisory</li>
+                    <li>📈 Mergers & Acquisitions (M&A) Support (Basic)</li>
+                    <li>👨‍⚖️ Regulatory Filings & Permits</li>
                     <li>Includes all Beta Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -265,14 +258,14 @@ const pricepackages2 = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $4,500</li>
-                        <li>📅 Annual Cost: $54,000</li>
-                        <li>💰 Live Call Deposit: $5,400</li>
-                        <li>🎁 Discount Amount: $5,400</li>
-                        <li>🧾 Monthly After Discount: $4,050</li>
-                        <li>💸 Pre Discount Total : $54,000</li>
-                        <li>🏦 Post Discount Total : $48,600</li>
-                        <li>🎉 Total Savings: $5,400</li>
+                        <li>💵 Monthly Cost: $6,500</li>
+                        <li>📅 Annual Cost: $78,000</li>
+                        <li>💰 Live Call Deposit: $7,800</li>
+                        <li>🎁 Discount Amount: $7,800</li>
+                        <li>🧾 Monthly After Discount: $5,850</li>
+                        <li>💸 Pre Discount Total : $78,000</li>
+                        <li>🏦 Post Discount Total : $70,200</li>
+                        <li>🎉 Total Savings: $7,800</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -280,14 +273,14 @@ const pricepackages2 = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $5,200</li>
-                        <li>📅 Semiannual Cost: $31,200</li>
-                        <li>💰 Live Call Deposit: $3,120</li>
-                        <li>🎁 Discount Amount: $3,120</li>
-                        <li>🧾 Monthly After Discount: $4,680</li>
-                        <li>💸 Pre Discount Total : $31,200</li>
-                        <li>🏦 Post Discount Total : $28,080</li>
-                        <li>🎉 Total Savings: $3,120</li>
+                        <li>💵 Monthly Cost: $7,400</li>
+                        <li>📅 Semiannual Cost: $44,400</li>
+                        <li>💰 Live Call Deposit: $4,440</li>
+                        <li>🎁 Discount Amount: $4,440</li>
+                        <li>🧾 Monthly After Discount: $6,660</li>
+                        <li>💸 Pre Discount Total : $44,400</li>
+                        <li>🏦 Post Discount Total : $40,000</li>
+                        <li>🎉 Total Savings: $4,440</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -305,7 +298,7 @@ const pricepackages2 = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>7,500
+                    <span>$</span>9,500
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -313,16 +306,16 @@ const pricepackages2 = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: The ultimate solution for large enterprises needing a full-fledged, 24/7 support team, complete with quality assurance and multilingual capabilities, to deliver exceptional customer experiences across the globe.
+                  🏷️ Deal Summary: Premium legal services for large corporations and complex transactions, including litigation support, international law, and specialized industry compliance.
                 </div>
                 <div className="beta-features mb-20">
                   <strong>Features</strong>
                   <ul>
-                    <li>🌐 24/7 Support</li>
-                    <li>✅ Quality Assurance and Monitoring</li>
-                    <li>🗣️ Multilingual Support</li>
-                    <li>🔥 Crisis Management</li>
-                    <li>🔗 CRM Integration and Management</li>
+                    <li>🏛️ Litigation & Dispute Resolution Support</li>
+                    <li>🌍 International Law & Cross-Border Advisory</li>
+                    <li>📊 Corporate Governance & Board Advisory</li>
+                    <li>🚨 Crisis Management Legal Support</li>
+                    <li>🧩 Specialized Industry Compliance</li>
                     <li>Includes all Beta and Sigma Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -330,14 +323,14 @@ const pricepackages2 = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $7,500</li>
-                        <li>📅 Annual Cost: $90,000</li>
-                        <li>💰 Live Call Deposit: $13,500</li>
-                        <li>🎁 Discount Amount: $13,500</li>
-                        <li>🧾 Monthly After Discount: $6,375</li>
-                        <li>💸 Pre Discount Total : $90,000</li>
-                        <li>🏦 Post Discount Total : $76,500</li>
-                        <li>🎉 Total Savings: $13,500</li>
+                        <li>💵 Monthly Cost: $9,500</li>
+                        <li>📅 Annual Cost: $114,000</li>
+                        <li>💰 Live Call Deposit: $17,100</li>
+                        <li>🎁 Discount Amount: $17,100</li>
+                        <li>🧾 Monthly After Discount: $8,075</li>
+                        <li>💸 Pre Discount Total : $114,000</li>
+                        <li>🏦 Post Discount Total : $96,900</li>
+                        <li>🎉 Total Savings: $17,100</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -345,14 +338,14 @@ const pricepackages2 = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $8,500</li>
-                        <li>📅 Semiannual Cost: $51,000</li>
-                        <li>💰 Live Call Deposit: $7,650</li>
-                        <li>🎁 Discount Amount: $7,650</li>
-                        <li>🧾 Monthly After Discount: $7,225</li>
-                        <li>💸 Pre Discount Total : $51,000</li>
-                        <li>🏦 Post Discount Total : $43,350</li>
-                        <li>🎉 Total Savings: $7,650</li>
+                        <li>💵 Monthly Cost: $10,000</li>
+                        <li>📅 Semiannual Cost: $60,000</li>
+                        <li>💰 Live Call Deposit: $9,000</li>
+                        <li>🎁 Discount Amount: $9,000</li>
+                        <li>🧾 Monthly After Discount: $8,500</li>
+                        <li>💸 Pre Discount Total : $60,000</li>
+                        <li>🏦 Post Discount Total : $51,000</li>
+                        <li>🎉 Total Savings: $9,000</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -382,7 +375,7 @@ const pricepackages2 = () => {
               letterSpacing: "1px",
             }}
           >
-            Admin & Customer Support Comparison Table {tableOpen ? "▲" : "▼"}
+            Legal Comparison Table {tableOpen ? "▲" : "▼"}
           </button>
           {tableOpen && (
             <div style={{
@@ -445,4 +438,4 @@ const pricepackages2 = () => {
   );
 };
 
-export default pricepackages2;
+export default LegalPackages;

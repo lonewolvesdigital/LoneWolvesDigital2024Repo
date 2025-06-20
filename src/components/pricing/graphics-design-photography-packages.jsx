@@ -1,15 +1,8 @@
 import React, { useState } from "react";
 
-
-const pricepackages2 = () => {
+const GraphicsDesignPhotographyPackages = () => {
   // State for dropdowns for each card and each option
   const [dropdowns, setDropdowns] = useState({
-    betaA: false,
-    betaB: false,
-    sigmaA: false,
-    sigmaB: false,
-    alphaA: false,
-    alphaB: false,
     betaSelect: false,
     sigmaSelect: false,
     alphaSelect: false,
@@ -48,7 +41,7 @@ const pricepackages2 = () => {
           }}
         >
           <a 
-            href="https://form.jotform.com/230592802711552"
+            href="#"
             className="dropdown-link"
             style={{
               display: 'block',
@@ -63,7 +56,7 @@ const pricepackages2 = () => {
             Option A
           </a>
           <a 
-            href="https://form.jotform.com/241234567890123"
+            href="#"
             className="dropdown-link"
             style={{
               display: 'block',
@@ -78,7 +71,7 @@ const pricepackages2 = () => {
             Option B
           </a>
           <a 
-            href="https://form.jotform.com/241234567890124"
+            href="#"
             className="dropdown-link"
             style={{
               display: 'block',
@@ -108,30 +101,30 @@ const pricepackages2 = () => {
   // --- Comparison Table Data ---
   const [tableOpen, setTableOpen] = useState(false);
   const features = [
-    { label: "💵 Monthly Cost", values: ["$2,500", "$3,000", "$4,500", "$5,200", "$7,500", "$8,500"] },
-    { label: "📅 Annual/Semiannual Cost", values: ["$30,000", "$18,000", "$54,000", "$31,200", "$90,000", "$51,000"] },
-    { label: "💰 Live Call Deposit", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
-    { label: "🎁 Discount Amount", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
-    { label: "🧾 Monthly After Discount", values: ["$2,375", "$2,850", "$4,050", "$4,680", "$6,375", "$7,225"] },
-    { label: "💸 Pre Discount Total", values: ["$30,000", "$18,000", "$54,000", "$31,200", "$90,000", "$51,000"] },
-    { label: "🏦 Post Discount Total", values: ["$28,500", "$17,100", "$48,600", "$28,080", "$76,500", "$43,350"] },
-    { label: "🎉 Total Savings", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
-    { label: "📉 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
-    { label: "📧 Email and Chat Support", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "📅 Calendar Management", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "🗂️ Data Entry and Management", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "📞 Basic Customer Service", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "📋 Administrative Tasks", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "🤝 Omnichannel Support", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🚨 Escalation Management", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "📱 Social Media Engagement", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "📈 Reporting and Analytics", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "👨‍💼 Dedicated Account Manager", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🌐 24/7 Support", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "✅ Quality Assurance", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🗣️ Multilingual Support", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🔥 Crisis Management", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🔗 CRM Integration", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCB5 Monthly Cost", values: ["$2,700", "$3,200", "$4,800", "$5,500", "$7,800", "$8,800"] },
+    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: ["$32,400", "$19,200", "$57,600", "$33,000", "$93,600", "$52,800"] },
+    { label: "\uD83D\uDCB0 Live Call Deposit", values: ["$1,620", "$960", "$5,760", "$3,300", "$14,040", "$7,920"] },
+    { label: "\uD83C\uDF81 Discount Amount", values: ["$1,620", "$960", "$5,760", "$3,300", "$14,040", "$7,920"] },
+    { label: "\uD83D\uDCDD Monthly After Discount", values: ["$2,565", "$3,040", "$4,320", "$4,950", "$6,630", "$7,480"] },
+    { label: "\uD83D\uDCB8 Pre Discount Total", values: ["$32,400", "$19,200", "$57,600", "$33,000", "$93,600", "$52,800"] },
+    { label: "\uD83C\uDFE6 Post Discount Total", values: ["$30,780", "$18,240", "$51,840", "$29,700", "$79,560", "$44,880"] },
+    { label: "\uD83C\uDF89 Total Savings", values: ["$1,620", "$960", "$5,760", "$3,300", "$14,040", "$7,920"] },
+    { label: "\uD83D\uDCB9 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
+    { label: "\uD83C\uDFA8 Logo Design", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCF8 Product Photography", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDDBC️ Social Media Graphics", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\u270D️ Brand Guideline Dev", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDDA8️ Basic Print Collateral", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\u2728 Full Branding Package", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDF1F Lifestyle & Editorial Photo", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCE6 Packaging Design", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDDA5️ Website UI/UX Design", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDFAC Infographic & Presentation", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDDBC️ Creative Direction", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDE80 Campaign Visuals", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDC57 Fashion & Editorial Photos", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDFA8 Custom Illustration", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDF10 Experiential Design", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
   ];
   const headers = [
     "Feature / Metric",
@@ -159,10 +152,10 @@ const pricepackages2 = () => {
           <div className="col-lg-8 col-md-10">
             <div className="s-head text-center mb-80">
               <h1 className="stit mb-30">
-                <span className="left"></span>Admin & Customer Support
+                <span className="left"></span>Graphics Design & Photography
                 <span className="right"></span>
               </h1>
-              <p> - Virtual assistance and customer service solutions </p>
+              <p> - Visual content creation and branding </p>
             </div>
           </div>
         </div>
@@ -176,7 +169,7 @@ const pricepackages2 = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>2500
+                    <span>$</span>2,700
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -184,30 +177,30 @@ const pricepackages2 = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Ideal for startups and small businesses needing foundational administrative and customer support to keep operations running smoothly.
+                  🏷️ Deal Summary: Fundamental graphic design and photography services for new brands or businesses needing essential visual assets.
                 </div>
                 <div className="beta-features mb-20">
                   <strong>Features</strong>
                   <ul>
-                    <li>📧 Email and Chat Support</li>
-                    <li>📅 Calendar Management</li>
-                    <li>🗂️ Data Entry and Management</li>
-                    <li>📞 Basic Customer Service</li>
-                    <li>📋 Administrative Tasks</li>
+                    <li>🎨 Logo Design (Basic)</li>
+                    <li>📸 Product Photography (Standard)</li>
+                    <li>🖼️ Social Media Graphics (Basic)</li>
+                    <li>✍️ Brand Guideline Development (Simple)</li>
+                    <li>🖨️ Basic Print Collateral Design (Business Cards, Flyers)</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
                     {/* 12-Month Plan */}
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $2,500</li>
-                        <li>📅 Annual Cost: $30,000</li>
-                        <li>💰 Live Call Deposit: $1,500</li>
-                        <li>🎁 Discount Amount: $1,500</li>
-                        <li>🧾 Monthly After Discount: $2,375</li>
-                        <li>💸 Pre Discount Total : $30,000</li>
-                        <li>🏦 Post Discount Total : $28,500</li>
-                        <li>🎉 Total Savings: $1,500</li>
+                        <li>💵 Monthly Cost: $2,700</li>
+                        <li>📅 Annual Cost: $32,400</li>
+                        <li>💰 Live Call Deposit: $1,620</li>
+                        <li>🎁 Discount Amount: $1,620</li>
+                        <li>🧾 Monthly After Discount: $2,565</li>
+                        <li>💸 Pre Discount Total : $32,400</li>
+                        <li>🏦 Post Discount Total : $30,780</li>
+                        <li>🎉 Total Savings: $1,620</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -215,14 +208,14 @@ const pricepackages2 = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $3,000</li>
-                        <li>📅 Semiannual Cost: $18,000</li>
-                        <li>💰 Live Call Deposit: $900</li>
-                        <li>🎁 Discount Amount: $900</li>
-                        <li>🧾 Monthly After Discount: $2,850</li>
-                        <li>💸 Pre Discount Total : $18,000</li>
-                        <li>🏦 Post Discount Total : $17,100</li>
-                        <li>🎉 Total Savings: $900</li>
+                        <li>💵 Monthly Cost: $3,200</li>
+                        <li>📅 Semiannual Cost: $19,200</li>
+                        <li>💰 Live Call Deposit: $960</li>
+                        <li>🎁 Discount Amount: $960</li>
+                        <li>🧾 Monthly After Discount: $3,040</li>
+                        <li>💸 Pre Discount Total : $19,200</li>
+                        <li>🏦 Post Discount Total : $18,240</li>
+                        <li>🎉 Total Savings: $960</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -240,7 +233,7 @@ const pricepackages2 = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>4,500
+                    <span>$</span>4,800
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -248,16 +241,16 @@ const pricepackages2 = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Perfect for growing businesses that require more comprehensive support, including handling complex customer issues and managing social media, to enhance customer satisfaction and brand presence.
+                  🏷️ Deal Summary: Enhanced graphic design and photography services for growing businesses, including full branding, professional photoshoots, and marketing material design.
                 </div>
                 <div className="beta-features mb-20">
                   <strong>Features</strong>
                   <ul>
-                    <li>🤝 Omnichannel Support (Phone, Email, Chat)</li>
-                    <li>🚨 Escalation Management</li>
-                    <li>📱 Social Media Engagement</li>
-                    <li>📈 Reporting and Analytics</li>
-                    <li>👨‍💼 Dedicated Account Manager</li>
+                    <li>✨ Full Branding Package</li>
+                    <li>🌟 Lifestyle & Editorial Photography</li>
+                    <li>📦 Packaging Design</li>
+                    <li>🖥️ Website UI/UX Design (Visuals)</li>
+                    <li>🎬 Infographic & Presentation Design</li>
                     <li>Includes all Beta Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -265,14 +258,14 @@ const pricepackages2 = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $4,500</li>
-                        <li>📅 Annual Cost: $54,000</li>
-                        <li>💰 Live Call Deposit: $5,400</li>
-                        <li>🎁 Discount Amount: $5,400</li>
-                        <li>🧾 Monthly After Discount: $4,050</li>
-                        <li>💸 Pre Discount Total : $54,000</li>
-                        <li>🏦 Post Discount Total : $48,600</li>
-                        <li>🎉 Total Savings: $5,400</li>
+                        <li>💵 Monthly Cost: $4,800</li>
+                        <li>📅 Annual Cost: $57,600</li>
+                        <li>💰 Live Call Deposit: $5,760</li>
+                        <li>🎁 Discount Amount: $5,760</li>
+                        <li>🧾 Monthly After Discount: $4,320</li>
+                        <li>💸 Pre Discount Total : $57,600</li>
+                        <li>🏦 Post Discount Total : $51,840</li>
+                        <li>🎉 Total Savings: $5,760</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -280,14 +273,14 @@ const pricepackages2 = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $5,200</li>
-                        <li>📅 Semiannual Cost: $31,200</li>
-                        <li>💰 Live Call Deposit: $3,120</li>
-                        <li>🎁 Discount Amount: $3,120</li>
-                        <li>🧾 Monthly After Discount: $4,680</li>
-                        <li>💸 Pre Discount Total : $31,200</li>
-                        <li>🏦 Post Discount Total : $28,080</li>
-                        <li>🎉 Total Savings: $3,120</li>
+                        <li>💵 Monthly Cost: $5,500</li>
+                        <li>📅 Semiannual Cost: $33,000</li>
+                        <li>💰 Live Call Deposit: $3,300</li>
+                        <li>🎁 Discount Amount: $3,300</li>
+                        <li>🧾 Monthly After Discount: $4,950</li>
+                        <li>💸 Pre Discount Total : $33,000</li>
+                        <li>🏦 Post Discount Total : $29,700</li>
+                        <li>🎉 Total Savings: $3,300</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -305,7 +298,7 @@ const pricepackages2 = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>7,500
+                    <span>$</span>7,800
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -313,16 +306,16 @@ const pricepackages2 = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: The ultimate solution for large enterprises needing a full-fledged, 24/7 support team, complete with quality assurance and multilingual capabilities, to deliver exceptional customer experiences across the globe.
+                  🏷️ Deal Summary: Premium graphic design and photography for established brands and large campaigns, offering art direction, advanced visual storytelling, and comprehensive creative solutions.
                 </div>
                 <div className="beta-features mb-20">
                   <strong>Features</strong>
                   <ul>
-                    <li>🌐 24/7 Support</li>
-                    <li>✅ Quality Assurance and Monitoring</li>
-                    <li>🗣️ Multilingual Support</li>
-                    <li>🔥 Crisis Management</li>
-                    <li>🔗 CRM Integration and Management</li>
+                    <li>🖼️ Creative Direction & Art Direction</li>
+                    <li>🚀 Campaign Visuals & Advertising Design</li>
+                    <li>👗 Fashion & Editorial Photoshoots</li>
+                    <li>🎨 Custom Illustration & Animation (2D)</li>
+                    <li>🌐 Experiential Design (Visuals)</li>
                     <li>Includes all Beta and Sigma Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -330,14 +323,14 @@ const pricepackages2 = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $7,500</li>
-                        <li>📅 Annual Cost: $90,000</li>
-                        <li>💰 Live Call Deposit: $13,500</li>
-                        <li>🎁 Discount Amount: $13,500</li>
-                        <li>🧾 Monthly After Discount: $6,375</li>
-                        <li>💸 Pre Discount Total : $90,000</li>
-                        <li>🏦 Post Discount Total : $76,500</li>
-                        <li>🎉 Total Savings: $13,500</li>
+                        <li>💵 Monthly Cost: $7,800</li>
+                        <li>📅 Annual Cost: $93,600</li>
+                        <li>💰 Live Call Deposit: $14,040</li>
+                        <li>🎁 Discount Amount: $14,040</li>
+                        <li>🧾 Monthly After Discount: $6,630</li>
+                        <li>💸 Pre Discount Total : $93,600</li>
+                        <li>🏦 Post Discount Total : $79,560</li>
+                        <li>🎉 Total Savings: $14,040</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -345,14 +338,14 @@ const pricepackages2 = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $8,500</li>
-                        <li>📅 Semiannual Cost: $51,000</li>
-                        <li>💰 Live Call Deposit: $7,650</li>
-                        <li>🎁 Discount Amount: $7,650</li>
-                        <li>🧾 Monthly After Discount: $7,225</li>
-                        <li>💸 Pre Discount Total : $51,000</li>
-                        <li>🏦 Post Discount Total : $43,350</li>
-                        <li>🎉 Total Savings: $7,650</li>
+                        <li>💵 Monthly Cost: $8,800</li>
+                        <li>📅 Semiannual Cost: $52,800</li>
+                        <li>💰 Live Call Deposit: $7,920</li>
+                        <li>🎁 Discount Amount: $7,920</li>
+                        <li>🧾 Monthly After Discount: $7,480</li>
+                        <li>💸 Pre Discount Total : $52,800</li>
+                        <li>🏦 Post Discount Total : $44,880</li>
+                        <li>🎉 Total Savings: $7,920</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -382,7 +375,7 @@ const pricepackages2 = () => {
               letterSpacing: "1px",
             }}
           >
-            Admin & Customer Support Comparison Table {tableOpen ? "▲" : "▼"}
+            Graphics Design & Photography Comparison Table {tableOpen ? "▲" : "▼"}
           </button>
           {tableOpen && (
             <div style={{
@@ -445,4 +438,4 @@ const pricepackages2 = () => {
   );
 };
 
-export default pricepackages2;
+export default GraphicsDesignPhotographyPackages;
