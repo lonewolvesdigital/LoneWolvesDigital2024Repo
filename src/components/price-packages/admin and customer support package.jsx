@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PriceTag from "./PriceTag";
 
 
-const pricepackages2 = () => {
+const AdminAndCustomerSupportPackage = () => {
   // State for dropdowns for each card and each option
   const [dropdowns, setDropdowns] = useState({
     betaA: false,
@@ -446,4 +446,4 @@ const pricepackages2 = () => {
   );
 };
 
-export default pricepackages2;
+export default AdminAndCustomerSupportPackage;

@@ -270,7 +270,7 @@ const ProjectDetails2Dark = () => {
         {/* <ProjectGallery /> */}
         {/* <CatalogPricing {...data}/> */}
         {/* <SummaryPricingTable data={hrTrainingSummaryPricingData} /> */}
-        <Works/>
+        {/* <Works/> */}
         <Footer2 />
       </div>
     </DarkTheme>
