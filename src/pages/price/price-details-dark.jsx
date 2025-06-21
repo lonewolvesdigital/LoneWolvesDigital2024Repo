@@ -14,7 +14,6 @@ import Clients3 from "../../components/Clients3/clients3";
 import Services7 from "../../components/Services7/services7";
 import Services8 from "../../components/Services8/services8";
 import Screenshots from "../../components/Screenshots/screenshots";
-import MobileAppPricingPlanDark from "../../components/Mobile-app-pricing-plan-dark/mobile-app-pricing-plan-dark";
 import Testimonials from "../../components/Testimonials/testimonials";
 import DownloadApp from "../../components/Download-app/download-app";
 import Blogs2 from "../../components/Blogs2/blogs2";
@@ -75,7 +74,7 @@ const MobileAppDark = () => {
         <VideoWithTeam />
         <Questionair />
         <Questionair2 />
-        <MobileAppPricingPlanDark/>
+        {/* <MobileAppPricingPlanDark/> */}
         <Testimonials />
         <DownloadApp />
         <Blogs2 />

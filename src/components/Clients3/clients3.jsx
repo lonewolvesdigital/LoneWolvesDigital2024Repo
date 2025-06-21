@@ -85,6 +85,7 @@ const Clients3 = () => {
                     src="/img/mobile-app/brands/l3.png"
                     alt=""
                     className="back"
+                    width={80} height={80}
                   />
                 </a>
               </div>
@@ -186,7 +187,7 @@ const Clients3 = () => {
                     src="/img/mobile-app/brands/l3.png"
                     alt=""
                     className="back"
-                    layout='fill'
+                    width={80} height={80}
                   />
                 </a>
               </div>
