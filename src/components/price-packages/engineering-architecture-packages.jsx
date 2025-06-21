@@ -398,7 +398,7 @@ const EngineeringArchitecturePackages = () => {
                 <thead>
                   <tr>
                     {headers.map((h, i) => (
-                      <th key={h || i} style={{
+                      <th key={i} style={{
                         padding: "12px 8px",
                         background: "#222",
                         borderBottom: "2px solid #333",
@@ -413,10 +413,10 @@ const EngineeringArchitecturePackages = () => {
                 </thead>
                 <tbody>
                   {features.map((row, i) => (
-                    <tr key={row.label || i} style={{ borderBottom: "1px solid #333" }}>
+                    <tr key={i} style={{ borderBottom: "1px solid #333" }}>
                       <td style={{ padding: "10px 8px", fontWeight: 600 }}>{row.label}</td>
                       {row.values.map((v, j) => (
-                        <td key={row.label + '-' + j} style={{ padding: "10px 8px", textAlign: "center" }}>{v}</td>
+                        <td key={j} style={{ padding: "10px 8px", textAlign: "center" }}>{v}</td>
                       ))}
                     </tr>
                   ))}
