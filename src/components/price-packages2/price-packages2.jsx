@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const pricepackages2 = () => {
+const PricePackages2 = () => {
   // State for dropdowns for each card and each option
   const [dropdowns, setDropdowns] = useState({
     betaA: false,
@@ -135,12 +135,12 @@ const pricepackages2 = () => {
   ];
   const headers = [
     "Feature / Metric",
-    "Beta Pack (12-Mo)",
-    "Beta Pack (6-Mo)",
-    "Sigma Pack (12-Mo)",
-    "Sigma Pack (6-Mo)",
-    "Alpha Pack (12-Mo)",
-    "Alpha Pack (6-Mo)",
+    <><span>Beta Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Beta Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(6-Mo)</span></>,
   ];
 
   // Responsive stack for plan cards
@@ -187,7 +187,7 @@ const pricepackages2 = () => {
                   🏷️ Deal Summary: Ideal for startups and small businesses needing foundational administrative and customer support to keep operations running smoothly.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
                     <li>📧 Email and Chat Support</li>
                     <li>📅 Calendar Management</li>
@@ -251,7 +251,7 @@ const pricepackages2 = () => {
                   🏷️ Deal Summary: Perfect for growing businesses that require more comprehensive support, including handling complex customer issues and managing social media, to enhance customer satisfaction and brand presence.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
                     <li>🤝 Omnichannel Support (Phone, Email, Chat)</li>
                     <li>🚨 Escalation Management</li>
@@ -316,7 +316,7 @@ const pricepackages2 = () => {
                   🏷️ Deal Summary: The ultimate solution for large enterprises needing a full-fledged, 24/7 support team, complete with quality assurance and multilingual capabilities, to deliver exceptional customer experiences across the globe.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
                     <li>🌐 24/7 Support</li>
                     <li>✅ Quality Assurance and Monitoring</li>
@@ -445,4 +445,4 @@ const pricepackages2 = () => {
   );
 };
 
-export default pricepackages2;
+export default PricePackages2;

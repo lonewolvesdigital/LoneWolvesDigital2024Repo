@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import PriceTag from "./PriceTag";
 
-const EngineeringArchitecturePackages = () => {
+const GraphicsDesignPhotographyPackages = () => {
   // State for dropdowns for each card and each option
   const [dropdowns, setDropdowns] = useState({
     betaSelect: false,
@@ -101,39 +102,39 @@ const EngineeringArchitecturePackages = () => {
   // --- Comparison Table Data ---
   const [tableOpen, setTableOpen] = useState(false);
   const features = [
-    { label: "\uD83D\uDCB5 Monthly Cost", values: ["$3,200", "$3,700", "$6,000", "$6,900", "$9,000", "$10,000"] },
-    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: ["$38,400", "$22,200", "$72,000", "$41,400", "$108,000", "$60,000"] },
-    { label: "\uD83D\uDCB0 Live Call Deposit", values: ["$1,920", "$1,110", "$7,200", "$4,140", "$16,200", "$9,000"] },
-    { label: "\uD83C\uDF81 Discount Amount", values: ["$1,920", "$1,110", "$7,200", "$4,140", "$16,200", "$9,000"] },
-    { label: "\uD83D\uDCDD Monthly After Discount", values: ["$3,040", "$3,515", "$5,400", "$6,210", "$7,650", "$8,500"] },
-    { label: "\uD83D\uDCB8 Pre Discount Total", values: ["$38,400", "$22,200", "$72,000", "$41,400", "$108,000", "$60,000"] },
-    { label: "\uD83C\uDFE6 Post Discount Total", values: ["$36,480", "$21,090", "$64,800", "$37,260", "$91,800", "$51,000"] },
-    { label: "\uD83C\uDF89 Total Savings", values: ["$1,920", "$1,110", "$7,200", "$4,140", "$16,200", "$9,000"] },
+    { label: "\uD83D\uDCB5 Monthly Cost", values: [<PriceTag usd={2700} />, <PriceTag usd={3200} />, <PriceTag usd={4800} />, <PriceTag usd={5500} />, <PriceTag usd={7800} />, <PriceTag usd={8800} />] },
+    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: [<PriceTag usd={32400} />, <PriceTag usd={19200} />, <PriceTag usd={57600} />, <PriceTag usd={33000} />, <PriceTag usd={93600} />, <PriceTag usd={52800} />] },
+    { label: "\uD83D\uDCB0 Live Call Deposit", values: [<PriceTag usd={1620} />, <PriceTag usd={960} />, <PriceTag usd={5760} />, <PriceTag usd={3300} />, <PriceTag usd={14040} />, <PriceTag usd={7920} />] },
+    { label: "\uD83C\uDF81 Discount Amount", values: [<PriceTag usd={1620} />, <PriceTag usd={960} />, <PriceTag usd={5760} />, <PriceTag usd={3300} />, <PriceTag usd={14040} />, <PriceTag usd={7920} />] },
+    { label: "\uD83D\uDCDD Monthly After Discount", values: [<PriceTag usd={2565} />, <PriceTag usd={3040} />, <PriceTag usd={4320} />, <PriceTag usd={4950} />, <PriceTag usd={6630} />, <PriceTag usd={7480} />] },
+    { label: "\uD83D\uDCB8 Pre Discount Total", values: [<PriceTag usd={32400} />, <PriceTag usd={19200} />, <PriceTag usd={57600} />, <PriceTag usd={33000} />, <PriceTag usd={93600} />, <PriceTag usd={52800} />] },
+    { label: "\uD83C\uDFE6 Post Discount Total", values: [<PriceTag usd={30780} />, <PriceTag usd={18240} />, <PriceTag usd={51840} />, <PriceTag usd={29700} />, <PriceTag usd={79560} />, <PriceTag usd={44880} />] },
+    { label: "\uD83C\uDF89 Total Savings", values: [<PriceTag usd={1620} />, <PriceTag usd={960} />, <PriceTag usd={5760} />, <PriceTag usd={3300} />, <PriceTag usd={14040} />, <PriceTag usd={7920} />] },
     { label: "\uD83D\uDCB9 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
-    { label: "\uD83D\uDCD0 Conceptual Design", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "🏗️ Basic CAD Drafting", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "📝 Material Specification", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "🚧 Site Analysis", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "📋 Code Compliance Review", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "🌐 Advanced 3D Modeling", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🔩 Structural Analysis & Design", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "💡 MEP Design", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🛠️ Construction Documentation", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🗓️ Project Scheduling", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🏗️ BIM", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🌱 Sustainable Design", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🔄 Advanced Simulation", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🔬 Value Engineering", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "👷 On-Site Supervision", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDFA8 Logo Design", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCF8 Product Photography", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDDBC️ Social Media Graphics", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\u270D️ Brand Guideline Dev", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDDA8️ Basic Print Collateral", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\u2728 Full Branding Package", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDF1F Lifestyle & Editorial Photo", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCE6 Packaging Design", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDDA5️ Website UI/UX Design", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDFAC Infographic & Presentation", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDDBC️ Creative Direction", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDE80 Campaign Visuals", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDC57 Fashion & Editorial Photos", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDFA8 Custom Illustration", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDF10 Experiential Design", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
   ];
   const headers = [
     "Feature / Metric",
-    "Beta Pack (12-Mo)",
-    "Beta Pack (6-Mo)",
-    "Sigma Pack (12-Mo)",
-    "Sigma Pack (6-Mo)",
-    "Alpha Pack (12-Mo)",
-    "Alpha Pack (6-Mo)",
+    <><span>Beta Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Beta Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(6-Mo)</span></>,
   ];
 
   // Responsive stack for plan cards
@@ -152,10 +153,10 @@ const EngineeringArchitecturePackages = () => {
           <div className="col-lg-8 col-md-10">
             <div className="s-head text-center mb-80">
               <h1 className="stit mb-30">
-                <span className="left"></span>Engineering & Architecture
+                <span className="left"></span>Graphics Design & Photography
                 <span className="right"></span>
               </h1>
-              <p> - Technical design and infrastructure development </p>
+              <p> - Visual content creation and branding </p>
             </div>
           </div>
         </div>
@@ -169,7 +170,7 @@ const EngineeringArchitecturePackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>3,200
+                    <span>$</span>2,700
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -177,30 +178,30 @@ const EngineeringArchitecturePackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Foundational engineering and architectural support for small-scale projects, ensuring structural integrity and basic design compliance.
+                  🏷️ Deal Summary: Fundamental graphic design and photography services for new brands or businesses needing essential visual assets.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>📐 Conceptual Design</li>
-                    <li>🏗️ Basic CAD Drafting</li>
-                    <li>📝 Material Specification (Standard)</li>
-                    <li>🚧 Site Analysis (Preliminary)</li>
-                    <li>📋 Code Compliance Review (Basic)</li>
+                    <li>🎨 Logo Design (Basic)</li>
+                    <li>📸 Product Photography (Standard)</li>
+                    <li>🖼️ Social Media Graphics (Basic)</li>
+                    <li>✍️ Brand Guideline Development (Simple)</li>
+                    <li>🖨️ Basic Print Collateral Design (Business Cards, Flyers)</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
                     {/* 12-Month Plan */}
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $3,200</li>
-                        <li>📅 Annual Cost: $38,400</li>
-                        <li>💰 Live Call Deposit: $1,920</li>
-                        <li>🎁 Discount Amount: $1,920</li>
-                        <li>🧾 Monthly After Discount: $3,040</li>
-                        <li>💸 Pre Discount Total : $38,400</li>
-                        <li>🏦 Post Discount Total : $36,480</li>
-                        <li>🎉 Total Savings: $1,920</li>
+                        <li>💵 Monthly Cost: $2,700</li>
+                        <li>📅 Annual Cost: $32,400</li>
+                        <li>💰 Live Call Deposit: $1,620</li>
+                        <li>🎁 Discount Amount: $1,620</li>
+                        <li>🧾 Monthly After Discount: $2,565</li>
+                        <li>💸 Pre Discount Total : $32,400</li>
+                        <li>🏦 Post Discount Total : $30,780</li>
+                        <li>🎉 Total Savings: $1,620</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -208,14 +209,14 @@ const EngineeringArchitecturePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $3,700</li>
-                        <li>📅 Semiannual Cost: $22,200</li>
-                        <li>💰 Live Call Deposit: $1,110</li>
-                        <li>🎁 Discount Amount: $1,110</li>
-                        <li>🧾 Monthly After Discount: $3,515</li>
-                        <li>💸 Pre Discount Total : $22,200</li>
-                        <li>🏦 Post Discount Total : $21,090</li>
-                        <li>🎉 Total Savings: $1,110</li>
+                        <li>💵 Monthly Cost: $3,200</li>
+                        <li>📅 Semiannual Cost: $19,200</li>
+                        <li>💰 Live Call Deposit: $960</li>
+                        <li>🎁 Discount Amount: $960</li>
+                        <li>🧾 Monthly After Discount: $3,040</li>
+                        <li>💸 Pre Discount Total : $19,200</li>
+                        <li>🏦 Post Discount Total : $18,240</li>
+                        <li>🎉 Total Savings: $960</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -233,7 +234,7 @@ const EngineeringArchitecturePackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>6,000
+                    <span>$</span>4,800
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -241,16 +242,16 @@ const EngineeringArchitecturePackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Comprehensive engineering and architectural services for medium-sized projects, including detailed design, structural analysis, and project management.
+                  🏷️ Deal Summary: Enhanced graphic design and photography services for growing businesses, including full branding, professional photoshoots, and marketing material design.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🌐 Advanced 3D Modeling</li>
-                    <li>🔩 Structural Analysis & Design</li>
-                    <li>💡 MEP (Mechanical, Electrical, Plumbing) Design</li>
-                    <li>🛠️ Construction Documentation</li>
-                    <li>🗓️ Project Scheduling & Coordination</li>
+                    <li>✨ Full Branding Package</li>
+                    <li>🌟 Lifestyle & Editorial Photography</li>
+                    <li>📦 Packaging Design</li>
+                    <li>🖥️ Website UI/UX Design (Visuals)</li>
+                    <li>🎬 Infographic & Presentation Design</li>
                     <li>Includes all Beta Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -258,14 +259,14 @@ const EngineeringArchitecturePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $6,000</li>
-                        <li>📅 Annual Cost: $72,000</li>
-                        <li>💰 Live Call Deposit: $7,200</li>
-                        <li>🎁 Discount Amount: $7,200</li>
-                        <li>🧾 Monthly After Discount: $5,400</li>
-                        <li>💸 Pre Discount Total : $72,000</li>
-                        <li>🏦 Post Discount Total : $64,800</li>
-                        <li>🎉 Total Savings: $7,200</li>
+                        <li>💵 Monthly Cost: $4,800</li>
+                        <li>📅 Annual Cost: $57,600</li>
+                        <li>💰 Live Call Deposit: $5,760</li>
+                        <li>🎁 Discount Amount: $5,760</li>
+                        <li>🧾 Monthly After Discount: $4,320</li>
+                        <li>💸 Pre Discount Total : $57,600</li>
+                        <li>🏦 Post Discount Total : $51,840</li>
+                        <li>🎉 Total Savings: $5,760</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -273,14 +274,14 @@ const EngineeringArchitecturePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $6,900</li>
-                        <li>📅 Semiannual Cost: $41,400</li>
-                        <li>💰 Live Call Deposit: $4,140</li>
-                        <li>🎁 Discount Amount: $4,140</li>
-                        <li>🧾 Monthly After Discount: $6,210</li>
-                        <li>💸 Pre Discount Total : $41,400</li>
-                        <li>🏦 Post Discount Total : $37,260</li>
-                        <li>🎉 Total Savings: $4,140</li>
+                        <li>💵 Monthly Cost: $5,500</li>
+                        <li>📅 Semiannual Cost: $33,000</li>
+                        <li>💰 Live Call Deposit: $3,300</li>
+                        <li>🎁 Discount Amount: $3,300</li>
+                        <li>🧾 Monthly After Discount: $4,950</li>
+                        <li>💸 Pre Discount Total : $33,000</li>
+                        <li>🏦 Post Discount Total : $29,700</li>
+                        <li>🎉 Total Savings: $3,300</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -298,7 +299,7 @@ const EngineeringArchitecturePackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>9,000
+                    <span>$</span>7,800
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -306,16 +307,16 @@ const EngineeringArchitecturePackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Elite engineering and architectural solutions for large-scale, complex projects, offering BIM integration, sustainable design, and advanced simulation.
+                  🏷️ Deal Summary: Premium graphic design and photography for established brands and large campaigns, offering art direction, advanced visual storytelling, and comprehensive creative solutions.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🏗️ Building Information Modeling (BIM)</li>
-                    <li>🌱 Sustainable Design & LEED Consulting</li>
-                    <li>🔄 Advanced Simulation & Optimization</li>
-                    <li>🔬 Value Engineering</li>
-                    <li>👷 On-Site Supervision & Quality Control</li>
+                    <li>🖼️ Creative Direction & Art Direction</li>
+                    <li>🚀 Campaign Visuals & Advertising Design</li>
+                    <li>👗 Fashion & Editorial Photoshoots</li>
+                    <li>🎨 Custom Illustration & Animation (2D)</li>
+                    <li>🌐 Experiential Design (Visuals)</li>
                     <li>Includes all Beta and Sigma Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -323,14 +324,14 @@ const EngineeringArchitecturePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $9,000</li>
-                        <li>📅 Annual Cost: $108,000</li>
-                        <li>💰 Live Call Deposit: $16,200</li>
-                        <li>🎁 Discount Amount: $16,200</li>
-                        <li>🧾 Monthly After Discount: $7,650</li>
-                        <li>💸 Pre Discount Total : $108,000</li>
-                        <li>🏦 Post Discount Total : $91,800</li>
-                        <li>🎉 Total Savings: $16,200</li>
+                        <li>💵 Monthly Cost: $7,800</li>
+                        <li>📅 Annual Cost: $93,600</li>
+                        <li>💰 Live Call Deposit: $14,040</li>
+                        <li>🎁 Discount Amount: $14,040</li>
+                        <li>🧾 Monthly After Discount: $6,630</li>
+                        <li>💸 Pre Discount Total : $93,600</li>
+                        <li>🏦 Post Discount Total : $79,560</li>
+                        <li>🎉 Total Savings: $14,040</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -338,14 +339,14 @@ const EngineeringArchitecturePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $10,000</li>
-                        <li>📅 Semiannual Cost: $60,000</li>
-                        <li>💰 Live Call Deposit: $9,000</li>
-                        <li>🎁 Discount Amount: $9,000</li>
-                        <li>🧾 Monthly After Discount: $8,500</li>
-                        <li>💸 Pre Discount Total : $60,000</li>
-                        <li>🏦 Post Discount Total : $51,000</li>
-                        <li>🎉 Total Savings: $9,000</li>
+                        <li>💵 Monthly Cost: $8,800</li>
+                        <li>📅 Semiannual Cost: $52,800</li>
+                        <li>💰 Live Call Deposit: $7,920</li>
+                        <li>🎁 Discount Amount: $7,920</li>
+                        <li>🧾 Monthly After Discount: $7,480</li>
+                        <li>💸 Pre Discount Total : $52,800</li>
+                        <li>🏦 Post Discount Total : $44,880</li>
+                        <li>🎉 Total Savings: $7,920</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -375,7 +376,7 @@ const EngineeringArchitecturePackages = () => {
               letterSpacing: "1px",
             }}
           >
-            Engineering & Architecture Comparison Table {tableOpen ? "▲" : "▼"}
+            Graphics Design & Photography Comparison Table {tableOpen ? "▲" : "▼"}
           </button>
           {tableOpen && (
             <div style={{
@@ -438,4 +439,4 @@ const EngineeringArchitecturePackages = () => {
   );
 };
 
-export default EngineeringArchitecturePackages;
+export default GraphicsDesignPhotographyPackages;

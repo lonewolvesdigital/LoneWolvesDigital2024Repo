@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import PriceTag from "./PriceTag";
 
-const LifestylePackages = () => {
+const LegalPackages = () => {
   // State for dropdowns for each card and each option
   const [dropdowns, setDropdowns] = useState({
     betaSelect: false,
@@ -101,39 +102,39 @@ const LifestylePackages = () => {
   // --- Comparison Table Data ---
   const [tableOpen, setTableOpen] = useState(false);
   const features = [
-    { label: "\uD83D\uDCB5 Monthly Cost", values: ["$2,500", "$3,000", "$4,500", "$5,200", "$7,500", "$8,500"] },
-    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: ["$30,000", "$18,000", "$54,000", "$31,200", "$90,000", "$51,000"] },
-    { label: "\uD83D\uDCB0 Live Call Deposit", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
-    { label: "\uD83C\uDF81 Discount Amount", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
-    { label: "\uD83D\uDCDD Monthly After Discount", values: ["$2,375", "$2,850", "$4,050", "$4,680", "$6,375", "$7,225"] },
-    { label: "\uD83D\uDCB8 Pre Discount Total", values: ["$30,000", "$18,000", "$54,000", "$31,200", "$90,000", "$51,000"] },
-    { label: "\uD83C\uDFE6 Post Discount Total", values: ["$28,500", "$17,100", "$48,600", "$28,080", "$76,500", "$43,350"] },
-    { label: "\uD83C\uDF89 Total Savings", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
+    { label: "\uD83D\uDCB5 Monthly Cost", values: [<PriceTag usd={3500} />, <PriceTag usd={4000} />, <PriceTag usd={6500} />, <PriceTag usd={7400} />, <PriceTag usd={9500} />, <PriceTag usd={10000} />] },
+    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: [<PriceTag usd={42000} />, <PriceTag usd={24000} />, <PriceTag usd={78000} />, <PriceTag usd={44400} />, <PriceTag usd={114000} />, <PriceTag usd={60000} />] },
+    { label: "\uD83D\uDCB0 Live Call Deposit", values: [<PriceTag usd={2100} />, <PriceTag usd={1200} />, <PriceTag usd={7800} />, <PriceTag usd={4440} />, <PriceTag usd={17100} />, <PriceTag usd={9000} />] },
+    { label: "\uD83C\uDF81 Discount Amount", values: [<PriceTag usd={2100} />, <PriceTag usd={1200} />, <PriceTag usd={7800} />, <PriceTag usd={4440} />, <PriceTag usd={17100} />, <PriceTag usd={9000} />] },
+    { label: "\uD83D\uDCDD Monthly After Discount", values: [<PriceTag usd={3325} />, <PriceTag usd={3800} />, <PriceTag usd={5850} />, <PriceTag usd={6660} />, <PriceTag usd={8075} />, <PriceTag usd={8500} />] },
+    { label: "\uD83D\uDCB8 Pre Discount Total", values: [<PriceTag usd={42000} />, <PriceTag usd={24000} />, <PriceTag usd={78000} />, <PriceTag usd={44400} />, <PriceTag usd={114000} />, <PriceTag usd={60000} />] },
+    { label: "\uD83C\uDFE6 Post Discount Total", values: [<PriceTag usd={39900} />, <PriceTag usd={22800} />, <PriceTag usd={70200} />, <PriceTag usd={40000} />, <PriceTag usd={96900} />, <PriceTag usd={51000} />] },
+    { label: "\uD83C\uDF89 Total Savings", values: [<PriceTag usd={2100} />, <PriceTag usd={1200} />, <PriceTag usd={7800} />, <PriceTag usd={4440} />, <PriceTag usd={17100} />, <PriceTag usd={9000} />] },
     { label: "\uD83D\uDCB9 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
-    { label: "\uD83D\uDCCB Basic Time Management", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83E\uDDE8 Wellness Planning", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDED2 Personal Shopping", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "✈️ Travel Itinerary Planning", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCDA Personal Organization", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "🍎 Nutrition & Fitness Coaching", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🎉 Event Planning", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "Concierge Services", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🏡 Home Management", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🌱 Mindfulness & Stress", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "✈️ Luxury Travel", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🌟 Bespoke Experience", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🎓 Personal Development", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🖼️ Art & Collectibles Advisory", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83D\uDD10 Digital Legacy Management", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCDC Contract Review", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "⚖️ Business Registration", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDEB4️ IP Overview", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCCB Compliance Checklist", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCE7 Basic Legal Consultations", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "✍️ Custom Contract Drafting", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "🔒 Data Privacy & GDPR", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "💼 Employment Law Advisory", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCC8 M&A Support", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDC68\u200D⚖️ Regulatory Filings", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDFDB️ Litigation Support", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "🌍 International Law", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCCA Corporate Governance", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "🚨 Crisis Management Legal", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "🧩 Specialized Industry", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
   ];
   const headers = [
     "Feature / Metric",
-    "Beta Pack (12-Mo)",
-    "Beta Pack (6-Mo)",
-    "Sigma Pack (12-Mo)",
-    "Sigma Pack (6-Mo)",
-    "Alpha Pack (12-Mo)",
-    "Alpha Pack (6-Mo)",
+    <><span>Beta Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Beta Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(6-Mo)</span></>,
   ];
 
   // Responsive stack for plan cards
@@ -152,10 +153,10 @@ const LifestylePackages = () => {
           <div className="col-lg-8 col-md-10">
             <div className="s-head text-center mb-80">
               <h1 className="stit mb-30">
-                <span className="left"></span>Lifestyle
+                <span className="left"></span>Legal
                 <span className="right"></span>
               </h1>
-              <p> - Personal and lifestyle enhancement services </p>
+              <p> - Compliance and legal advisory services </p>
             </div>
           </div>
         </div>
@@ -169,7 +170,7 @@ const LifestylePackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>2,500
+                    <span>$</span>3,500
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -177,30 +178,30 @@ const LifestylePackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Introductory lifestyle services for individuals seeking to improve personal well-being and efficiency, focusing on foundational planning and organization.
+                  🏷️ Deal Summary: Foundational legal support for startups and small businesses, including basic contract review and compliance checks.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🗓️ Basic Time Management Coaching</li>
-                    <li>🧘 Wellness Planning (Intro)</li>
-                    <li>🛒 Personal Shopping (Limited)</li>
-                    <li>✈️ Travel Itinerary Planning (Basic)</li>
-                    <li>📚 Personal Organization & Decluttering</li>
+                    <li>📜 Contract Review (Basic)</li>
+                    <li>⚖️ Business Registration & Licensing</li>
+                    <li>🛡️ Intellectual Property (IP) Overview</li>
+                    <li>📋 Compliance Checklist Development</li>
+                    <li>📧 Basic Legal Consultations (Email/Chat)</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
                     {/* 12-Month Plan */}
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $2,500</li>
-                        <li>📅 Annual Cost: $30,000</li>
-                        <li>💰 Live Call Deposit: $1,500</li>
-                        <li>🎁 Discount Amount: $1,500</li>
-                        <li>🧾 Monthly After Discount: $2,375</li>
-                        <li>💸 Pre Discount Total : $30,000</li>
-                        <li>🏦 Post Discount Total : $28,500</li>
-                        <li>🎉 Total Savings: $1,500</li>
+                        <li>💵 Monthly Cost: $3,500</li>
+                        <li>📅 Annual Cost: $42,000</li>
+                        <li>💰 Live Call Deposit: $2,100</li>
+                        <li>🎁 Discount Amount: $2,100</li>
+                        <li>🧾 Monthly After Discount: $3,325</li>
+                        <li>💸 Pre Discount Total : $42,000</li>
+                        <li>🏦 Post Discount Total : $39,900</li>
+                        <li>🎉 Total Savings: $2,100</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -208,14 +209,14 @@ const LifestylePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $3,000</li>
-                        <li>📅 Semiannual Cost: $18,000</li>
-                        <li>💰 Live Call Deposit: $900</li>
-                        <li>🎁 Discount Amount: $900</li>
-                        <li>🧾 Monthly After Discount: $2,850</li>
-                        <li>💸 Pre Discount Total : $18,000</li>
-                        <li>🏦 Post Discount Total : $17,100</li>
-                        <li>🎉 Total Savings: $900</li>
+                        <li>💵 Monthly Cost: $4,000</li>
+                        <li>📅 Semiannual Cost: $24,000</li>
+                        <li>💰 Live Call Deposit: $1,200</li>
+                        <li>🎁 Discount Amount: $1,200</li>
+                        <li>🧾 Monthly After Discount: $3,800</li>
+                        <li>💸 Pre Discount Total : $24,000</li>
+                        <li>🏦 Post Discount Total : $22,800</li>
+                        <li>🎉 Total Savings: $1,200</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -233,7 +234,7 @@ const LifestylePackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>4,500
+                    <span>$</span>6,500
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -241,16 +242,16 @@ const LifestylePackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Enhanced lifestyle management for busy professionals, offering holistic wellness programs, event planning, and personalized concierge services.
+                  🏷️ Deal Summary: Comprehensive legal advisory for growing businesses, including detailed contract drafting, data privacy, and employment law support.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🍎 Nutrition & Fitness Coaching</li>
-                    <li>🎉 Event Planning (Small Scale)</li>
-                    <li>Concierge Services (Personal Appointments, Reservations)</li>
-                    <li>🏡 Home Management & Organization</li>
-                    <li>🌱 Mindfulness & Stress Reduction Programs</li>
+                    <li>✍️ Custom Contract Drafting</li>
+                    <li>🔒 Data Privacy & GDPR Compliance</li>
+                    <li>💼 Employment Law Advisory</li>
+                    <li>📈 Mergers & Acquisitions (M&A) Support (Basic)</li>
+                    <li>👨‍⚖️ Regulatory Filings & Permits</li>
                     <li>Includes all Beta Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -258,14 +259,14 @@ const LifestylePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $4,500</li>
-                        <li>📅 Annual Cost: $54,000</li>
-                        <li>💰 Live Call Deposit: $5,400</li>
-                        <li>🎁 Discount Amount: $5,400</li>
-                        <li>🧾 Monthly After Discount: $4,050</li>
-                        <li>💸 Pre Discount Total : $54,000</li>
-                        <li>🏦 Post Discount Total : $48,600</li>
-                        <li>🎉 Total Savings: $5,400</li>
+                        <li>💵 Monthly Cost: $6,500</li>
+                        <li>📅 Annual Cost: $78,000</li>
+                        <li>💰 Live Call Deposit: $7,800</li>
+                        <li>🎁 Discount Amount: $7,800</li>
+                        <li>🧾 Monthly After Discount: $5,850</li>
+                        <li>💸 Pre Discount Total : $78,000</li>
+                        <li>🏦 Post Discount Total : $70,200</li>
+                        <li>🎉 Total Savings: $7,800</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -273,14 +274,14 @@ const LifestylePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $5,200</li>
-                        <li>📅 Semiannual Cost: $31,200</li>
-                        <li>💰 Live Call Deposit: $3,120</li>
-                        <li>🎁 Discount Amount: $3,120</li>
-                        <li>🧾 Monthly After Discount: $4,680</li>
-                        <li>💸 Pre Discount Total : $31,200</li>
-                        <li>🏦 Post Discount Total : $28,080</li>
-                        <li>🎉 Total Savings: $3,120</li>
+                        <li>💵 Monthly Cost: $7,400</li>
+                        <li>📅 Semiannual Cost: $44,400</li>
+                        <li>💰 Live Call Deposit: $4,440</li>
+                        <li>🎁 Discount Amount: $4,440</li>
+                        <li>🧾 Monthly After Discount: $6,660</li>
+                        <li>💸 Pre Discount Total : $44,400</li>
+                        <li>🏦 Post Discount Total : $40,000</li>
+                        <li>🎉 Total Savings: $4,440</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -298,7 +299,7 @@ const LifestylePackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>7,500
+                    <span>$</span>9,500
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -306,16 +307,16 @@ const LifestylePackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Exclusive lifestyle management for high-net-worth individuals, providing luxury travel planning, personalized bespoke experiences, and comprehensive personal assistance.
+                  🏷️ Deal Summary: Premium legal services for large corporations and complex transactions, including litigation support, international law, and specialized industry compliance.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>✈️ Luxury Travel & Expedition Planning</li>
-                    <li>🌟 Bespoke Experience Curation</li>
-                    <li>🎓 Personal Development & Coaching (Advanced)</li>
-                    <li>🖼️ Art & Collectibles Advisory</li>
-                    <li>🔐 Digital Legacy Management</li>
+                    <li>🏛️ Litigation & Dispute Resolution Support</li>
+                    <li>🌍 International Law & Cross-Border Advisory</li>
+                    <li>📊 Corporate Governance & Board Advisory</li>
+                    <li>🚨 Crisis Management Legal Support</li>
+                    <li>🧩 Specialized Industry Compliance</li>
                     <li>Includes all Beta and Sigma Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -323,14 +324,14 @@ const LifestylePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $7,500</li>
-                        <li>📅 Annual Cost: $90,000</li>
-                        <li>💰 Live Call Deposit: $13,500</li>
-                        <li>🎁 Discount Amount: $13,500</li>
-                        <li>🧾 Monthly After Discount: $6,375</li>
-                        <li>💸 Pre Discount Total : $90,000</li>
-                        <li>🏦 Post Discount Total : $76,500</li>
-                        <li>🎉 Total Savings: $13,500</li>
+                        <li>💵 Monthly Cost: $9,500</li>
+                        <li>📅 Annual Cost: $114,000</li>
+                        <li>💰 Live Call Deposit: $17,100</li>
+                        <li>🎁 Discount Amount: $17,100</li>
+                        <li>🧾 Monthly After Discount: $8,075</li>
+                        <li>💸 Pre Discount Total : $114,000</li>
+                        <li>🏦 Post Discount Total : $96,900</li>
+                        <li>🎉 Total Savings: $17,100</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -338,14 +339,14 @@ const LifestylePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $8,500</li>
-                        <li>📅 Semiannual Cost: $51,000</li>
-                        <li>💰 Live Call Deposit: $7,650</li>
-                        <li>🎁 Discount Amount: $7,650</li>
-                        <li>🧾 Monthly After Discount: $7,225</li>
-                        <li>💸 Pre Discount Total : $51,000</li>
-                        <li>🏦 Post Discount Total : $43,350</li>
-                        <li>🎉 Total Savings: $7,650</li>
+                        <li>💵 Monthly Cost: $10,000</li>
+                        <li>📅 Semiannual Cost: $60,000</li>
+                        <li>💰 Live Call Deposit: $9,000</li>
+                        <li>🎁 Discount Amount: $9,000</li>
+                        <li>🧾 Monthly After Discount: $8,500</li>
+                        <li>💸 Pre Discount Total : $60,000</li>
+                        <li>🏦 Post Discount Total : $51,000</li>
+                        <li>🎉 Total Savings: $9,000</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -375,7 +376,7 @@ const LifestylePackages = () => {
               letterSpacing: "1px",
             }}
           >
-            Lifestyle Comparison Table {tableOpen ? "▲" : "▼"}
+            Legal Comparison Table {tableOpen ? "▲" : "▼"}
           </button>
           {tableOpen && (
             <div style={{
@@ -438,4 +439,4 @@ const LifestylePackages = () => {
   );
 };
 
-export default LifestylePackages;
+export default LegalPackages;

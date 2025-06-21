@@ -1,14 +1,13 @@
 import React, { useState } from "react";
+import PriceTag from "./PriceTag";
 
-const GraphicsDesignPhotographyPackages = () => {
-  // State for dropdowns for each card and each option
+const VideoAudioAnimationPackages = () => {
   const [dropdowns, setDropdowns] = useState({
     betaSelect: false,
     sigmaSelect: false,
     alphaSelect: false,
   });
 
-  // Helper for select plan dropdown, now accepts a key for each card
   const renderSelectPlan = (dropdownKey) => (
     <div className="custom-dropdown" style={{ position: 'relative', marginTop: '10px' }}>
       <button 
@@ -40,57 +39,14 @@ const GraphicsDesignPhotographyPackages = () => {
             padding: '1px'
           }}
         >
-          <a 
-            href="#"
-            className="dropdown-link"
-            style={{
-              display: 'block',
-              padding: '10px 15px',
-              color: '#fff',
-              textDecoration: 'none',
-              transition: 'background-color 0.3s'
-            }}
-            onMouseEnter={(e) => e.target.style.backgroundColor = '#000'}
-            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-          >
-            Option A
-          </a>
-          <a 
-            href="#"
-            className="dropdown-link"
-            style={{
-              display: 'block',
-              padding: '10px 15px',
-              color: '#fff',
-              textDecoration: 'none',
-              transition: 'background-color 0.3s'
-            }}
-            onMouseEnter={(e) => e.target.style.backgroundColor = '#000'}
-            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-          >
-            Option B
-          </a>
-          <a 
-            href="#"
-            className="dropdown-link"
-            style={{
-              display: 'block',
-              padding: '10px 15px',
-              color: '#fff',
-              textDecoration: 'none',
-              transition: 'background-color 0.3s'
-            }}
-            onMouseEnter={(e) => e.target.style.backgroundColor = '#000'}
-            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-          >
-            Custom Plan
-          </a>
+          <a href="#" className="dropdown-link" style={{display:'block',padding:'10px 15px',color:'#fff',textDecoration:'none',transition:'background-color 0.3s'}} onMouseEnter={e=>e.target.style.backgroundColor='#000'} onMouseLeave={e=>e.target.style.backgroundColor='transparent'}>Option A</a>
+          <a href="#" className="dropdown-link" style={{display:'block',padding:'10px 15px',color:'#fff',textDecoration:'none',transition:'background-color 0.3s'}} onMouseEnter={e=>e.target.style.backgroundColor='#000'} onMouseLeave={e=>e.target.style.backgroundColor='transparent'}>Option B</a>
+          <a href="#" className="dropdown-link" style={{display:'block',padding:'10px 15px',color:'#fff',textDecoration:'none',transition:'background-color 0.3s'}} onMouseEnter={e=>e.target.style.backgroundColor='#000'} onMouseLeave={e=>e.target.style.backgroundColor='transparent'}>Custom Plan</a>
         </div>
       )}
     </div>
   );
 
-  // Ensure only one dropdown is open at a time
   const toggleDropdown = (key) => {
     setDropdowns((prev) => {
       const newState = Object.keys(prev).reduce((acc, k) => ({ ...acc, [k]: false }), {});
@@ -98,45 +54,43 @@ const GraphicsDesignPhotographyPackages = () => {
     });
   };
 
-  // --- Comparison Table Data ---
   const [tableOpen, setTableOpen] = useState(false);
   const features = [
-    { label: "\uD83D\uDCB5 Monthly Cost", values: ["$2,700", "$3,200", "$4,800", "$5,500", "$7,800", "$8,800"] },
-    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: ["$32,400", "$19,200", "$57,600", "$33,000", "$93,600", "$52,800"] },
-    { label: "\uD83D\uDCB0 Live Call Deposit", values: ["$1,620", "$960", "$5,760", "$3,300", "$14,040", "$7,920"] },
-    { label: "\uD83C\uDF81 Discount Amount", values: ["$1,620", "$960", "$5,760", "$3,300", "$14,040", "$7,920"] },
-    { label: "\uD83D\uDCDD Monthly After Discount", values: ["$2,565", "$3,040", "$4,320", "$4,950", "$6,630", "$7,480"] },
-    { label: "\uD83D\uDCB8 Pre Discount Total", values: ["$32,400", "$19,200", "$57,600", "$33,000", "$93,600", "$52,800"] },
-    { label: "\uD83C\uDFE6 Post Discount Total", values: ["$30,780", "$18,240", "$51,840", "$29,700", "$79,560", "$44,880"] },
-    { label: "\uD83C\uDF89 Total Savings", values: ["$1,620", "$960", "$5,760", "$3,300", "$14,040", "$7,920"] },
+    { label: "\uD83D\uDCB5 Monthly Cost", values: [<PriceTag usd={2800} />, <PriceTag usd={3300} />, <PriceTag usd={5000} />, <PriceTag usd={5800} />, <PriceTag usd={8000} />, <PriceTag usd={9000} />] },
+    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: [<PriceTag usd={33600} />, <PriceTag usd={19800} />, <PriceTag usd={60000} />, <PriceTag usd={34800} />, <PriceTag usd={96000} />, <PriceTag usd={54000} />] },
+    { label: "\uD83D\uDCB0 Live Call Deposit", values: [<PriceTag usd={1680} />, <PriceTag usd={990} />, <PriceTag usd={6000} />, <PriceTag usd={3480} />, <PriceTag usd={14400} />, <PriceTag usd={8100} />] },
+    { label: "\uD83C\uDF81 Discount Amount", values: [<PriceTag usd={1680} />, <PriceTag usd={990} />, <PriceTag usd={6000} />, <PriceTag usd={3480} />, <PriceTag usd={14400} />, <PriceTag usd={8100} />] },
+    { label: "\uD83D\uDCDD Monthly After Discount", values: [<PriceTag usd={2660} />, <PriceTag usd={3135} />, <PriceTag usd={4500} />, <PriceTag usd={5220} />, <PriceTag usd={6800} />, <PriceTag usd={7650} />] },
+    { label: "\uD83D\uDCB8 Pre Discount Total", values: [<PriceTag usd={33600} />, <PriceTag usd={19800} />, <PriceTag usd={60000} />, <PriceTag usd={34800} />, <PriceTag usd={96000} />, <PriceTag usd={54000} />] },
+    { label: "\uD83C\uDFE6 Post Discount Total", values: [<PriceTag usd={31920} />, <PriceTag usd={18810} />, <PriceTag usd={54000} />, <PriceTag usd={31320} />, <PriceTag usd={81600} />, <PriceTag usd={45900} />] },
+    { label: "\uD83C\uDF89 Total Savings", values: [<PriceTag usd={1680} />, <PriceTag usd={990} />, <PriceTag usd={6000} />, <PriceTag usd={3480} />, <PriceTag usd={14400} />, <PriceTag usd={8100} />] },
     { label: "\uD83D\uDCB9 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
-    { label: "\uD83C\uDFA8 Logo Design", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCF8 Product Photography", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDDBC️ Social Media Graphics", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\u270D️ Brand Guideline Dev", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDDA8️ Basic Print Collateral", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\u2728 Full Branding Package", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83C\uDF1F Lifestyle & Editorial Photo", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCE6 Packaging Design", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDDA5️ Website UI/UX Design", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83C\uDFAC Infographic & Presentation", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDDBC️ Creative Direction", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83D\uDE80 Campaign Visuals", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83D\uDC57 Fashion & Editorial Photos", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83C\uDFA8 Custom Illustration", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83C\uDF10 Experiential Design", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDFAC Basic Video Editing", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDFA4 Audio Enhancement", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "GIF & Short Animation", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDFB6 Stock Music & Sound Effects", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDF9E️ Basic Storyboard", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDFA5 Professional Video Prod.", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDD0A Sound Design & Mastering", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "✨ Motion Graphics & VFX", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDC64 Voiceover & Narration", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCA1 Concept Development", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDFAC Cinematic Video Production", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDC7E 3D Animation & VFX", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDFA7 Immersive Audio Experiences", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDFAE Interactive Media", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDFAF Distribution Strategy", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
   ];
   const headers = [
     "Feature / Metric",
-    "Beta Pack (12-Mo)",
-    "Beta Pack (6-Mo)",
-    "Sigma Pack (12-Mo)",
-    "Sigma Pack (6-Mo)",
-    "Alpha Pack (12-Mo)",
-    "Alpha Pack (6-Mo)",
+    <><span>Beta Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Beta Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(6-Mo)</span></>,
   ];
 
-  // Responsive stack for plan cards
   const planStackStyle = {
     display: 'flex',
     gap: '24px',
@@ -152,10 +106,10 @@ const GraphicsDesignPhotographyPackages = () => {
           <div className="col-lg-8 col-md-10">
             <div className="s-head text-center mb-80">
               <h1 className="stit mb-30">
-                <span className="left"></span>Graphics Design & Photography
+                <span className="left"></span>Video, Audio & Animation
                 <span className="right"></span>
               </h1>
-              <p> - Visual content creation and branding </p>
+              <p> - Multimedia content creation </p>
             </div>
           </div>
         </div>
@@ -169,7 +123,7 @@ const GraphicsDesignPhotographyPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>2,700
+                    <span>$</span>2,800
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -177,30 +131,30 @@ const GraphicsDesignPhotographyPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Fundamental graphic design and photography services for new brands or businesses needing essential visual assets.
+                  🏷️ Deal Summary: Fundamental video, audio, and animation services for basic content needs, including short social media videos and simple audio editing.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🎨 Logo Design (Basic)</li>
-                    <li>📸 Product Photography (Standard)</li>
-                    <li>🖼️ Social Media Graphics (Basic)</li>
-                    <li>✍️ Brand Guideline Development (Simple)</li>
-                    <li>🖨️ Basic Print Collateral Design (Business Cards, Flyers)</li>
+                    <li>🎬 Basic Video Editing (Short-form)</li>
+                    <li>🎤 Audio Enhancement & Mixing (Simple)</li>
+                    <li>GIF & Short Animation Creation</li>
+                    <li>🎶 Stock Music & Sound Effects</li>
+                    <li>🎞️ Basic Storyboard & Scripting</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
                     {/* 12-Month Plan */}
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $2,700</li>
-                        <li>📅 Annual Cost: $32,400</li>
-                        <li>💰 Live Call Deposit: $1,620</li>
-                        <li>🎁 Discount Amount: $1,620</li>
-                        <li>🧾 Monthly After Discount: $2,565</li>
-                        <li>💸 Pre Discount Total : $32,400</li>
-                        <li>🏦 Post Discount Total : $30,780</li>
-                        <li>🎉 Total Savings: $1,620</li>
+                        <li>💵 Monthly Cost: $2,800</li>
+                        <li>📅 Annual Cost: $33,600</li>
+                        <li>💰 Live Call Deposit: $1,680</li>
+                        <li>🎁 Discount Amount: $1,680</li>
+                        <li>🧾 Monthly After Discount: $2,660</li>
+                        <li>💸 Pre Discount Total : $33,600</li>
+                        <li>🏦 Post Discount Total : $31,920</li>
+                        <li>🎉 Total Savings: $1,680</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -208,14 +162,14 @@ const GraphicsDesignPhotographyPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $3,200</li>
-                        <li>📅 Semiannual Cost: $19,200</li>
-                        <li>💰 Live Call Deposit: $960</li>
-                        <li>🎁 Discount Amount: $960</li>
-                        <li>🧾 Monthly After Discount: $3,040</li>
-                        <li>💸 Pre Discount Total : $19,200</li>
-                        <li>🏦 Post Discount Total : $18,240</li>
-                        <li>🎉 Total Savings: $960</li>
+                        <li>💵 Monthly Cost: $3,300</li>
+                        <li>📅 Semiannual Cost: $19,800</li>
+                        <li>💰 Live Call Deposit: $990</li>
+                        <li>🎁 Discount Amount: $990</li>
+                        <li>🧾 Monthly After Discount: $3,135</li>
+                        <li>💸 Pre Discount Total : $19,800</li>
+                        <li>🏦 Post Discount Total : $18,810</li>
+                        <li>🎉 Total Savings: $990</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -233,7 +187,7 @@ const GraphicsDesignPhotographyPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>4,800
+                    <span>$</span>5,000
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -241,16 +195,16 @@ const GraphicsDesignPhotographyPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Enhanced graphic design and photography services for growing businesses, including full branding, professional photoshoots, and marketing material design.
+                  🏷️ Deal Summary: Professional video, audio, and animation production for marketing campaigns and corporate communications, featuring high-quality video production and motion graphics.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>✨ Full Branding Package</li>
-                    <li>🌟 Lifestyle & Editorial Photography</li>
-                    <li>📦 Packaging Design</li>
-                    <li>🖥️ Website UI/UX Design (Visuals)</li>
-                    <li>🎬 Infographic & Presentation Design</li>
+                    <li>🎥 Professional Video Production (Mid-length)</li>
+                    <li>🔊 Sound Design & Mastering</li>
+                    <li>✨ Motion Graphics & Visual Effects (Basic)</li>
+                    <li>🗣️ Voiceover & Narration Talent</li>
+                    <li>💡 Concept Development & Scriptwriting (Advanced)</li>
                     <li>Includes all Beta Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -258,14 +212,14 @@ const GraphicsDesignPhotographyPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $4,800</li>
-                        <li>📅 Annual Cost: $57,600</li>
-                        <li>💰 Live Call Deposit: $5,760</li>
-                        <li>🎁 Discount Amount: $5,760</li>
-                        <li>🧾 Monthly After Discount: $4,320</li>
-                        <li>💸 Pre Discount Total : $57,600</li>
-                        <li>🏦 Post Discount Total : $51,840</li>
-                        <li>🎉 Total Savings: $5,760</li>
+                        <li>💵 Monthly Cost: $5,000</li>
+                        <li>📅 Annual Cost: $60,000</li>
+                        <li>💰 Live Call Deposit: $6,000</li>
+                        <li>🎁 Discount Amount: $6,000</li>
+                        <li>🧾 Monthly After Discount: $4,500</li>
+                        <li>💸 Pre Discount Total : $60,000</li>
+                        <li>🏦 Post Discount Total : $54,000</li>
+                        <li>🎉 Total Savings: $6,000</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -273,14 +227,14 @@ const GraphicsDesignPhotographyPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $5,500</li>
-                        <li>📅 Semiannual Cost: $33,000</li>
-                        <li>💰 Live Call Deposit: $3,300</li>
-                        <li>🎁 Discount Amount: $3,300</li>
-                        <li>🧾 Monthly After Discount: $4,950</li>
-                        <li>💸 Pre Discount Total : $33,000</li>
-                        <li>🏦 Post Discount Total : $29,700</li>
-                        <li>🎉 Total Savings: $3,300</li>
+                        <li>💵 Monthly Cost: $5,800</li>
+                        <li>📅 Semiannual Cost: $34,800</li>
+                        <li>💰 Live Call Deposit: $3,480</li>
+                        <li>🎁 Discount Amount: $3,480</li>
+                        <li>🧾 Monthly After Discount: $5,220</li>
+                        <li>💸 Pre Discount Total : $34,800</li>
+                        <li>🏦 Post Discount Total : $31,320</li>
+                        <li>🎉 Total Savings: $3,480</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -298,7 +252,7 @@ const GraphicsDesignPhotographyPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>7,800
+                    <span>$</span>8,000
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -306,16 +260,16 @@ const GraphicsDesignPhotographyPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Premium graphic design and photography for established brands and large campaigns, offering art direction, advanced visual storytelling, and comprehensive creative solutions.
+                  🏷️ Deal Summary: High-end multimedia content creation for broadcast, film, and immersive experiences, including cinematic production, 3D animation, and interactive media.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🖼️ Creative Direction & Art Direction</li>
-                    <li>🚀 Campaign Visuals & Advertising Design</li>
-                    <li>👗 Fashion & Editorial Photoshoots</li>
-                    <li>🎨 Custom Illustration & Animation (2D)</li>
-                    <li>🌐 Experiential Design (Visuals)</li>
+                    <li>🎬 Cinematic Video Production</li>
+                    <li>👾 3D Animation & VFX</li>
+                    <li>🎧 Immersive Audio Experiences (Spatial Audio)</li>
+                    <li>🎮 Interactive Media & VR/AR Content</li>
+                    <li>🎯 Distribution & Broadcast Strategy</li>
                     <li>Includes all Beta and Sigma Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -323,14 +277,14 @@ const GraphicsDesignPhotographyPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $7,800</li>
-                        <li>📅 Annual Cost: $93,600</li>
-                        <li>💰 Live Call Deposit: $14,040</li>
-                        <li>🎁 Discount Amount: $14,040</li>
-                        <li>🧾 Monthly After Discount: $6,630</li>
-                        <li>💸 Pre Discount Total : $93,600</li>
-                        <li>🏦 Post Discount Total : $79,560</li>
-                        <li>🎉 Total Savings: $14,040</li>
+                        <li>💵 Monthly Cost: $8,000</li>
+                        <li>📅 Annual Cost: $96,000</li>
+                        <li>💰 Live Call Deposit: $14,400</li>
+                        <li>🎁 Discount Amount: $14,400</li>
+                        <li>🧾 Monthly After Discount: $6,800</li>
+                        <li>💸 Pre Discount Total : $96,000</li>
+                        <li>🏦 Post Discount Total : $81,600</li>
+                        <li>🎉 Total Savings: $14,400</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -338,14 +292,14 @@ const GraphicsDesignPhotographyPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $8,800</li>
-                        <li>📅 Semiannual Cost: $52,800</li>
-                        <li>💰 Live Call Deposit: $7,920</li>
-                        <li>🎁 Discount Amount: $7,920</li>
-                        <li>🧾 Monthly After Discount: $7,480</li>
-                        <li>💸 Pre Discount Total : $52,800</li>
-                        <li>🏦 Post Discount Total : $44,880</li>
-                        <li>🎉 Total Savings: $7,920</li>
+                        <li>💵 Monthly Cost: $9,000</li>
+                        <li>📅 Semiannual Cost: $54,000</li>
+                        <li>💰 Live Call Deposit: $8,100</li>
+                        <li>🎁 Discount Amount: $8,100</li>
+                        <li>🧾 Monthly After Discount: $7,650</li>
+                        <li>💸 Pre Discount Total : $54,000</li>
+                        <li>🏦 Post Discount Total : $45,900</li>
+                        <li>🎉 Total Savings: $8,100</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -375,7 +329,7 @@ const GraphicsDesignPhotographyPackages = () => {
               letterSpacing: "1px",
             }}
           >
-            Graphics Design & Photography Comparison Table {tableOpen ? "▲" : "▼"}
+            Video, Audio & Animation Comparison Table {tableOpen ? "▲" : "▼"}
           </button>
           {tableOpen && (
             <div style={{
@@ -438,4 +392,4 @@ const GraphicsDesignPhotographyPackages = () => {
   );
 };
 
-export default GraphicsDesignPhotographyPackages;
+export default VideoAudioAnimationPackages;

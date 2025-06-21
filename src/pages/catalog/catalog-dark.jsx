@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar/navbar";
 import Footer2 from "../../components/Footer2/footer2";
 import WorksHeader from "../../components/Works-header/works-header";
 import WorksStyle4 from "../../components/Works-style4/works-style4";
-import CatalogPricing from "../../components/pricing/catalog-pricing";
+// import CatalogPricing from "../../components/pricing/catalog-pricing";
 
 
 const WorksDark = () => {

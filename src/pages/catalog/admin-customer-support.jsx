@@ -10,7 +10,7 @@ import ProjectDescription from "../../components/Project-description/project-des
 import ProjectVideo from "../../components/Project-video/project-video";
 import NextProject from "../../components/Next-project/next-project";
 import Works from "../../components/Works/works";
-import AdminAndCustomerSupportPackage from "../../components/pricing/admin and customer support package";
+import AdminAndCustomerSupportPackage from "../../components/price-packages/admin and customer support package";
 
 const ProjectDetails2Dark = () => {
   const navbarRef = React.useRef(null);

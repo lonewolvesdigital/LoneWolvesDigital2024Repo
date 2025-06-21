@@ -8,8 +8,16 @@ import Navbar from "../../components/Navbar/navbar";
 import Intro6 from "../../components/Intro6/intro6";
 import Progress from "../../components/Progress/progress";
 import VideoWithTeam from "../../components/Video-with-team/video-with-team";
-// import Questionair from "../../components/price-packages/price-packages";
+import Questionair from "../../components/price-packages/price-packages";
 import Questionair2 from "../../components/price-packages2/price-packages2";
+import Clients3 from "../../components/Clients3/clients3";
+import Services7 from "../../components/Services7/services7";
+import Services8 from "../../components/Services8/services8";
+import Screenshots from "../../components/Screenshots/screenshots";
+import MobileAppPricingPlanDark from "../../components/Mobile-app-pricing-plan-dark/mobile-app-pricing-plan-dark";
+import Testimonials from "../../components/Testimonials/testimonials";
+import DownloadApp from "../../components/Download-app/download-app";
+import Blogs2 from "../../components/Blogs2/blogs2";
 
 import Footer2 from "../../components/Footer2/footer2";
 
@@ -59,18 +67,18 @@ const MobileAppDark = () => {
       <Navbar nr={navbarRef} />
 
         <Intro6 />
-        {/* <Clients3 /> */}
-        {/* <Services7 /> */}
-        {/* <Services8 /> */}
-        {/* <Screenshots /> */}
+        <Clients3 />
+        <Services7 />
+        <Services8 />
+        <Screenshots />
         <Progress />
-        {/* <VideoWithTeam /> */}
-        {/* <Questionair /> */}
+        <VideoWithTeam />
+        <Questionair />
         <Questionair2 />
-        {/* <MobileAppPricingPlanDark/> */}
-        {/* <Testimonials /> */}
-        {/* <DownloadApp /> */}
-        {/* <Blogs2 /> */}
+        <MobileAppPricingPlanDark/>
+        <Testimonials />
+        <DownloadApp />
+        <Blogs2 />
       
         <Footer2 />
 

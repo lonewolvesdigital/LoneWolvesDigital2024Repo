@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import PriceTag from "./PriceTag";
 
-const LegalPackages = () => {
+const EngineeringArchitecturePackages = () => {
   // State for dropdowns for each card and each option
   const [dropdowns, setDropdowns] = useState({
     betaSelect: false,
@@ -101,39 +102,39 @@ const LegalPackages = () => {
   // --- Comparison Table Data ---
   const [tableOpen, setTableOpen] = useState(false);
   const features = [
-    { label: "\uD83D\uDCB5 Monthly Cost", values: ["$3,500", "$4,000", "$6,500", "$7,400", "$9,500", "$10,000"] },
-    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: ["$42,000", "$24,000", "$78,000", "$44,400", "$114,000", "$60,000"] },
-    { label: "\uD83D\uDCB0 Live Call Deposit", values: ["$2,100", "$1,200", "$7,800", "$4,440", "$17,100", "$9,000"] },
-    { label: "\uD83C\uDF81 Discount Amount", values: ["$2,100", "$1,200", "$7,800", "$4,440", "$17,100", "$9,000"] },
-    { label: "\uD83D\uDCDD Monthly After Discount", values: ["$3,325", "$3,800", "$5,850", "$6,660", "$8,075", "$8,500"] },
-    { label: "\uD83D\uDCB8 Pre Discount Total", values: ["$42,000", "$24,000", "$78,000", "$44,400", "$114,000", "$60,000"] },
-    { label: "\uD83C\uDFE6 Post Discount Total", values: ["$39,900", "$22,800", "$70,200", "$40,000", "$96,900", "$51,000"] },
-    { label: "\uD83C\uDF89 Total Savings", values: ["$2,100", "$1,200", "$7,800", "$4,440", "$17,100", "$9,000"] },
+    { label: "\uD83D\uDCB5 Monthly Cost", values: [<PriceTag usd={3200} />, <PriceTag usd={3700} />, <PriceTag usd={6000} />, <PriceTag usd={6900} />, <PriceTag usd={9000} />, <PriceTag usd={10000} />] },
+    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: [<PriceTag usd={38400} />, <PriceTag usd={22200} />, <PriceTag usd={72000} />, <PriceTag usd={41400} />, <PriceTag usd={108000} />, <PriceTag usd={60000} />] },
+    { label: "\uD83D\uDCB0 Live Call Deposit", values: [<PriceTag usd={1920} />, <PriceTag usd={1110} />, <PriceTag usd={7200} />, <PriceTag usd={4140} />, <PriceTag usd={16200} />, <PriceTag usd={9000} />] },
+    { label: "\uD83C\uDF81 Discount Amount", values: [<PriceTag usd={1920} />, <PriceTag usd={1110} />, <PriceTag usd={7200} />, <PriceTag usd={4140} />, <PriceTag usd={16200} />, <PriceTag usd={9000} />] },
+    { label: "\uD83D\uDCDD Monthly After Discount", values: [<PriceTag usd={3040} />, <PriceTag usd={3515} />, <PriceTag usd={5400} />, <PriceTag usd={6210} />, <PriceTag usd={7650} />, <PriceTag usd={8500} />] },
+    { label: "\uD83D\uDCB8 Pre Discount Total", values: [<PriceTag usd={38400} />, <PriceTag usd={22200} />, <PriceTag usd={72000} />, <PriceTag usd={41400} />, <PriceTag usd={108000} />, <PriceTag usd={60000} />] },
+    { label: "\uD83C\uDFE6 Post Discount Total", values: [<PriceTag usd={36480} />, <PriceTag usd={21090} />, <PriceTag usd={64800} />, <PriceTag usd={37260} />, <PriceTag usd={91800} />, <PriceTag usd={51000} />] },
+    { label: "\uD83C\uDF89 Total Savings", values: [<PriceTag usd={1920} />, <PriceTag usd={1110} />, <PriceTag usd={7200} />, <PriceTag usd={4140} />, <PriceTag usd={16200} />, <PriceTag usd={9000} />] },
     { label: "\uD83D\uDCB9 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
-    { label: "\uD83D\uDCDC Contract Review", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "⚖️ Business Registration", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDEB4️ IP Overview", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCCB Compliance Checklist", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCE7 Basic Legal Consultations", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "✍️ Custom Contract Drafting", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "🔒 Data Privacy & GDPR", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "💼 Employment Law Advisory", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCC8 M&A Support", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDC68\u200D⚖️ Regulatory Filings", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83C\uDFDB️ Litigation Support", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🌍 International Law", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83D\uDCCA Corporate Governance", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🚨 Crisis Management Legal", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "🧩 Specialized Industry", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCD0 Conceptual Design", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "🏗️ Basic CAD Drafting", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "📝 Material Specification", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "🚧 Site Analysis", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "📋 Code Compliance Review", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "🌐 Advanced 3D Modeling", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "🔩 Structural Analysis & Design", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "💡 MEP Design", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "🛠️ Construction Documentation", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "🗓️ Project Scheduling", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "🏗️ BIM", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "🌱 Sustainable Design", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "🔄 Advanced Simulation", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "🔬 Value Engineering", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "👷 On-Site Supervision", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
   ];
   const headers = [
     "Feature / Metric",
-    "Beta Pack (12-Mo)",
-    "Beta Pack (6-Mo)",
-    "Sigma Pack (12-Mo)",
-    "Sigma Pack (6-Mo)",
-    "Alpha Pack (12-Mo)",
-    "Alpha Pack (6-Mo)",
+    <><span>Beta Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Beta Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(6-Mo)</span></>,
   ];
 
   // Responsive stack for plan cards
@@ -152,10 +153,10 @@ const LegalPackages = () => {
           <div className="col-lg-8 col-md-10">
             <div className="s-head text-center mb-80">
               <h1 className="stit mb-30">
-                <span className="left"></span>Legal
+                <span className="left"></span>Engineering & Architecture
                 <span className="right"></span>
               </h1>
-              <p> - Compliance and legal advisory services </p>
+              <p> - Technical design and infrastructure development </p>
             </div>
           </div>
         </div>
@@ -169,7 +170,7 @@ const LegalPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>3,500
+                    <span>$</span>3,200
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -177,30 +178,30 @@ const LegalPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Foundational legal support for startups and small businesses, including basic contract review and compliance checks.
+                  🏷️ Deal Summary: Foundational engineering and architectural support for small-scale projects, ensuring structural integrity and basic design compliance.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>📜 Contract Review (Basic)</li>
-                    <li>⚖️ Business Registration & Licensing</li>
-                    <li>🛡️ Intellectual Property (IP) Overview</li>
-                    <li>📋 Compliance Checklist Development</li>
-                    <li>📧 Basic Legal Consultations (Email/Chat)</li>
+                    <li>📐 Conceptual Design</li>
+                    <li>🏗️ Basic CAD Drafting</li>
+                    <li>📝 Material Specification (Standard)</li>
+                    <li>🚧 Site Analysis (Preliminary)</li>
+                    <li>📋 Code Compliance Review (Basic)</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
                     {/* 12-Month Plan */}
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $3,500</li>
-                        <li>📅 Annual Cost: $42,000</li>
-                        <li>💰 Live Call Deposit: $2,100</li>
-                        <li>🎁 Discount Amount: $2,100</li>
-                        <li>🧾 Monthly After Discount: $3,325</li>
-                        <li>💸 Pre Discount Total : $42,000</li>
-                        <li>🏦 Post Discount Total : $39,900</li>
-                        <li>🎉 Total Savings: $2,100</li>
+                        <li>💵 Monthly Cost: $3,200</li>
+                        <li>📅 Annual Cost: $38,400</li>
+                        <li>💰 Live Call Deposit: $1,920</li>
+                        <li>🎁 Discount Amount: $1,920</li>
+                        <li>🧾 Monthly After Discount: $3,040</li>
+                        <li>💸 Pre Discount Total : $38,400</li>
+                        <li>🏦 Post Discount Total : $36,480</li>
+                        <li>🎉 Total Savings: $1,920</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -208,14 +209,14 @@ const LegalPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $4,000</li>
-                        <li>📅 Semiannual Cost: $24,000</li>
-                        <li>💰 Live Call Deposit: $1,200</li>
-                        <li>🎁 Discount Amount: $1,200</li>
-                        <li>🧾 Monthly After Discount: $3,800</li>
-                        <li>💸 Pre Discount Total : $24,000</li>
-                        <li>🏦 Post Discount Total : $22,800</li>
-                        <li>🎉 Total Savings: $1,200</li>
+                        <li>💵 Monthly Cost: $3,700</li>
+                        <li>📅 Semiannual Cost: $22,200</li>
+                        <li>💰 Live Call Deposit: $1,110</li>
+                        <li>🎁 Discount Amount: $1,110</li>
+                        <li>🧾 Monthly After Discount: $3,515</li>
+                        <li>💸 Pre Discount Total : $22,200</li>
+                        <li>🏦 Post Discount Total : $21,090</li>
+                        <li>🎉 Total Savings: $1,110</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -233,7 +234,7 @@ const LegalPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>6,500
+                    <span>$</span>6,000
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -241,16 +242,16 @@ const LegalPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Comprehensive legal advisory for growing businesses, including detailed contract drafting, data privacy, and employment law support.
+                  🏷️ Deal Summary: Comprehensive engineering and architectural services for medium-sized projects, including detailed design, structural analysis, and project management.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>✍️ Custom Contract Drafting</li>
-                    <li>🔒 Data Privacy & GDPR Compliance</li>
-                    <li>💼 Employment Law Advisory</li>
-                    <li>📈 Mergers & Acquisitions (M&A) Support (Basic)</li>
-                    <li>👨‍⚖️ Regulatory Filings & Permits</li>
+                    <li>🌐 Advanced 3D Modeling</li>
+                    <li>🔩 Structural Analysis & Design</li>
+                    <li>💡 MEP (Mechanical, Electrical, Plumbing) Design</li>
+                    <li>🛠️ Construction Documentation</li>
+                    <li>🗓️ Project Scheduling & Coordination</li>
                     <li>Includes all Beta Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -258,14 +259,14 @@ const LegalPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $6,500</li>
-                        <li>📅 Annual Cost: $78,000</li>
-                        <li>💰 Live Call Deposit: $7,800</li>
-                        <li>🎁 Discount Amount: $7,800</li>
-                        <li>🧾 Monthly After Discount: $5,850</li>
-                        <li>💸 Pre Discount Total : $78,000</li>
-                        <li>🏦 Post Discount Total : $70,200</li>
-                        <li>🎉 Total Savings: $7,800</li>
+                        <li>💵 Monthly Cost: $6,000</li>
+                        <li>📅 Annual Cost: $72,000</li>
+                        <li>💰 Live Call Deposit: $7,200</li>
+                        <li>🎁 Discount Amount: $7,200</li>
+                        <li>🧾 Monthly After Discount: $5,400</li>
+                        <li>💸 Pre Discount Total : $72,000</li>
+                        <li>🏦 Post Discount Total : $64,800</li>
+                        <li>🎉 Total Savings: $7,200</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -273,14 +274,14 @@ const LegalPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $7,400</li>
-                        <li>📅 Semiannual Cost: $44,400</li>
-                        <li>💰 Live Call Deposit: $4,440</li>
-                        <li>🎁 Discount Amount: $4,440</li>
-                        <li>🧾 Monthly After Discount: $6,660</li>
-                        <li>💸 Pre Discount Total : $44,400</li>
-                        <li>🏦 Post Discount Total : $40,000</li>
-                        <li>🎉 Total Savings: $4,440</li>
+                        <li>💵 Monthly Cost: $6,900</li>
+                        <li>📅 Semiannual Cost: $41,400</li>
+                        <li>💰 Live Call Deposit: $4,140</li>
+                        <li>🎁 Discount Amount: $4,140</li>
+                        <li>🧾 Monthly After Discount: $6,210</li>
+                        <li>💸 Pre Discount Total : $41,400</li>
+                        <li>🏦 Post Discount Total : $37,260</li>
+                        <li>🎉 Total Savings: $4,140</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -298,7 +299,7 @@ const LegalPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>9,500
+                    <span>$</span>9,000
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -306,16 +307,16 @@ const LegalPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Premium legal services for large corporations and complex transactions, including litigation support, international law, and specialized industry compliance.
+                  🏷️ Deal Summary: Elite engineering and architectural solutions for large-scale, complex projects, offering BIM integration, sustainable design, and advanced simulation.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🏛️ Litigation & Dispute Resolution Support</li>
-                    <li>🌍 International Law & Cross-Border Advisory</li>
-                    <li>📊 Corporate Governance & Board Advisory</li>
-                    <li>🚨 Crisis Management Legal Support</li>
-                    <li>🧩 Specialized Industry Compliance</li>
+                    <li>🏗️ Building Information Modeling (BIM)</li>
+                    <li>🌱 Sustainable Design & LEED Consulting</li>
+                    <li>🔄 Advanced Simulation & Optimization</li>
+                    <li>🔬 Value Engineering</li>
+                    <li>👷 On-Site Supervision & Quality Control</li>
                     <li>Includes all Beta and Sigma Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -323,14 +324,14 @@ const LegalPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $9,500</li>
-                        <li>📅 Annual Cost: $114,000</li>
-                        <li>💰 Live Call Deposit: $17,100</li>
-                        <li>🎁 Discount Amount: $17,100</li>
-                        <li>🧾 Monthly After Discount: $8,075</li>
-                        <li>💸 Pre Discount Total : $114,000</li>
-                        <li>🏦 Post Discount Total : $96,900</li>
-                        <li>🎉 Total Savings: $17,100</li>
+                        <li>💵 Monthly Cost: $9,000</li>
+                        <li>📅 Annual Cost: $108,000</li>
+                        <li>💰 Live Call Deposit: $16,200</li>
+                        <li>🎁 Discount Amount: $16,200</li>
+                        <li>🧾 Monthly After Discount: $7,650</li>
+                        <li>💸 Pre Discount Total : $108,000</li>
+                        <li>🏦 Post Discount Total : $91,800</li>
+                        <li>🎉 Total Savings: $16,200</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -375,7 +376,7 @@ const LegalPackages = () => {
               letterSpacing: "1px",
             }}
           >
-            Legal Comparison Table {tableOpen ? "▲" : "▼"}
+            Engineering & Architecture Comparison Table {tableOpen ? "▲" : "▼"}
           </button>
           {tableOpen && (
             <div style={{
@@ -438,4 +439,4 @@ const LegalPackages = () => {
   );
 };
 
-export default LegalPackages;
+export default EngineeringArchitecturePackages;

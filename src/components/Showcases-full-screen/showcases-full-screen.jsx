@@ -2,20 +2,13 @@ import React from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ShowcassesFullScreenData from "../../data/showcases-full-screen-slider.json";
-import SwiperCore, {
-  Navigation,
-  Pagination,
-  Parallax,
-  Mousewheel,
-} from "swiper";
+import { Navigation, Pagination, Parallax, Mousewheel, Autoplay } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/mousewheel";
 import removeSlashFromPagination from "../../common/removeSlashpagination";
-
-SwiperCore.use([Navigation, Pagination, Parallax, Mousewheel]);
 
 const ShowcasesFullScreen = () => {
   const [load, setLoad] = React.useState(true);
@@ -34,6 +27,7 @@ const ShowcasesFullScreen = () => {
       <div className="swiper-container parallax-slider">
         {!load ? (
           <Swiper
+            modules={[Navigation, Pagination, Parallax, Mousewheel, Autoplay]}
             speed={1000}
             mousewheel={true}
             parallax={true}
@@ -45,6 +39,7 @@ const ShowcasesFullScreen = () => {
               clickable: true,
               el: paginationRef.current,
             }}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
             onBeforeInit={(swiper) => {
               swiper.params.navigation.prevEl = navigationPrevRef.current;
               swiper.params.navigation.nextEl = navigationNextRef.current;

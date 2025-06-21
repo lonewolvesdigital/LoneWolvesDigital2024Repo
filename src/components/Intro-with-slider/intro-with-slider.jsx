@@ -2,16 +2,13 @@ import React from "react";
 import Link from "next/link";
 import introData from "../../data/sections/intro.json";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-import SwiperCore, { Navigation, Pagination, Parallax } from "swiper";
+import { Navigation, Pagination, Parallax, Autoplay } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import removeSlashFromPagination from "../../common/removeSlashpagination";
 import fadeWhenScroll from "../../common/fadeWhenScroll";
-
-SwiperCore.use([Navigation, Pagination, Parallax]);
 
 const IntroWithSlider = ({ sliderRef }) => {
   const [load, setLoad] = React.useState(true);
@@ -35,6 +32,7 @@ const IntroWithSlider = ({ sliderRef }) => {
       <div className="swiper-container parallax-slider">
         {!load ? (
           <Swiper
+            modules={[Navigation, Pagination, Parallax, Autoplay]}
             speed={1000}
             parallax={true}
             navigation={{
@@ -46,6 +44,7 @@ const IntroWithSlider = ({ sliderRef }) => {
               clickable: true,
               el: paginationRef.current,
             }}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
             onBeforeInit={(swiper) => {
               swiper.params.navigation.prevEl = navigationPrevRef.current;
               swiper.params.navigation.nextEl = navigationNextRef.current;

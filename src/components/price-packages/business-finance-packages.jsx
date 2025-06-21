@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import PriceTag from "./PriceTag";
 
-const SoftwareDevITPackages = () => {
+const BusinessFinancePackages = () => {
+  // State for dropdowns for each card and each option
   const [dropdowns, setDropdowns] = useState({
     betaSelect: false,
     sigmaSelect: false,
     alphaSelect: false,
   });
 
+  // Helper for select plan dropdown, now accepts a key for each card
   const renderSelectPlan = (dropdownKey) => (
     <div className="custom-dropdown" style={{ position: 'relative', marginTop: '10px' }}>
       <button 
@@ -38,14 +41,57 @@ const SoftwareDevITPackages = () => {
             padding: '1px'
           }}
         >
-          <a href="#" className="dropdown-link" style={{display:'block',padding:'10px 15px',color:'#fff',textDecoration:'none',transition:'background-color 0.3s'}} onMouseEnter={e=>e.target.style.backgroundColor='#000'} onMouseLeave={e=>e.target.style.backgroundColor='transparent'}>Option A</a>
-          <a href="#" className="dropdown-link" style={{display:'block',padding:'10px 15px',color:'#fff',textDecoration:'none',transition:'background-color 0.3s'}} onMouseEnter={e=>e.target.style.backgroundColor='#000'} onMouseLeave={e=>e.target.style.backgroundColor='transparent'}>Option B</a>
-          <a href="#" className="dropdown-link" style={{display:'block',padding:'10px 15px',color:'#fff',textDecoration:'none',transition:'background-color 0.3s'}} onMouseEnter={e=>e.target.style.backgroundColor='#000'} onMouseLeave={e=>e.target.style.backgroundColor='transparent'}>Custom Plan</a>
+          <a 
+            href="#"
+            className="dropdown-link"
+            style={{
+              display: 'block',
+              padding: '10px 15px',
+              color: '#fff',
+              textDecoration: 'none',
+              transition: 'background-color 0.3s'
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = '#000'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+          >
+            Option A
+          </a>
+          <a 
+            href="#"
+            className="dropdown-link"
+            style={{
+              display: 'block',
+              padding: '10px 15px',
+              color: '#fff',
+              textDecoration: 'none',
+              transition: 'background-color 0.3s'
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = '#000'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+          >
+            Option B
+          </a>
+          <a 
+            href="#"
+            className="dropdown-link"
+            style={{
+              display: 'block',
+              padding: '10px 15px',
+              color: '#fff',
+              textDecoration: 'none',
+              transition: 'background-color 0.3s'
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = '#000'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+          >
+            Custom Plan
+          </a>
         </div>
       )}
     </div>
   );
 
+  // Ensure only one dropdown is open at a time
   const toggleDropdown = (key) => {
     setDropdowns((prev) => {
       const newState = Object.keys(prev).reduce((acc, k) => ({ ...acc, [k]: false }), {});
@@ -53,43 +99,45 @@ const SoftwareDevITPackages = () => {
     });
   };
 
+  // --- Comparison Table Data ---
   const [tableOpen, setTableOpen] = useState(false);
   const features = [
-    { label: "\uD83D\uDCB5 Monthly Cost", values: ["$3,300", "$3,800", "$6,200", "$7,100", "$9,200", "$9,900"] },
-    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: ["$39,600", "$22,800", "$74,400", "$42,600", "$110,400", "$59,400"] },
-    { label: "\uD83D\uDCB0 Live Call Deposit", values: ["$1,980", "$1,140", "$7,440", "$4,260", "$16,560", "$8,910"] },
-    { label: "\uD83C\uDF81 Discount Amount", values: ["$1,980", "$1,140", "$7,440", "$4,260", "$16,560", "$8,910"] },
-    { label: "\uD83D\uDCDD Monthly After Discount", values: ["$3,135", "$3,610", "$5,580", "$6,390", "$7,820", "$8,415"] },
-    { label: "\uD83D\uDCB8 Pre Discount Total", values: ["$39,600", "$22,800", "$74,400", "$42,600", "$110,400", "$59,400"] },
-    { label: "\uD83C\uDFE6 Post Discount Total", values: ["$37,620", "$21,660", "$66,960", "$38,340", "$93,840", "$50,490"] },
-    { label: "\uD83C\uDF89 Total Savings", values: ["$1,980", "$1,140", "$7,440", "$4,260", "$16,560", "$8,910"] },
+    { label: "\uD83D\uDCB5 Monthly Cost", values: [<PriceTag usd={2800} />, <PriceTag usd={3300} />, <PriceTag usd={5000} />, <PriceTag usd={5800} />, <PriceTag usd={8000} />, <PriceTag usd={9000} />] },
+    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: [<PriceTag usd={33600} />, <PriceTag usd={19800} />, <PriceTag usd={60000} />, <PriceTag usd={34800} />, <PriceTag usd={96000} />, <PriceTag usd={54000} />] },
+    { label: "\uD83D\uDCB0 Live Call Deposit", values: [<PriceTag usd={1680} />, <PriceTag usd={990} />, <PriceTag usd={6000} />, <PriceTag usd={3480} />, <PriceTag usd={14400} />, <PriceTag usd={8100} />] },
+    { label: "\uD83C\uDF81 Discount Amount", values: [<PriceTag usd={1680} />, <PriceTag usd={990} />, <PriceTag usd={6000} />, <PriceTag usd={3480} />, <PriceTag usd={14400} />, <PriceTag usd={8100} />] },
+    { label: "\uD83D\uDCDD Monthly After Discount", values: [<PriceTag usd={2660} />, <PriceTag usd={3135} />, <PriceTag usd={4500} />, <PriceTag usd={5220} />, <PriceTag usd={6800} />, <PriceTag usd={7650} />] },
+    { label: "\uD83D\uDCB8 Pre Discount Total", values: [<PriceTag usd={33600} />, <PriceTag usd={19800} />, <PriceTag usd={60000} />, <PriceTag usd={34800} />, <PriceTag usd={96000} />, <PriceTag usd={54000} />] },
+    { label: "\uD83C\uDFE6 Post Discount Total", values: [<PriceTag usd={31920} />, <PriceTag usd={18810} />, <PriceTag usd={54000} />, <PriceTag usd={31320} />, <PriceTag usd={81600} />, <PriceTag usd={45900} />] },
+    { label: "\uD83C\uDF89 Total Savings", values: [<PriceTag usd={1680} />, <PriceTag usd={990} />, <PriceTag usd={6000} />, <PriceTag usd={3480} />, <PriceTag usd={14400} />, <PriceTag usd={8100} />] },
     { label: "\uD83D\uDCB9 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
-    { label: "\uD83C\uDF10 Basic Website Development", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\u2699️ IT Helpdesk Support", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\u2601️ Cloud Storage Setup", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDEE1️ Basic Cybersecurity", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCBB Software Installation", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCF1 Custom Web App Development", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCE1 Network Setup & Management", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDD10 Advanced Cybersecurity", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDD04 Data Backup & Recovery", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDC68\u200D\uD83D\uDCBB Dedicated IT Specialist", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCF2 Mobile App Development", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\u2601️ Enterprise Cloud Arch.", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "Threat Intelligence", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83D\uDCCA IT Governance", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83D\uDCA1 Emerging Tech Consulting", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCCA Basic Financial Reporting", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCB0 Budgeting and Forecasting", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCC8 Cash Flow Management", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCDD Expense Tracking", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDFAF Basic Business Consulting", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83C\uDFE6 Advanced Financial Modeling", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDD0D Investment Analysis", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDEE1️ Risk Management", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCA1 Strategic Business Planning", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83E\uDD1D Stakeholder Reporting", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDD17 M&A Advisory", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDF0E Global Market Analysis", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "⚖️ Corporate Governance", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCC8 Performance Optimization", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDF1F Executive Financial Coaching", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
   ];
   const headers = [
     "Feature / Metric",
-    "Beta Pack (12-Mo)",
-    "Beta Pack (6-Mo)",
-    "Sigma Pack (12-Mo)",
-    "Sigma Pack (6-Mo)",
-    "Alpha Pack (12-Mo)",
-    "Alpha Pack (6-Mo)",
+    <><span>Beta Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Beta Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(6-Mo)</span></>,
   ];
 
+  // Responsive stack for plan cards
   const planStackStyle = {
     display: 'flex',
     gap: '24px',
@@ -105,10 +153,10 @@ const SoftwareDevITPackages = () => {
           <div className="col-lg-8 col-md-10">
             <div className="s-head text-center mb-80">
               <h1 className="stit mb-30">
-                <span className="left"></span>Software Development & IT
+                <span className="left"></span>Business & Finance
                 <span className="right"></span>
               </h1>
-              <p> - Custom application development and IT solutions </p>
+              <p> - Strategic consulting and financial management services </p>
             </div>
           </div>
         </div>
@@ -122,7 +170,7 @@ const SoftwareDevITPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>3,300
+                    <span>$</span>2,800
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -130,30 +178,30 @@ const SoftwareDevITPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Essential software development and IT support for startups and small businesses, including basic website development and IT helpdesk services.
+                  🏷️ Deal Summary: Essential financial oversight and strategic guidance for emerging businesses, providing a solid foundation for growth.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🌐 Basic Website Development</li>
-                    <li>⚙️ IT Helpdesk Support</li>
-                    <li>☁️ Cloud Storage Setup</li>
-                    <li>🛡️ Basic Cybersecurity Measures</li>
-                    <li>💻 Software Installation & Configuration</li>
+                    <li>📊 Basic Financial Reporting</li>
+                    <li>💰 Budgeting and Forecasting</li>
+                    <li>📈 Cash Flow Management</li>
+                    <li>🗒️ Expense Tracking</li>
+                    <li>🎯 Basic Business Consulting</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
                     {/* 12-Month Plan */}
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $3,300</li>
-                        <li>📅 Annual Cost: $39,600</li>
-                        <li>💰 Live Call Deposit: $1,980</li>
-                        <li>🎁 Discount Amount: $1,980</li>
-                        <li>🧾 Monthly After Discount: $3,135</li>
-                        <li>💸 Pre Discount Total : $39,600</li>
-                        <li>🏦 Post Discount Total : $37,620</li>
-                        <li>🎉 Total Savings: $1,980</li>
+                        <li>💵 Monthly Cost: $2,800</li>
+                        <li>📅 Annual Cost: $33,600</li>
+                        <li>💰 Live Call Deposit: $1,680</li>
+                        <li>🎁 Discount Amount: $1,680</li>
+                        <li>🧾 Monthly After Discount: $2,660</li>
+                        <li>💸 Pre Discount Total : $33,600</li>
+                        <li>🏦 Post Discount Total : $31,920</li>
+                        <li>🎉 Total Savings: $1,680</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -161,14 +209,14 @@ const SoftwareDevITPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $3,800</li>
-                        <li>📅 Semiannual Cost: $22,800</li>
-                        <li>💰 Live Call Deposit: $1,140</li>
-                        <li>🎁 Discount Amount: $1,140</li>
-                        <li>🧾 Monthly After Discount: $3,610</li>
-                        <li>💸 Pre Discount Total : $22,800</li>
-                        <li>🏦 Post Discount Total : $21,660</li>
-                        <li>🎉 Total Savings: $1,140</li>
+                        <li>💵 Monthly Cost: $3,300</li>
+                        <li>📅 Semiannual Cost: $19,800</li>
+                        <li>💰 Live Call Deposit: $990</li>
+                        <li>🎁 Discount Amount: $990</li>
+                        <li>🧾 Monthly After Discount: $3,135</li>
+                        <li>💸 Pre Discount Total : $19,800</li>
+                        <li>🏦 Post Discount Total : $18,810</li>
+                        <li>🎉 Total Savings: $990</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -186,7 +234,7 @@ const SoftwareDevITPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>6,200
+                    <span>$</span>5,000
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -194,16 +242,16 @@ const SoftwareDevITPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Comprehensive software development and IT solutions for growing businesses, offering custom web applications, network management, and enhanced security.
+                  🏷️ Deal Summary: Comprehensive financial management and strategic planning, including investment analysis and risk assessment, for established businesses seeking optimized performance.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>📱 Custom Web Application Development</li>
-                    <li>📡 Network Setup & Management</li>
-                    <li>🔐 Advanced Cybersecurity Audits</li>
-                    <li>🔄 Data Backup & Disaster Recovery</li>
-                    <li>👨‍💻 Dedicated IT Support Specialist</li>
+                    <li>🏦 Advanced Financial Modeling</li>
+                    <li>🔍 Investment Analysis</li>
+                    <li>🛡️ Risk Management and Mitigation</li>
+                    <li>💡 Strategic Business Planning</li>
+                    <li>🤝 Stakeholder Reporting</li>
                     <li>Includes all Beta Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -211,14 +259,14 @@ const SoftwareDevITPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $6,200</li>
-                        <li>📅 Annual Cost: $74,400</li>
-                        <li>💰 Live Call Deposit: $7,440</li>
-                        <li>🎁 Discount Amount: $7,440</li>
-                        <li>🧾 Monthly After Discount: $5,580</li>
-                        <li>💸 Pre Discount Total : $74,400</li>
-                        <li>🏦 Post Discount Total : $66,960</li>
-                        <li>🎉 Total Savings: $7,440</li>
+                        <li>💵 Monthly Cost: $5,000</li>
+                        <li>📅 Annual Cost: $60,000</li>
+                        <li>💰 Live Call Deposit: $6,000</li>
+                        <li>🎁 Discount Amount: $6,000</li>
+                        <li>🧾 Monthly After Discount: $4,500</li>
+                        <li>💸 Pre Discount Total : $60,000</li>
+                        <li>🏦 Post Discount Total : $54,000</li>
+                        <li>🎉 Total Savings: $6,000</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -226,14 +274,14 @@ const SoftwareDevITPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $7,100</li>
-                        <li>📅 Semiannual Cost: $42,600</li>
-                        <li>💰 Live Call Deposit: $4,260</li>
-                        <li>🎁 Discount Amount: $4,260</li>
-                        <li>🧾 Monthly After Discount: $6,390</li>
-                        <li>💸 Pre Discount Total : $42,600</li>
-                        <li>🏦 Post Discount Total : $38,340</li>
-                        <li>🎉 Total Savings: $4,260</li>
+                        <li>💵 Monthly Cost: $5,800</li>
+                        <li>📅 Semiannual Cost: $34,800</li>
+                        <li>💰 Live Call Deposit: $3,480</li>
+                        <li>🎁 Discount Amount: $3,480</li>
+                        <li>🧾 Monthly After Discount: $5,220</li>
+                        <li>💸 Pre Discount Total : $34,800</li>
+                        <li>🏦 Post Discount Total : $31,320</li>
+                        <li>🎉 Total Savings: $3,480</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -251,7 +299,7 @@ const SoftwareDevITPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>9,200
+                    <span>$</span>8,000
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -259,16 +307,16 @@ const SoftwareDevITPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Enterprise-grade software development and IT infrastructure, including mobile app development, cloud architecture, and proactive threat intelligence.
+                  🏷️ Deal Summary: Elite-level financial and business consultancy, offering merger and acquisition support, global market analysis, and high-level advisory for large corporations.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>📲 Mobile App Development (iOS/Android)</li>
-                    <li>☁️ Enterprise Cloud Architecture</li>
-                    <li>Threat Intelligence & Incident Response</li>
-                    <li>📊 IT Governance & Compliance</li>
-                    <li>💡 Emerging Tech Consulting (Blockchain, IoT)</li>
+                    <li>🔗 M&A Advisory and Support</li>
+                    <li>🌎 Global Market Analysis</li>
+                    <li>⚖️ Corporate Governance Consulting</li>
+                    <li>📈 Performance Optimization</li>
+                    <li>🌟 Executive Financial Coaching</li>
                     <li>Includes all Beta and Sigma Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -276,14 +324,14 @@ const SoftwareDevITPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $9,200</li>
-                        <li>📅 Annual Cost: $110,400</li>
-                        <li>💰 Live Call Deposit: $16,560</li>
-                        <li>🎁 Discount Amount: $16,560</li>
-                        <li>🧾 Monthly After Discount: $7,820</li>
-                        <li>💸 Pre Discount Total : $110,400</li>
-                        <li>🏦 Post Discount Total : $93,840</li>
-                        <li>🎉 Total Savings: $16,560</li>
+                        <li>💵 Monthly Cost: $8,000</li>
+                        <li>📅 Annual Cost: $96,000</li>
+                        <li>💰 Live Call Deposit: $14,400</li>
+                        <li>🎁 Discount Amount: $14,400</li>
+                        <li>🧾 Monthly After Discount: $6,800</li>
+                        <li>💸 Pre Discount Total : $96,000</li>
+                        <li>🏦 Post Discount Total : $81,600</li>
+                        <li>🎉 Total Savings: $14,400</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -291,14 +339,14 @@ const SoftwareDevITPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $9,900</li>
-                        <li>📅 Semiannual Cost: $59,400</li>
-                        <li>💰 Live Call Deposit: $8,910</li>
-                        <li>🎁 Discount Amount: $8,910</li>
-                        <li>🧾 Monthly After Discount: $8,415</li>
-                        <li>💸 Pre Discount Total : $59,400</li>
-                        <li>🏦 Post Discount Total : $50,490</li>
-                        <li>🎉 Total Savings: $8,910</li>
+                        <li>💵 Monthly Cost: $9,000</li>
+                        <li>📅 Semiannual Cost: $54,000</li>
+                        <li>💰 Live Call Deposit: $8,100</li>
+                        <li>🎁 Discount Amount: $8,100</li>
+                        <li>🧾 Monthly After Discount: $7,650</li>
+                        <li>💸 Pre Discount Total : $54,000</li>
+                        <li>🏦 Post Discount Total : $45,900</li>
+                        <li>🎉 Total Savings: $8,100</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -328,7 +376,7 @@ const SoftwareDevITPackages = () => {
               letterSpacing: "1px",
             }}
           >
-            Software Dev & IT Comparison Table {tableOpen ? "▲" : "▼"}
+            Business & Finance Comparison Table {tableOpen ? "▲" : "▼"}
           </button>
           {tableOpen && (
             <div style={{
@@ -391,4 +439,4 @@ const SoftwareDevITPackages = () => {
   );
 };
 
-export default SoftwareDevITPackages;
+export default BusinessFinancePackages;

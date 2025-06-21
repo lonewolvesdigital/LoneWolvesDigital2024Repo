@@ -7,6 +7,7 @@ import SwiperCore, {
   Pagination,
   Parallax,
   Mousewheel,
+  Autoplay,
 } from "swiper";
 
 import "swiper/css";
@@ -15,7 +16,7 @@ import "swiper/css/navigation";
 import "swiper/css/mousewheel";
 import tooltipEffect from "../../common/tooltipEffect";
 
-SwiperCore.use([Navigation, Pagination, Parallax, Mousewheel]);
+SwiperCore.use([Navigation, Pagination, Parallax, Mousewheel, Autoplay]);
 
 const ShowcasesGrid = () => {
   const [load, setLoad] = React.useState(true);

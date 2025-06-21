@@ -9,9 +9,7 @@ import ProjectGallery from "../../components/Project-gallery/project-gallery";
 import ProjectDescription from "../../components/Project-description/project-description";
 import ProjectVideo from "../../components/Project-video/project-video";
 import NextProject from "../../components/Next-project/next-project";
-import CatalogPricing from "../../components/pricing/catalog-pricing";
-import SummaryPricingTable from "../../components/pricing/summary-pricing-table";
-import Works from "../../components/Works/works";
+import HRTrainingPackages from "../../components/price-packages/hr-training-packages";
 
 const ProjectDetails2Dark = () => {
   const navbarRef = React.useRef(null);
@@ -266,11 +264,12 @@ const ProjectDetails2Dark = () => {
         <ProjectHeader projectHeaderData={ProjectDate} />
         <ProjectIntroduction projectIntroductionData={ProjectDate.intro} />
         <ProjectDescription projectDescriptionData={ProjectDate.description} />
+        <HRTrainingPackages />
         {/* <ProjectVideo projectVideoDate={ProjectDate} /> */}
         {/* <NextProject /> */}
         {/* <ProjectGallery /> */}
-        <CatalogPricing {...data}/>
-        <SummaryPricingTable data={hrTrainingSummaryPricingData} />
+        {/* <CatalogPricing {...data}/> */}
+        {/* <SummaryPricingTable data={hrTrainingSummaryPricingData} /> */}
         <Works/>
         <Footer2 />
       </div>

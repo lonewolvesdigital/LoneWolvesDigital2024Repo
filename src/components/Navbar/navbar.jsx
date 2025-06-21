@@ -230,6 +230,26 @@ const Navbar = ({ lr, nr, theme }) => {
 
         {/* Navbar Links */}
         <div className={`navbar-collapse ${isMobileMenuOpen ? 'show' : ''}`}>
+          {/* X icon for closing mobile menu */}
+          <button
+            className="mobile-menu-close"
+            style={{
+              position: 'absolute',
+              top: 18,
+              right: 18,
+              background: 'none',
+              border: 'none',
+              zIndex: 1100,
+              cursor: 'pointer',
+              color: '#fff',
+              fontSize: 28,
+              display: isMobileMenuOpen ? 'block' : 'none',
+            }}
+            aria-label="Close menu"
+            onClick={toggleMobileMenu}
+          >
+            <X size={32} />
+          </button>
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link href="/lonewolvesdigital/home-dark">
@@ -261,7 +281,7 @@ const Navbar = ({ lr, nr, theme }) => {
                 <a className="nav-link">Portfolio</a>
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <button
                 className="btn-toggle-theme nav-link"
                 onClick={onToggleTheme}
@@ -269,7 +289,7 @@ const Navbar = ({ lr, nr, theme }) => {
               >
                 {!isDark ? <Sun /> : <SunMoon />}
               </button>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
@@ -329,7 +349,7 @@ const Navbar = ({ lr, nr, theme }) => {
           position: relative;
           border: double 2px transparent;
           background-image: linear-gradient(white, white), 
-            linear-gradient(to right, rgb(68, 249, 255), #fd7e14, rgba(255, 9, 243, 0.712));
+            linear-gradient(to right, rgb(68,249,255), #fd7e14, rgba(255, 9, 243, 0.712));
           background-origin: border-box;
           background-clip: padding-box, border-box;
         }
@@ -338,7 +358,7 @@ const Navbar = ({ lr, nr, theme }) => {
           outline: none;
           border: double 2.5px transparent;
           background-image: linear-gradient(white, white), 
-            linear-gradient(to right, rgb(68, 249, 255), #fd7e14, rgba(255, 9, 243, 0.712));
+            linear-gradient(to right, rgb(68,249,255), #fd7e14, rgba(255, 9, 243, 0.712));
           background-origin: border-box;
           background-clip: padding-box, border-box;
           box-shadow: 0 0 15px rgba(68, 249, 255, 0.2);

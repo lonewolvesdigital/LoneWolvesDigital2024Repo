@@ -9,8 +9,8 @@ import ProjectGallery from "../../components/Project-gallery/project-gallery";
 import ProjectDescription from "../../components/Project-description/project-description";
 import ProjectVideo from "../../components/Project-video/project-video";
 import NextProject from "../../components/Next-project/next-project";
-import CatalogPricing from "../../components/pricing/catalog-pricing";
-import SummaryPricingTable from "../../components/pricing/summary-pricing-table";
+// import CatalogPricing from "../../components/pricing/catalog-pricing";
+import LifestylePackages from "../../components/price-packages/lifestyle-packages";
 import Works from "../../components/Works/works";
 
 const ProjectDetails2Dark = () => {
@@ -274,11 +274,12 @@ const ProjectDetails2Dark = () => {
         <ProjectHeader projectHeaderData={ProjectDate} />
         <ProjectIntroduction projectIntroductionData={ProjectDate.intro} />
         <ProjectDescription projectDescriptionData={ProjectDate.description} />
+        <LifestylePackages />
         {/* <ProjectVideo projectVideoDate={ProjectDate} />
         <NextProject /> */}
         {/* <ProjectGallery /> */}
-        <CatalogPricing {...data}/>
-        <SummaryPricingTable data={lifestyleSummaryPricingData} />
+        {/* <CatalogPricing {...data}/> */}
+        {/* <SummaryPricingTable data={lifestyleSummaryPricingData} /> */}
         <Works/>
         <Footer2 />
       </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PriceTag from "./PriceTag";
 
 const WritingTranslationPackages = () => {
   const [dropdowns, setDropdowns] = useState({
@@ -55,14 +56,14 @@ const WritingTranslationPackages = () => {
 
   const [tableOpen, setTableOpen] = useState(false);
   const features = [
-    { label: "\uD83D\uDCB5 Monthly Cost", values: ["$2,500", "$3,000", "$4,500", "$5,200", "$7,500", "$8,500"] },
-    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: ["$30,000", "$18,000", "$54,000", "$31,200", "$90,000", "$51,000"] },
-    { label: "\uD83D\uDCB0 Live Call Deposit", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
-    { label: "\uD83C\uDF81 Discount Amount", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
-    { label: "\uD83D\uDCDD Monthly After Discount", values: ["$2,375", "$2,850", "$4,050", "$4,680", "$6,375", "$7,225"] },
-    { label: "\uD83D\uDCB8 Pre Discount Total", values: ["$30,000", "$18,000", "$54,000", "$31,200", "$90,000", "$51,000"] },
-    { label: "\uD83C\uDFE6 Post Discount Total", values: ["$28,500", "$17,100", "$48,600", "$28,080", "$76,500", "$43,350"] },
-    { label: "\uD83C\uDF89 Total Savings", values: ["$1,500", "$900", "$5,400", "$3,120", "$13,500", "$7,650"] },
+    { label: "\uD83D\uDCB5 Monthly Cost", values: [<PriceTag usd={2500} />, <PriceTag usd={3000} />, <PriceTag usd={4500} />, <PriceTag usd={5200} />, <PriceTag usd={7500} />, <PriceTag usd={8500} />] },
+    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: [<PriceTag usd={30000} />, <PriceTag usd={18000} />, <PriceTag usd={54000} />, <PriceTag usd={31200} />, <PriceTag usd={90000} />, <PriceTag usd={51000} />] },
+    { label: "\uD83D\uDCB0 Live Call Deposit", values: [<PriceTag usd={1500} />, <PriceTag usd={900} />, <PriceTag usd={5400} />, <PriceTag usd={3120} />, <PriceTag usd={13500} />, <PriceTag usd={7650} />] },
+    { label: "\uD83C\uDF81 Discount Amount", values: [<PriceTag usd={1500} />, <PriceTag usd={900} />, <PriceTag usd={5400} />, <PriceTag usd={3120} />, <PriceTag usd={13500} />, <PriceTag usd={7650} />] },
+    { label: "\uD83D\uDCDD Monthly After Discount", values: [<PriceTag usd={2375} />, <PriceTag usd={2850} />, <PriceTag usd={4050} />, <PriceTag usd={4680} />, <PriceTag usd={6375} />, <PriceTag usd={7225} />] },
+    { label: "\uD83D\uDCB8 Pre Discount Total", values: [<PriceTag usd={30000} />, <PriceTag usd={18000} />, <PriceTag usd={54000} />, <PriceTag usd={31200} />, <PriceTag usd={90000} />, <PriceTag usd={51000} />] },
+    { label: "\uD83C\uDFE6 Post Discount Total", values: [<PriceTag usd={28500} />, <PriceTag usd={17100} />, <PriceTag usd={48600} />, <PriceTag usd={28080} />, <PriceTag usd={76500} />, <PriceTag usd={43350} />] },
+    { label: "\uD83C\uDF89 Total Savings", values: [<PriceTag usd={1500} />, <PriceTag usd={900} />, <PriceTag usd={5400} />, <PriceTag usd={3120} />, <PriceTag usd={13500} />, <PriceTag usd={7650} />] },
     { label: "\uD83D\uDCB9 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
     { label: "\u270D️ Blog Post Writing", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
     { label: "\uD83D\uDCDD Website Content Creation", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
@@ -82,12 +83,12 @@ const WritingTranslationPackages = () => {
   ];
   const headers = [
     "Feature / Metric",
-    "Beta Pack (12-Mo)",
-    "Beta Pack (6-Mo)",
-    "Sigma Pack (12-Mo)",
-    "Sigma Pack (6-Mo)",
-    "Alpha Pack (12-Mo)",
-    "Alpha Pack (6-Mo)",
+    <><span>Beta Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Beta Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(6-Mo)</span></>,
   ];
 
   const planStackStyle = {
@@ -133,7 +134,7 @@ const WritingTranslationPackages = () => {
                   🏷️ Deal Summary: Essential writing and translation services for foundational content needs, including basic blog posts and general document translation.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
                     <li>✍️ Blog Post Writing (Basic)</li>
                     <li>📝 Website Content Creation (Standard)</li>
@@ -197,7 +198,7 @@ const WritingTranslationPackages = () => {
                   🏷️ Deal Summary: Comprehensive writing and translation services for growing businesses, including SEO content, technical writing, and localized marketing materials.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
                     <li>🔍 SEO-Optimized Content Writing</li>
                     <li>📚 Technical Writing & Documentation</li>
@@ -262,7 +263,7 @@ const WritingTranslationPackages = () => {
                   🏷️ Deal Summary: Elite writing and localization solutions for large enterprises, including legal translation, academic writing, and strategic content planning for global audiences.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
                     <li>⚖️ Legal & Certified Translation</li>
                     <li>🎓 Academic & Research Writing</li>

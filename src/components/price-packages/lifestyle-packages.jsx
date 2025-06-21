@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import PriceTag from "./PriceTag";
 
-const DataAIServicesPackages = () => {
+const LifestylePackages = () => {
   // State for dropdowns for each card and each option
   const [dropdowns, setDropdowns] = useState({
     betaSelect: false,
@@ -101,39 +102,39 @@ const DataAIServicesPackages = () => {
   // --- Comparison Table Data ---
   const [tableOpen, setTableOpen] = useState(false);
   const features = [
-    { label: "\uD83D\uDCB5 Monthly Cost", values: ["$3,000", "$3,500", "$5,500", "$6,300", "$8,500", "$9,500"] },
-    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: ["$36,000", "$21,000", "$66,000", "$37,800", "$102,000", "$57,000"] },
-    { label: "\uD83D\uDCB0 Live Call Deposit", values: ["$1,800", "$1,050", "$6,600", "$3,780", "$15,300", "$8,550"] },
-    { label: "\uD83C\uDF81 Discount Amount", values: ["$1,800", "$1,050", "$6,600", "$3,780", "$15,300", "$8,550"] },
-    { label: "\uD83D\uDCDD Monthly After Discount", values: ["$2,850", "$3,325", "$4,950", "$5,670", "$7,225", "$8,075"] },
-    { label: "\uD83D\uDCB8 Pre Discount Total", values: ["$36,000", "$21,000", "$66,000", "$37,800", "$102,000", "$57,000"] },
-    { label: "\uD83C\uDFE6 Post Discount Total", values: ["$34,200", "$19,950", "$59,400", "$34,020", "$86,700", "$48,450"] },
-    { label: "\uD83C\uDF89 Total Savings", values: ["$1,800", "$1,050", "$6,600", "$3,780", "$15,300", "$8,550"] },
+    { label: "\uD83D\uDCB5 Monthly Cost", values: [<PriceTag usd={2500} />, <PriceTag usd={3000} />, <PriceTag usd={4500} />, <PriceTag usd={5200} />, <PriceTag usd={7500} />, <PriceTag usd={8500} />] },
+    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: [<PriceTag usd={30000} />, <PriceTag usd={18000} />, <PriceTag usd={54000} />, <PriceTag usd={31200} />, <PriceTag usd={90000} />, <PriceTag usd={51000} />] },
+    { label: "\uD83D\uDCB0 Live Call Deposit", values: [<PriceTag usd={1500} />, <PriceTag usd={900} />, <PriceTag usd={5400} />, <PriceTag usd={3120} />, <PriceTag usd={13500} />, <PriceTag usd={7650} />] },
+    { label: "\uD83C\uDF81 Discount Amount", values: [<PriceTag usd={1500} />, <PriceTag usd={900} />, <PriceTag usd={5400} />, <PriceTag usd={3120} />, <PriceTag usd={13500} />, <PriceTag usd={7650} />] },
+    { label: "\uD83D\uDCDD Monthly After Discount", values: [<PriceTag usd={2375} />, <PriceTag usd={2850} />, <PriceTag usd={4050} />, <PriceTag usd={4680} />, <PriceTag usd={6375} />, <PriceTag usd={7225} />] },
+    { label: "\uD83D\uDCB8 Pre Discount Total", values: [<PriceTag usd={30000} />, <PriceTag usd={18000} />, <PriceTag usd={54000} />, <PriceTag usd={31200} />, <PriceTag usd={90000} />, <PriceTag usd={51000} />] },
+    { label: "\uD83C\uDFE6 Post Discount Total", values: [<PriceTag usd={28500} />, <PriceTag usd={17100} />, <PriceTag usd={48600} />, <PriceTag usd={28080} />, <PriceTag usd={76500} />, <PriceTag usd={43350} />] },
+    { label: "\uD83C\uDF89 Total Savings", values: [<PriceTag usd={1500} />, <PriceTag usd={900} />, <PriceTag usd={5400} />, <PriceTag usd={3120} />, <PriceTag usd={13500} />, <PriceTag usd={7650} />] },
     { label: "\uD83D\uDCB9 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
-    { label: "\uD83D\uDCCA Basic Data Reporting", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCC8 Trend Analysis", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83E\uDDF9 Data Cleaning & Preparation", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCB9 Dashboard Creation", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDD11 KPI Tracking", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83E\uDD16 ML Model Development", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDD2E Predictive Analytics", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "⚙️ Data Pipeline Automation", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDD2C A/B Testing & Optimization", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83E\uDDD1‍💻 Dedicated Data Scientist", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDC68\u200D\uD83D\uDCBB NLP", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83D\uDC41️ Computer Vision", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83E\uDD16 Custom AI App Dev", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "☁️ Cloud AI Integration", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83C\uDF93 AI Strategy & Governance", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCCB Basic Time Management", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83E\uDDE8 Wellness Planning", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDED2 Personal Shopping", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "✈️ Travel Itinerary Planning", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCDA Personal Organization", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "🍎 Nutrition & Fitness Coaching", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "🎉 Event Planning", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "Concierge Services", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "🏡 Home Management", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "🌱 Mindfulness & Stress", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "✈️ Luxury Travel", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "🌟 Bespoke Experience", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "🎓 Personal Development", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "🖼️ Art & Collectibles Advisory", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDD10 Digital Legacy Management", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
   ];
   const headers = [
     "Feature / Metric",
-    "Beta Pack (12-Mo)",
-    "Beta Pack (6-Mo)",
-    "Sigma Pack (12-Mo)",
-    "Sigma Pack (6-Mo)",
-    "Alpha Pack (12-Mo)",
-    "Alpha Pack (6-Mo)",
+    <><span>Beta Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Beta Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(6-Mo)</span></>,
   ];
 
   // Responsive stack for plan cards
@@ -152,10 +153,10 @@ const DataAIServicesPackages = () => {
           <div className="col-lg-8 col-md-10">
             <div className="s-head text-center mb-80">
               <h1 className="stit mb-30">
-                <span className="left"></span>Data & AI Services
+                <span className="left"></span>Lifestyle
                 <span className="right"></span>
               </h1>
-              <p> - Machine learning, analytics, and artificial intelligence solutions </p>
+              <p> - Personal and lifestyle enhancement services </p>
             </div>
           </div>
         </div>
@@ -169,7 +170,7 @@ const DataAIServicesPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>3,000
+                    <span>$</span>2,500
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -177,30 +178,30 @@ const DataAIServicesPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Foundational data analysis and reporting services to help businesses understand their basic performance and identify key trends.
+                  🏷️ Deal Summary: Introductory lifestyle services for individuals seeking to improve personal well-being and efficiency, focusing on foundational planning and organization.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>📊 Basic Data Reporting</li>
-                    <li>📈 Trend Analysis</li>
-                    <li>🧹 Data Cleaning & Preparation</li>
-                    <li>📉 Dashboard Creation (Standard)</li>
-                    <li>🔑 Key Performance Indicator (KPI) Tracking</li>
+                    <li>🗓️ Basic Time Management Coaching</li>
+                    <li>🧘 Wellness Planning (Intro)</li>
+                    <li>🛒 Personal Shopping (Limited)</li>
+                    <li>✈️ Travel Itinerary Planning (Basic)</li>
+                    <li>📚 Personal Organization & Decluttering</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
                     {/* 12-Month Plan */}
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $3,000</li>
-                        <li>📅 Annual Cost: $36,000</li>
-                        <li>💰 Live Call Deposit: $1,800</li>
-                        <li>🎁 Discount Amount: $1,800</li>
-                        <li>🧾 Monthly After Discount: $2,850</li>
-                        <li>💸 Pre Discount Total : $36,000</li>
-                        <li>🏦 Post Discount Total : $34,200</li>
-                        <li>🎉 Total Savings: $1,800</li>
+                        <li>💵 Monthly Cost: $2,500</li>
+                        <li>📅 Annual Cost: $30,000</li>
+                        <li>💰 Live Call Deposit: $1,500</li>
+                        <li>🎁 Discount Amount: $1,500</li>
+                        <li>🧾 Monthly After Discount: $2,375</li>
+                        <li>💸 Pre Discount Total : $30,000</li>
+                        <li>🏦 Post Discount Total : $28,500</li>
+                        <li>🎉 Total Savings: $1,500</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -208,14 +209,14 @@ const DataAIServicesPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $3,500</li>
-                        <li>📅 Semiannual Cost: $21,000</li>
-                        <li>💰 Live Call Deposit: $1,050</li>
-                        <li>🎁 Discount Amount: $1,050</li>
-                        <li>🧾 Monthly After Discount: $3,325</li>
-                        <li>💸 Pre Discount Total : $21,000</li>
-                        <li>🏦 Post Discount Total : $19,950</li>
-                        <li>🎉 Total Savings: $1,050</li>
+                        <li>💵 Monthly Cost: $3,000</li>
+                        <li>📅 Semiannual Cost: $18,000</li>
+                        <li>💰 Live Call Deposit: $900</li>
+                        <li>🎁 Discount Amount: $900</li>
+                        <li>🧾 Monthly After Discount: $2,850</li>
+                        <li>💸 Pre Discount Total : $18,000</li>
+                        <li>🏦 Post Discount Total : $17,100</li>
+                        <li>🎉 Total Savings: $900</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -233,7 +234,7 @@ const DataAIServicesPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>5,500
+                    <span>$</span>4,500
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -241,16 +242,16 @@ const DataAIServicesPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Advanced data analytics and introductory AI model development for businesses looking to gain deeper insights and automate decision-making.
+                  🏷️ Deal Summary: Enhanced lifestyle management for busy professionals, offering holistic wellness programs, event planning, and personalized concierge services.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🧠 Machine Learning Model Development (Basic)</li>
-                    <li>🔮 Predictive Analytics</li>
-                    <li>⚙️ Data Pipeline Automation</li>
-                    <li>🔬 A/B Testing & Optimization</li>
-                    <li>🧑‍💻 Dedicated Data Scientist (Part-time)</li>
+                    <li>🍎 Nutrition & Fitness Coaching</li>
+                    <li>🎉 Event Planning (Small Scale)</li>
+                    <li>Concierge Services (Personal Appointments, Reservations)</li>
+                    <li>🏡 Home Management & Organization</li>
+                    <li>🌱 Mindfulness & Stress Reduction Programs</li>
                     <li>Includes all Beta Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -258,14 +259,14 @@ const DataAIServicesPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $5,500</li>
-                        <li>📅 Annual Cost: $66,000</li>
-                        <li>💰 Live Call Deposit: $6,600</li>
-                        <li>🎁 Discount Amount: $6,600</li>
-                        <li>🧾 Monthly After Discount: $4,950</li>
-                        <li>💸 Pre Discount Total : $66,000</li>
-                        <li>🏦 Post Discount Total : $59,400</li>
-                        <li>🎉 Total Savings: $6,600</li>
+                        <li>💵 Monthly Cost: $4,500</li>
+                        <li>📅 Annual Cost: $54,000</li>
+                        <li>💰 Live Call Deposit: $5,400</li>
+                        <li>🎁 Discount Amount: $5,400</li>
+                        <li>🧾 Monthly After Discount: $4,050</li>
+                        <li>💸 Pre Discount Total : $54,000</li>
+                        <li>🏦 Post Discount Total : $48,600</li>
+                        <li>🎉 Total Savings: $5,400</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -273,14 +274,14 @@ const DataAIServicesPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $6,300</li>
-                        <li>📅 Semiannual Cost: $37,800</li>
-                        <li>💰 Live Call Deposit: $3,780</li>
-                        <li>🎁 Discount Amount: $3,780</li>
-                        <li>🧾 Monthly After Discount: $5,670</li>
-                        <li>💸 Pre Discount Total : $37,800</li>
-                        <li>🏦 Post Discount Total : $34,020</li>
-                        <li>🎉 Total Savings: $3,780</li>
+                        <li>💵 Monthly Cost: $5,200</li>
+                        <li>📅 Semiannual Cost: $31,200</li>
+                        <li>💰 Live Call Deposit: $3,120</li>
+                        <li>🎁 Discount Amount: $3,120</li>
+                        <li>🧾 Monthly After Discount: $4,680</li>
+                        <li>💸 Pre Discount Total : $31,200</li>
+                        <li>🏦 Post Discount Total : $28,080</li>
+                        <li>🎉 Total Savings: $3,120</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -298,7 +299,7 @@ const DataAIServicesPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>8,500
+                    <span>$</span>7,500
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -306,16 +307,16 @@ const DataAIServicesPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Cutting-edge AI solutions, including advanced machine learning, natural language processing, and custom AI application development, for enterprises seeking to innovate and lead.
+                  🏷️ Deal Summary: Exclusive lifestyle management for high-net-worth individuals, providing luxury travel planning, personalized bespoke experiences, and comprehensive personal assistance.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🗣️ Natural Language Processing (NLP)</li>
-                    <li>👁️ Computer Vision Solutions</li>
-                    <li>🤖 Custom AI Application Development</li>
-                    <li>☁️ Cloud AI Integration</li>
-                    <li>🎓 AI Strategy & Governance Consulting</li>
+                    <li>✈️ Luxury Travel & Expedition Planning</li>
+                    <li>🌟 Bespoke Experience Curation</li>
+                    <li>🎓 Personal Development & Coaching (Advanced)</li>
+                    <li>🖼️ Art & Collectibles Advisory</li>
+                    <li>🔐 Digital Legacy Management</li>
                     <li>Includes all Beta and Sigma Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -323,14 +324,14 @@ const DataAIServicesPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $8,500</li>
-                        <li>📅 Annual Cost: $102,000</li>
-                        <li>💰 Live Call Deposit: $15,300</li>
-                        <li>🎁 Discount Amount: $15,300</li>
-                        <li>🧾 Monthly After Discount: $7,225</li>
-                        <li>💸 Pre Discount Total : $102,000</li>
-                        <li>🏦 Post Discount Total : $86,700</li>
-                        <li>🎉 Total Savings: $15,300</li>
+                        <li>💵 Monthly Cost: $7,500</li>
+                        <li>📅 Annual Cost: $90,000</li>
+                        <li>💰 Live Call Deposit: $13,500</li>
+                        <li>🎁 Discount Amount: $13,500</li>
+                        <li>🧾 Monthly After Discount: $6,375</li>
+                        <li>💸 Pre Discount Total : $90,000</li>
+                        <li>🏦 Post Discount Total : $76,500</li>
+                        <li>🎉 Total Savings: $13,500</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -338,14 +339,14 @@ const DataAIServicesPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $9,500</li>
-                        <li>📅 Semiannual Cost: $57,000</li>
-                        <li>💰 Live Call Deposit: $8,550</li>
-                        <li>🎁 Discount Amount: $8,550</li>
-                        <li>🧾 Monthly After Discount: $8,075</li>
-                        <li>💸 Pre Discount Total : $57,000</li>
-                        <li>🏦 Post Discount Total : $48,450</li>
-                        <li>🎉 Total Savings: $8,550</li>
+                        <li>💵 Monthly Cost: $8,500</li>
+                        <li>📅 Semiannual Cost: $51,000</li>
+                        <li>💰 Live Call Deposit: $7,650</li>
+                        <li>🎁 Discount Amount: $7,650</li>
+                        <li>🧾 Monthly After Discount: $7,225</li>
+                        <li>💸 Pre Discount Total : $51,000</li>
+                        <li>🏦 Post Discount Total : $43,350</li>
+                        <li>🎉 Total Savings: $7,650</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -375,7 +376,7 @@ const DataAIServicesPackages = () => {
               letterSpacing: "1px",
             }}
           >
-            Data & AI Services Comparison Table {tableOpen ? "▲" : "▼"}
+            Lifestyle Comparison Table {tableOpen ? "▲" : "▼"}
           </button>
           {tableOpen && (
             <div style={{
@@ -438,4 +439,4 @@ const DataAIServicesPackages = () => {
   );
 };
 
-export default DataAIServicesPackages;
+export default LifestylePackages;

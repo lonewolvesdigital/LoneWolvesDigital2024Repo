@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import PriceTag from "./PriceTag";
 
 const pricePackages = ({ bgGray }) => {
   return (
@@ -123,7 +124,7 @@ const pricePackages = ({ bgGray }) => {
                     </div>
                     <div className="amount text-center mb-40">
                       <h3>
-                        <span>$</span> 59
+                        <PriceTag usd={59} />
                       </h3>
                     </div>
                     <div className="order mb-40">

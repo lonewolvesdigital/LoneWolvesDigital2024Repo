@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import Image from 'next/image';
 import { Search, Filter, ArrowUpDown, Calendar, Tag, ExternalLink, Eye } from 'lucide-react';
 import DarkTheme from '../../layouts/Dark';
 import Navbar from '../../components/Navbar/navbar';
@@ -388,9 +389,11 @@ const Portfolio = () => {
                 height: '250px',
                 overflow: 'hidden'
               }}>
-                <img
+                <Image
                   src={project.image}
                   alt={project.name}
+                  width={600}
+                  height={400}
                   style={{
                     width: '100%',
                     height: '100%',

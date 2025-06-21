@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import PriceTag from "./PriceTag";
 
-const VideoAudioAnimationPackages = () => {
+const SoftwareDevITPackages = () => {
   const [dropdowns, setDropdowns] = useState({
     betaSelect: false,
     sigmaSelect: false,
@@ -55,39 +56,39 @@ const VideoAudioAnimationPackages = () => {
 
   const [tableOpen, setTableOpen] = useState(false);
   const features = [
-    { label: "\uD83D\uDCB5 Monthly Cost", values: ["$2,800", "$3,300", "$5,000", "$5,800", "$8,000", "$9,000"] },
-    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: ["$33,600", "$19,800", "$60,000", "$34,800", "$96,000", "$54,000"] },
-    { label: "\uD83D\uDCB0 Live Call Deposit", values: ["$1,680", "$990", "$6,000", "$3,480", "$14,400", "$8,100"] },
-    { label: "\uD83C\uDF81 Discount Amount", values: ["$1,680", "$990", "$6,000", "$3,480", "$14,400", "$8,100"] },
-    { label: "\uD83D\uDCDD Monthly After Discount", values: ["$2,660", "$3,135", "$4,500", "$5,220", "$6,800", "$7,650"] },
-    { label: "\uD83D\uDCB8 Pre Discount Total", values: ["$33,600", "$19,800", "$60,000", "$34,800", "$96,000", "$54,000"] },
-    { label: "\uD83C\uDFE6 Post Discount Total", values: ["$31,920", "$18,810", "$54,000", "$31,320", "$81,600", "$45,900"] },
-    { label: "\uD83C\uDF89 Total Savings", values: ["$1,680", "$990", "$6,000", "$3,480", "$14,400", "$8,100"] },
+    { label: "\uD83D\uDCB5 Monthly Cost", values: [<PriceTag usd={3300} />, <PriceTag usd={3800} />, <PriceTag usd={6200} />, <PriceTag usd={7100} />, <PriceTag usd={9200} />, <PriceTag usd={9900} />] },
+    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: [<PriceTag usd={39600} />, <PriceTag usd={22800} />, <PriceTag usd={74400} />, <PriceTag usd={42600} />, <PriceTag usd={110400} />, <PriceTag usd={59400} />] },
+    { label: "\uD83D\uDCB0 Live Call Deposit", values: [<PriceTag usd={1980} />, <PriceTag usd={1140} />, <PriceTag usd={7440} />, <PriceTag usd={4260} />, <PriceTag usd={16560} />, <PriceTag usd={8910} />] },
+    { label: "\uD83C\uDF81 Discount Amount", values: [<PriceTag usd={1980} />, <PriceTag usd={1140} />, <PriceTag usd={7440} />, <PriceTag usd={4260} />, <PriceTag usd={16560} />, <PriceTag usd={8910} />] },
+    { label: "\uD83D\uDCDD Monthly After Discount", values: [<PriceTag usd={3135} />, <PriceTag usd={3610} />, <PriceTag usd={5580} />, <PriceTag usd={6390} />, <PriceTag usd={7820} />, <PriceTag usd={8415} />] },
+    { label: "\uD83D\uDCB8 Pre Discount Total", values: [<PriceTag usd={39600} />, <PriceTag usd={22800} />, <PriceTag usd={74400} />, <PriceTag usd={42600} />, <PriceTag usd={110400} />, <PriceTag usd={59400} />] },
+    { label: "\uD83C\uDFE6 Post Discount Total", values: [<PriceTag usd={37620} />, <PriceTag usd={21660} />, <PriceTag usd={66960} />, <PriceTag usd={38340} />, <PriceTag usd={93840} />, <PriceTag usd={50490} />] },
+    { label: "\uD83C\uDF89 Total Savings", values: [<PriceTag usd={1980} />, <PriceTag usd={1140} />, <PriceTag usd={7440} />, <PriceTag usd={4260} />, <PriceTag usd={16560} />, <PriceTag usd={8910} />] },
     { label: "\uD83D\uDCB9 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
-    { label: "\uD83C\uDFAC Basic Video Editing", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83C\uDFA4 Audio Enhancement", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "GIF & Short Animation", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83C\uDFB6 Stock Music & Sound Effects", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83C\uDF9E️ Basic Storyboard", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83C\uDFA5 Professional Video Prod.", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDD0A Sound Design & Mastering", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "✨ Motion Graphics & VFX", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDC64 Voiceover & Narration", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCA1 Concept Development", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83C\uDFAC Cinematic Video Production", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83D\uDC7E 3D Animation & VFX", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83C\uDFA7 Immersive Audio Experiences", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83C\uDFAE Interactive Media", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83C\uDFAF Distribution Strategy", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDF10 Basic Website Development", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\u2699️ IT Helpdesk Support", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\u2601️ Cloud Storage Setup", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDEE1️ Basic Cybersecurity", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCBB Software Installation", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCF1 Custom Web App Development", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCE1 Network Setup & Management", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDD10 Advanced Cybersecurity", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDD04 Data Backup & Recovery", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDC68\u200D\uD83D\uDCBB Dedicated IT Specialist", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCF2 Mobile App Development", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\u2601️ Enterprise Cloud Arch.", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "Threat Intelligence", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCCA IT Governance", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCA1 Emerging Tech Consulting", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
   ];
   const headers = [
     "Feature / Metric",
-    "Beta Pack (12-Mo)",
-    "Beta Pack (6-Mo)",
-    "Sigma Pack (12-Mo)",
-    "Sigma Pack (6-Mo)",
-    "Alpha Pack (12-Mo)",
-    "Alpha Pack (6-Mo)",
+    <><span>Beta Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Beta Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(6-Mo)</span></>,
   ];
 
   const planStackStyle = {
@@ -105,10 +106,10 @@ const VideoAudioAnimationPackages = () => {
           <div className="col-lg-8 col-md-10">
             <div className="s-head text-center mb-80">
               <h1 className="stit mb-30">
-                <span className="left"></span>Video, Audio & Animation
+                <span className="left"></span>Software Development & IT
                 <span className="right"></span>
               </h1>
-              <p> - Multimedia content creation </p>
+              <p> - Custom application development and IT solutions </p>
             </div>
           </div>
         </div>
@@ -122,7 +123,7 @@ const VideoAudioAnimationPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>2,800
+                    <span>$</span>3,300
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -130,30 +131,30 @@ const VideoAudioAnimationPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Fundamental video, audio, and animation services for basic content needs, including short social media videos and simple audio editing.
+                  🏷️ Deal Summary: Essential software development and IT support for startups and small businesses, including basic website development and IT helpdesk services.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🎬 Basic Video Editing (Short-form)</li>
-                    <li>🎤 Audio Enhancement & Mixing (Simple)</li>
-                    <li>GIF & Short Animation Creation</li>
-                    <li>🎶 Stock Music & Sound Effects</li>
-                    <li>🎞️ Basic Storyboard & Scripting</li>
+                    <li>🌐 Basic Website Development</li>
+                    <li>⚙️ IT Helpdesk Support</li>
+                    <li>☁️ Cloud Storage Setup</li>
+                    <li>🛡️ Basic Cybersecurity Measures</li>
+                    <li>💻 Software Installation & Configuration</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
                     {/* 12-Month Plan */}
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $2,800</li>
-                        <li>📅 Annual Cost: $33,600</li>
-                        <li>💰 Live Call Deposit: $1,680</li>
-                        <li>🎁 Discount Amount: $1,680</li>
-                        <li>🧾 Monthly After Discount: $2,660</li>
-                        <li>💸 Pre Discount Total : $33,600</li>
-                        <li>🏦 Post Discount Total : $31,920</li>
-                        <li>🎉 Total Savings: $1,680</li>
+                        <li>💵 Monthly Cost: $3,300</li>
+                        <li>📅 Annual Cost: $39,600</li>
+                        <li>💰 Live Call Deposit: $1,980</li>
+                        <li>🎁 Discount Amount: $1,980</li>
+                        <li>🧾 Monthly After Discount: $3,135</li>
+                        <li>💸 Pre Discount Total : $39,600</li>
+                        <li>🏦 Post Discount Total : $37,620</li>
+                        <li>🎉 Total Savings: $1,980</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -161,14 +162,14 @@ const VideoAudioAnimationPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $3,300</li>
-                        <li>📅 Semiannual Cost: $19,800</li>
-                        <li>💰 Live Call Deposit: $990</li>
-                        <li>🎁 Discount Amount: $990</li>
-                        <li>🧾 Monthly After Discount: $3,135</li>
-                        <li>💸 Pre Discount Total : $19,800</li>
-                        <li>🏦 Post Discount Total : $18,810</li>
-                        <li>🎉 Total Savings: $990</li>
+                        <li>💵 Monthly Cost: $3,800</li>
+                        <li>📅 Semiannual Cost: $22,800</li>
+                        <li>💰 Live Call Deposit: $1,140</li>
+                        <li>🎁 Discount Amount: $1,140</li>
+                        <li>🧾 Monthly After Discount: $3,610</li>
+                        <li>💸 Pre Discount Total : $22,800</li>
+                        <li>🏦 Post Discount Total : $21,660</li>
+                        <li>🎉 Total Savings: $1,140</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -186,7 +187,7 @@ const VideoAudioAnimationPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>5,000
+                    <span>$</span>6,200
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -194,16 +195,16 @@ const VideoAudioAnimationPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Professional video, audio, and animation production for marketing campaigns and corporate communications, featuring high-quality video production and motion graphics.
+                  🏷️ Deal Summary: Comprehensive software development and IT solutions for growing businesses, offering custom web applications, network management, and enhanced security.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🎥 Professional Video Production (Mid-length)</li>
-                    <li>🔊 Sound Design & Mastering</li>
-                    <li>✨ Motion Graphics & Visual Effects (Basic)</li>
-                    <li>🗣️ Voiceover & Narration Talent</li>
-                    <li>💡 Concept Development & Scriptwriting (Advanced)</li>
+                    <li>📱 Custom Web Application Development</li>
+                    <li>📡 Network Setup & Management</li>
+                    <li>🔐 Advanced Cybersecurity Audits</li>
+                    <li>🔄 Data Backup & Disaster Recovery</li>
+                    <li>👨‍💻 Dedicated IT Support Specialist</li>
                     <li>Includes all Beta Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -211,14 +212,14 @@ const VideoAudioAnimationPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $5,000</li>
-                        <li>📅 Annual Cost: $60,000</li>
-                        <li>💰 Live Call Deposit: $6,000</li>
-                        <li>🎁 Discount Amount: $6,000</li>
-                        <li>🧾 Monthly After Discount: $4,500</li>
-                        <li>💸 Pre Discount Total : $60,000</li>
-                        <li>🏦 Post Discount Total : $54,000</li>
-                        <li>🎉 Total Savings: $6,000</li>
+                        <li>💵 Monthly Cost: $6,200</li>
+                        <li>📅 Annual Cost: $74,400</li>
+                        <li>💰 Live Call Deposit: $7,440</li>
+                        <li>🎁 Discount Amount: $7,440</li>
+                        <li>🧾 Monthly After Discount: $5,580</li>
+                        <li>💸 Pre Discount Total : $74,400</li>
+                        <li>🏦 Post Discount Total : $66,960</li>
+                        <li>🎉 Total Savings: $7,440</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -226,14 +227,14 @@ const VideoAudioAnimationPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $5,800</li>
-                        <li>📅 Semiannual Cost: $34,800</li>
-                        <li>💰 Live Call Deposit: $3,480</li>
-                        <li>🎁 Discount Amount: $3,480</li>
-                        <li>🧾 Monthly After Discount: $5,220</li>
-                        <li>💸 Pre Discount Total : $34,800</li>
-                        <li>🏦 Post Discount Total : $31,320</li>
-                        <li>🎉 Total Savings: $3,480</li>
+                        <li>💵 Monthly Cost: $7,100</li>
+                        <li>📅 Semiannual Cost: $42,600</li>
+                        <li>💰 Live Call Deposit: $4,260</li>
+                        <li>🎁 Discount Amount: $4,260</li>
+                        <li>🧾 Monthly After Discount: $6,390</li>
+                        <li>💸 Pre Discount Total : $42,600</li>
+                        <li>🏦 Post Discount Total : $38,340</li>
+                        <li>🎉 Total Savings: $4,260</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -251,7 +252,7 @@ const VideoAudioAnimationPackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>8,000
+                    <span>$</span>9,200
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -259,16 +260,16 @@ const VideoAudioAnimationPackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: High-end multimedia content creation for broadcast, film, and immersive experiences, including cinematic production, 3D animation, and interactive media.
+                  🏷️ Deal Summary: Enterprise-grade software development and IT infrastructure, including mobile app development, cloud architecture, and proactive threat intelligence.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🎬 Cinematic Video Production</li>
-                    <li>👾 3D Animation & VFX</li>
-                    <li>🎧 Immersive Audio Experiences (Spatial Audio)</li>
-                    <li>🎮 Interactive Media & VR/AR Content</li>
-                    <li>🎯 Distribution & Broadcast Strategy</li>
+                    <li>📲 Mobile App Development (iOS/Android)</li>
+                    <li>☁️ Enterprise Cloud Architecture</li>
+                    <li>Threat Intelligence & Incident Response</li>
+                    <li>📊 IT Governance & Compliance</li>
+                    <li>💡 Emerging Tech Consulting (Blockchain, IoT)</li>
                     <li>Includes all Beta and Sigma Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -276,14 +277,14 @@ const VideoAudioAnimationPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $8,000</li>
-                        <li>📅 Annual Cost: $96,000</li>
-                        <li>💰 Live Call Deposit: $14,400</li>
-                        <li>🎁 Discount Amount: $14,400</li>
-                        <li>🧾 Monthly After Discount: $6,800</li>
-                        <li>💸 Pre Discount Total : $96,000</li>
-                        <li>🏦 Post Discount Total : $81,600</li>
-                        <li>🎉 Total Savings: $14,400</li>
+                        <li>💵 Monthly Cost: $9,200</li>
+                        <li>📅 Annual Cost: $110,400</li>
+                        <li>💰 Live Call Deposit: $16,560</li>
+                        <li>🎁 Discount Amount: $16,560</li>
+                        <li>🧾 Monthly After Discount: $7,820</li>
+                        <li>💸 Pre Discount Total : $110,400</li>
+                        <li>🏦 Post Discount Total : $93,840</li>
+                        <li>🎉 Total Savings: $16,560</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -291,14 +292,14 @@ const VideoAudioAnimationPackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $9,000</li>
-                        <li>📅 Semiannual Cost: $54,000</li>
-                        <li>💰 Live Call Deposit: $8,100</li>
-                        <li>🎁 Discount Amount: $8,100</li>
-                        <li>🧾 Monthly After Discount: $7,650</li>
-                        <li>💸 Pre Discount Total : $54,000</li>
-                        <li>🏦 Post Discount Total : $45,900</li>
-                        <li>🎉 Total Savings: $8,100</li>
+                        <li>💵 Monthly Cost: $9,900</li>
+                        <li>📅 Semiannual Cost: $59,400</li>
+                        <li>💰 Live Call Deposit: $8,910</li>
+                        <li>🎁 Discount Amount: $8,910</li>
+                        <li>🧾 Monthly After Discount: $8,415</li>
+                        <li>💸 Pre Discount Total : $59,400</li>
+                        <li>🏦 Post Discount Total : $50,490</li>
+                        <li>🎉 Total Savings: $8,910</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -328,7 +329,7 @@ const VideoAudioAnimationPackages = () => {
               letterSpacing: "1px",
             }}
           >
-            Video, Audio & Animation Comparison Table {tableOpen ? "▲" : "▼"}
+            Software Dev & IT Comparison Table {tableOpen ? "▲" : "▼"}
           </button>
           {tableOpen && (
             <div style={{
@@ -391,4 +392,4 @@ const VideoAudioAnimationPackages = () => {
   );
 };
 
-export default VideoAudioAnimationPackages;
+export default SoftwareDevITPackages;

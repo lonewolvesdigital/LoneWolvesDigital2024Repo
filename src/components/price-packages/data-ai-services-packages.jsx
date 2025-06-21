@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import PriceTag from "./PriceTag";
 
-const BusinessFinancePackages = () => {
+const DataAIServicesPackages = () => {
   // State for dropdowns for each card and each option
   const [dropdowns, setDropdowns] = useState({
     betaSelect: false,
@@ -101,39 +102,39 @@ const BusinessFinancePackages = () => {
   // --- Comparison Table Data ---
   const [tableOpen, setTableOpen] = useState(false);
   const features = [
-    { label: "\uD83D\uDCB5 Monthly Cost", values: ["$2,800", "$3,300", "$5,000", "$5,800", "$8,000", "$9,000"] },
-    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: ["$33,600", "$19,800", "$60,000", "$34,800", "$96,000", "$54,000"] },
-    { label: "\uD83D\uDCB0 Live Call Deposit", values: ["$1,680", "$990", "$6,000", "$3,480", "$14,400", "$8,100"] },
-    { label: "\uD83C\uDF81 Discount Amount", values: ["$1,680", "$990", "$6,000", "$3,480", "$14,400", "$8,100"] },
-    { label: "\uD83D\uDCDD Monthly After Discount", values: ["$2,660", "$3,135", "$4,500", "$5,220", "$6,800", "$7,650"] },
-    { label: "\uD83D\uDCB8 Pre Discount Total", values: ["$33,600", "$19,800", "$60,000", "$34,800", "$96,000", "$54,000"] },
-    { label: "\uD83C\uDFE6 Post Discount Total", values: ["$31,920", "$18,810", "$54,000", "$31,320", "$81,600", "$45,900"] },
-    { label: "\uD83C\uDF89 Total Savings", values: ["$1,680", "$990", "$6,000", "$3,480", "$14,400", "$8,100"] },
+    { label: "\uD83D\uDCB5 Monthly Cost", values: [<PriceTag usd={3000} />, <PriceTag usd={3500} />, <PriceTag usd={5500} />, <PriceTag usd={6300} />, <PriceTag usd={8500} />, <PriceTag usd={9500} />] },
+    { label: "\uD83D\uDCC5 Annual/Semiannual Cost", values: [<PriceTag usd={36000} />, <PriceTag usd={21000} />, <PriceTag usd={66000} />, <PriceTag usd={37800} />, <PriceTag usd={102000} />, <PriceTag usd={57000} />] },
+    { label: "\uD83D\uDCB0 Live Call Deposit", values: [<PriceTag usd={1800} />, <PriceTag usd={1050} />, <PriceTag usd={6600} />, <PriceTag usd={3780} />, <PriceTag usd={15300} />, <PriceTag usd={8550} />] },
+    { label: "\uD83C\uDF81 Discount Amount", values: [<PriceTag usd={1800} />, <PriceTag usd={1050} />, <PriceTag usd={6600} />, <PriceTag usd={3780} />, <PriceTag usd={15300} />, <PriceTag usd={8550} />] },
+    { label: "\uD83D\uDCDD Monthly After Discount", values: [<PriceTag usd={2850} />, <PriceTag usd={3325} />, <PriceTag usd={4950} />, <PriceTag usd={5670} />, <PriceTag usd={7225} />, <PriceTag usd={8075} />] },
+    { label: "\uD83D\uDCB8 Pre Discount Total", values: [<PriceTag usd={36000} />, <PriceTag usd={21000} />, <PriceTag usd={66000} />, <PriceTag usd={37800} />, <PriceTag usd={102000} />, <PriceTag usd={57000} />] },
+    { label: "\uD83C\uDFE6 Post Discount Total", values: [<PriceTag usd={34200} />, <PriceTag usd={19950} />, <PriceTag usd={59400} />, <PriceTag usd={34020} />, <PriceTag usd={86700} />, <PriceTag usd={48450} />] },
+    { label: "\uD83C\uDF89 Total Savings", values: [<PriceTag usd={1800} />, <PriceTag usd={1050} />, <PriceTag usd={6600} />, <PriceTag usd={3780} />, <PriceTag usd={15300} />, <PriceTag usd={8550} />] },
     { label: "\uD83D\uDCB9 Savings Percentage", values: ["5%", "5%", "10%", "10%", "15%", "15%"] },
-    { label: "\uD83D\uDCCA Basic Financial Reporting", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCB0 Budgeting and Forecasting", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCC8 Cash Flow Management", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCDD Expense Tracking", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83C\uDFAF Basic Business Consulting", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83C\uDFE6 Advanced Financial Modeling", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDD0D Investment Analysis", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDEE1️ Risk Management", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDCA1 Strategic Business Planning", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83E\uDD1D Stakeholder Reporting", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
-    { label: "\uD83D\uDD17 M&A Advisory", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83C\uDF0E Global Market Analysis", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "⚖️ Corporate Governance", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83D\uDCC8 Performance Optimization", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
-    { label: "\uD83C\uDF1F Executive Financial Coaching", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDCCA Basic Data Reporting", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCC8 Trend Analysis", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83E\uDDF9 Data Cleaning & Preparation", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDCB9 Dashboard Creation", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDD11 KPI Tracking", values: ["✅", "✅", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83E\uDD16 ML Model Development", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDD2E Predictive Analytics", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "⚙️ Data Pipeline Automation", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDD2C A/B Testing & Optimization", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83E\uDDD1‍💻 Dedicated Data Scientist", values: ["❌", "❌", "✅", "✅", "✅", "✅"] },
+    { label: "\uD83D\uDC68\u200D\uD83D\uDCBB NLP", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83D\uDC41️ Computer Vision", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83E\uDD16 Custom AI App Dev", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "☁️ Cloud AI Integration", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
+    { label: "\uD83C\uDF93 AI Strategy & Governance", values: ["❌", "❌", "❌", "❌", "✅", "✅"] },
   ];
   const headers = [
     "Feature / Metric",
-    "Beta Pack (12-Mo)",
-    "Beta Pack (6-Mo)",
-    "Sigma Pack (12-Mo)",
-    "Sigma Pack (6-Mo)",
-    "Alpha Pack (12-Mo)",
-    "Alpha Pack (6-Mo)",
+    <><span>Beta Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Beta Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Sigma Pack</span><br/><span>(6-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(12-Mo)</span></>,
+    <><span>Alpha Pack</span><br/><span>(6-Mo)</span></>,
   ];
 
   // Responsive stack for plan cards
@@ -152,10 +153,10 @@ const BusinessFinancePackages = () => {
           <div className="col-lg-8 col-md-10">
             <div className="s-head text-center mb-80">
               <h1 className="stit mb-30">
-                <span className="left"></span>Business & Finance
+                <span className="left"></span>Data & AI Services
                 <span className="right"></span>
               </h1>
-              <p> - Strategic consulting and financial management services </p>
+              <p> - Machine learning, analytics, and artificial intelligence solutions </p>
             </div>
           </div>
         </div>
@@ -169,7 +170,7 @@ const BusinessFinancePackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>2,800
+                    <span>$</span>3,000
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -177,30 +178,30 @@ const BusinessFinancePackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Essential financial oversight and strategic guidance for emerging businesses, providing a solid foundation for growth.
+                  🏷️ Deal Summary: Foundational data analysis and reporting services to help businesses understand their basic performance and identify key trends.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>📊 Basic Financial Reporting</li>
-                    <li>💰 Budgeting and Forecasting</li>
-                    <li>📈 Cash Flow Management</li>
-                    <li>🗒️ Expense Tracking</li>
-                    <li>🎯 Basic Business Consulting</li>
+                    <li>📊 Basic Data Reporting</li>
+                    <li>📈 Trend Analysis</li>
+                    <li>🧹 Data Cleaning & Preparation</li>
+                    <li>📉 Dashboard Creation (Standard)</li>
+                    <li>🔑 Key Performance Indicator (KPI) Tracking</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
                     {/* 12-Month Plan */}
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $2,800</li>
-                        <li>📅 Annual Cost: $33,600</li>
-                        <li>💰 Live Call Deposit: $1,680</li>
-                        <li>🎁 Discount Amount: $1,680</li>
-                        <li>🧾 Monthly After Discount: $2,660</li>
-                        <li>💸 Pre Discount Total : $33,600</li>
-                        <li>🏦 Post Discount Total : $31,920</li>
-                        <li>🎉 Total Savings: $1,680</li>
+                        <li>💵 Monthly Cost: $3,000</li>
+                        <li>📅 Annual Cost: $36,000</li>
+                        <li>💰 Live Call Deposit: $1,800</li>
+                        <li>🎁 Discount Amount: $1,800</li>
+                        <li>🧾 Monthly After Discount: $2,850</li>
+                        <li>💸 Pre Discount Total : $36,000</li>
+                        <li>🏦 Post Discount Total : $34,200</li>
+                        <li>🎉 Total Savings: $1,800</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -208,14 +209,14 @@ const BusinessFinancePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $3,300</li>
-                        <li>📅 Semiannual Cost: $19,800</li>
-                        <li>💰 Live Call Deposit: $990</li>
-                        <li>🎁 Discount Amount: $990</li>
-                        <li>🧾 Monthly After Discount: $3,135</li>
-                        <li>💸 Pre Discount Total : $19,800</li>
-                        <li>🏦 Post Discount Total : $18,810</li>
-                        <li>🎉 Total Savings: $990</li>
+                        <li>💵 Monthly Cost: $3,500</li>
+                        <li>📅 Semiannual Cost: $21,000</li>
+                        <li>💰 Live Call Deposit: $1,050</li>
+                        <li>🎁 Discount Amount: $1,050</li>
+                        <li>🧾 Monthly After Discount: $3,325</li>
+                        <li>💸 Pre Discount Total : $21,000</li>
+                        <li>🏦 Post Discount Total : $19,950</li>
+                        <li>🎉 Total Savings: $1,050</li>
                         <li>📉 Savings Percentage: 5%</li>
                       </ul>
                     </div>
@@ -233,7 +234,7 @@ const BusinessFinancePackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>5,000
+                    <span>$</span>5,500
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -241,16 +242,16 @@ const BusinessFinancePackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Comprehensive financial management and strategic planning, including investment analysis and risk assessment, for established businesses seeking optimized performance.
+                  🏷️ Deal Summary: Advanced data analytics and introductory AI model development for businesses looking to gain deeper insights and automate decision-making.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🏦 Advanced Financial Modeling</li>
-                    <li>🔍 Investment Analysis</li>
-                    <li>🛡️ Risk Management and Mitigation</li>
-                    <li>💡 Strategic Business Planning</li>
-                    <li>🤝 Stakeholder Reporting</li>
+                    <li>🧠 Machine Learning Model Development (Basic)</li>
+                    <li>🔮 Predictive Analytics</li>
+                    <li>⚙️ Data Pipeline Automation</li>
+                    <li>🔬 A/B Testing & Optimization</li>
+                    <li>🧑‍💻 Dedicated Data Scientist (Part-time)</li>
                     <li>Includes all Beta Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -258,14 +259,14 @@ const BusinessFinancePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $5,000</li>
-                        <li>📅 Annual Cost: $60,000</li>
-                        <li>💰 Live Call Deposit: $6,000</li>
-                        <li>🎁 Discount Amount: $6,000</li>
-                        <li>🧾 Monthly After Discount: $4,500</li>
-                        <li>💸 Pre Discount Total : $60,000</li>
-                        <li>🏦 Post Discount Total : $54,000</li>
-                        <li>🎉 Total Savings: $6,000</li>
+                        <li>💵 Monthly Cost: $5,500</li>
+                        <li>📅 Annual Cost: $66,000</li>
+                        <li>💰 Live Call Deposit: $6,600</li>
+                        <li>🎁 Discount Amount: $6,600</li>
+                        <li>🧾 Monthly After Discount: $4,950</li>
+                        <li>💸 Pre Discount Total : $66,000</li>
+                        <li>🏦 Post Discount Total : $59,400</li>
+                        <li>🎉 Total Savings: $6,600</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -273,14 +274,14 @@ const BusinessFinancePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $5,800</li>
-                        <li>📅 Semiannual Cost: $34,800</li>
-                        <li>💰 Live Call Deposit: $3,480</li>
-                        <li>🎁 Discount Amount: $3,480</li>
-                        <li>🧾 Monthly After Discount: $5,220</li>
-                        <li>💸 Pre Discount Total : $34,800</li>
-                        <li>🏦 Post Discount Total : $31,320</li>
-                        <li>🎉 Total Savings: $3,480</li>
+                        <li>💵 Monthly Cost: $6,300</li>
+                        <li>📅 Semiannual Cost: $37,800</li>
+                        <li>💰 Live Call Deposit: $3,780</li>
+                        <li>🎁 Discount Amount: $3,780</li>
+                        <li>🧾 Monthly After Discount: $5,670</li>
+                        <li>💸 Pre Discount Total : $37,800</li>
+                        <li>🏦 Post Discount Total : $34,020</li>
+                        <li>🎉 Total Savings: $3,780</li>
                         <li>📉 Savings Percentage: 10%</li>
                       </ul>
                     </div>
@@ -298,7 +299,7 @@ const BusinessFinancePackages = () => {
                 </div>
                 <div className="amount text-center mb-40">
                   <h3>
-                    <span>$</span>8,000
+                    <span>$</span>8,500
                   </h3>
                   <h6>
                     <span>starting price </span> per month
@@ -306,16 +307,16 @@ const BusinessFinancePackages = () => {
                 </div>
                 {/* Deal Summary above Features */}
                 <div style={{ margin: '16px 0 0 0', fontStyle: 'italic', color: '#fd7e14', background: '#232323', borderRadius: 8, padding: 12 }}>
-                  🏷️ Deal Summary: Elite-level financial and business consultancy, offering merger and acquisition support, global market analysis, and high-level advisory for large corporations.
+                  🏷️ Deal Summary: Cutting-edge AI solutions, including advanced machine learning, natural language processing, and custom AI application development, for enterprises seeking to innovate and lead.
                 </div>
                 <div className="beta-features mb-20">
-                  <strong>Features</strong>
+                  <strong><br/>Features</strong>
                   <ul>
-                    <li>🔗 M&A Advisory and Support</li>
-                    <li>🌎 Global Market Analysis</li>
-                    <li>⚖️ Corporate Governance Consulting</li>
-                    <li>📈 Performance Optimization</li>
-                    <li>🌟 Executive Financial Coaching</li>
+                    <li>🗣️ Natural Language Processing (NLP)</li>
+                    <li>👁️ Computer Vision Solutions</li>
+                    <li>🤖 Custom AI Application Development</li>
+                    <li>☁️ Cloud AI Integration</li>
+                    <li>🎓 AI Strategy & Governance Consulting</li>
                     <li>Includes all Beta and Sigma Pack features</li>
                   </ul>
                   <div style={{ ...planStackStyle, flexDirection: 'row' }} className="plan-stack-responsive">
@@ -323,14 +324,14 @@ const BusinessFinancePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>12‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $8,000</li>
-                        <li>📅 Annual Cost: $96,000</li>
-                        <li>💰 Live Call Deposit: $14,400</li>
-                        <li>🎁 Discount Amount: $14,400</li>
-                        <li>🧾 Monthly After Discount: $6,800</li>
-                        <li>💸 Pre Discount Total : $96,000</li>
-                        <li>🏦 Post Discount Total : $81,600</li>
-                        <li>🎉 Total Savings: $14,400</li>
+                        <li>💵 Monthly Cost: $8,500</li>
+                        <li>📅 Annual Cost: $102,000</li>
+                        <li>💰 Live Call Deposit: $15,300</li>
+                        <li>🎁 Discount Amount: $15,300</li>
+                        <li>🧾 Monthly After Discount: $7,225</li>
+                        <li>💸 Pre Discount Total : $102,000</li>
+                        <li>🏦 Post Discount Total : $86,700</li>
+                        <li>🎉 Total Savings: $15,300</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -338,14 +339,14 @@ const BusinessFinancePackages = () => {
                     <div style={{ minWidth: 260, flex: 1, background: '#232323', borderRadius: 10, padding: 16, maxWidth: 340 }}>
                       <strong>6‑Month Plan</strong>
                       <ul style={{ marginTop: 8 }}>
-                        <li>💵 Monthly Cost: $9,000</li>
-                        <li>📅 Semiannual Cost: $54,000</li>
-                        <li>💰 Live Call Deposit: $8,100</li>
-                        <li>🎁 Discount Amount: $8,100</li>
-                        <li>🧾 Monthly After Discount: $7,650</li>
-                        <li>💸 Pre Discount Total : $54,000</li>
-                        <li>🏦 Post Discount Total : $45,900</li>
-                        <li>🎉 Total Savings: $8,100</li>
+                        <li>💵 Monthly Cost: $9,500</li>
+                        <li>📅 Semiannual Cost: $57,000</li>
+                        <li>💰 Live Call Deposit: $8,550</li>
+                        <li>🎁 Discount Amount: $8,550</li>
+                        <li>🧾 Monthly After Discount: $8,075</li>
+                        <li>💸 Pre Discount Total : $57,000</li>
+                        <li>🏦 Post Discount Total : $48,450</li>
+                        <li>🎉 Total Savings: $8,550</li>
                         <li>📉 Savings Percentage: 15%</li>
                       </ul>
                     </div>
@@ -375,7 +376,7 @@ const BusinessFinancePackages = () => {
               letterSpacing: "1px",
             }}
           >
-            Business & Finance Comparison Table {tableOpen ? "▲" : "▼"}
+            Data & AI Services Comparison Table {tableOpen ? "▲" : "▼"}
           </button>
           {tableOpen && (
             <div style={{
@@ -438,4 +439,4 @@ const BusinessFinancePackages = () => {
   );
 };
 
-export default BusinessFinancePackages;
+export default DataAIServicesPackages;
